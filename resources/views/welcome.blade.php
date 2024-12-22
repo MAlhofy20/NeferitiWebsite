@@ -39,13 +39,13 @@
 
     <body dir="rtl" class="bg">
     <div class="main ">
-        <div class="the-pag h-[1000px] rounded-[16px] w-[90%] mt-[20px] mx-auto bg-white custum">
-            <div class="minu h-[46px] rounded-tl-[16px] rounded-tr-[16px] bg-[#303030] flex justify-evenly items-center ">
-                <div class="logo ml-[10px]">
-                    <img class="rounded-[8px] w-full h-[36px]" src="./image/Link.png" alt="">
+        <div class="the-pag shadow-[0px_0px_5px_0px_#e3e2e2] visible relative h-[5000px] rounded-[16px] w-[90%] mt-[20px] mx-auto bg-white custum">
+            <div id="menu" class="minu menu-fixed pl-[10px] pr-[10px] rounded-tl-[16px] rounded-tr-[16px] bg-[#303030] flex justify-evenly items-center">
+                            <div class="logo ml-[10px]">
+                    <img class="rounded-[8px] w-[44px] h-[36px]" src="{{asset('frontend/images/logo.png')}}" alt="">
                 </div>
                 <div class="content-menu">
-                    <ul class="px-[50px] gap-[50px] flex justify-center items-center">
+                    <ul class="px-[10px] gap-[50px] flex justify-center items-center">
                         <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">الرئيسيه</li>
                         <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">الاسعار</li>
                         <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">المدونه</li>
@@ -74,7 +74,6 @@
             </div>
         </div>
     </div>
-
     <script src="{{ asset('frontend/js/main.js') }}" ></script>
 
 </body>
