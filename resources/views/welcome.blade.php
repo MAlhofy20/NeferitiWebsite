@@ -170,7 +170,6 @@
                 </div>
             </div>
         </div>
-        {{-- #0b2131 --}}
         <div class="home relative overflow-hidden bg-[#0b2131] text-white p-[50px]">
             <div class="main text-center flex gap-[10px] flex-col justify-center items-center">
                 <div class="title font-500 text-[56px]">
@@ -246,40 +245,6 @@
             </div>
             <div class="colr absolute bottom-[-59px] z-[1] opacity-20 left-[150px]"> <img src="{{asset('frontend/images/middle2.png')}}" alt=""></div>
         </div>
-        {{-- <div class="services flex flex-col gap-[30px] justify-center items-center p-[50px]">
-            <div class="sirvOne flex justify-center items-center ">
-                <div class="main">
-                    <div class="title">
-                        ليست مجرد وكالة تصميم عادية
-                    </div>
-                    <p>
-                        لقد سلم فريق Teamollo الموقع في الجدول الزمني الذي طلبوه.
-                        <br>
-                        وفي النهاية، وجد العميل زيادة بنسبة 50% في حركة المرور في غضون أيام منذ إطلاقه.
-                        <br>
-                        كما كان لديهم قدرة رائعة على استخدام التقنيات التي لم تستخدمها الشركة   ،
-                        <br>
-                        والتي أثبتت أيضًا سهولة استخدامها وأنها موثوقة.
-                    </p>
-                </div>
-                <div><img src="{{asset('frontend/images/Mask Group 1.png')}}" alt=""></div>
-
-            </div>
-            <div class="sirvOne">
-                <div><img src="{{asset('frontend/images/Mask Group 2.png')}}" alt=""></div>
-                <div class="main">
-                    <div class="title">
-                        ليست مجرد وكالة تصميم عادية
-                    </div>
-                    <p>
-                        لقد سلم فريق Teamollo الموقع في الجدول الزمني الذي طلبوه.
-                        وفي النهاية، وجد العميل زيادة بنسبة 50% في حركة المرور في غضون أيام منذ إطلاقه.
-                        كما كان لديهم قدرة رائعة على استخدام التقنيات التي لم تستخدمها الشركة   ،
-                        والتي أثبتت أيضًا سهولة استخدامها وأنها موثوقة.
-                    </p>
-                </div>
-            </div>
-        </div> --}}
         <div class="products p-[50px] bg-[#cecbc5]">
             <div class="main flex flex-col justify-center items-center text-center">
                 <div class="title font-500 text-[56px]"> نبذة عن فريق جرافيتي</div>
@@ -291,10 +256,10 @@
                     نحن صانع سوق للعملات المشفرة
                     <br>
                     أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
-
                 </p>
             </div>
-            <div class="accordon py-[50px] gap-[25px] flex flex-col">
+        </div>
+        <div class="accordon py-[50px] gap-[25px] flex flex-col">
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[45px] items-center">
                         <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
@@ -405,7 +370,6 @@
                         <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="previous-work bg-[#0b2131] text-white p-[50px]">
 
@@ -441,11 +405,34 @@
                 </div>
 
         </div>
+        <div class="blogs">
+            <div class="title">
+                <div class="tit text-[42px] font-[800]">أحدث منشورات مدونتنا</div>
+                <div class="bg-[#171313] rounded-[10px]">
+                    <a class="font-[600]" href="#">شاهد جميع منشورات المدونة</a>
+                </div>
+            </div>
+            <div class="tow-colmn">
+                <div class="one">
+                    <div>
+                        <div class="image">
+                            <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                        </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
+                        </div>
+                        <div class="tit font-[800] ">
+                            الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.
+                        </div>
+                        <p>
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
     <script src="{{ asset('frontend/js/main.js') }}" ></script>
 
 </body>
