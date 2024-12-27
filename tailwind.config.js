@@ -11,6 +11,9 @@ export default {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'custom-gradient': "linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%)",
+                },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
