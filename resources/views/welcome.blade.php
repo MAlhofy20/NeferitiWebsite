@@ -25,19 +25,20 @@
         {{-- bg-[#041527] --}}
     </head>
     <body dir="rtl" class="bg">
-    <div class="main bg-[#041527] pb-[50px] relative">
+    <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
         <div class = "flex justify-center">
             <div id="menu" class="active">
                 <div class="logo ml-[10px]">
                     <img class="rounded-[8px] w-[44px] h-[36px]" src="{{asset('frontend/images/logo.png')}}" alt="">
                 </div>
-                <div class="content-menu">
-                    <ul class="px-[10px] gap-[50px] flex justify-center items-center">
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">الرئيسيه</li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">الاسعار</li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">المدونه</li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">المحتوي</li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]">الاراء</li>
+                <div class="content-menu px-[30px]">
+                    <ul class="px-[10px] gap-[50px] flex justify-center items-center cursor-pointer">
+
+                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#"><span>الاراء</span></a></li>
+                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#"><span>المدونه</span></a></li>
+                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#"><span>المحتوي</span></a></li>
+                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#"><span>خدمات</span></a></li>
+                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#"><span>الاراء</span></a></li>
                     </ul>
                 </div>
                 <div class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
@@ -45,7 +46,7 @@
                 </div>
         </div>
         </div>
-        <div class="hero flex justify-center items-center flex-col pt-[150px] text-center pb-[50px]">
+        <div class="hero flex justify-center items-center flex-col pt-[150px] text-center pb-[50px] px-[20px]">
             <div class="title">
                 <p class="text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
                 <p class="py-[20px] leading-[37px] font-bold text-[20px] text-gray-500">
@@ -128,7 +129,7 @@
         </div>
         <div class="color w-full absolute h-[14%] bg-white -bottom-[47px]"></div>
     </div>
-    <div class="the-pahe bg-white relative pt-[50px] h-[600px]">
+    <div class="the-pahe bg-white relative pt-[50px]">
         <div class="about-us relative">
             <div class="colr absolute ">
                 <img class="w-[62%]" src="{{asset('frontend/images/middle1.png')}}" alt="">
@@ -185,7 +186,7 @@
                     أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                 </p>
             </div>
-            <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[80px] flex-wrap">
+            <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[25px] flex-wrap">
                     <div class="box1 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">~$100 billion</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
@@ -245,7 +246,7 @@
             </div>
             <div class="colr absolute bottom-[-59px] z-[1] opacity-20 left-[150px]"> <img src="{{asset('frontend/images/middle2.png')}}" alt=""></div>
         </div>
-        <div class="products p-[50px] bg-[#cecbc5]">
+        <div class="products p-[50px] bg-[#ffe0a2]">
             <div class="main flex flex-col justify-center items-center text-center">
                 <div class="title font-500 text-[56px]"> نبذة عن فريق جرافيتي</div>
                 <p class="font-[400] text-[20px] leading-[30px]">
@@ -258,11 +259,10 @@
                     أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                 </p>
             </div>
-        </div>
-        <div class="accordon py-[50px] gap-[25px] flex flex-col">
+            <div class="accordon py-[50px] gap-[25px] flex flex-col">
                 <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] items-center">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
+                    <div class="min flex justify-center gap-[45px] ">
+                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
                             <img class="rounded-[18px] " src="{{asset('frontend/images/accordion1.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
@@ -283,8 +283,8 @@
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] items-center">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
+                    <div class="min flex justify-center gap-[45px] ">
+                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
                             <img class="rounded-[18px] " src="{{asset('frontend/images/accordion2.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
@@ -305,8 +305,8 @@
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] items-center">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
+                    <div class="min flex justify-center gap-[45px] ">
+                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
                             <img class="rounded-[18px] " src="{{asset('frontend/images/accordion3.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
@@ -327,8 +327,8 @@
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] items-center">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
+                    <div class="min flex justify-center gap-[45px] ">
+                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
                             <img class="rounded-[18px] " src="{{asset('frontend/images/accordion4.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
@@ -349,8 +349,8 @@
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] items-center">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[100px]">
+                    <div class="min flex justify-center gap-[45px]">
+                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
                             <img class="rounded-[18px] " src="{{asset('frontend/images/accordion5.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
@@ -370,66 +370,302 @@
                         <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
                     </div>
                 </div>
+            </div>
         </div>
         <div class="previous-work bg-[#0b2131] text-white p-[50px]">
-
-                <div class="title flex items-center pb-[20px] px-[124px]">
-                    <div class="font-[600] text-[22px]">اعمال سابقه</div>
-                    <i class="fa-solid fa-turn-down"></i>
+            <div class="title flex items-center pb-[20px] px-[124px]">
+                <div class="font-[600] text-[22px]">اعمال سابقه</div>
+                <i class="fa-solid fa-turn-down"></i>
+            </div>
+            <div class="previous flex gap-[32px] flex-wrap justify-center">
+                <div class="cee  rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work1.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">العلامة التجارية جالاكسيا</div>
                 </div>
-                <div class="previous flex gap-[32px] flex-wrap justify-center">
-                    <div class="cee  rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work1.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">العلامة التجارية جالاكسيا</div>
-                    </div>
-                    <div class="cee  rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work2.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">جون ماير نيويورك</div>
-                    </div>
-                    <div class="cee rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work3.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">أنماط نايزاك</div>
-                    </div>
-                    <div class="cee rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work4.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">رقائق كريف</div>
-                    </div>
-                    <div class="cee rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work2.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">جون ماير نيويورك</div>
-                    </div>
-                    <div class="cee rounded-[24px] border-2 border-[#282828]">
-                        <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work3.png') }}" alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">أنماط نايزاك</div>
-                    </div>
+                <div class="cee  rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work2.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">جون ماير نيويورك</div>
                 </div>
-
-        </div>
-        <div class="blogs">
-            <div class="title">
-                <div class="tit text-[42px] font-[800]">أحدث منشورات مدونتنا</div>
-                <div class="bg-[#171313] rounded-[10px]">
-                    <a class="font-[600]" href="#">شاهد جميع منشورات المدونة</a>
+                <div class="cee rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work3.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">أنماط نايزاك</div>
+                </div>
+                <div class="cee rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work4.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">رقائق كريف</div>
+                </div>
+                <div class="cee rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work2.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">جون ماير نيويورك</div>
+                </div>
+                <div class="cee rounded-[24px] border-2 border-[#282828]">
+                    <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]" src="{{ asset('frontend/images/work3.png') }}" alt="">
+                    <div class="title font-[600] text-[28px] px-[15px] py-[10px]">أنماط نايزاك</div>
                 </div>
             </div>
-            <div class="tow-colmn">
-                <div class="one">
-                    <div>
-                        <div class="image">
+        </div>
+        <div class="previousTwo">
+            <div class="box">
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            </div>
+            <div class="bton">
+                <div class="btn prev"></div>
+                <div class="btn next"></div>
+            </div>
+        </div>
+        <div class="blogs p-[100px]">
+            <div class="title flex justify-between pb-[50px] items-center">
+                <div class="tit text-[42px] font-[800]">أحدث منشورات مدونتنا</div>
+                <div class="bg-[#171313] p-[15px] rounded-[10px] text-white">
+                    <a class="font-[600] " href="#">شاهد جميع منشورات المدونة</a>
+                </div>
+            </div>
+            <div class="tow-colmn flex gap-[20px] justify-start flex-wrap">
+                <div class="one flex gap-[20px] flex-wrap">
+                    <div class="gap-[45px]">
+                        <div class="image pb-[15px]">
                             <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
                         <div class="date text-[#64607D]">
                             <span>08-11-2021</span>
                             <span>Category</span>
                         </div>
-                        <div class="tit font-[800] ">
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
                             الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.
                         </div>
-                        <p>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="image pb-[15px]">
+                            <img src="{{ asset('frontend/images/blog3.png') }}" alt="">
+                        </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
+                        </div>
+                        <div class="tit font-[800]  text-[20px] leading-[36px] py-[5px]">
+                            الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
                             رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
                         </p>
                     </div>
                 </div>
+                <div class="two max-w-[375px]">
+                    <div class="flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                        <div class="image min-w-[110px]">
+                            <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                        </div>
+                        <div>
+                            <div class="date text-[#64607D]">
+                                <span>08-11-2021</span>
+                                <span>Category</span>
+                            </div>
+                            <div class="tit font-[800] leading-[27px]">
+                                التحيز أو الاستمرار في مبادئ معينة                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                        <div class="image min-w-[110px]">
+                            <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
+                        </div>
+                        <div>
+                            <div class="date text-[#64607D]">
+                                <span>08-11-2021</span>
+                                <span>Category</span>
+                            </div>
+                            <div class="tit font-[800] leading-[27px]">
+                                هل نؤمن بالتصرف في المخصصات المدعومة؟
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                        <div class="image min-w-[110px]">
+                            <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                        </div>
+                        <div>
+                            <div class="date text-[#64607D]">
+                                <span>08-11-2021</span>
+                                <span>Category</span>
+                            </div>
+                            <div class="tit font-[800] leading-[27px]">
+                                الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
+                        <div class="image min-w-[110px]">
+                            <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                        </div>
+                        <div>
+                            <div class="date text-[#64607D]">
+                                <span>08-11-2021</span>
+                                <span>Category</span>
+                            </div>
+                            <div class="tit font-[800] leading-[27px]">
+                                القرية لم تتم إزالتها استمتعت بشرحها ولا رأى لحم الخنزير.                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Here-is-how bg-[#E3F8F8] px-[100px] py-[50px]">
+            <div class="all ">
+                <div class="title text-[60px] flex justify-center items-center text-center flex-col">
+                    <div class="font-[700]  text-[#2E2F35]">
+                        إطلاق سريع. نتائج سريعة.
+                    </div>
+                    <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
+                </div>
+                <div class="here">
+                    <div class="min py-[15px]">
+                        <div class="tit text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer"> شريحة</div>
+                        <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
+                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون أسبوع.
+                        </p>
+                    </div>
+                    <div class="min py-[15px]">
+                        <div class="tit text-[36px] text-[#2E2F3566] font-[700] pr-[50px] cursor-pointer"> تصميم</div>
+                        <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
+                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون أسبوع.
+                        </p>
+                    </div>
+                    <div class="min activeTwo py-[15px]">
+                        <div class="tit text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer"> ارسال</div>
+                        <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
+                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون أسبوع.
+                        </p>
+                    </div>
+                    <div class="min py-[15px]">
+                        <div class="tit text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer"> يتحول</div>
+                        <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px] ">
+                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون أسبوع.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clients bg-[#282f4b] text-white">
+            <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
+                <div class="tit font-bold max-w-[600px] text-[33px] px-[20px] text-center">
+                    يحب الكثير من الأشخاص الآخرين
+                    بناء وشحن
+                    المواقع باستخدام Framer.
+                </div>
+                <div class="flex gap-[10px] items-center">
+                    <a class="text-[22px] font-bold font-sans" href="#">انضم إلى المجتمع</a>
+                    <i class="fa-solid fa-turn-down"></i>
+                </div>
+            </div>
+            <div class="Opinions py-[65px] bg-[#282f4b] flex gap-[24px] overflow-hidden">
+
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                    <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div>
+                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
+                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                        </div>
+                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
+                            <span class="h-[3px] w-[60px] bg-white block"></span>
+                            <span class="font-[700]">K Oiwake</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
     </div>
