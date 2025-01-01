@@ -1,0 +1,13 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "El Messiri", "Baloo Bhaijaan 2", "Rakkas", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
