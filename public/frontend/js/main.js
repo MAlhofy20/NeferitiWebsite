@@ -1,5 +1,22 @@
-// accordion
+// menu
 
+// الحصول على العنصر
+let menuButton = document.querySelector('.main div #menu');
+console.log(menuButton);
+
+// إضافة حدث التمرير
+window.onscroll = function() {
+  // التحقق من موضع التمرير
+  if (window.scrollY >= 100) {  // إذا كان التمرير أكثر من 100px
+    menuButton.classList.add('custom-btn');  // إضافة class عند التمرير
+  } else {
+    menuButton.classList.remove('custom-btn');  // إزالة class عند الرجوع للأعلى
+  }
+};
+
+
+
+// accordion
 let accordions = document.querySelectorAll(".accordon .accor");
 let images = document.querySelectorAll(".accordon .accor .min .image img");
 let icons = document.querySelectorAll(".accordon .accor .icon i");
@@ -23,17 +40,22 @@ document.addEventListener("click", function (e) {
                     paragraph.style.maxHeight = paragraph.scrollHeight + "px";
                     paragraph.style.opacity = "1";
                     image.style.height = "140px";
+                    icon.style.transform = "rotate(315deg)"
 
                 } else {
                     paragraph.style.maxHeight = "0";
                     paragraph.style.opacity = "0";
                     image.style.height = "40px";
+                    icon.style.transform = "rotate(540deg)"
+
                 }
             } else {
                 // إغلاق العناصر الأخرى
                 paragraph.style.maxHeight = "0";
                 paragraph.style.opacity = "0";
                 image.style.height = "40px";
+                icon.style.transform = "rotate(540deg)"
+
             }
         });
     }
@@ -83,17 +105,51 @@ titless.forEach((title, index) => {
 
 // bbbbbbbbooooooooox// xxxxxxxxxx
 
-let box = document.querySelector('.box');
+// let box = document.querySelector('.box');
 
-// حركة الماوس لتدوير الصندوق
-window.onmousemove = function (e) {
-    let x = (e.clientX - window.innerWidth / 2) / 10; // تحريك بزاوية بناءً على موضع الماوس
-    box.style.transform = `perspective(1000px) rotateY(${x}deg)`;
-};
+// // حركة الماوس لتدوير الصندوق
+// window.onmousemove = function (e) {
+//     let x = (e.clientX - window.innerWidth / 2) / 10; // تحريك بزاوية بناءً على موضع الماوس
+//     box.style.transform = `perspective(1000px) rotateY(${x}deg)`;
+// };
 
-// تعيين زوايا دوران لكل عنصر داخل الصندوق
-const spans = document.querySelectorAll('.box span');
-spans.forEach((span, index) => {
-    span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
+// // تعيين زوايا دوران لكل عنصر داخل الصندوق
+// const spans = document.querySelectorAll('.box span');
+// spans.forEach((span, index) => {
+//     span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
+// });
+
+
+
+
+
+// Services
+let icon = document.querySelectorAll(".clients .angle i");
+let boxOpinions = document.querySelectorAll(".clients .Opinions .all .boxOpinions");
+let opinionsWrapper = document.querySelector(".clients .Opinions .all");
+
+let currentIndex = 0;
+let totalCards = boxOpinions.length;
+console.log(totalCards);
+
+
+document.addEventListener("click", function (el) {
+    icon.forEach((ico) => {
+    if (el.target === ico) {
+      if (ico.classList.contains("left")) {
+
+        if (currentIndex > 0) {
+            currentIndex--;
+            opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
+        }
+    } else if (ico.classList.contains("right")) {
+        if (currentIndex < totalCards - 3) { // Assuming 3 cards are visible
+          currentIndex++;
+          opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
+        }
+      }
+    }
+  });
 });
+
 
