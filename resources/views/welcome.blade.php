@@ -423,7 +423,7 @@
                 </div>
             </div>
         </div>
-        <div class="previousTwo">
+        {{-- <div class="previousTwo">
             <div class="box">
                 <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
                 <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
@@ -444,7 +444,7 @@
                 <div class="btn prev"></div>
                 <div class="btn next"></div>
             </div>
-        </div>
+        </div> --}}
         <div class="blogs p-[100px]">
             <div class="title flex justify-between pb-[50px] items-center">
                 <div class="tit text-[42px] font-[800]">أحدث منشورات مدونتنا</div>

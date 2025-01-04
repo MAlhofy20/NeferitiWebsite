@@ -97,17 +97,3 @@ spans.forEach((span, index) => {
     span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
 });
 
-
-
-
-
-let boxColor = document.querySelector('.boxColor div');
-console.log(boxColor);
-
-boxColor.addEventListener('mouseenter', () => {
-    box.style.background = 'linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%)';
-});
-
-boxColor.addEventListener('mouseleave', () => {
-    box.style.background = 'red';
-});
