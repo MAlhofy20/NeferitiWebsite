@@ -29,7 +29,7 @@
         <div class = "flex justify-center">
             <div id="menu" class="active">
                 <div class="logo ml-[10px]">
-                    <img class="rounded-[8px] w-[44px] h-[36px]" src="{{asset('frontend/images/logo.png')}}" alt="">
+                    <img class="rounded-[8px] w-[40px] h-[50px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
                 </div>
                 <div class="content-menu px-[30px]">
                     <ul class="px-[10px] gap-[50px] flex justify-center items-center cursor-pointer">
@@ -44,7 +44,10 @@
                 <div class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
                     <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
                 </div>
+            </div>
         </div>
+        <div class="flex justify-center items-center">
+            <img class="rounded-[8px]  absolute w-[250px] h-[148px] top-[80px] opacity-10"src="{{asset('frontend/images/logo trans.png')}}" alt="">
         </div>
         <div class="hero flex justify-center items-center flex-col pt-[150px] text-center pb-[50px] px-[20px]">
             <div class="title">
@@ -56,8 +59,14 @@
                 </p>
             </div>
             <div>
-                <a class="bg-gray-800 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                <a class="cursor-box not-allowed bg-gray-800 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
             </div>
+        </div>
+        <div class="flex justify-start items-center">
+            <img class="rounded-[8px]  absolute w-[250px] h-[148px] top-[50%] opacity-10"src="{{asset('frontend/images/logo trans.png')}}" alt="">
+        </div>
+        <div class="flex justify-end items-center">
+            <img class="rounded-[8px]  absolute w-[250px] scale-x-[-1] h-[148px] top-[50%] opacity-10"src="{{asset('frontend/images/logo trans2.png')}}" alt="">
         </div>
         <div class="icons pt-[50px] overflow-hidden w-[80%] mx-auto pb-[50px]">
             <div class="title flex justify-center items-center text-white pb-[30px]">
@@ -131,9 +140,7 @@
     </div>
     <div class="the-pahe bg-white relative pt-[50px]">
         <div class="about-us relative">
-            <div class="colr absolute ">
-                <img class="w-[62%]" src="{{asset('frontend/images/middle1.png')}}" alt="">
-            </div>
+
             <div class="main flex-col justify-center items-center text-center">
                 <div class="title font-500 text-[50px] text-[#0B2131]">
                     نحن نقدم هذه الخدمات
@@ -145,29 +152,29 @@
                 </p>
             </div>
             <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[50px] py-[80px] flex-wrap">
-                <div class="flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[160px] h-[160px] rounded-[32px] border-[2px] border-[#0B2131]">
+                <div class="aa flex flex-col justify-center items-center gap-[30px]">
+                    <div class="flex justify-center items-center bg-white  rounded-[32px] ">
                         <img src="{{asset('frontend/images/Group1.png')}}" alt="">
                     </div>
-                    <p class="font-[500] text-[30px] text-center text-[#0B2131]">تصميم التخطيط</p>
+                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم التخطيط</p>
                 </div>
-                <div class="flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[160px] h-[160px] rounded-[32px] border-[2px] border-[#0B2131]">
+                <div class="bb flex flex-col justify-center items-center gap-[30px]">
+                    <div class="flex justify-center items-center bg-white  rounded-[32px] ">
                         <img src="{{asset('frontend/images/Group2.png')}}" alt="">
                     </div>
-                    <p class="font-[500] text-[30px] text-center text-[#0B2131]">التصميم الجرافيكي</p>
+                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم جرافك</p>
                 </div>
-                <div class="flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[160px] h-[160px] rounded-[32px] border-[2px] border-[#0B2131]">
+                <div class="cc flex flex-col justify-center items-center gap-[30px]">
+                    <div class="flex justify-center items-center bg-white rounded-[32px] ">
                         <img src="{{asset('frontend/images/Group3.png')}}" alt="">
                     </div>
-                    <p class="font-[500] text-[30px] text-center text-[#0B2131]">تصميم الهاتف </p>
+                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم الهاتف </p>
                 </div>
-                <div class="flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[160px] h-[160px] rounded-[32px] border-[2px] border-[#0B2131]">
+                <div class="dd flex flex-col justify-center items-center gap-[30px]">
+                    <div class="flex justify-center items-center bg-white rounded-[32px] ">
                         <img src="{{asset('frontend/images/Group4.png')}}" alt="">
                     </div>
-                    <p class="font-[500] text-[30px] text-center text-[#0B2131]">تصميم الويب</p>
+                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم الويب</p>
                 </div>
             </div>
         </div>
@@ -187,7 +194,7 @@
                 </p>
             </div>
             <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[25px] flex-wrap">
-                    <div class="box1 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">~$100 billion</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             حجم التداول التراكمي
@@ -195,7 +202,7 @@
                             حتى تاريخه
                         </div>
                     </div>
-                    <div class="box2 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">0.8%</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             من حجم تداول العملات
@@ -203,7 +210,7 @@
                             المشفرة العالمية
                         </div>
                     </div>
-                    <div class="box3 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] transition-all duration-500 items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] transition-all duration-500 items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">~30</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             زملاء فريق الجاذبية
@@ -211,7 +218,7 @@
                             (& ينمون)
                         </div>
                     </div>
-                    <div class="box4 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">25+</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             البورصات العالمية والمحلية الرائدة
@@ -219,34 +226,34 @@
                             في مجال العملات المشفرة
                         </div>
                     </div>
-                    <div class="box5 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">2017</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             البداية، مواطنو التشفير
                         </div>
                     </div>
-                    <div class="box6 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">1,200+</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             أزواج الأصول المشفرة
                         </div>
                     </div>
-                    <div class="box7 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">24/7</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             السيولة
                         </div>
                     </div>
-                    <div class="box8 flex flex-col text-center justify-center p-[15px] hover:bg-custom-gradient rounded-[20px] items-center w-[264px] h-[180px]">
+                    <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]">
                         <div class="font-[500] text-[32px]">50+الف</div>
                         <div class="font-[400] leading-[30px] text-center text-[20px]">
                             الصفقات التي تمت حتى الآن
                         </div>
                     </div>
             </div>
-            <div class="colr absolute bottom-[-59px] z-[1] opacity-20 left-[150px]"> <img src="{{asset('frontend/images/middle2.png')}}" alt=""></div>
+            <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img src="{{asset('frontend/images/logo trans.png')}}" alt=""></div>
         </div>
-        <div class="products p-[50px] bg-[#ffe0a2]">
+        <div class="products p-[50px] bg-black text-white">
             <div class="main flex flex-col justify-center items-center text-center">
                 <div class="title font-500 text-[56px]"> نبذة عن فريق جرافيتي</div>
                 <p class="font-[400] text-[20px] leading-[30px]">
@@ -262,11 +269,15 @@
             <div class="accordon py-[50px] gap-[25px] flex flex-col">
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[45px] ">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
-                            <img class="rounded-[18px] " src="{{asset('frontend/images/accordion1.png')}}" alt="">
+                        <div class="image">
+                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out" src="{{asset('frontend/images/accordion1.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
-                            <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                            <div class="tot flex justify-between items-center">
+                                <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-arrow-down"></i>                                </div>
+                            </div>
                             <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
                                 في Gravity Team، نحن في مهمة
                                 <br>
@@ -278,17 +289,42 @@
                             </p>
                         </div>
                     </div>
-                    <div class="icon">
-                        <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
+
+                </div>
+                <div class="accor cursor-pointer flex justify-center items-center ">
+                    <div class="min flex justify-center gap-[45px] ">
+                        <div class="image">
+                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out  " src="{{asset('frontend/images/accordion2.png')}}" alt="">
+                        </div>
+                        <div class="flex flex-col gap-[15px]">
+                            <div class="tot flex justify-between items-center">
+                                <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-arrow-down"></i>                                </div>
+                            </div>
+                            <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
+                                في Gravity Team، نحن في مهمة
+                                <br>
+                                لتحقيق التوازن بين العرض والطلب في أسواق العملات المشفرة في جميع أنحاء العالم.
+                                <br>
+                                نحن صانع سوق للعملات المشفرة
+                                <br>
+                                أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[45px] ">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
-                            <img class="rounded-[18px] " src="{{asset('frontend/images/accordion2.png')}}" alt="">
+                        <div class="image ">
+                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out" src="{{asset('frontend/images/accordion3.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
-                            <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                            <div class="tot flex justify-between items-center">
+                                <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-arrow-down"></i>                                </div>
+                            </div>
                             <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
                                 في Gravity Team، نحن في مهمة
                                 <br>
@@ -300,17 +336,18 @@
                             </p>
                         </div>
                     </div>
-                    <div>
-                        <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
-                    </div>
+
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[45px] ">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
-                            <img class="rounded-[18px] " src="{{asset('frontend/images/accordion3.png')}}" alt="">
+                        <div class="image ">
+                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out" src="{{asset('frontend/images/accordion4.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
-                            <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                            <div class="tot flex justify-between items-center">
+                                <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
                             <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
                                 في Gravity Team، نحن في مهمة
                                 <br>
@@ -321,40 +358,19 @@
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
                         </div>
-                    </div>
-                    <div>
-                        <i class=" transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
-                    </div>
-                </div>
-                <div class="accor cursor-pointer flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[45px] ">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
-                            <img class="rounded-[18px] " src="{{asset('frontend/images/accordion4.png')}}" alt="">
-                        </div>
-                        <div class="flex flex-col gap-[15px]">
-                            <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
-                            <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
-                                في Gravity Team، نحن في مهمة
-                                <br>
-                                لتحقيق التوازن بين العرض والطلب في أسواق العملات المشفرة في جميع أنحاء العالم.
-                                <br>
-                                نحن صانع سوق للعملات المشفرة
-                                <br>
-                                أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
                     </div>
                 </div>
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[45px]">
-                        <div class="image transition-all duration-300 ease-in-out max-w-[50px]">
-                            <img class="rounded-[18px] " src="{{asset('frontend/images/accordion5.png')}}" alt="">
+                        <div class="image ">
+                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out" src="{{asset('frontend/images/accordion5.png')}}" alt="">
                         </div>
                         <div class="flex flex-col gap-[15px]">
-                            <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                            <div class="tot flex justify-between items-center">
+                                <div class="tit font-[600] text-[28px]">تصميم الويب والهواتف المحمولة</div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-arrow-down"></i>                                </div>
+                            </div>
                             <p class="pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
                                 في Gravity Team، نحن في مهمة
                                 <br>
@@ -365,9 +381,6 @@
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
                         </div>
-                    </div>
-                    <div>
-                        <i class="transition-transform duration-300 ease-in-out fa-solid fa-plus"></i>
                     </div>
                 </div>
             </div>
@@ -403,9 +416,23 @@
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">أنماط نايزاك</div>
                 </div>
             </div>
+            <div class="allVeow flex justify-center items-center pt-[50px]">
+                <div class="gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
+                    <a href="#">جميع الالعمال السابقه</a>
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+                </div>
+            </div>
         </div>
         <div class="previousTwo">
             <div class="box">
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+                <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
                 <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
                 <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
                 <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
@@ -566,7 +593,7 @@
             </div>
             <div class="Opinions py-[65px] bg-[#282f4b] flex gap-[24px] overflow-hidden">
 
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -578,7 +605,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -590,7 +617,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -602,7 +629,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -614,7 +641,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -626,7 +653,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -638,7 +665,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
@@ -650,7 +677,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
+                <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
                     <div>
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">

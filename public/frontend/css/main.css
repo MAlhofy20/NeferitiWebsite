@@ -18,6 +18,9 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* input:focus{
     border: none;
@@ -61,9 +64,9 @@ textarea::-webkit-scrollbar {
 
 }
 
-.custom-gradient {
-    background: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
-  }
+
+
+
 
 .main .icons {
     position: relative;
@@ -292,3 +295,214 @@ textarea::-webkit-scrollbar {
     height: 100%;
     object-fit: cover;
 }
+
+
+
+/*
+ */
+ /* /
+ / */
+
+
+
+.cursor-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.cursor-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    top: -100%;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.cursor-box:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.not-allowed {
+    background: linear-gradient(145deg, #2a2a2a, #383838);
+    border: 2px solid #f44336;
+}
+.not-allowed:hover {
+    transform: scale(1.05);
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Animations */
+
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0) scale(1.05); }
+    25% { transform: translateX(-5px) scale(1.05); }
+    75% { transform: translateX(5px) scale(1.05); }
+}
+
+ /* /   zxcvzxcv xzv xzv xzc  */
+
+.start {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+  box-shadow: 0 0 15px 0px #808080;
+  cursor: pointer;
+}
+
+.start a {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+.start:hover a {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+.start:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+.start:hover:before {
+  top: 0;
+}
+.start:before {
+  background: #0077b5;
+}
+/*  / */
+/*
+
+ */
+
+
+
+
+  .about-us .cards .aa ,
+  .about-us .cards .cc,
+  .about-us .cards .dd,
+  .about-us .cards .bb{
+    text-decoration: none;
+    position:relative;
+    display:block;;
+    background: #fff;
+    text-align:center;
+    transform: rotate(-30deg) skew(25deg) translate(0,0);
+    transition:.5s;
+    box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+  }
+  .about-us .cards .aa::before,
+  .about-us .cards .cc::before,
+  .about-us .cards .dd::before,
+  .about-us .cards .bb::before {
+    content: '';
+    position: absolute;
+    top:10px;
+    left:-20px;
+    height:100%;
+    width:20px;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+  }
+  .about-us .cards .aa::after,
+  .about-us .cards .cc::after,
+  .about-us .cards .dd::after,
+  .about-us .cards .bb::after {
+    content: '';
+    position: absolute;
+    bottom:-20px;
+    left:-10px;
+    height:20px;
+    width:100%;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+  }
+
+  .about-us .cards .aa:hover ,
+  .about-us .cards .cc:hover,
+  .about-us .cards .dd:hover,
+  .about-us .cards .bb:hover {
+    transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+  }
+
+  .about-us .cards:hover .aa {
+    color:#fff;
+  }
+
+  .about-us .cards:hover .aa {
+    color:#fff;
+  }
+
+  .about-us .cards .aa:hover,
+  .about-us .cards .aa:hover div{
+    background: #3b5998;
+  }
+  .about-us .cards .aa:hover:before{
+    background: #365492;
+  }
+  .about-us .cards .aa:hover:after{
+    background: #4a69ad;
+  }
+
+  .about-us .cards .bb:hover,
+  .about-us .cards .bb:hover div{
+    background: #00aced;
+  }
+  .about-us .cards .bb:hover:before{
+    background: #097aa5;
+  }
+  .about-us .cards .bb:hover:after{
+    background: #53b9e0;
+  }
+
+  .about-us .cards .cc:hover,
+  .about-us .cards .cc:hover div{
+    background: #dd4b39;
+  }
+  .about-us .cards .cc:hover:before{
+    background: #b33a2b;
+  }
+  .about-us .cards .cc:hover:after{
+    background: #e66a5a;
+  }
+
+  .about-us .cards .dd:hover,
+  .about-us .cards .dd:hover div{
+    background: #21532a;
+  }
+  .about-us .cards .dd:hover:before{
+    background: #21532a;
+  }
+  .about-us .cards .dd:hover:after{
+    background: #21532a;
+  }

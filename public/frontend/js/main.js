@@ -1,7 +1,7 @@
 // accordion
 
 let accordions = document.querySelectorAll(".accordon .accor");
-let images = document.querySelectorAll(".accordon .accor .min .image");
+let images = document.querySelectorAll(".accordon .accor .min .image img");
 let icons = document.querySelectorAll(".accordon .accor .icon i");
 let paragraphs = document.querySelectorAll(".accordon p");
 let titles = document.querySelectorAll(".accordon .tit");
@@ -22,18 +22,18 @@ document.addEventListener("click", function (e) {
                 if (currentMaxHeight === "0px" || !currentMaxHeight) {
                     paragraph.style.maxHeight = paragraph.scrollHeight + "px";
                     paragraph.style.opacity = "1";
-                    image.style.maxWidth = "100px";
-                    image.style.height = "10px";
+                    image.style.height = "140px";
+
                 } else {
                     paragraph.style.maxHeight = "0";
                     paragraph.style.opacity = "0";
-                    image.style.maxWidth = "50px";
+                    image.style.height = "40px";
                 }
             } else {
                 // إغلاق العناصر الأخرى
                 paragraph.style.maxHeight = "0";
                 paragraph.style.opacity = "0";
-                image.style.maxWidth = "50px";
+                image.style.height = "40px";
             }
         });
     }
@@ -95,4 +95,19 @@ window.onmousemove = function (e) {
 const spans = document.querySelectorAll('.box span');
 spans.forEach((span, index) => {
     span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
+});
+
+
+
+
+
+let boxColor = document.querySelector('.boxColor div');
+console.log(boxColor);
+
+boxColor.addEventListener('mouseenter', () => {
+    box.style.background = 'linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%)';
+});
+
+boxColor.addEventListener('mouseleave', () => {
+    box.style.background = 'red';
 });
