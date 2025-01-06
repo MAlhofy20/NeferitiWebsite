@@ -21,7 +21,7 @@ Route::get('/', function () {
     Route::get('dashboard/login', [AuthDashController::class, 'login_page'])->name('login');
     Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name('login.check');
 
-    Route::get('/', [HomeDashController::class, 'index'])->name('dashboard.home');
+    // Route::get('/', [HomeDashController::class, 'index'])->name('dashboard.home');
 
 // Route::name('dashboard.')->prefix('dashboard')->middleware([LangMiddleware::class, 'auth'])->group(function () {
 //     Route::get('/', [HomeDashController::class, 'index'])->name('home');
