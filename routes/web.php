@@ -18,48 +18,48 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([LangMiddleware::class])->group(function () {
     Route::get('dashboard/login', [AuthDashController::class, 'login_page'])->name('login');
     Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name('login.check');
-});
 
-Route::name('dashboard.')->prefix('dashboard')->middleware([LangMiddleware::class, 'auth'])->group(function () {
-    Route::get('/', [HomeDashController::class, 'index'])->name('home');
+    Route::get('/', [HomeDashController::class, 'index'])->name('dashboard.home');
+
+// Route::name('dashboard.')->prefix('dashboard')->middleware([LangMiddleware::class, 'auth'])->group(function () {
+//     Route::get('/', [HomeDashController::class, 'index'])->name('home');
    
-    Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
-    Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
+//     Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
+//     Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
     
-    Route::get('profile', [ProfileController::class, 'index'])->name('profile');
-    Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+//     Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
 
-    Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
-    Route::get('blogs/create', [BlogController::class, 'create'])->name('blogs.create');
-    Route::post('blogs/store', [BlogController::class, 'store'])->name('blogs.store');
-    Route::get('blogs/edit/{blog_id}', [BlogController::class, 'edit'])->name('blogs.edit');
-    Route::put('blogs/update/{blog_id}', [BlogController::class, 'update'])->name('blogs.update');
-    Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'delete'])->name('blogs.delete');
+//     Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
+//     Route::get('blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+//     Route::post('blogs/store', [BlogController::class, 'store'])->name('blogs.store');
+//     Route::get('blogs/edit/{blog_id}', [BlogController::class, 'edit'])->name('blogs.edit');
+//     Route::put('blogs/update/{blog_id}', [BlogController::class, 'update'])->name('blogs.update');
+//     Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'delete'])->name('blogs.delete');
     
     
-    Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
-    Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
+//     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
+//     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
     
-    Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
-    Route::post('messages', [MessageController::class, 'delete'])->name('messages.delete');
+//     Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
+//     Route::post('messages', [MessageController::class, 'delete'])->name('messages.delete');
 
-    Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
-    Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');
-    Route::post('external_pages/store', [ExternalPageController::class, 'store'])->name('external_pages.store');
-    Route::get('external_pages/edit/{external_page_id}', [ExternalPageController::class, 'edit'])->name('external_pages.edit');
-    Route::put('external_pages/update/{external_page_id}', [ExternalPageController::class, 'update'])->name('external_pages.update');
-    Route::delete('external_pages/delete/{external_page_id}', [ExternalPageController::class, 'delete'])->name('external_pages.delete');
-    Route::get('external_pages/{external_page_id}', [ExternalPageController::class, 'show'])->name('external_pages.show');
+//     Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
+//     Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');
+//     Route::post('external_pages/store', [ExternalPageController::class, 'store'])->name('external_pages.store');
+//     Route::get('external_pages/edit/{external_page_id}', [ExternalPageController::class, 'edit'])->name('external_pages.edit');
+//     Route::put('external_pages/update/{external_page_id}', [ExternalPageController::class, 'update'])->name('external_pages.update');
+//     Route::delete('external_pages/delete/{external_page_id}', [ExternalPageController::class, 'delete'])->name('external_pages.delete');
+//     Route::get('external_pages/{external_page_id}', [ExternalPageController::class, 'show'])->name('external_pages.show');
 
     
-    Route::post('logout', function () {
-        auth()->logout();
-        return redirect()->route('login')->with('success', 'تم تسجيل الخروج بنجاح');
-    })->name('logout');
-});
+//     Route::post('logout', function () {
+//         auth()->logout();
+//         return redirect()->route('login')->with('success', 'تم تسجيل الخروج بنجاح');
+//     })->name('logout');
+// });
 
 
 Route::get('language/{locale}', function($locale){
