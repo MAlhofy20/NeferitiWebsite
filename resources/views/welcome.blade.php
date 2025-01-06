@@ -24,7 +24,7 @@
         </style>
         {{-- bg-[#041527] --}}
     </head>
-    <body dir="rtl" class="bg">
+    <body dir="rtl" class="bg h-[10000px]">
     <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
         <div class = "flex justify-center">
             <div id="menu" class="active fixed">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="flex justify-center items-center">
-            <img class="rounded-[8px]  absolute w-[250px] h-[148px] top-[80px] opacity-10"src="{{asset('frontend/images/logo trans.png')}}" alt="">
+            <img class="rounded-[8px]  absolute  right-0 top-[80px] opacity-10"src="{{asset('frontend/images/logo trans.png')}}" alt="">
         </div>
         <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px]">
             <div class="title">
@@ -62,7 +62,7 @@
                 <a class="cursor-box not-allowed bg-gray-800 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
             </div>
         </div>
-        <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[50px]">
+        <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px]">
             <div class="title flex justify-center items-center text-white pb-[30px]">
                 موثوق به من قبل أكثر من 25000 شركة
             </div>
@@ -385,7 +385,6 @@
 
             </div>
         </div>
-
         <div class="previous-work bg-[#0b2131] text-white p-[20px] md:p-[50px]">
             <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]">
                 <div class="font-[600] text-[22px]">اعمال سابقه</div>
@@ -582,7 +581,7 @@
         </div>
         <div id="clients" class="clients bg-[#282f4b] text-white">
             <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
-                <div class="tit font-bold max-w-[600px] text-[33px] px-[20px] text-center">
+                <div class="tit font-bold max-w-[600px] text-[22px] md:text-[33px] px-[20px] text-center">
                     يحب الكثير من الأشخاص الآخرين
                     بناء وشحن
                     المواقع باستخدام Framer.
@@ -592,10 +591,10 @@
                     <i class="fa-solid fa-turn-down"></i>
                 </div>
             </div>
-            <div class="Opinions overflow-hidden transition-translate duration-500"  >
-                <div class="all py-[65px] bg-[#282f4b] flex gap-[24px] transition-translate duration-500 ">
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] max-w-[1500px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+            <div class="Opinions overflow-hidden transition-translate duration-500 pr-[20px] ">
+                <div class="all md:py-[65px] py-[40px] bg-[#282f4b] flex gap-[24px] transition-translate duration-500 ">
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -606,8 +605,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -618,8 +617,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -630,8 +629,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -642,8 +641,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -654,8 +653,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -666,8 +665,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
+                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                 خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -678,23 +677,126 @@
                             </div>
                         </div>
                     </div>
-                    <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[50px] max-h-[350px] flex w-[500px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[45px] fa-solid fa-quote-right"></i>
-                        <div>
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
             <div class="angle flex justify-center items-center pb-[20px] gap-[20px] cursor-pointer">
                 <i class="  left bg-[#1c1c1e] p-3 rounded-full w-10 h-10 flex justify-center items-center fa-solid fa-angle-right"></i>
                 <i class="  right bg-[#1c1c1e] p-3 rounded-full w-10 h-10 flex justify-center items-center fa-solid fa-angle-left"></i>
+            </div>
+        </div>
+        <div class="section-info p-[50px] bg-[#000000] flex flex-wrap justify-center">
+            <div class="all flex flex-wrap justify-center flex-row-reverse rounded-[20px] w-[1000px] overflow-hidden shadow-[3px_-4px_5px_0px_#fff]">
+                <!-- Contact Form -->
+                <div class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8 ">
+                <h3 class="mb-5 text-[30px] font-bold text-[cyan]">تواصل معنا</h3>
+                <div class="form">
+                    <div class="form-group mb-[20px]">
+                        <input type="text" class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm" name="name" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group mb-[20px]">
+                        <input type="email" class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group mb-[20px]">
+                        <input type="text" class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm" name="subject" id="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group mb-[20px]">
+                        <textarea name="message" class="form-control w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e]  border border-[#444] rounded-sm bg-[#333] text-white text-sm placeholder-[#bbb]" id="message" rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group mb-[20px]  cursor-pointer  ">
+                        <input type="submit" value="Send Message" class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
+                    </div>
+                </div>
+                </div>
+                <!-- Contact Information -->
+                <div class="contact-info flex-[1_1_300px] bg-[#1c1e25] p-8 text-[#dcdcdc]">
+                <h3 class="mb-[20px] text-[30px] font-bold text-[cyan]">معلومات للتواصل معنا</h3>
+                <p class="mb-[20px] leading-9 text-[20px] text-[#666666]">نحن منفتحون على أي اقتراح  <br> أو مجرد الدردشة</p>
+                <div class="info-item  text-[#666666] flex gap-[20px] justify-start items-baseline mb-[15px]">
+                    <div class=" w-[50px] h-[50px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <i class="te1 text-[#fff] fa-solid fa-location-dot"></i></div>
+                        <div class="flex">
+                            <span class="text-[#fff] pl-[10px] flex ">  العنوان : </span>
+                            <p class="tex1 leading-6"> 198 غرب شارع 21، الجناح 721 نيويورك<br> نيويورك 10016</p>
+                        </div>
+                </div>
+                <div class="info-item flex gap-[20px] justify-start items-center mb-[15px] ">
+                    <div class=" w-[50px] h-[50px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <i class="te1 text-[#fff] fa-solid fa-phone-volume"></i></div>
+                    <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span><a class="text-[#666666] no-underline link8" href="tel:+1235235598">+ 1235 2355 98</a></p>
+                </div>
+                <div class="info-item  flex gap-[20px] justify-start items-center mb-[15px]">
+                    <div class="w-[50px] h-[50px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <i class="te1 text-[#fff] fa-solid fa-envelope"></i></div>
+                    <p><span class="text-[#fff] pl-[10px]"> الاميل : </span><a class="text-[#666666] no-underline link8" href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                </div>
+                <div class="info-item flex gap-[20px] justify-start items-center mb-[15px]">
+                    <div class="w-[50px] h-[50px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
+                    </div>
+                    <p><span class="text-[#fff] pl-[10px]"> الموقع الإلكتروني : </span><a class="text-[#666666] no-underline link8" href="#">yoursite.com</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
+            <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_f_1833_4737)"><ellipse cx="618.5" cy="-213" rx="268.5" ry="268" fill="#48DCFF"></ellipse></g><defs><filter id="filter0_f_1833_4737" x="0" y="-831" width="1237" height="1236" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur_1833_4737"></feGaussianBlur></filter></defs></svg></div>
+            <div class="information pb-[10px] lg:pb-[50px] flex justify-center lg:justify-between flex-wrap  gap-[40px]">
+                <div class="main-fot leading-[26px]">
+                    <div class="logo ml-[10px]">
+                        <img class="rounded-[8px] w-[65px] h-[88px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
+                    </div>
+                    <p class="max-w-[414px] text-[#FFFFFF] leading-[26px] pt-[24px] t">
+                        خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.                    </p>
+                </div>
+                <div class="overview max-w-[275px] leading-[26px]">
+                    <div class="font-[700] text-[24px]">اختصارات</div>
+                    <div class="list">
+                        <ul class="flex flex-wrap gap-y-4 pt-[24px] leading-[16px]">
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">افكار</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">المحتوي</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">الاخبار</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">الخدمات</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">الاراء</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">التواصل معنا</a></li>
+                            <li class="w-1/2 hover:font-bold"><a class="link9" href="#">اعمالنا السابقه</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-Us leading-[24px]">
+                    <div class="font-[700] text-[24px]">للتواصل</div>
+                    <div class="forYou pt-[24px]">
+                        <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span><a class=" no-underline link9" href="tel:+1235235598">+ 1235 2355 98</a></p>
+                        <p class="py-[10px]"><span class="text-[#fff] pl-[10px]"> الاميل : </span><a class=" no-underline link9" href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><span class="text-[#fff] pl-[10px]"> الموقع الإلكتروني : </span><a class=" no-underline link9" href="#">yoursite.com</a></p>
+                    </div>
+                    <div class="icone py-[18px]  text-[40px] flex gap-[16px] lg:justify-start justify-center ">
+                        <a class=" facebook" href="https://www.facebook.com/">
+                            <i class=" fa-brands fa-facebook"></i>
+                        </a>
+                        <a class=" x " href="https://x.com/?lang=en">
+                            <i class=" fa-brands fa-twitter"></i>
+                        </a>
+                        <a class="start2 instagram" href="https://www.instagram.com/?hl=en">
+                            <i class="  fa-brands fa-instagram"></i>
+                        </a>
+                        <a class=" whatsapp" href="https://web.whatsapp.com/">
+                            <i class="  fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="location border-t border-white py-[20px] gap-[10px] flex-wrap flex justify-between items-center">
+                <div class="locati flex gap-[8px] items-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="country">Riyadh - KSA</div>
+                </div>
+                <div class="locati-sp flex flex-wrap gap-[10px]">
+                    <span>Terms and conditions</span>
+                    <span>Privacy police </span>
+                </div>
             </div>
         </div>
     </div>

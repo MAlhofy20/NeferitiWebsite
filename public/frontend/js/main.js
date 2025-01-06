@@ -143,7 +143,7 @@ document.addEventListener("click", function (el) {
             opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
         }
     } else if (ico.classList.contains("right")) {
-        if (currentIndex < totalCards - 3) { // Assuming 3 cards are visible
+        if (currentIndex < totalCards - 5) { // Assuming 3 cards are visible
           currentIndex++;
           opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
         }
