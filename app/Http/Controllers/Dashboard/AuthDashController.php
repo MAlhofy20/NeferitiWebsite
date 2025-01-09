@@ -21,7 +21,6 @@ class AuthDashController extends Controller
             'password' => 'required',
         ]);
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
-            dd('in');
             return redirect()->route('dashboard.home')->with('success', 'تم تسجيل الدخول بنجاح');
         } else {
             return redirect()->back()->with('error', 'البريد الالكتروني او كلمة المرور غير صحيحة');
