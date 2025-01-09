@@ -122,34 +122,32 @@ titless.forEach((title, index) => {
 
 
 
-
 // Services
-let icon = document.querySelectorAll(".clients .angle i");
-let boxOpinions = document.querySelectorAll(".clients .Opinions .all .boxOpinions");
-let opinionsWrapper = document.querySelector(".clients .Opinions .all");
-
-let currentIndex = 0;
-let totalCards = boxOpinions.length;
-console.log(totalCards);
 
 
-document.addEventListener("click", function (el) {
-    icon.forEach((ico) => {
-    if (el.target === ico) {
-      if (ico.classList.contains("left")) {
+/* inimation 2*/
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".Opinions .all");
+    const scrollSpeed = 2; // السرعة (بيكسل لكل إطار)
 
-        if (currentIndex > 0) {
-            currentIndex--;
-            opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
-        }
-    } else if (ico.classList.contains("right")) {
-        if (currentIndex < totalCards - 5) { // Assuming 3 cards are visible
-          currentIndex++;
-          opinionsWrapper.style.transform = `translateX(${currentIndex * 524}px)`;
-        }
+    // استنساخ المحتوى لملء العرض للحركة المستمرة
+    const clone = container.innerHTML;
+    container.innerHTML += clone;
+
+    let scrollPosition = 0;
+
+    function scrollContent() {
+      scrollPosition += scrollSpeed; // التحرك بالعكس
+      container.style.transform = `translateX(${scrollPosition}px)`;
+
+      // إعادة ضبط الحركة عند النهاية
+      if (scrollPosition >= container.scrollWidth / 2) {
+        scrollPosition = 0;
       }
+
+      requestAnimationFrame(scrollContent);
     }
+
+    scrollContent();
   });
-});
-
-
+/* inimation 2*/

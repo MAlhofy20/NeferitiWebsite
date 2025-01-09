@@ -6,6 +6,25 @@
     padding: 0;
     margin: 0;
 }
+
+[data-aos="anim3"] {
+    transform: skewX(45deg);
+    opacity: 0;
+    transition-property: transform, opacity;
+    &.aos-animate {
+      transform: skewX(0);
+      opacity: 1;
+    }
+  }
+  [data-aos="anim"] {
+    transform: skewX(45deg);
+    opacity: 0;
+    transition-property: transform, opacity;
+    &.aos-animate {
+      transform: skewX(0);
+      opacity: 1;
+    }
+  }
 body {
     font-family: "El Messiri", "Baloo Bhaijaan 2", "Rakkas", serif;
     font-optical-sizing: auto;
@@ -90,48 +109,39 @@ html {
 .boxColor:hover::before {
     opacity: 1; /* تفعيل التدرج عند التمرير */
 }
-.main .icons {
+.main-icon{
+    display: flex;
+    gap: 65px;
+    overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease;
-}
-
-.main .icon .main-icon {
-    position: relative;
-    transition: transform 0.5s ease;
-}
-
-
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-280px * 4));
-    }
   }
 
-@keyframes scrollRight {
+  .main-icon .right img {
+    animation: scroll-left  10s linear  infinite ;
+  }
+  .main-icon .left img{
+    animation: scroll-right 10s linear infinite ;
+  }
+
+  @keyframes scroll-left {
     0% {
-    transform: translateX(0%);
-    }
-    100% {
-    transform: translateX(calc(280px * 4));
-    }
-}
-
-.animate-scrollLeft {
-    animation: scrollLeft 15s linear infinite;
-}
-
-.animate-scrollRight {
-    animation: scrollRight 15s linear infinite;
-}
-
-.icon:hover {
-    animation-play-state: paused;
-}
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(1215.35px);
+      }
+  }
+  @keyframes scroll-right {
+    0% {
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(-1215.35px);
+      }
+  }
 
 
+/* inimation 1*/
 
 .main .icons .right::before{
     content: "";
@@ -140,7 +150,7 @@ html {
     background-size: cover;
     background-blend-mode: overlay;
     width: 13%;
-    height: 40%;
+    height: 110px;
     left: 0;
     z-index: 1;
 }
@@ -151,14 +161,17 @@ html {
     background-size: cover;
     background-blend-mode: overlay;
     width: 13%;
-    height: 40%;
+    height: 110px;
     right: 0;
-    top: 100px;
+    top: 0;
     z-index: 1;
 }
 
+/* inimation 1*/
 /* //////////////////////////
- */
+*/
+
+
 
 
 
@@ -354,7 +367,7 @@ html {
 
 .not-allowed {
     background: linear-gradient(145deg, #2a2a2a, #383838);
-    border: 2px solid #f44336;
+    border: 2px solid 2px solid #00000061;
 }
 .not-allowed:hover {
     transform: scale(1.05);
@@ -534,7 +547,9 @@ html {
     backdrop-filter: blur(20px);
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
+  .custom-btn1{
 
+  }
 
 .blogs .link1 {
     background-color: #097aa5;
@@ -666,33 +681,108 @@ html {
         /* */
 
 
-/* 
-          .start2  {
+
+
+        .start2 {
             position: relative;
-            color: #262626;
-            transition: .5s;
-
-            overflow: hidden;
           }
-          .start2:hover  {
-            color: #fff;
 
-          }
-          .start2:before {
-            content: "";
+          .iconeweb .instagram::before {
+            content: "\f16d";
+            background-image: linear-gradient(
+              45deg,
+              #f09433 0%,
+              #e6683c 25%,
+              #dc2743 50%,
+              #cc2366 75%,
+              #bc1888 100%
+            );
+            -webkit-background-clip: text;
+            font-weight: 900;
+            -webkit-text-fill-color: transparent;
+            font-family: "FontAwesome";
             position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #f00;
-            color: #21532a;
-            transition: .5s;
+            display: flex;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+            align-items: center;
+          }
 
+          .iconeweb .instagram:hover::before {
+            height: 100%;
           }
-          .start2:hover:before {
-            top: 0;
+
+          .iconeweb .whatsapp::before {
+            content: "\f232";
+            color: #25d366;
+            font-family: "FontAwesome";
+            position: absolute;
+            display: flex;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+            align-items: center;
           }
-          .start2:before {
-            color: #0077b5; */
+
+          .iconeweb .whatsapp:hover::before {
+            height: 100%;
+          }
+
+          .iconeweb .facebook::before {
+            content: "\f39e";
+            color: #1da1f2;
+            font-family: "FontAwesome";
+            position: absolute;
+            display: flex;
+            height: 0;
+            justify-content: center;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+            align-items: center;
+            font-size: 33px;
+            left: 10px;
+            top: 4px;
+          }
+
+          .iconeweb .facebook:hover::before {
+            height: 100%;
+          }
+          .iconeweb .x::before {
+            content: "\f099";
+            color: #1da1f2;
+            font-family: "FontAwesome";
+            position: absolute;
+            display: flex;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+            align-items: center;
+          }
+
+          .iconeweb .x:hover::before {
+            height: 100%;
+          }
+
+
+          /* line */
+
+          .blogs .tit{
+            position: relative;
+            cursor: pointer;
+          }
+          .blogs .tit::before{
+            content: '';
+            background: #54b3d6;
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 0;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+          }
+
+          .blogs .tit:hover::before{
+            width: 100%;
           }
