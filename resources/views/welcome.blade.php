@@ -14,8 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
                 integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
                 crossorigin="anonymous" referrerpolicy="no-referrer">
-
-            <!-- Local Stylesheets -->
+        <!-- Local Stylesheets -->
         <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
         <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -24,42 +23,39 @@
                 background: linear-gradient(to bottom left, #1091ff -73%, white 52%, transparent);
             }
         </style>
-        {{-- bg-[#041527] --}}
     </head>
     <body dir="rtl" >
-        <div class = "flex justify-center">
-            <div id="menu" class="active fixed z-[999999] ">
-                <div class="logo ml-[10px]">
-                    <img class="rounded-[8px] w-[40px] h-[50px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
-                </div>
-                <div class="content-menu lg:px-[30px]" >
-                    <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#ideas"><span>افكار</span></a></li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#products "><span>المحتوي</span></a></li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#blogs"><span>الأخبار</span></a></li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#Here"><span>خدمات</span></a></li>
-                        <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#clients"><span>الاراء</span></a></li>
-                    </ul>
-                </div>
-                <div class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
-                    <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
+        <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
+            <div class = "flex justify-center">
+                <div id="menu" class="active fixed z-[999999] ">
+                    <div class="logo ml-[10px]">
+                        <img class="rounded-[8px] w-[40px] h-[50px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
+                    </div>
+                    <div class="content-menu lg:px-[30px]" >
+                        <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
+                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#ideas"><span>افكار</span></a></li>
+                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#products "><span>المحتوي</span></a></li>
+                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#blogs"><span>الأخبار</span></a></li>
+                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#Here"><span>خدمات</span></a></li>
+                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#clients"><span>الاراء</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
+                        <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
             <div class="flex justify-center items-center">
-                <img class="rounded-[8px] w-full  absolute  right-0 top-[80px] opacity-10"src="{{asset('frontend/images/dadad.jpg')}}" alt="">
+                <img class="rounded-[8px] w-full  absolute  right-0 top-0 opacity-10"src="{{asset('frontend/images/dadad.jpg')}}" alt="">
             </div>
             <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
                 data-aos="fade-down"
                 data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
-                <p class="text-[25px] font-[500]  text-[#FFFFFF]">نفرتيتي لحلول الاعمال</p>
+                <p class="wave text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span> <span>الاعمال</span></p>
                 <div class="title">
                     <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
-                    <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 " >
+                    <p class="title12 py-[50px] px-[50px] leading-[30px] " >
                         من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
-                        <br>
                         نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
                     </p>
                 </div>

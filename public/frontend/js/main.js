@@ -1,19 +1,39 @@
-// menu
+// set intarval
+// النص الكامل
+const text = `من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق، نصنع لك نافذة تنقل أعمالك إلى بُعد آخر`;
+const words = text.split(" "); // تقسيم النص إلى كلمات
+const wordsPerBatch = 4; // عدد الكلمات في كل عرض
+const textElement = document.querySelector(".title12");
+let currentIndex = 0;
 
-// الحصول على العنصر
-let menuButton = document.querySelector('.main div #menu');
-console.log(menuButton);
+function updateText() {
+    // إخفاء النص (opacity = 0)
+    textElement.style.opacity = 0;
 
-// إضافة حدث التمرير
-window.onscroll = function() {
-  // التحقق من موضع التمرير
-  if (window.scrollY >= 100) {  // إذا كان التمرير أكثر من 100px
-    menuButton.classList.add('custom-btn');  // إضافة class عند التمرير
-  } else {
-    menuButton.classList.remove('custom-btn');  // إزالة class عند الرجوع للأعلى
-  }
-};
+    // الانتظار حتى ينتهي تأثير الإخفاء ثم تحديث النص
+    setTimeout(() => {
+        // استخراج الكلمات الحالية
+        const currentWords = words.slice(currentIndex, currentIndex + wordsPerBatch);
+        textElement.innerHTML = currentWords.join(" ");
 
+        // تحديث الفهرس
+        currentIndex += wordsPerBatch;
+        if (currentIndex >= words.length) {
+            currentIndex = 0; // إعادة البداية إذا انتهى النص
+        }
+
+        // إظهار النص (opacity = 1)
+        textElement.style.opacity = 1;
+    }, 1000); // 500 مللي ثانية لانتظار تأثير الإخفاء
+}
+
+// تحديث النص كل 2.5 ثانية
+setInterval(updateText, 2500);
+
+// عرض النص الأول عند بدء الصفحة
+updateText();
+
+// set intarval
 
 
 // accordion
