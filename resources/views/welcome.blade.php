@@ -27,8 +27,7 @@
         {{-- bg-[#041527] --}}
     </head>
     <body dir="rtl" >
-        <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
-            <div class = "flex justify-center">
+        <div class = "flex justify-center">
             <div id="menu" class="active fixed z-[999999] ">
                 <div class="logo ml-[10px]">
                     <img class="rounded-[8px] w-[40px] h-[50px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
@@ -46,9 +45,11 @@
                     <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
                 </div>
             </div>
-            </div>
+        </div>
+
+        <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
             <div class="flex justify-center items-center">
-            <img class="rounded-[8px]  absolute  right-0 top-[80px] opacity-10"src="{{asset('frontend/images/logo trans.png')}}" alt="">
+                <img class="rounded-[8px] w-full  absolute  right-0 top-[80px] opacity-10"src="{{asset('frontend/images/dadad.jpg')}}" alt="">
             </div>
             <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
                 data-aos="fade-down"
