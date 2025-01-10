@@ -54,6 +54,7 @@
             <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
                 data-aos="fade-down"
                 data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
+                <p class="text-[25px] font-[500]  text-[#FFFFFF]">نفرتيتي لحلول الاعمال</p>
                 <div class="title">
                     <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
                     <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 " >
@@ -63,7 +64,7 @@
                     </p>
                 </div>
                 <div>
-                    <a class="cursor-box not-allowed bg-gray-800 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                    <a class="cursor-box not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
                 </div>
             </div>
             <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px]" >
