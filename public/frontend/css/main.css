@@ -54,15 +54,35 @@ html {
 } */
 
 
-.content-menu ul li {
-    transition: all 0.3s ease;
-}
 
-.content-menu ul li:hover{
-    text-shadow: 1px 1px 12px white;
-    transform: translate(2px, 2px);
-}
 
+
+.content-menu ul li{
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+  }
+  .content-menu ul li::before,
+  .content-menu ul li::after{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  .content-menu ul li::after{left: 0;}
+  .content-menu ul li::before{right: 0;}
+  .content-menu ul li:hover::before,
+  .content-menu ul li:hover::after{
+    width: 51%;
+  }
+  .content-menu ul li:hover{
+    transform: translate(-2px, -2px);
+}
 .active {
     display: flex;
     justify-content: center;
@@ -183,10 +203,10 @@ html {
 .main .icons .right::before{
     content: "";
     position: absolute;
-    background: linear-gradient(to right, #041527, rgba(0, 0, 0, 0)), url(path-to-noise-image.png);
+    background: linear-gradient(to right, #ffffff2e, rgba(0, 0, 0, 0)), url(path-to-noise-image.png);
     background-size: cover;
     background-blend-mode: overlay;
-    width: 13%;
+    width: 9px;
     height: 110px;
     left: 0;
     z-index: 1;
@@ -194,10 +214,10 @@ html {
 .main .icons .left::after{
     content: "";
     position: absolute;
-    background: linear-gradient(to left, #041527, rgba(0, 0, 0, 0)), url(path-to-noise-image.png);
+    background: linear-gradient(to left, #ffffff2e, rgba(0, 0, 0, 0)), url(path-to-noise-image.png);
     background-size: cover;
     background-blend-mode: overlay;
-    width: 13%;
+    width: 9px;
     height: 110px;
     right: 0;
     top: 0;

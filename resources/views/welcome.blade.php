@@ -25,7 +25,7 @@
         </style>
     </head>
     <body dir="rtl" >
-        <div class="main bg-[#041527] pb-[50px] relative overflow-hidden">
+        <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
             <div class = "flex justify-center">
                 <div id="menu" class="active fixed z-[999999] ">
                     <div class="logo ml-[10px]">
@@ -33,11 +33,11 @@
                     </div>
                     <div class="content-menu lg:px-[30px]" >
                         <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
-                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#ideas"><span>افكار</span></a></li>
-                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#products "><span>المحتوي</span></a></li>
-                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#blogs"><span>الأخبار</span></a></li>
-                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#Here"><span>خدمات</span></a></li>
-                            <li class="font-[300] text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#clients"><span>الاراء</span></a></li>
+                            <li class="font-bold text-[16px] leading-[18.2px] text-[#FFFFFF]"><a href="#ideas"><span>افكار</span></a></li>
+                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#products "><span>المحتوي</span></a></li>
+                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#blogs"><span>الأخبار</span></a></li>
+                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#Here"><span>خدمات</span></a></li>
+                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#clients"><span>الاراء</span></a></li>
                         </ul>
                     </div>
                     <div class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="flex justify-center items-center">
-                <img class="rounded-[8px] w-full  absolute  right-0 top-0 opacity-10"src="{{asset('frontend/images/dadad.jpg')}}" alt="">
+                <img class="rounded-[8px] w-full  absolute  right-0 top-0 opacity-10" src="{{asset('frontend/images/dadad.jpg')}}" alt="">
             </div>
             <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
                 data-aos="fade-down"
@@ -54,7 +54,7 @@
                 <p class="wave text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span> <span>الاعمال</span></p>
                 <div class="title">
                     <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
-                    <p class="title12 py-[50px] px-[50px] leading-[30px] " >
+                    <p class="title12 py-[50px] px-[50px] leading-[50px] " >
                         من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
                         نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
                     </p>
@@ -176,8 +176,8 @@
                 </div>
             </div>
             </div>
-            <div  id="ideas" class="home relative overflow-hidden bg-[#0b2131] text-white p-[20px] md:p-[50px]">
-            <div class="main text-center flex gap-[10px] flex-col justify-center items-center"
+            <div  id="ideas" class="home relative overflow-hidden bg-[#101828] text-white p-[20px] md:p-[50px]">
+                <div class="main text-center flex gap-[10px] flex-col justify-center items-center"
                 data-aos="fade-down-right" data-aos-easing="linear"
                 data-aos-easing="ease-in-sine" data-aos-duration="500">
                 <div class="title font-bold md:font-500 text-[35px] md:text-[56px]">
@@ -192,8 +192,8 @@
                     <br>
                     أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                 </p>
-            </div>
-            <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[20px] flex-wrap">
+                </div>
+                <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[20px] flex-wrap">
                     <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] h-[180px]"
                     data-aos="zoom-in"  data-aos-easing="linear"
                     data-aos-easing="ease-in-sine" data-aos-duration="500">
@@ -266,8 +266,8 @@
                             الصفقات التي تمت حتى الآن
                         </div>
                     </div>
-            </div>
-            <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img src="{{asset('frontend/images/logo trans.png')}}" alt=""></div>
+                </div>
+                <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img src="{{asset('frontend/images/logo trans.png')}}" alt=""></div>
             </div>
             <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
                 <div class="main flex flex-col justify-center items-center text-center"
@@ -430,7 +430,7 @@
                     </div>
                 </div>
             </div>
-            <div class="previous-work bg-[#0b2131] text-white p-[20px] md:p-[50px]">
+            <div class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
                 <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
                  data-aos-easing="linear" data-aos-duration="1000"
                 data-aos-easing="ease-in-sine" data-aos-duration="500">
@@ -648,7 +648,7 @@
                 </div>
                 </div>
             </div>
-            <div id="clients" class="clients bg-[#282f4b] text-white">
+            <div id="clients" class="clients bg-[#101828] text-white">
                 <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
                     <div class="tit font-bold max-w-[600px] text-[22px] md:text-[33px] px-[20px] text-center"
                         data-aos="anim"  data-aos-easing="linear" data-aos-duration="500">
@@ -663,7 +663,7 @@
                     </div>
                 </div>
                 <div class="Opinions overflow-hidden transition-translate duration-500 pr-[20px] ">
-                    <div class="all md:py-[65px] py-[40px] bg-[#282f4b] flex gap-[24px] transition-translate duration-500 " >
+                    <div class="all md:py-[65px] py-[40px] bg-[#101828] flex gap-[24px] transition-translate duration-500 " >
                     <div class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                         <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div>
@@ -851,8 +851,8 @@
                 </div>
             </div>
             <div class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
-            <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_f_1833_4737)"><ellipse cx="618.5" cy="-213" rx="268.5" ry="268" fill="#48DCFF"></ellipse></g><defs><filter id="filter0_f_1833_4737" x="0" y="-831" width="1237" height="1236" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur_1833_4737"></feGaussianBlur></filter></defs></svg></div>
-            <div class="information pb-[10px] lg:pb-[50px] flex justify-center lg:justify-between flex-wrap  gap-[40px]">
+                <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_f_1833_4737)"><ellipse cx="618.5" cy="-213" rx="268.5" ry="268" fill="#48DCFF"></ellipse></g><defs><filter id="filter0_f_1833_4737" x="0" y="-831" width="1237" height="1236" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur_1833_4737"></feGaussianBlur></filter></defs></svg></div>
+                <div class="information pb-[10px] lg:pb-[50px] flex justify-center lg:justify-between flex-wrap  gap-[40px]">
                 <div class="main-fot leading-[26px]">
                     <div class="logo ml-[10px]">
                         <img class="rounded-[8px] w-[65px] h-[88px]" src="{{asset('frontend/images/logo trans.png')}}" alt="">
@@ -905,8 +905,8 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="location border-t border-white py-[20px] gap-[10px] flex-wrap flex justify-between items-center">
+                </div>
+                <div class="location border-t border-white py-[20px] gap-[10px] flex-wrap flex justify-between items-center">
                 <div class="locati flex gap-[8px] items-baseline">
                     <i class="fa-solid fa-location-dot"></i>
                     <div class="country">Riyadh - KSA</div>
@@ -915,7 +915,7 @@
                     <span>Terms and conditions</span>
                     <span>Privacy police </span>
                 </div>
-            </div>
+                </div>
             </div>
         </div>
         <script src="{{ asset('frontend/js/main.js') }}" ></script>
