@@ -1,10 +1,10 @@
-
 // accordion
 let accordions = document.querySelectorAll(".accordon .accor");
 let images = document.querySelectorAll(".accordon .accor .min .image img");
 let icons = document.querySelectorAll(".accordon .accor .icon i");
 let paragraphs = document.querySelectorAll(".accordon p");
 let titles = document.querySelectorAll(".accordon .tit");
+let ancors = document.querySelectorAll(".accordon a");
 
 document.addEventListener("click", function (e) {
     let targetTitle = e.target.closest(".tit");
@@ -14,35 +14,39 @@ document.addEventListener("click", function (e) {
             let paragraph = paragraphs[index];
             let icon = icons[index];
             let image = images[index];
+            let ancor = ancors[index];
 
             if (titles[index] === targetTitle) {
-                const currentMaxHeight = window.getComputedStyle(paragraph).maxHeight;
-
-                // تغيير حالة الفقرة
-                if (currentMaxHeight === "0px" || !currentMaxHeight) {
+                const ParagraphMaxHeight = window.getComputedStyle(paragraph).maxHeight;
+                // تغيير حالة الفقرة والأنكور
+                if (ParagraphMaxHeight === "0px" || ParagraphMaxHeight === "none") {
+                    // فتح الفقرة والأنكور
                     paragraph.style.maxHeight = paragraph.scrollHeight + "px";
                     paragraph.style.opacity = "1";
+                    ancor.style.maxHeight = ancor.scrollHeight + "px";
+                    ancor.style.opacity = "1";
                     image.style.height = "140px";
-                    icon.style.transform = "rotate(315deg)"
-
+                    icon.style.transform = "rotate(315deg)";
                 } else {
                     paragraph.style.maxHeight = "0";
                     paragraph.style.opacity = "0";
+                    ancor.style.maxHeight = "0";
+                    ancor.style.opacity = "0";
                     image.style.height = "40px";
-                    icon.style.transform = "rotate(540deg)"
-
+                    icon.style.transform = "rotate(540deg)";
                 }
             } else {
-                // إغلاق العناصر الأخرى
                 paragraph.style.maxHeight = "0";
                 paragraph.style.opacity = "0";
+                ancor.style.maxHeight = "0";
+                ancor.style.opacity = "0";
                 image.style.height = "40px";
-                icon.style.transform = "rotate(540deg)"
-
+                icon.style.transform = "rotate(540deg)";
             }
         });
     }
 });
+
 
 // here//
 

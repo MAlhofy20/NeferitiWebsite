@@ -275,19 +275,19 @@
             </div>
             <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
                 <div class="main flex flex-col justify-center items-center text-center"
-                data-aos="zoom-in-up"
-                data-aos-easing="ease-in-sine" data-aos-duration="500">
-                <div class="title font-bold md:font-500 text-[35px] md:text-[56px] pb-[20px]"> نبذة عن فريق جرافيتي</div>
-                <p class="font-[400] text-[20px] leading-[30px] px[4px]">
-                    في Gravity Team، نحن في مهمة
-                    <br>
-                    لتحقيق التوازن بين العرض والطلب في أسواق العملات المشفرة في جميع أنحاء العالم.
-                    <hr>
-                    <br>
-                    نحن صانع سوق للعملات المشفرة
-                    <br>
-                    أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
-                </p>
+                    data-aos="zoom-in-up"
+                    data-aos-easing="ease-in-sine" data-aos-duration="500">
+                    <div class="title font-bold md:font-500 text-[35px] md:text-[56px] pb-[20px]"> نبذة عن فريق جرافيتي</div>
+                    <p class="font-[400] text-[20px] leading-[30px] px[4px]">
+                        في Gravity Team، نحن في مهمة
+                        <br>
+                        لتحقيق التوازن بين العرض والطلب في أسواق العملات المشفرة في جميع أنحاء العالم.
+                        <hr>
+                        <br>
+                        نحن صانع سوق للعملات المشفرة
+                        <br>
+                        أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
+                    </p>
                 </div>
                 <div class="accordon py-[50px] gap-[25px] flex flex-col">
                     <div class="accor cursor-pointer flex justify-center items-center ">
@@ -316,6 +316,7 @@
                                 <br>
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
+                                <a class="cursor-box w-[200px] not-allowed bg-gold-button overflow-hidden opacity-0 max-h-0 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
                         </div>
                     </div>
 
@@ -345,6 +346,8 @@
                                 <br>
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
+                            <a class="cursor-box w-[200px] not-allowed bg-gold-button overflow-hidden opacity-0 max-h-0 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+
                             </div>
                         </div>
                     </div>
@@ -372,7 +375,8 @@
                                 <br>
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
-                            </div>
+                            <a class="cursor-box w-[200px] not-allowed bg-gold-button overflow-hidden opacity-0 max-h-0 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                        </div>
                         </div>
 
                     </div>
@@ -400,6 +404,7 @@
                                 <br>
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
+                            <a class="cursor-box w-[200px] not-allowed bg-gold-button overflow-hidden opacity-0 max-h-0 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
                         </div>
                         </div>
 
@@ -428,6 +433,7 @@
                                 <br>
                                 أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية والأصول الرقمية.
                             </p>
+                            <a class="cursor-box w-[200px] not-allowed bg-gold-button overflow-hidden opacity-0 max-h-0 rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
                         </div>
                     </div>
 
@@ -519,100 +525,112 @@
                 </div>
                 <div class="tow-colmn flex gap-[20px] justify-start flex-wrap">
                     <div class="one flex gap-[20px] flex-wrap">
-                    <div class="gap-[45px]" data-aos="fade-up"  data-aos-easing="linear" data-aos-duration="500">
-                        <div class="image pb-[15px]">
-                            <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                        </div>
-                        <div class="date text-[#64607D]">
-                            <span>08-11-2021</span>
-                            <span>Category</span>
-                        </div>
-                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                        </div>
-                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
-                        </p>
-                    </div>
-                    <div data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="500">
-                        <div class="image pb-[15px]">
-                            <img src="{{ asset('frontend/images/blog3.png') }}" alt="">
-                        </div>
-                        <div class="date text-[#64607D]">
-                            <span>08-11-2021</span>
-                            <span>Category</span>
-                        </div>
-                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                        </div>
-                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
-                        </p>
-                    </div>
-                    </div>
-                    <div class="two max-w-[375px]">
-                    <div class="flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-easing="ease-in-sine" data-aos-duration="500">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
+                        <a href="#" class="alla block" >
+                            <div class="gap-[45px]" data-aos="fade-up"  data-aos-easing="linear" data-aos-duration="500">
+                                <div class="image pb-[15px]">
+                                    <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                                </div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                                <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                                    رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
+                                </p>
                             </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                        </div>
+                        </a>
+                        <a href="#" class="alla">
+                            <div data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="500">
+                                <div class="image pb-[15px]">
+                                    <img src="{{ asset('frontend/images/blog3.png') }}" alt="">
+                                </div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                                <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                                    رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول لضمان السرير ضروري.
+                                </p>
+                                </div>
+                        </a>
                     </div>
-                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="600">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
+                <div class="two max-w-[375px]">
+                    <a href="#" class="alla">
+                        <div class="flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]"
+                            data-aos="fade-right" data-aos-easing="linear"
+                            data-aos-easing="ease-in-sine" data-aos-duration="500">
+                            <div class="image min-w-[110px]">
+                                <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
                             </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                            <div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="700">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
+                    </a>
+                    <a href="#" class="alla">
+                        <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
+                            data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="600">
+                            <div class="image min-w-[110px]">
+                                <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
                             </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                            <div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                    </a>
+                    <a href="#" class="alla">
+                        <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
+                            data-aos="fade-right"  data-aos-easing="linear" data-aos-duration="700">
+                            <div class="image min-w-[110px]">
+                                <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="alla">
+                        <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]"
+                            data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
+                            <div class="image min-w-[110px]">
+                                <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 </div>
             </div>
             <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">
