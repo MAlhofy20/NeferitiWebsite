@@ -11,6 +11,7 @@ return [
     'actions' => 'اعدادات',
     'type' => 'النوع',
     'edit_name' => 'تعديل الاسم',
+    'partners' => 'الشركاء',
     'update' => 'تعديل',
     'close' => 'اغلاق',
     'updated_successfully' => 'تم التعديل بنجاح',
@@ -253,5 +254,14 @@ return [
         'price_breakdown' => 'تفاصيل الأسعار',
         'room_price' => 'سعر الغرفة',
         'total_amount' => 'المبلغ الإجمالي',
-    
+        'admins' => 'المسؤولين',
+        'edit' => 'تعديل',
+        'products' => 'المنتجات',
+        'product_details' => 'تفاصيل المنتج',
+        'slug' => 'معرف الرابط',
+        'meta_title' => 'عنوان SEO',
+        'meta_description' => 'وصف SEO',
+        'meta_keywords' => 'كلمات SEO',
+
+
 ];

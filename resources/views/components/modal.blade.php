@@ -5,7 +5,7 @@
 
 <div 
     id="{{ $id }}" 
-    class="fixed inset-0 flex items-center justify-center z-50 hidden itsModal"
+    class="fixed inset-0  items-center justify-center z-50 hidden itsModal"
     aria-labelledby="modal-title" 
     role="dialog" 
     aria-modal="true">

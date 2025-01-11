@@ -54,9 +54,10 @@
                 <p class="wave text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span> <span>الاعمال</span></p>
                 <div class="title">
                     <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
-                    <p class="title12 py-[50px] px-[50px] leading-[50px] " >
+                    <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 " >
                         من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
-                        نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
+                        <br>
+                        نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
                     </p>
                 </div>
                 <div>
@@ -67,11 +68,14 @@
                 <div class="title flex justify-center items-center text-white pb-[30px]"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
-                موثوق به من قبل أكثر من 25000 شركة
+                موثوق به من قبل أكثر من 50 شركة
                 </div>
                 <div class="main-icon flex flex-col gap-[10px] ">
                 <div class="iconimg right ">
                     <div class="flex justify-center items-center gap-[65px]">
+                        {{-- @foreach (\App\Models\Partner::all() as $partner)
+                            <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{asset($partner->image)}}" alt="">
+                        @endforeach --}}
                         <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
                         <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
                         <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
@@ -99,7 +103,7 @@
                         <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
                     </div>
                 </div>
-                <div class="iconimg left">
+                {{-- <div class="iconimg left">
                     <div class="flex logos-track justify-center items-center gap-[65px]">
                         <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
                         <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
@@ -131,7 +135,7 @@
                         <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
                         <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
                     </div>
-                </div>
+                </div> --}}
                 </div>
             </div>
             <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
