@@ -1,29 +1,40 @@
 <?php
 
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\LangMiddleware;
-use Illuminate\Auth\Notifications\VerifyEmail;
 use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\MessageController;
+use App\Http\Controllers\Dashboard\PartnerController;
+use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\SettingController;
 use App\Http\Controllers\Dashboard\AuthDashController;
 use App\Http\Controllers\Dashboard\HomeDashController;
+use App\Http\Controllers\Dashboard\AdminDashController;
 use App\Http\Controllers\Dashboard\EmailSettingController;
-use App\Http\Controllers\Dashboard\ExternalPageController;
+use App\Http\Controllers\Dashboard\ProductDetailController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('dashboard/login', [AuthDashController::class, 'login_page'])->name('login');
 Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name('login.check');
 
+
 Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->group(function () {
     Route::get('/', [HomeDashController::class, 'index'])->name('home');
    
+    Route::resource('admin', AdminDashController::class)->names('admin');
+    
+    Route::resource('products', ProductController::class)->names('products');
+    Route::controller(ProductDetailController::class)->group(function () {
+        Route::get('product_details/{product}', 'index')->name('product_details.index');
+        Route::get('product_details/create/{product}', 'create')->name('product_details.create');
+        Route::post('product_details/store/{product}', 'store')->name('product_details.store');
+        Route::get('product_details/edit/{product_detail}', 'edit')->name('product_details.edit');
+        Route::put('product_details/update/{product_detail}', 'update')->name('product_details.update');
+        Route::delete('product_details/delete/{product_detail}', 'destroy')->name('product_details.destroy');
+    });
+
+    Route::resource('partners', PartnerController::class)->names('partners');
+    
     Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
     Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
     
@@ -44,13 +55,13 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
     Route::post('messages', [MessageController::class, 'delete'])->name('messages.delete');
 
-    Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
-    Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');
-    Route::post('external_pages/store', [ExternalPageController::class, 'store'])->name('external_pages.store');
-    Route::get('external_pages/edit/{external_page_id}', [ExternalPageController::class, 'edit'])->name('external_pages.edit');
-    Route::put('external_pages/update/{external_page_id}', [ExternalPageController::class, 'update'])->name('external_pages.update');
-    Route::delete('external_pages/delete/{external_page_id}', [ExternalPageController::class, 'delete'])->name('external_pages.delete');
-    Route::get('external_pages/{external_page_id}', [ExternalPageController::class, 'show'])->name('external_pages.show');
+    // Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
+    // Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');
+    // Route::post('external_pages/store', [ExternalPageController::class, 'store'])->name('external_pages.store');
+    // Route::get('external_pages/edit/{external_page_id}', [ExternalPageController::class, 'edit'])->name('external_pages.edit');
+    // Route::put('external_pages/update/{external_page_id}', [ExternalPageController::class, 'update'])->name('external_pages.update');
+    // Route::delete('external_pages/delete/{external_page_id}', [ExternalPageController::class, 'delete'])->name('external_pages.delete');
+    // Route::get('external_pages/{external_page_id}', [ExternalPageController::class, 'show'])->name('external_pages.show');
 
     
     Route::post('logout', function () {
@@ -58,6 +69,10 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
         return redirect()->route('login')->with('success', 'تم تسجيل الخروج بنجاح');
     })->name('logout');
 });
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 
 Route::get('language/{locale}', function($locale){
@@ -68,72 +83,4 @@ Route::get('language/{locale}', function($locale){
 
     return redirect()->back();
 })->name('lang');
-
-
-// Route::get('/test-email', function () {
-//     // قم بإنشاء قيمة وهمية لـ OTP
-//     $otp = rand(100000, 999999); // يمكن تعديل طول الـ OTP حسب الحاجة
-
-//     // إرسال البريد الإلكتروني
-//     Mail::to("malhofynl@gmail.com")->send(new VerifyEmail(12356));
-
-//     return 'Email sent with OTP: ' . $otp;
-// });
-
-
-Route::get('/sitemap.xml', function () {
-    // إضافة الـheader المناسب لملف XML
-    $content = '<?xml version="1.0" encoding="UTF-8"?>';
-    $content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-    // الصفحة الرئيسية
-    $content .= '<url>';
-    $content .= '<loc>' . url('/') . '</loc>';
-    $content .= '<changefreq>daily</changefreq>';
-    $content .= '<priority>1.0</priority>';
-    $content .= '</url>';
-
-    // صفحة من نحن
-    $content .= '<url>';
-    $content .= '<loc>' . url('/about_us') . '</loc>';
-    $content .= '<changefreq>monthly</changefreq>';
-    $content .= '<priority>0.8</priority>';
-    $content .= '</url>';
-    // صفحة التواصل
-    $content .= '<url>';
-    $content .= '<loc>' . url('/contact') . '</loc>';
-    $content .= '<changefreq>monthly</changefreq>';
-    $content .= '<priority>0.8</priority>';
-    $content .= '</url>';
-
-    // صفحة الـBlogs العامة
-    $content .= '<url>';
-    $content .= '<loc>' . url('/blogs') . '</loc>';
-    $content .= '<changefreq>weekly</changefreq>';
-    $content .= '<priority>0.9</priority>';
-    $content .= '</url>';
-
-    // إضافة المقالات بشكل ديناميكي
-    // $blogs = Blog::all(); // هنا بنجيب كل المقالات من قاعدة البيانات
-    // foreach ($blogs as $blog) {
-    //     $content .= '<url>';
-
-    //     // توليد الـ slug بناءً على اللغة أو اللغة الافتراضية
-    //     $title = $blog['title_' . lang()] ?? $blog['title_en'];
-    //     $slug = Str::slug($title, '-'); // استخدام الـ "-" كفاصل
-
-    //     // استخدام الـblog_id والـslug في الرابط الصحيح
-    //     $content .= '<loc>' . url("/blog/show/{$blog->id}/{$slug}") . '</loc>';
-    //     $content .= '<lastmod>' . $blog->updated_at->tz('UTC')->toAtomString() . '</lastmod>';
-    //     $content .= '<changefreq>monthly</changefreq>';
-    //     $content .= '<priority>0.7</priority>';
-    //     $content .= '</url>';
-    // }
-
-    $content .= '</urlset>';
-
-    // إرسال الـXML كاستجابة
-    return response($content, 200)
-        ->header('Content-Type', 'application/xml');
-});
 

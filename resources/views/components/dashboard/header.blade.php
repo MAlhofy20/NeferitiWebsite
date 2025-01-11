@@ -21,22 +21,26 @@
                     {{ __('dashboard.admin.index') }}
                 </a>
                 {{-- countries --}}
-                <a href="{{ route('dashboard.countries.index') }}" class="flex items-center text-white {{ Route::is('dashboard.countries.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
+                {{-- <a href="{{ route('dashboard.countries.index') }}" class="flex items-center text-white {{ Route::is('dashboard.countries.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
                     <i class="fa-solid fa-globe mx-2"></i>
                     {{ __('dashboard.countries.index') }}
-                </a>
+                </a> --}}
 
-                {{-- categories --}}
-                <a href="{{ route('dashboard.categories.index') }}" class="flex items-center text-white {{ Route::is('dashboard.categories.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
+                {{-- products --}}
+                <a href="{{ route('dashboard.products.index') }}" class="flex items-center text-white {{ Route::is('dashboard.products.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
                     <i class="fa-solid fa-tags mx-2"></i>
-                    {{ __('dashboard.categories.index') }}
+                    {{ __('dashboard.products.index') }}
+                </a>
+                <a href="{{ route('dashboard.partners.index') }}" class="flex items-center text-white {{ Route::is('dashboard.partners.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
+                    <i class="fa-solid fa-handshake mx-2"></i>
+                    {{ __('dashboard.partners.index') }}
                 </a>
 
                 {{-- users --}}
-                <a href="{{ route('dashboard.users.index') }}" class="flex items-center text-white {{ Route::is('dashboard.users.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
+                {{-- <a href="{{ route('dashboard.users.index') }}" class="flex items-center text-white {{ Route::is('dashboard.users.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
                     <i class="fa-solid fa-users mx-2"></i>
                     {{ __('dashboard.users.index') }}
-                </a>
+                </a> --}}
 
                 {{-- settings --}}
                 <a href="{{ route('dashboard.settings.index') }}" class="flex items-center text-white {{ Route::is('dashboard.settings.*') ? 'bg-primary' : '' }} hover:bg-primary rounded-lg px-3 py-3">
@@ -77,7 +81,7 @@
             <i class="fas fa-bell text-2xl text-white"></i>
         </div>
         <div role="button" onclick="location.href='{{ route('dashboard.profile') }}'" class="flex items-center gap-2">
-            <img src="{{ auth('admin')->user()->image ? asset(auth('admin')->user()->image) : asset('images/unknowing_face.jpg') }}" alt="User Avatar" class="rounded-lg w-10 h-10">
+            <img src="{{ auth('admin')->user()->image ? asset(auth('admin')->user()->image) : asset('dash/images/face.jpg') }}" alt="User Avatar" class="rounded-lg w-10 h-10">
             <div>
                 <p class="text-sm text-gray-500">{{ __('dashboard.welcome') }}</p>
                 <span>{{ auth('admin')->user()->name }}</span>

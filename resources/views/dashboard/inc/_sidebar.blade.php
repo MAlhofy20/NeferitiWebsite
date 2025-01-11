@@ -3,7 +3,7 @@
         <div role="button" onclick="location.href='{{ route('dashboard.home') }}'"
             class="flex items-center mb-8 justify-center">
             {{-- <span class="text-xl font-bold">SPACEREMIT</span> --}}
-            <img src="{{ asset('images/dashboard_side_logo.png') }}">
+            <img src="{{ asset('dash/images/4.png') }}">
         </div>
         <nav class="space-y-1 max-h-96 overflow-y-scroll scrollbar-hide">
             <a href="{{ route('dashboard.home') }}"
@@ -16,21 +16,26 @@
                 <i class="fa-solid fa-user-tie mx-2"></i>
                 {{ __('dashboard.admins') }}
             </a>
-            <a href="{{ route('dashboard.countries.index') }}"
+            {{-- <a href="{{ route('dashboard.countries.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.countries.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-globe mx-2"></i>
                 {{ __('dashboard.geographical_scope') }}
-            </a>
-            <a href="{{ route('dashboard.categories.index') }}"
-                class="flex items-center  {{ Route::is('dashboard.categories.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+            </a> --}}
+            <a href="{{ route('dashboard.products.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.products.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-tags mx-2"></i>
-                {{ __('dashboard.categories') }}
+                {{ __('dashboard.products') }}
             </a>
-            <a href="{{ route('dashboard.users.index') }}"
+            <a href="{{ route('dashboard.partners.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.partners.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-handshake mx-2"></i>
+                {{ __('dashboard.partners') }}
+            </a>
+            {{-- <a href="{{ route('dashboard.users.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.users.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-users mx-2"></i>
                 {{ __('dashboard.users') }}
-            </a>
+            </a> --}} 
             {{-- settings --}}
             <a href="{{ route('dashboard.settings.index') }}"
                     class="flex items-center  {{ Route::is('dashboard.settings.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">

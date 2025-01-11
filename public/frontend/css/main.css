@@ -156,7 +156,6 @@ html {
 
 .wave span {
     display: inline-block;
-    font-family: "ensoulify",Sans-serif;
     animation: wave 2s ease-in-out infinite;
 }
 

@@ -1,38 +1,13 @@
 <?php
 
+use App\Models\User;
+use App\Models\Input;
 use GuzzleHttp\Client;
+use App\Models\Country;
 use App\Models\Setting;
 use Illuminate\Support\Facades\File;
-use Modules\Country\Entities\Country;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
-
-function httpsHelper($link)
-{
-    if (substr($link, 0, 8) === "https://") {
-        return $link;
-    } else {
-        return "//" . $link;
-    }
-}
-function editedBody($body)
-{
-    // التعامل مع عناوين البريد الإلكتروني أولاً
-    $body = preg_replace(
-        '/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/',
-        '<a style="color: #1d4ed8; text-decoration: underline;" href="mailto:\\0">\\0</a>',
-        $body
-    );
-
-    // التعامل مع الروابط
-    $body = preg_replace(
-        '~(?<!mailto:)(?:(?:https?://)|(?:www\.))([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(/[^\s<>]*)?~',
-        '<a style="color: #1d4ed8; text-decoration: underline;" target="_blank" href="http://\\1\\2">\\1\\2</a>',
-        $body
-    );
-
-    return nl2br($body);
-}
 
 function lang($lang = null)
 {
@@ -42,6 +17,12 @@ function lang($lang = null)
         return app()->getlocale();
     }
 }
+
+function authLang()
+{
+    return auth()->user()->lang ?? lang();
+}
+
 
 function RemoveFirstSlash($String)
 {
@@ -77,11 +58,11 @@ function Admin($lang = null)
 
 function Settings()
 {
-    Session::put('Settings', Setting::get());
+    Session::put('Settings', Input::get());
 
-    if (! Session::get('Settings')) {
-        Session::put('Settings', Setting::get());
-    }
+    // if (! Session::get('Settings')) {
+    //     Session::put('Settings', Setting::get());
+    // }
     return Session::get('Settings');
 }
 
@@ -152,7 +133,27 @@ function times()
 
 function costformat($cost)
 {
-    return number_format($cost, 3, '.', '');
+    if(request()->country_id){
+        $country = Country::find(request()->country_id);
+        if($country){
+            $cost = $cost * $country->currancy_value;
+            return   $country->currancy_code . ' '. number_format($cost, $country->decimals, '.', '');
+        }
+    }else{
+        return  'BHD' . ' ' .number_format($cost, 3, '.', '') ;
+    }
+}
+function costSessionformat($cost)
+{
+    if(request()->country_id){
+        $country = Country::find(request()->country_id);
+        if($country){
+            $cost = $cost * $country->currancy_value;
+            return   $country->currancy_code . ' '. number_format($cost, $country->decimals, '.', '');
+        }
+    }else{
+        return  'BHD' . ' ' .number_format($cost, 3, '.', '') ;
+    }
 }
 
 function DayesNames()
@@ -172,8 +173,10 @@ function getDayNum($day)
 function getMapPoint($link)
 {
     $isLongLink = isLongLink($link);
+
     if(!$isLongLink){
         $client = new Client();
+    
         $response = $client->head($link, [
             'allow_redirects' => [
                 'track_redirects' => true
@@ -181,25 +184,22 @@ function getMapPoint($link)
         ]);
     
         $link = $response->getHeaderLine('X-Guzzle-Redirect-History');
-        
+
     }
 
-    $pattern = '/@(-?\d+\.\d+),(-?\d+\.\d+)/';
-    $search_pattern = '/\/search\/(-?\d+\.\d+),(-?\d+\.\d+)\?/';
-    
-    if (preg_match($pattern, $link, $matches)) {
+        $pattern = '/@(-?\d+\.\d+),(-?\d+\.\d+)/';
+        preg_match($pattern, $link, $matches);
+
         $latitude = $matches[1];
         $longitude = $matches[2];
-    } else if (preg_match($search_pattern, $link, $search_matches)) {
-        $latitude = $search_matches[1];
-        $longitude = $search_matches[2];
-    }
 
         $coordinates = [
-            'lat' => $latitude ?? 0 ,
-            'long' => $longitude ?? 0
-        ];        
-        return $coordinates;
+            'lat' => $latitude,
+            'long' => $longitude
+        ];
+        
+    
+    return $coordinates;
 }
 
 function isLongLink($link)
@@ -213,27 +213,29 @@ function culcPercent($total, $percent)
     return $total - $discount;
 }
 
-function checkForYoutube($body)
+
+
+function httpsHelper($link)
 {
-    $pattern = '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
-
-    // Check if the string contains a YouTube video link
-    if (preg_match($pattern, $body, $matches)) {
-        $video_id = $matches[1];
-        return "https://www.youtube.com/embed/$video_id";
+    if (substr($link, 0, 8) === "https://") {
+        return $link;
     } else {
-        return false;
+        return "//" . $link;
     }
-
-    // if (strpos($body, 'youtube.com') !== false || strpos($body, 'youtu.be') !== false) {
-    //     $videoId = substr(parse_url($url, PHP_URL_QUERY), 2);
-
-    //     // Construct embed URL
-    //     $embedUrl = "https://www.youtube.com/embed/$videoId";
-    // } else {
-    //     return false;
-    // }
 }
 
+function cleanSlug($name) {
+    // التعبير النمطي يسمح فقط بالحروف العربية والمسافات
+    $cleaned_name = preg_replace('/[^\p{Arabic}A-Za-z\s]/u', ' ', $name);
+    
+        // تحويل أي مسافات متكررة إلى مسافة واحدة
+    $cleaned_name = preg_replace('/\s+/', ' ', $cleaned_name);
+    
+    // إزالة المسافات الزائدة في بداية أو نهاية النص
+    $cleaned_name = trim($cleaned_name);
 
+    $cleaned_name_with_underscores = str_replace(' ', '_', $cleaned_name);
+    
+    return $cleaned_name_with_underscores;
+}
 
