@@ -84,6 +84,7 @@ html {
     transform: translate(-2px, -2px);
 }
 .active {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,8 +92,9 @@ html {
     margin-top: 10px;
     padding: 10px;
     border-radius: 15px;
-    backdrop-filter: blur(30px);
+    backdrop-filter: brightness(0.7) blur(10px);
 }
+
 
 .color{
     clip-path: ellipse(56% 100% at 50% 100%);
@@ -555,47 +557,57 @@ html {
 
   .about-us .cards .aa:hover,
   .about-us .cards .aa:hover div{
-    background: #3b5998;
+    background: #79deebeb;
   }
   .about-us .cards .aa:hover:before{
-    background: #365492;
+    background: #79deebeb;
   }
   .about-us .cards .aa:hover:after{
-    background: #4a69ad;
+    background: #79deebeb;
   }
 
   .about-us .cards .bb:hover,
   .about-us .cards .bb:hover div{
-    background: #00aced;
+    background: #84e1ce;
   }
   .about-us .cards .bb:hover:before{
-    background: #097aa5;
+    background: #84e1ce;
   }
   .about-us .cards .bb:hover:after{
-    background: #53b9e0;
+    background: #84e1ce;
   }
 
   .about-us .cards .cc:hover,
   .about-us .cards .cc:hover div{
-    background: #dd4b39;
+    background: #846bd5;
+    color: white;
   }
   .about-us .cards .cc:hover:before{
-    background: #b33a2b;
+    background: #846bd5;
   }
   .about-us .cards .cc:hover:after{
-    background: #e66a5a;
+    background: #846bd5;
   }
 
   .about-us .cards .dd:hover,
   .about-us .cards .dd:hover div{
-    background: #21532a;
+    background: #3faeff;
+
   }
   .about-us .cards .dd:hover:before{
-    background: #21532a;
+    background: #3faeff;
   }
   .about-us .cards .dd:hover:after{
-    background: #21532a;
+    background: #3faeff;
   }
+  .cards-gold-gradient {
+    background-image: linear-gradient(90deg,
+    #79deebeb,
+    #3faeff,
+    #3faeff,
+    #84e1ce
+    );
+}
 
   .custom-btn {
     position: fixed;
@@ -620,6 +632,24 @@ html {
 }
 .blogs .link1:hover {
     transform: rotate(-10deg) skew(0deg) translate(-5px, 10px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
+  }
+.blogs .link15 {
+    background-color: #097aa5;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    transition: .5s;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, .5);
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    right: calc(50% - 240px);
+    transform: translate(-50%, 0);
+}
+.blogs .link15:hover {
+
     box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
   }
 
@@ -846,7 +876,7 @@ html {
 
 
           .text-gold-gradient {
-            background-image: linear-gradient(90deg, 
+            background-image: linear-gradient(90deg,
                 #8f8612, /* أصفر لامع */
                 #FEDB37, /* ذهبي مشرق */
                 #FDB931, /* ذهبي متوسط */
@@ -858,4 +888,3 @@ html {
             background-clip: text;
             color: transparent;
         }
-                

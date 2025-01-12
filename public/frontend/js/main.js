@@ -1,51 +1,55 @@
-// accordion
-let accordions = document.querySelectorAll(".accordon .accor");
-let images = document.querySelectorAll(".accordon .accor .min .image img");
-let icons = document.querySelectorAll(".accordon .accor .icon i");
-let paragraphs = document.querySelectorAll(".accordon p");
-let titles = document.querySelectorAll(".accordon .tit");
-let ancors = document.querySelectorAll(".accordon a");
+// الحصول على جميع الأكوردينات والعناصر المرتبطة بها
+const accordions = document.querySelectorAll(".accordon .accor");
+const paragraphs = document.querySelectorAll(".accordon p");
+const icons = document.querySelectorAll(".accordon .icon i");
+const images = document.querySelectorAll(".accordon .min .image img");
+const anchors = document.querySelectorAll(".accordon .all");
+const titles = document.querySelectorAll(".accordon .min");
 
-document.addEventListener("click", function (e) {
-    let targetTitle = e.target.closest(".tit");
+// استماع للنقرات على المستند
+document.addEventListener("click", (e) => {
+    const targetTitle = e.target.closest(".min"); // تحديد ما إذا كان العنصر الذي تم النقر عليه هو عنوان أكوردين
 
     if (targetTitle) {
         accordions.forEach((accordion, index) => {
-            let paragraph = paragraphs[index];
-            let icon = icons[index];
-            let image = images[index];
-            let ancor = ancors[index];
+            const paragraph = paragraphs[index];
+            const anchor = anchors[index];
+            const icon = icons[index];
+            const image = images[index];
+            const isTargetAccordion = titles[index] === targetTitle;
 
-            if (titles[index] === targetTitle) {
-                const ParagraphMaxHeight = window.getComputedStyle(paragraph).maxHeight;
-                // تغيير حالة الفقرة والأنكور
-                if (ParagraphMaxHeight === "0px" || ParagraphMaxHeight === "none") {
-                    // فتح الفقرة والأنكور
-                    paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+            if (isTargetAccordion) {
+                const isCollapsed = paragraph.style.maxHeight === "0px" || !paragraph.style.maxHeight;
+
+                if (isCollapsed) {
+                    paragraph.style.maxHeight = `${paragraph.scrollHeight}px`;
                     paragraph.style.opacity = "1";
-                    ancor.style.maxHeight = ancor.scrollHeight + "px";
-                    ancor.style.opacity = "1";
                     image.style.height = "140px";
                     icon.style.transform = "rotate(315deg)";
+                    anchor.style.maxHeight = `${anchor.scrollHeight}px`;
+                    anchor.style.opacity = "1";
                 } else {
                     paragraph.style.maxHeight = "0";
                     paragraph.style.opacity = "0";
-                    ancor.style.maxHeight = "0";
-                    ancor.style.opacity = "0";
                     image.style.height = "40px";
                     icon.style.transform = "rotate(540deg)";
+                    anchor.style.maxHeight = "0";
+                    anchor.style.opacity = "0";
                 }
             } else {
+
                 paragraph.style.maxHeight = "0";
                 paragraph.style.opacity = "0";
-                ancor.style.maxHeight = "0";
-                ancor.style.opacity = "0";
                 image.style.height = "40px";
                 icon.style.transform = "rotate(540deg)";
+                anchor.style.maxHeight = "0";
+                anchor.style.opacity = "0";
             }
         });
     }
 });
+
+
 
 
 // here//
