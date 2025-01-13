@@ -460,7 +460,7 @@
             </div>
         </div>
         <div class="link15 bg-[#171313] p-[15px] rounded-[10px] text-white ">
-            <a class="font-[600] " href="#">شاهد جميع منشورات المدونة</a>
+            <a class="font-[600] " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
         </div>
     </div>
     <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">

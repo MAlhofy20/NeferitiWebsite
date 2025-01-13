@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Product;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -25,5 +26,11 @@ class FrontController extends Controller
     {
         $projects = Project::all();
         return view('front.projects', compact('projects'));
+    }
+
+    public function blog()
+    {
+        $blogs = Blog::all();
+        return view('front.blog.index', compact('blogs'));
     }
 }
