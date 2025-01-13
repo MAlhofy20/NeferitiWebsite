@@ -259,7 +259,7 @@
         </div>
         <div class="accordon py-[50px] gap-[25px] flex flex-col">
             @foreach ($products as $product)
-                <div class="accor flex justify-center items-center ">
+                <div class="accor flex justify-center items-center">
                     <div class="min flex justify-center gap-[15px] cursor-pointer">
                         <div class="image" data-aos="zoom-in" data-aos-easing="linear"
                             data-aos-easing="ease-in-sine" data-aos-duration="500">
@@ -277,13 +277,13 @@
                                 </div>
                             </div>
                             <p
-                                class="pl-[40px] md:pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
+                                class="pl-[40px] md:pl-[50px] transition-all text-[14px] md:text-[16px]  w-[272px] md:min-w-[700px] duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
                                 {!! breackableText($product->description) !!}
                             </p>
-                            <div class="flex all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" 
+                            <div class="flex   all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
+                                <a class=" w-[125px] cards-gold-gradient cursor-box md:w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed  rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
                                 href="{{ route('front.product', $product->slug) }}">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                                <a class="cursor-box w-[125px] h-[30px] md:w-[160px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
                             </div>
                         </div>
                     </div>
@@ -300,9 +300,9 @@
         </div>
         <div class="previous flex gap-[32px] flex-wrap justify-center">
             @foreach ($projects as $project)
-                <div class="cee  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
+                <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="500">
-                <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px]"
+                <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full"
                         src="{{ asset($project->image) }}" alt="">
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                 </div>

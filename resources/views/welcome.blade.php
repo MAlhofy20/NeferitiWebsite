@@ -32,28 +32,28 @@
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
         <div class = "flex justify-center">
             <div id="menu" class="active  fixed z-[999999] ">
-                    <div class="logo ml-[10px]">
-                        <img class="rounded-[8px] w-[40px] h-[50px]" src="{{ asset('frontend/images/logo trans.png') }}"
-                            alt="">
-                    </div>
-                    <div class="content-menu lg:px-[30px]">
-                        <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
-                            <li class="font-bold text-[16px] leading-[18.2px] text-[#FFFFFF]"><a
-                                    href="#ideas"><span>افكار</span></a></li>
-                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                                    href="#products "><span>المحتوي</span></a></li>
-                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                                    href="#blogs"><span>الأخبار</span></a></li>
-                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                                    href="#Here"><span>خدمات</span></a></li>
-                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                                    href="#clients"><span>الاراء</span></a></li>
-                        </ul>
-                    </div>
-                    <div
-                        class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
-                        <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
-                    </div>
+                <div class="logo ml-[10px]">
+                    <img class="rounded-[8px] w-[40px] h-[50px]" src="{{ asset('frontend/images/logo trans.png') }}"
+                        alt="">
+                </div>
+                <div class="content-menu lg:px-[30px]">
+                    <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
+                        <li class="font-bold text-[16px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#ideas"><span>افكار</span></a></li>
+                        <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#products "><span>المحتوي</span></a></li>
+                        <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#blogs"><span>الأخبار</span></a></li>
+                        <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#Here"><span>خدمات</span></a></li>
+                        <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#clients"><span>الاراء</span></a></li>
+                    </ul>
+                </div>
+                <div
+                    class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
+                    <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
+                </div>
             </div>
         </div>
         <div class="flex justify-center items-center">
@@ -63,7 +63,8 @@
         <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
-                <span>الاعمال</span></p>
+                <span>الاعمال</span>
+            </p>
             <div class="title">
                 <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
                 <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
@@ -86,7 +87,8 @@
                 <div class="iconimg right ">
                     <div class="flex justify-center items-center gap-[65px]">
                         @foreach (\App\Models\Partner::all() as $partner)
-                            <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{asset($partner->image)}}" alt="">
+                            <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]"
+                                src="{{ asset($partner->image) }}" alt="">
                         @endforeach
                         {{-- <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
                             src="{{ asset('frontend/images/logoa.png') }}" alt="">
@@ -210,13 +212,15 @@
 
                 <div class="dd flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/2.png') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/2.png') }}"
+                            alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم عصري</p>
                 </div>
                 <div class="cc flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/4.png') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/4.png') }}"
+                            alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تسليم واختبار </p>
                 </div>
@@ -313,34 +317,38 @@
             </div>
             <div class="accordon py-[50px] gap-[25px] flex flex-col">
                 @foreach (\App\Models\Product::all() as $product)
-                <div class="accor flex justify-center items-center ">
-                    <div class="min flex justify-center gap-[15px] cursor-pointer">
-                        <div class="image" data-aos="zoom-in" data-aos-easing="linear"
-                            data-aos-easing="ease-in-sine" data-aos-duration="500">
-                            <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
-                                src="{{ asset($product->image) }}" alt="">
-                        </div>
-                        <div class="flex flex-col gap-[5px]">
-                            <div class="tot flex justify-between items-center">
-                                <div class="tit font-bold md:font-[600] text-[20px] md:text-[28px]" data-aos="fade-up"
-                                    data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                    {{ $product->name }}</div>
-                                <div class="icon" data-aos="fade-right" data-aos-easing="linear"
-                                    data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                    <i class="duration-300 ease-in-out rotate-180 fa-solid fa-arrow-down"></i>
-                                </div>
+                    <div class="accor flex justify-center items-center ">
+                        <div class="min flex justify-center gap-[15px] cursor-pointer">
+                            <div class="image" data-aos="zoom-in" data-aos-easing="linear"
+                                data-aos-easing="ease-in-sine" data-aos-duration="500">
+                                <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
+                                    src="{{ asset($product->image) }}" alt="">
                             </div>
-                            <p
-                                class="pl-[40px] md:pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
-                                {!! breackableText($product->description) !!}
-                            </p>
-                            <div class="flex all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                            <div class="flex flex-col gap-[5px]">
+                                <div class="tot flex justify-between items-center">
+                                    <div class="tit font-bold md:font-[600] text-[20px] md:text-[28px]"
+                                        data-aos="fade-up" data-aos-easing="linear" data-aos-easing="ease-in-sine"
+                                        data-aos-duration="500">
+                                        {{ $product->name }}</div>
+                                    <div class="icon" data-aos="fade-right" data-aos-easing="linear"
+                                        data-aos-easing="ease-in-sine" data-aos-duration="500">
+                                        <i class="duration-300 ease-in-out rotate-180 fa-solid fa-arrow-down"></i>
+                                    </div>
+                                </div>
+                                <p
+                                    class="pl-[40px] md:pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
+                                    {!! breackableText($product->description) !!}
+                                </p>
+                                <div
+                                    class="flex all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
+                                    <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                        href="#">اعرف اكتر</a>
+                                    <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                        href="#">تواصل معنا</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[15px] cursor-pointer">
@@ -370,8 +378,10 @@
                                 والأصول الرقمية.
                             </p>
                             <div class="flex all overflow-hidden opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">اعرف اكتر</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">تواصل معنا</a>
                             </div>
                         </div>
                     </div>
@@ -405,8 +415,10 @@
                                 والأصول الرقمية.
                             </p>
                             <div class="flex all overflow-hidden opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">اعرف اكتر</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">تواصل معنا</a>
                             </div>
                         </div>
                     </div>
@@ -421,7 +433,8 @@
                         <div class="flex flex-col gap-[5px]">
                             <div class="tot flex justify-between items-center">
                                 <div class="tit font-bold md:font-[600] text-[20px] md:text-[28px]" data-aos="fade-up"
-                                    data-aos-easing="linear" data-aos-duration="800">نظام Scanly لعرض خدماتك ومنتجاتك بال QR Code
+                                    data-aos-easing="linear" data-aos-duration="800">نظام Scanly لعرض خدماتك ومنتجاتك
+                                    بال QR Code
                                 </div>
                                 <div class="icon" data-aos="fade-right" data-aos-easing="linear"
                                     data-aos-duration="800">
@@ -440,8 +453,10 @@
                                 والأصول الرقمية.
                             </p>
                             <div class="flex all overflow-hidden opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">اعرف اكتر</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">تواصل معنا</a>
                             </div>
                         </div>
                     </div>
@@ -475,8 +490,10 @@
                                 والأصول الرقمية.
                             </p>
                             <div class="flex all overflow-hidden opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
-                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">تواصل معنا</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">اعرف اكتر</a>
+                                <a class="cursor-box w-[160px] h-[30px] not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    href="#">تواصل معنا</a>
                             </div>
                         </div>
                     </div>
@@ -561,7 +578,8 @@
             </div>
             </div> --}}
         <div id="blogs" class="blogs p-[20px] md:p-[100px]">
-            <div class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
+            <div
+                class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
                 <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold" data-aos="anim"
                     data-aos-easing="linear" data-aos-duration="500">أحدث منشورات مدونتنا</div>
                 <div class="link1 bg-[#171313] p-[15px] rounded-[10px] text-white" data-aos="anim"
@@ -917,8 +935,8 @@
             <div
                 class="all flex flex-wrap justify-center flex-row-reverse rounded-[20px] w-[1000px] overflow-hidden shadow-[0px_0px_9px_0px_#377287]">
                 <!-- Contact Form -->
-                <div id="contact-section" class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8" data-aos="zoom-in-left"
-                    data-aos-easing="linear" data-aos-duration="500">
+                <div id="contact-section" class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8"
+                    data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="500">
                     <h3 class="mb-5 text-[30px] font-bold text-[cyan]">تواصل معنا</h3>
                     <div class="form">
                         <div class="form-group mb-[20px]">
@@ -984,7 +1002,8 @@
                 </div>
             </div>
         </div>
-        <div class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
+        <div
+            class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
             <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
                     viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_1833_4737)">
