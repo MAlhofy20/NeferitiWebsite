@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
+    <div class="main bg-[#0f1521] pb-[50px] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_1833_4737)">
                 <ellipse cx="618.5" cy="-213" rx="268.5" ry="268" fill="#48DCFF">
@@ -17,7 +17,7 @@
             </defs>
         </svg></div>
         <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center px-[20px] "
-            data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
+            data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="400">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
             </p>
@@ -39,8 +39,8 @@
         <div class="previous flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
             @foreach ($projects as $project)
                 <div class="cee  rounded-[24px] w-[400px] text-black  border-2 " data-aos="zoom-in"
-                    data-aos-easing="linear" data-aos-duration="500">
-                <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full"
+                    data-aos-easing="linear" data-aos-duration="400">
+                <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full "
                         src="{{ asset($project->image) }}" alt="">
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                 </div>

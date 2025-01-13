@@ -32,14 +32,14 @@
     @include('front.inc.header')
 
     @yield('content')
-    
+
     <div class="the-pahe bg-white relative overflow-hidden">
         <div class="section-info p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
                 class="all flex flex-wrap justify-center flex-row-reverse rounded-[20px] w-[1000px] overflow-hidden shadow-[0px_0px_9px_0px_#377287]">
                 <!-- Contact Form -->
                 <div id="contact-section" class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8" data-aos="zoom-in-left"
-                    data-aos-easing="linear" data-aos-duration="500">
+                    data-aos-easing="linear" data-aos-duration="400">
                     <h3 class="mb-5 text-[30px] font-bold text-[cyan]">تواصل معنا</h3>
                     <div class="form">
                         <div class="form-group mb-[20px]">
@@ -70,7 +70,7 @@
                 </div>
                 <!-- Contact Information -->
                 <div class="contact-info flex-[1_1_300px] bg-[#1c1e25] p-8 text-[#dcdcdc]" data-aos="zoom-in-right"
-                    data-aos-easing="linear" data-aos-duration="600">
+                    data-aos-easing="linear" data-aos-duration="500">
                     <h3 class="mb-[20px] text-[30px] font-bold text-[cyan]">معلومات للتواصل معنا</h3>
                     <p class="mb-[20px] leading-9 text-[20px] text-[#666666]">نحن منفتحون على أي اقتراح <br> أو مجرد
                         الدردشة</p>

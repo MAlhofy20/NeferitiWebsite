@@ -122,7 +122,33 @@
     </div>
     <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
 </div>
-
+<div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
+    <div class="st flex flex-col gap-[10px] " data-network="facebook ">
+        <div class="icons">
+            <a href="#">
+                <div class="w-10 h-10 bg-[#1da1f2] cursor-pointer  flex items-center justify-center overflow-hidden">
+                    <i class="fa-brands fa-facebook text-white text-2xl"></i>
+                </div>
+            </a>
+            <a href="#">
+                <div class="w-10 h-10 bg-black cursor-pointer  flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                </div>
+            </a>
+            <a href="#">
+                <div class="w-10 h-10 bg-[#2ad04a] cursor-pointer  flex items-center justify-center overflow-hidden">
+                    <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                </div>
+            </a>
+        </div>
+        <a href="#">
+            <div class="arrow w-10 h-10 bg-[#727272] rounded-full flex items-center justify-center overflow-hidden">
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+      </div>
+</div>
 <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
     <div class="about-us relative">
         <div class="main flex-col justify-center items-center text-center px-[20px]">
@@ -140,7 +166,7 @@
             </p>
         </div>
         <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[20px] md:px-[50px] py-[80px] flex-wrap"
-            data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+            data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
             <div class="bb flex flex-col justify-center items-center gap-[30px]">
                 <div class="flex justify-center items-center bg-white  rounded-[32px] ">
                     <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/3.png') }}" alt="">
@@ -239,7 +265,7 @@
     </div>
     <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
         <div class="main flex flex-col justify-center items-center text-center" data-aos="zoom-in-up"
-            data-aos-easing="ease-in-sine" data-aos-duration="500">
+            data-aos-easing="ease-in-sine" data-aos-duration="400">
             <div class="title font-bold md:font-500 text-[35px] md:text-[56px] pb-[20px]"> منتجات فريق Nefertiti
             </div>
             <p class="font-[400] text-[20px] leading-[30px] px[4px]">
@@ -293,7 +319,7 @@
     </div>
     <div class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
         <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
-            data-aos-easing="linear" data-aos-duration="1000" data-aos-easing="ease-in-sine"
+            data-aos-easing="linear" data-aos-duration="400"
             data-aos-duration="500">
             <div class="font-[600] text-[22px]">اعمال سابقه</div>
             <i class="fa-solid fa-turn-down"></i>
@@ -302,14 +328,14 @@
             @foreach ($projects as $project)
                 <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="500">
-                <img class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px]"
+                <img class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px] w-full"
                         src="{{ asset($project->image) }}" alt="">
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                 </div>
             @endforeach
         </div>
         <div class="allVeow flex justify-center items-center pt-[50px]" data-aos="anim" data-aos-easing="linear"
-            data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-duration="100">
+            data-aos-duration="400" >
             <div
                 class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
                 <a href="{{ route('front.projects') }}">جميع الالعمال السابقه</a>
@@ -351,7 +377,7 @@
         <div class="tow-colmn flex gap-[20px] justify-start flex-wrap">
             <div class="one flex gap-[20px] flex-wrap">
                 <a href="#" class="alla block">
-                    <div class="gap-[45px]" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                    <div class="gap-[45px]" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
                         <div class="image pb-[15px]">
                             <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
@@ -369,7 +395,7 @@
                     </div>
                 </a>
                 <a href="#" class="alla">
-                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="400">
                         <div class="image pb-[15px]">
                             <img src="{{ asset('frontend/images/blog3.png') }}" alt="">
                         </div>
@@ -390,8 +416,7 @@
             <div class="two max-w-[375px]">
                 <a href="#" class="alla">
                     <div class="flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-easing="ease-in-sine"
-                        data-aos-duration="500">
+                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="400">
                         <div class="image min-w-[110px]">
                             <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
                         </div>
@@ -408,7 +433,7 @@
                 </a>
                 <a href="#" class="alla">
                     <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
+                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                         <div class="image min-w-[110px]">
                             <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
                         </div>
@@ -425,7 +450,7 @@
                 </a>
                 <a href="#" class="alla">
                     <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="700">
+                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
                         <div class="image min-w-[110px]">
                             <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
                         </div>
@@ -442,7 +467,7 @@
                 </a>
                 <a href="#" class="alla">
                     <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
+                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="700">
                         <div class="image min-w-[110px]">
                             <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
                         </div>
@@ -466,7 +491,7 @@
     <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">
         <div class="all ">
             <div class="title text-[33px] md:text-[60px] flex justify-center items-center text-center flex-col"
-                data-aos="anim" data-aos-easing="linear" data-aos-duration="500">
+                data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
                 <div class="md:font-[700] font-bold  text-[#2E2F35]">
                     إطلاق سريع. نتائج سريعة.
                 </div>
@@ -474,7 +499,7 @@
             </div>
             <div class="here">
                 <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear"
-                    data-aos-duration="500">
+                    data-aos-duration="300">
                     <div
                         class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                         شريحة</div>
@@ -484,7 +509,7 @@
                     </p>
                 </div>
                 <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear"
-                    data-aos-duration="600">
+                    data-aos-duration="400">
                     <div
                         class="tit text-[30px] md:text-[36px] text-[#2E2F3566] font-[700] pr-[50px] cursor-pointer">
                         تصميم</div>
@@ -494,7 +519,7 @@
                     </p>
                 </div>
                 <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear"
-                    data-aos-duration="700">
+                    data-aos-duration="500">
                     <div
                         class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                         ارسال</div>
@@ -504,7 +529,7 @@
                     </p>
                 </div>
                 <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear"
-                    data-aos-duration="800">
+                    data-aos-duration="600">
                     <div
                         class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                         يتحول</div>
@@ -519,13 +544,13 @@
     <div id="clients" class="clients bg-[#101828] text-white">
         <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
             <div class="tit font-bold max-w-[600px] text-[22px] md:text-[33px] px-[20px] text-center"
-                data-aos="anim" data-aos-easing="linear" data-aos-duration="500">
+                data-aos="anim" data-aos-easing="linear" data-aos-duration="400">
                 يحب الكثير من الأشخاص الآخرين
                 بناء وشحن
                 المواقع باستخدام Framer.
             </div>
             <div class="link-2 flex gap-[10px] items-center" data-aos="anim" data-aos-easing="linear"
-                data-aos-duration="500">
+                data-aos-duration="400">
                 <a class="text-[22px] font-bold font-sans" href="#">انضم إلى المجتمع</a>
                 <i class="fa-solid fa-turn-down"></i>
             </div>
@@ -693,3 +718,13 @@
 </div>
 
 @endsection
+
+
+
+
+
+
+
+
+
+
