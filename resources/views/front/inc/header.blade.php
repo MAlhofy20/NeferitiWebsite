@@ -7,15 +7,16 @@
             <div class="content-menu lg:px-[30px]">
                 <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
                     <li class="font-bold text-[16px] leading-[18.2px] text-[#FFFFFF]"><a
-                            href="#ideas"><span>افكار</span></a></li>
+                            href="{{ route('front.home') }}"><span>الرئيسية</span></a></li>
+                            <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
+                                href="#about"><span>تعريف بنا</span></a></li>
+    
                     <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                            href="#products "><span>المحتوي</span></a></li>
+                            href="#products"><span>المنتجات</span></a></li>
                     <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                            href="#blogs"><span>الأخبار</span></a></li>
+                            href="#projects"><span>المشاريع</span></a></li>
                     <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                            href="#Here"><span>خدمات</span></a></li>
-                    <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
-                            href="#clients"><span>الاراء</span></a></li>
+                            href="#blog"><span>المدونة</span></a></li>
                 </ul>
             </div>
             <div
