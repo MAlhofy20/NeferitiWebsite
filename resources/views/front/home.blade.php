@@ -302,7 +302,11 @@
             @foreach ($projects as $project)
                 <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="500">
+<<<<<<< Updated upstream
                 <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full"
+=======
+                <img class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px]"
+>>>>>>> Stashed changes
                         src="{{ asset($project->image) }}" alt="">
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                 </div>
