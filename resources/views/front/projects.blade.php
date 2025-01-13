@@ -16,14 +16,14 @@
                 </filter>
             </defs>
         </svg></div>
-        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
+        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
             </p>
-            <div class="title">
+            <div class="title flex justify-center items-center flex-col">
                 <p class="text-[30px] md:text-[80px] text-white font-bold">أعمالنا السابقة - تنوع يُلهم الإبداع</p>
-                <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="py-[20px] max-w-[1000px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
                     بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
                 </p>
@@ -38,7 +38,7 @@
 
         <div class="previous flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
             @foreach ($projects as $project)
-                <div class="cee  rounded-[24px] w-[400px] text-black  border-2 border-[#282828]" data-aos="zoom-in"
+                <div class="cee  rounded-[24px] w-[400px] text-black  border-2 " data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="500">
                 <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full"
                         src="{{ asset($project->image) }}" alt="">
