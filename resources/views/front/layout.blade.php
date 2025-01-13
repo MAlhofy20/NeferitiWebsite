@@ -32,6 +32,7 @@
     @include('front.inc.header')
 
     @yield('content')
+    
     <div class="the-pahe bg-white relative overflow-hidden">
         <div class="section-info p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
