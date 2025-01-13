@@ -16,9 +16,13 @@ return new class extends Migration
             $table->foreignId('product_id')->nullable()->constrained('products')->cascadeOnDelete();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->text('description');
+            $table->text('preview');
+            $table->text('content');
             $table->string('image');
-            $table->boolean('status')->default(true);
+            $table->string('meta_title')->nullable();
+            $table->string('meta_description')->nullable();
+            $table->string('meta_keywords')->nullable();
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

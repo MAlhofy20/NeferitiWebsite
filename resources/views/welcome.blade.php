@@ -197,26 +197,26 @@
                 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                 <div class="bb flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white  rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/Group22.png') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/3.png') }}" alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تخطيط مُحكم</p>
                 </div>
                 <div class="aa flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white  rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/Group11.png') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/1.png') }}" alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تقنية متطورة</p>
                 </div>
 
                 <div class="dd flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/Group44.png') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/2.png') }}" alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم عصري</p>
                 </div>
                 <div class="cc flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/Group33.jpg') }}" alt="">
+                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/4.png') }}" alt="">
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تسليم واختبار </p>
                 </div>
@@ -312,18 +312,19 @@
                 </p>
             </div>
             <div class="accordon py-[50px] gap-[25px] flex flex-col">
+                @foreach (\App\Models\Product::all() as $product)
                 <div class="accor flex justify-center items-center ">
                     <div class="min flex justify-center gap-[15px] cursor-pointer">
                         <div class="image" data-aos="zoom-in" data-aos-easing="linear"
                             data-aos-easing="ease-in-sine" data-aos-duration="500">
                             <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
-                                src="{{ asset('frontend/images/accordion1.png') }}" alt="">
+                                src="{{ asset($product->image) }}" alt="">
                         </div>
                         <div class="flex flex-col gap-[5px]">
                             <div class="tot flex justify-between items-center">
                                 <div class="tit font-bold md:font-[600] text-[20px] md:text-[28px]" data-aos="fade-up"
                                     data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                    الموقع الالكتروني الخاص بشركتك</div>
+                                    {{ $product->name }}</div>
                                 <div class="icon" data-aos="fade-right" data-aos-easing="linear"
                                     data-aos-easing="ease-in-sine" data-aos-duration="500">
                                     <i class="duration-300 ease-in-out rotate-180 fa-solid fa-arrow-down"></i>
@@ -331,14 +332,7 @@
                             </div>
                             <p
                                 class="pl-[40px] md:pl-[100px] transition-all duration-300 ease-in-out overflow-hidden opacity-0 max-h-0">
-                                في Gravity Team، نحن في مهمة
-                                <br>
-                                لتحقيق التوازن بين العرض والطلب في أسواق العملات المشفرة في جميع أنحاء العالم.
-                                <br>
-                                نحن صانع سوق للعملات المشفرة
-                                <br>
-                                أسسنا من قبل التجار والمطورين والمبتكرين الذين يؤمنون بشدة ويدعمون مستقبل اللامركزية
-                                والأصول الرقمية.
+                                {!! breackableText($product->description) !!}
                             </p>
                             <div class="flex all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
                                 <a class="cursor-box w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]" href="#">اعرف اكتر</a>
@@ -347,6 +341,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <div class="accor cursor-pointer flex justify-center items-center ">
                     <div class="min flex justify-center gap-[15px] cursor-pointer">
                         <div class="image" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="600">

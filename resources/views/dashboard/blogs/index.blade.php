@@ -17,7 +17,9 @@
             <table class="shadow w-full rounded-lg overflow-hidden">
                 <thead>
                     <tr class="bg-gray-200">
-                        <th class="py-2 px-4 text-start">{{ __('dashboard.blog_title') }}</th>
+                        <th class="py-2 px-4 text-start">{{ __('dashboard.title') }}</th>
+                        <th class="py-2 px-4 text-start">{{ __('dashboard.product') }}</th>
+                        <th class="py-2 px-4 text-start">{{ __('dashboard.status') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.created_at') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.actions') }}</th>
                     </tr>
@@ -26,8 +28,19 @@
                     @foreach ($blogs as $blog)
                         <tr id="row-{{ $blog['id'] }}" class="border-t border-gray-200">
                             <td class="py-2 px-4 text-start items-center">
-                                <p>{{ $blog->title_ar }}</p>
-                                <p>{{ $blog->title_en }}</p>
+                                <p>{{ $blog->title }}</p>
+                            </td>
+                            <td class="py-2 px-4 text-start items-center">
+                                @if ($blog->product)
+                                    <a href="{{ route('dashboard.products.edit', $blog->product->id) }}"
+                                        class="text-blue-500 hover:text-blue-700">{{ $blog->product?->name }}
+                                    </a>
+                                @else
+                                    عام
+                                @endif
+                            </td>
+                            <td class="py-2 px-4 text-start items-center">
+                                {{ $blog->status ? __('dashboard.active') : __('dashboard.inactive') }}
                             </td>
                             <td class="py-2 px-4 text-start items-center">
                                 {{ $blog->created_at->format('Y-m-d H:i') }}
@@ -44,8 +57,6 @@
                                             class="fa-solid fa-trash hover:text-red-500"></i>
                                     </form>
                                 </div>
-
-
                             </td>
                         </tr>
                     @endforeach

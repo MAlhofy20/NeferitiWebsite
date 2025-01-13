@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Blog;
+use App\Models\Product;
 use App\Functions\Upload;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,56 +18,69 @@ class BlogController extends Controller
 
     public function create()
     {
-        return view('dashboard.blogs.create');
+        $products = Product::all();
+        return view('dashboard.blogs.create', compact('products'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'title_ar' => 'required|max:255',
-            'title_en' => 'required|max:255',
+            'title' => 'required|max:255',
+            'preview' => 'required',
             'image' => 'required|image',
-            'content_ar' => 'required',
-            'content_en' => 'required',
+            'content' => 'required',
+            'meta_title' => 'nullable|max:255',
+            'meta_description' => 'nullable',
+            'meta_keywords' => 'nullable',
         ]);
         $blog = new Blog();
-        $blog->title_ar = $request->title_ar;
-        $blog->content_ar = $request->content_ar;
-        $blog->title_en = $request->title_en;
-        $blog->content_en = $request->content_en;
+        $blog->title = $request->title;
+        $blog->slug = cleanSlug($request->title);
+        $blog->preview = $request->preview;
+        $blog->content = $request->content;
+        if ($request->product_id) {
+            $blog->product_id = $request->product_id;
+        }
         $blog->image = Upload::UploadFile($request->image, 'blogs');
+
+        $blog->meta_title = $request->meta_title;
+        $blog->meta_description = $request->meta_description;
+        $blog->meta_keywords = $request->meta_keywords;
         $blog->save();
-        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.blog created successfully'));
+        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.created_successfully'));
     }
 
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('dashboard.blogs.edit', compact('blog'));
+        $products = Product::all();
+        return view('dashboard.blogs.edit', compact('blog', 'products'));
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title_ar' => 'required|max:255',
-            'title_en' => 'required|max:255',
+            'title' => 'required|max:255',
+            'preview' => 'required',
             'image' => 'nullable|image',
-            'content_ar' => 'required',
-            'content_en' => 'required',
+            'content' => 'required',
         ]);
         $blog = Blog::find($id);
-        $blog->title_ar = $request->title_ar;
-        $blog->content_ar = $request->content_ar;
-        $blog->title_en = $request->title_en;
-        $blog->content_en = $request->content_en;
+        $blog->title = $request->title;
+        $blog->preview = $request->preview;
+        $blog->content = $request->content;
         if ($request->hasFile('image')) {
             $blog->image = Upload::UploadFile($request->image, 'blogs');
         }
+        $blog->meta_title = $request->meta_title;
+        $blog->meta_description = $request->meta_description;
+        $blog->meta_keywords = $request->meta_keywords;
         $blog->save();
-        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.blog updated successfully'));
+
+        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.updated_successfully'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $blog = Blog::find($id);
         if ($blog->image) {
@@ -76,7 +90,7 @@ class BlogController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => __('dashboard.blog deleted successfully'),
+            'message' => __('dashboard.deleted_successfully'),
         ]);
     }
 }

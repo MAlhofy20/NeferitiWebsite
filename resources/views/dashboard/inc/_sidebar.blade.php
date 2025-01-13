@@ -26,6 +26,16 @@
                 <i class="fa-solid fa-tags mx-2"></i>
                 {{ __('dashboard.products') }}
             </a>
+            <a href="{{ route('dashboard.projects.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.projects.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-building mx-2"></i>
+                {{ __('dashboard.projects') }}
+            </a>
+            <a href="{{ route('dashboard.blogs.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.blogs.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-blog mx-2"></i>
+                {{ __('dashboard.blogs') }}
+            </a>
             <a href="{{ route('dashboard.partners.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.partners.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-handshake mx-2"></i>

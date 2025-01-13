@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\MessageController;
 use App\Http\Controllers\Dashboard\PartnerController;
@@ -9,10 +11,10 @@ use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\SettingController;
 use App\Http\Controllers\Dashboard\AuthDashController;
 use App\Http\Controllers\Dashboard\HomeDashController;
+use App\Http\Controllers\Dashboard\ProjectsController;
 use App\Http\Controllers\Dashboard\AdminDashController;
 use App\Http\Controllers\Dashboard\EmailSettingController;
 use App\Http\Controllers\Dashboard\ProductDetailController;
-
 
 Route::get('dashboard/login', [AuthDashController::class, 'login_page'])->name('login');
 Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name('login.check');
@@ -34,6 +36,8 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     });
 
     Route::resource('partners', PartnerController::class)->names('partners');
+
+    Route::resource('projects', ProjectsController::class)->names('projects');   
     
     Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
     Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
@@ -46,7 +50,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::post('blogs/store', [BlogController::class, 'store'])->name('blogs.store');
     Route::get('blogs/edit/{blog_id}', [BlogController::class, 'edit'])->name('blogs.edit');
     Route::put('blogs/update/{blog_id}', [BlogController::class, 'update'])->name('blogs.update');
-    Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'delete'])->name('blogs.delete');
+    Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     
     
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
@@ -69,8 +73,12 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
         return redirect()->route('login')->with('success', 'تم تسجيل الخروج بنجاح');
     })->name('logout');
 });
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::name('front.')->group(function () {
+    Route::get('/', [FrontController::class, 'home'])->name('home');
+    Route::get('product/{slug}', [FrontController::class, 'product'])->name('product');
+    Route::get('projects', [FrontController::class, 'projects'])->name('projects');
 });
 
 

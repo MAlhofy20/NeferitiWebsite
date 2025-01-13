@@ -239,3 +239,8 @@ function cleanSlug($name) {
     return $cleaned_name_with_underscores;
 }
 
+function breackableText($text)
+{
+    return nl2br($text);
+}
+

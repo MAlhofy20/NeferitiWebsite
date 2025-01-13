@@ -3,7 +3,7 @@
     <x-dashboard.header>
         <a href="{{ route('dashboard.blogs.index') }}"
             class="text-xl font-bold text-gray-500 hover:underline hover:text-gray-800">{{ __('dashboard.blogs') }}</a> |
-        <div class="text-xl font-bold">{{ __('dashboard.edit_blog') }}</div>
+        <div class="text-xl font-bold">{{ __('dashboard.edit') }} {{ $blog->title }}</div>
     </x-dashboard.header>
 
     <div class="bg-white rounded-lg shadow p-6 h-full">
@@ -21,67 +21,92 @@
         <form action="{{ route('dashboard.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-
             <div class="mb-4">
-                <label for="title_ar" class="block text-sm font-medium text-gray-700">{{ __('userarea.blog_title_ar') }}</label>
-                <input type="text" id="title_ar" name="title_ar" value="{{ old('title_ar', $blog->title_ar) }}"
+                <label for="product_id"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.product') }}</label>
+                <select name="product_id" id="product_id" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
+                    <option disabled selected value="">{{ __('dashboard.select_product') }}</option>
+                    @foreach ($products as $product)
+                        <option value="{{ $product->id }}" {{ $blog->product_id == $product->id ? 'selected' : '' }}>{{ $product->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="title"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.title') }}</label>
+                <input type="text" id="title" name="title" value="{{ $blog->title }}"
                     class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
-                @error('title_ar')
+                @error('title')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="title_en" class="block text-sm font-medium text-gray-700">{{ __('userarea.blog_title_en') }}</label>
-                <input type="text" id="title_en" name="title_en" value="{{ old('title_en', $blog->title_en) }}"
-                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
-                @error('title_en')
+                <label for="preview"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.preview') }}</label>
+                <textarea type="text" id="preview" name="preview" rows="4"
+                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">{!! $blog->preview !!}</textarea>
+                @error('preview')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="flex gap-2">
                 <div class="mb-4 w-full">
-                    <label for="image" class="block text-sm font-medium text-gray-700">{{ __('dashboard.image') }}</label>
+                    <label for="image"
+                        class="block text-sm font-medium text-gray-700">{{ __('dashboard.image') }}</label>
                     <input onchange="previewImage(event)" type="file" id="image" name="image"
-                        class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
+                        class=" mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
                     @error('image')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
-                <div id="imgPreview" class="mb-4 w-full">
-                    @if ($blog->image)
-                        <img src="{{ asset($blog->image) }}" alt="Current Image"
-                            class="w-[200px] h-[200px] object-cover rounded mx-auto">
-                    @endif
+                <div id="imgPreview" class="mb-4 w-full ">
+                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="w-full h-auto">
                 </div>
             </div>
 
             <div class="mb-4">
-                <label for="content_ar" class="block text-sm font-medium text-gray-700">{{ __('userarea.content_ar') }}</label>
-                <div id="content_ar" name="content_ar" dir="rtl" style="font-family: inherit"
-                    class="mt-1 w-full bg-white px-2 py-1">
-                    {!! old('content_ar', $blog->content_ar) !!}
+                <label for="content" class="block text-sm font-medium text-gray-700">{{ __('dashboard.content') }}</label>
+                <div id="content" name="content" dir="rtl" id="content" style="font-family: inherit"
+                    class="mt-1 w-full  bg-white px-2 py-1 ">
+                    {!! $blog->content !!}
                 </div>
-                @error('content_ar')
+                @error('content')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
 
-                <input type="hidden" name="content_ar" id="content-input-ar">
+                <input type="hidden" name="content" id="content-input">
+            </div>
+
+            <hr class="w-full my-4 mx-auto">
+
+            <div class="mb-4">
+                <label for="meta_title"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_title') }}</label>
+                <input type="text" id="meta_title" name="meta_title" value="{{ $blog->meta_title }}"
+                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
+                @error('meta_title')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-4">
-                <label for="content_en" class="block text-sm font-medium text-gray-700">{{ __('userarea.content_en') }}</label>
-                <div id="content_en" name="content_en" dir="rtl" style="font-family: inherit"
-                    class="mt-1 w-full bg-white px-2 py-1">
-                    {!! old('content_en', $blog->content_en) !!}
-                </div>
-                @error('content_en')
+                <label for="meta_description"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_description') }}</label>
+                <textarea name="meta_description" id="meta_description" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1">{{ $blog->meta_description }}</textarea>
+                @error('meta_description')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
-
-                <input type="hidden" name="content_en" id="content-input-en">
             </div>
 
+            <div class="mb-4">
+                <label for="meta_keywords"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_keywords') }}</label>
+                <textarea name="meta_keywords" id="meta_keywords" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1">{{ $blog->meta_keywords }}</textarea>
+                @error('meta_keywords')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
+            </div>
             <button type="submit" onclick="appendContentToInput()"
                 class="w-100 bg-[#452810] text-white rounded-lg px-3 py-1 hover:bg-[#5a3d24]">{{ __('dashboard.submit') }}</button>
         </form>
@@ -89,31 +114,13 @@
 @endsection
 
 @push('js')
-    <script>
-        function previewImage(event) {
-            const previewDiv = document.getElementById('imgPreview');
-            const file = event.target.files[0];
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = 'Selected Image';
-                img.className = 'w-[200px] h-[200px] object-cover rounded mx-auto';
-
-                previewDiv.innerHTML = '';
-                previewDiv.appendChild(img);
-            };
-            reader.readAsDataURL(file);
-        }
-    </script>
 
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>
         const toolbarOptions = [
             ['bold', 'italic', 'underline', 'strike'], // toggled buttons
-            ['link', 'image', 'video', 'formula'],
+            ['link', 'image', 'video', 'formula'], // Keep 'image' here
             [{
                 'header': [1, 2, false] // Adding options for h1 and h2
             }],
@@ -127,24 +134,17 @@
             }], // text direction
         ];
 
-        var quillNews_ar = new Quill('#content_ar', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-        var quillNews_en = new Quill('#content_en', {
+        var quillNews = new Quill('#content', {
             modules: {
                 toolbar: toolbarOptions
             },
             theme: 'snow'
         });
 
+
         function appendContentToInput() {
-            const content_ar = quillNews_ar.root.innerHTML;
-            const content_en = quillNews_en.root.innerHTML;
-            document.getElementById('content-input-ar').value = content_ar;
-            document.getElementById('content-input-en').value = content_en;
+            const content = quillNews.root.innerHTML;
+            document.getElementById('content-input').value = content;
         }
     </script>
 @endpush

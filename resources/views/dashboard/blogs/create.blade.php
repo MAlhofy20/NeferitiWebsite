@@ -21,20 +21,30 @@
         <form action="{{ route('dashboard.blogs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-4">
-                <label for="title_ar"
-                    class="block text-sm font-medium text-gray-700">{{ __('userarea.blog_title_ar') }}</label>
-                <input type="text" id="title_ar" name="title_ar" value="{{ old('title_ar') }}"
+                <label for="product_id"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.product') }}</label>
+                <select name="product_id" id="product_id" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
+                    <option disabled selected value="">{{ __('dashboard.select_product') }}</option>
+                    @foreach ($products as $product)
+                        <option value="{{ $product->id }}">{{ $product->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="title"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.title') }}</label>
+                <input type="text" id="title" name="title" value="{{ old('title') }}"
                     class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
-                @error('title_ar')
+                @error('title')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-4">
-                <label for="title_en"
-                    class="block text-sm font-medium text-gray-700">{{ __('userarea.blog_title_en') }}</label>
-                <input type="text" id="title_en" name="title_en" value="{{ old('title_en') }}"
-                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
-                @error('title_en')
+                <label for="preview"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.preview') }}</label>
+                <textarea type="text" id="preview" name="preview" rows="4"
+                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">{{ old('preview') }}</textarea>
+                @error('preview')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
@@ -55,29 +65,46 @@
             </div>
 
             <div class="mb-4">
-                <label for="content_ar" class="block text-sm font-medium text-gray-700">{{ __('userarea.content_ar') }}</label>
-                <div id="content_ar" name="content_ar" dir="rtl" id="content_ar" style="font-family: inherit"
+                <label for="content" class="block text-sm font-medium text-gray-700">{{ __('dashboard.content') }}</label>
+                <div id="content" name="content" dir="rtl" id="content" style="font-family: inherit"
                     class="mt-1 w-full  bg-white px-2 py-1 ">
-                    {!! old('content_ar') !!}
+                    {!! old('content') !!}
                 </div>
-                @error('content_ar')
+                @error('content')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
 
-                <input type="hidden" name="content_ar" id="content-input_ar">
+                <input type="hidden" name="content" id="content-input">
+            </div>
+
+            <hr class="w-full my-4 mx-auto">
+
+            <div class="mb-4">
+                <label for="meta_title"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_title') }}</label>
+                <input type="text" id="meta_title" name="meta_title" value="{{ old('meta_title') }}"
+                    class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1 hover:shadow outline-none focus:shadow">
+                @error('meta_title')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-4">
-                <label for="content_en" class="block text-sm font-medium text-gray-700">{{ __('userarea.content_en') }}</label>
-                <div id="content_en" name="content_en" dir="rtl" id="content_en" style="font-family: inherit"
-                    class="mt-1 w-full  bg-white px-2 py-1 ">
-                    {!! old('content_en') !!}
-                </div>
-                @error('content_en')
+                <label for="meta_description"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_description') }}</label>
+                <textarea name="meta_description" id="meta_description" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1"></textarea>
+                @error('meta_description')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror
+            </div>
 
-                <input type="hidden" name="content_en" id="content-input_en">
+            <div class="mb-4">
+                <label for="meta_keywords"
+                    class="block text-sm font-medium text-gray-700">{{ __('dashboard.meta_keywords') }}</label>
+                <textarea name="meta_keywords" id="meta_keywords" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1"></textarea>
+                @error('meta_keywords')
+                    <span class="text-red-500">{{ $message }}</span>
+                @enderror
             </div>
 
             <button type="submit" onclick="appendContentToInput()"
@@ -89,31 +116,6 @@
 @endsection
 
 @push('js')
-    <script>
-        function previewImage(event) {
-            const previewDiv = document.getElementById('imgPreview');
-            const file = event.target.files[0];
-
-            // Check if a file was selected
-            const reader = new FileReader();
-
-            // Set up the FileReader event
-            reader.onload = function(e) {
-                // Create an image element
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = 'Selected Image';
-                img.className = 'w-[200px] h-[200px] object-cover rounded mx-auto';
-
-                // Clear the current preview and add the new image
-                previewDiv.innerHTML = '';
-                previewDiv.appendChild(img);
-            };
-
-            // Read the file as a data URL
-            reader.readAsDataURL(file);
-        }
-    </script>
 
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
@@ -134,69 +136,17 @@
             }], // text direction
         ];
 
-        var quillNews_ar = new Quill('#content_ar', {
+        var quillNews = new Quill('#content', {
             modules: {
                 toolbar: toolbarOptions
             },
             theme: 'snow'
         });
-        var quillNews_en = new Quill('#content_en', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow'
-        });
-
-        function limitImages(quill) {
-            const Delta = Quill.import('delta');
-            const imageButton = quill.getModule('toolbar').container.querySelector('button.ql-image');
-
-            function updateImageButton() {
-                const images = quill.root.querySelectorAll('img');
-                if (images.length >= 5) {
-                    imageButton.style.display = 'none';
-                } else {
-                    imageButton.style.display = 'inline-block';
-                }
-            }
-
-            quill.clipboard.addMatcher('IMG', function(node, delta) {
-                const images = quill.root.querySelectorAll('img');
-                if (images.length >= 5) {
-                    alert('You can only upload up to 5 images.');
-                    return new Delta();
-                }
-                updateImageButton();
-                return delta;
-            });
-
-            quill.root.addEventListener('paste', function(e) {
-                const clipboardData = (e.clipboardData || window.clipboardData);
-                const items = clipboardData.items;
-                for (let i = 0; i < items.length; i++) {
-                    if (items[i].type.indexOf('image') !== -1) {
-                        e.preventDefault();
-                        alert('Pasting images is not allowed.');
-                        break;
-                    }
-                }
-            });
-
-            quill.on('text-change', updateImageButton);
-
-            updateImageButton(); // Initial check
-        }
-
-        limitImages(quillNews_ar);
-        limitImages(quillNews_en);
-
 
 
         function appendContentToInput() {
-            const content_ar = quillNews_ar.root.innerHTML;
-            const content_en = quillNews_en.root.innerHTML;
-            document.getElementById('content-input_ar').value = content_ar;
-            document.getElementById('content-input_en').value = content_en;
+            const content = quillNews.root.innerHTML;
+            document.getElementById('content-input').value = content;
         }
     </script>
 @endpush

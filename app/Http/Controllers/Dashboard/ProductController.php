@@ -57,7 +57,6 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'required|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'meta_title' => 'required|string|max:255',
             'meta_description' => 'required|string',
             'meta_keywords' => 'required|string',
