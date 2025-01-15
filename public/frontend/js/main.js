@@ -3,7 +3,6 @@ let dis  = document.querySelector(".icon-small .dis")
 
 document.addEventListener("click", function (e) {
     if (e.target === smallIcon) { // إذا تم النقر على smallIcon
-        console.log('asdvdsa');
         dis.style.opacity = "1";
         dis.style.visibility = "visible";
     } else { // إذا تم النقر في أي مكان آخر

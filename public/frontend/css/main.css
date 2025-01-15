@@ -877,38 +877,6 @@ html {
 
 
 
-        .stiky .arrow span {
-            display: flex;
-                width: 15px;
-                align-items: center;
-                justify-content: center;
-                height: 15px;
-                border-right: 3px solid white;
-                border-top: 3px solid white;
-                transform: rotate(-45deg);
-                margin: -8px;
-                animation: animate 1.5s infinite;
-        }
-        .arrow span:nth-child(2) {
-            animation-delay: -0.2s;
-        }
-
-        @keyframes animate {
-            0% {
-                /* opacity: 0; */
-                transform: rotate(-45deg) translate(-9px, 10px);
-            }
-            50% {
-                opacity: 1;
-                transform: rotate(-45deg) translate(0px, 0);
-            }
-            100% {
-                opacity: 0;
-                transform: rotate(-45deg) translate(4px, 6px);
-            }
-        }
-
-
         .imageCard {
             position: relative;
 
@@ -949,4 +917,155 @@ html {
             height: 110%;
             opacity: 1;
         }
+/* whatsapp and phone */
+/* .stiky .icons .phone,
+.stiky .icons .whatsapp{
+    text-decoration: none;
+    position:relative;
 
+
+    text-align:center;
+    transform: rotate(-30deg) skew(25deg) translate(0,0);
+    transition:.5s;
+    box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+
+}
+.stiky .icons .whatsapp::before,
+.stiky .icons .phone::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -14px;
+    height: 100%;
+    width: 15px;
+    transform: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.stiky .icons .whatsapp::after,
+.stiky .icons .phone::after{
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: -7px;
+    height: 15px;
+    width: 100%;
+    transform: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+.stiky .icons .whatsapp::before,
+.stiky .icons .whatsapp::after{
+    background-color: #2ad04a;
+}
+.stiky .icons .phone::before,
+.stiky .icons .phone::after{
+    background-color: black;
+}
+.stiky .icons .whatsapp:hover,
+.stiky .icons .phone:hover{
+    transform: rotate(-28deg) skew(7deg) translate(0px,-10px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+} */
+/* /////// */
+
+
+
+.st .icons a ,
+.st .icons a {
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 1;
+  }
+  .st .icons .sa{
+    border: 3px solid black;
+    background-color: #ffe293;
+}
+.st .icons .sb{
+      border: 3px solid #2ad04a;
+
+  }
+  .st .icons a i{
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  .st .icons .sb i{
+    color: #2ad04a;
+  }
+  .st .icons a:hover {
+    border: 3px solid white;
+}
+  .st .icons a:hover i {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  .st .icons a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+
+  .st .icons a:hover:before {
+    top: 0;
+  }
+
+  .st .icons a:nth-child(1)::before {
+    background: black;
+  }
+
+  .st .icons a:nth-child(2)::before {
+    background: #2ad04a;
+  }
+
+
+/* whatsapp and phone */
+/* small menu */
+
+
+  .sparkle:hover {
+    cursor: pointer;
+  }
+  .u-hover--sparkle {
+    box-sizing: border-box;
+    position: relative;
+    padding: 6px;
+  }
+  .u-hover--sparkle::before, .u-hover--sparkle::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+  .u-hover--sparkle::before {
+    border-top: 0.2em solid #54b3d6;
+    border-bottom: 0.2em solid #54b3d6;
+    transform: scale3d(0, 1, 1);
+  }
+  .u-hover--sparkle::after {
+    border-left: 0.2em solid #54b3d6;
+    border-right: 0.2em solid #54b3d6;
+    transform: scale3d(1, 0, 1);
+  }
+  .u-hover--sparkle:hover::before, .u-hover--sparkle:hover::after {
+    transform: scale3d(1, 1, 1);
+    transition: transform .6s;
+  }
