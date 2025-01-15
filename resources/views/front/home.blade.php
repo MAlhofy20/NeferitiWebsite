@@ -128,24 +128,29 @@
 </div>
 <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
     <div class="st flex flex-col gap-[10px] " data-network="facebook ">
-        <div class="icons">
-            <a href="#">
-                <div class="w-10 h-10 bg-[#1da1f2] cursor-pointer  flex items-center justify-center overflow-hidden">
-                    <i class="fa-brands fa-facebook text-white text-2xl"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="w-10 h-10 bg-black cursor-pointer  flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="w-10 h-10 bg-[#2ad04a] cursor-pointer  flex items-center justify-center overflow-hidden">
-                    <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
-                </div>
-            </a>
-        </div>
-        <a href="#">
+        <div>
+            <div class="icons ">
+                <a href="#" class="absolute">
+                    <div class="w-10 h-10 bg-[#1da1f2] cursor-pointer  flex items-center justify-center overflow-hidden">
+                        <i class="fa-brands fa-facebook text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="#" class="absolute">
+                    <div class="w-10 h-10 bg-black cursor-pointer  flex items-center justify-center overflow-hidden">
+                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="#" class="absolute">
+                    <div class="w-10 h-10 bg-[#2ad04a] cursor-pointer  flex items-center justify-center overflow-hidden">
+                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="w-10 h-10 bg-[#0d1a23] cursor-pointer  flex items-center justify-center overflow-hidden relative">
+                <i  class="text-white fa-solid fa-angle-up"></i>
+            </div>
+        </div class="all">
+        <a  href="#">
             <div class="arrow w-10 h-10 bg-[#727272] rounded-full flex items-center justify-center overflow-hidden">
                 <span></span>
                 <span></span>
