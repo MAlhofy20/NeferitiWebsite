@@ -374,12 +374,12 @@
                 <a class="font-[600] " href="#">شاهد جميع منشورات المدونة</a>
             </div>
         </div>
-        <div class="tow-colmn flex gap-[20px] justify-start flex-wrap">
-            <div class="one flex gap-[20px] flex-wrap">
-                <a href="#" class="alla block">
-                    <div class="gap-[45px]" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
-                        <div class="image pb-[15px]">
-                            <img src="{{ asset('frontend/images/blog1.png') }}" alt="">
+        <div class="tow-colmn flex ">
+            <div class="all flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
+                <div class="one gap-[20px]  flex flex-wrap w-[70%] justify-center">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
                         <div class="date text-[#64607D]">
                             <span>08-11-2021</span>
@@ -393,11 +393,9 @@
                             لضمان السرير ضروري.
                         </p>
                     </div>
-                </a>
-                <a href="#" class="alla">
-                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="400">
-                        <div class="image pb-[15px]">
-                            <img src="{{ asset('frontend/images/blog3.png') }}" alt="">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
                         <div class="date text-[#64607D]">
                             <span>08-11-2021</span>
@@ -411,81 +409,183 @@
                             لضمان السرير ضروري.
                         </p>
                     </div>
-                </a>
-            </div>
-            <div class="two max-w-[375px]">
-                <a href="#" class="alla">
-                    <div class="flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="400">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
-                        <div>
-                            <div class="date text-[14px] text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
                         </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
                     </div>
-                </a>
-                <a href="#" class="alla">
-                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
-                        <div>
-                            <div class="date text-[14px] text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800]  leading-[25px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
                         </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
                     </div>
-                </a>
-                <a href="#" class="alla">
-                    <div class="flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
-                        <div>
-                            <div class="date text-[14px] text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
                         </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
                     </div>
-                </a>
-                <a href="#" class="alla">
-                    <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]"
-                        data-aos="fade-right" data-aos-easing="linear" data-aos-duration="700">
-                        <div class="image min-w-[110px]">
-                            <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
-                        <div>
-                            <div class="date text-[#64607D] text-[14px]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
                         </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
                     </div>
-                </a>
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                        </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
+                        </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
+                    </div>
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                        </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
+                        </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
+                    </div>
+                    <div class="w-[270px] gap-[45px]">
+                        <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                        </div>
+                        <div class="date text-[#64607D]">
+                            <span>08-11-2021</span>
+                            <span>Category</span>
+                        </div>
+                        <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
+                            <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                        </div>
+                        <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
+                            رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
+                            لضمان السرير ضروري.
+                        </p>
+                    </div>
+                </div>
+                <div class="two min-w-[400px] flex flex-col">
+                        <div class=" flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                            <div class="imageCard min-w-[110px]">
+                                <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[14px] text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="  flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                            <div class="imageCard min-w-[110px]">
+                                <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog4.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[14px] text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800]  leading-[25px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                            <div class="imageCard min-w-[110px]">
+                                <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[14px] text-[#64607D]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
+                            <div class="imageCard min-w-[110px]">
+                                <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[#64607D] text-[14px]">
+                                    <span>08-11-2021</span>
+                                    <span>Category</span>
+                                </div>
+                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                    <a class= "origin-center transform hover:scale-110 transition duration-300" href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
-        <div class="link15 bg-[#171313] p-[15px] rounded-[10px] text-white ">
-            <a class="font-[600] " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
+        <div class="flex justify-center items-center pt-12">
+            <div class="link15 bg-[#25437e] p-[15px] rounded-[10px] text-white no-underline transition duration-500 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
+                <a class=" " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
+            </div>
         </div>
     </div>
     <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">

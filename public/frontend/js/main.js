@@ -1,3 +1,18 @@
+let smallIcon = document.querySelector(".icon-small i")
+let dis  = document.querySelector(".icon-small .dis")
+
+document.addEventListener("click", function (e) {
+    if (e.target === smallIcon) { // إذا تم النقر على smallIcon
+        console.log('asdvdsa');
+        dis.style.opacity = "1";
+        dis.style.visibility = "visible";
+    } else { // إذا تم النقر في أي مكان آخر
+        dis.style.opacity = "0";
+        dis.style.visibility = "hidden ";
+    }
+})
+
+
 // الحصول على جميع الأكوردينات والعناصر المرتبطة بها
 const accordions = document.querySelectorAll(".accordon .accor");
 const paragraphs = document.querySelectorAll(".accordon p");
@@ -142,3 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollContent();
   });
 /* inimation 2*/
+
+
+

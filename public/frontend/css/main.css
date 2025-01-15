@@ -634,24 +634,7 @@ html {
     transform: rotate(-10deg) skew(0deg) translate(-5px, 10px);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
   }
-.blogs .link15 {
-    background-color: #097aa5;
-    text-decoration: none;
-    position: relative;
-    text-align: center;
-    transition: .5s;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, .5);
-    width: 240px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    right: calc(50% - 240px);
-    transform: translate(-50%, 50px);
-}
-.blogs .link15:hover {
 
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
-  }
 
   .clients .title .link-2{
     filter: drop-shadow(2px 4px 6px black);
@@ -904,7 +887,6 @@ html {
                 border-top: 3px solid white;
                 transform: rotate(-45deg);
                 margin: -8px;
-
                 animation: animate 1.5s infinite;
         }
         .arrow span:nth-child(2) {
@@ -916,7 +898,6 @@ html {
                 /* opacity: 0; */
                 transform: rotate(-45deg) translate(-9px, 10px);
             }
-
             50% {
                 opacity: 1;
                 transform: rotate(-45deg) translate(0px, 0);
@@ -926,3 +907,46 @@ html {
                 transform: rotate(-45deg) translate(4px, 6px);
             }
         }
+
+
+        .imageCard {
+            position: relative;
+
+
+            border-radius: 10px; /* لتنعيم الزوايا */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+        }
+
+        .imageCard img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover; /* لضمان ملء الصورة للحاوية */
+            transition: transform 0.5s ease; /* تأثير سلس عند التكبير */
+        }
+
+        .imageCard:hover img {
+            transform: scale(1.1); /* تكبير الصورة بنسبة 20% */
+        }
+
+        .imageCard::before {
+            content: "";
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 0;
+            height: 0;
+            opacity: 0;
+            z-index: 2;
+            transition: all 0.7s ease; /* إضافة انتقال سلس */
+        }
+
+        .imageCard:hover::before {
+            width: 111%;
+            height: 110%;
+            opacity: 1;
+        }
+
