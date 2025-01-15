@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\Front\HomeController;
@@ -86,11 +87,12 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
 });
 
 
-Route::name('front.')->group(function () {
+Route::name('front.')->middleware([TrackVisits::class])->group(function () {
     Route::get('/', [FrontController::class, 'home'])->name('home');
     Route::get('product/{slug}', [FrontController::class, 'product'])->name('product');
     Route::get('projects', [FrontController::class, 'projects'])->name('projects');
     Route::get('blog', [FrontController::class, 'blog'])->name('blog');
+    Route::get('blog/{slug}', [FrontController::class, 'blog_show'])->name('blog.show');
 });
 
 

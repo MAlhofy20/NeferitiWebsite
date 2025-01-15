@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Visit;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Testimonial;
@@ -36,4 +37,11 @@ class FrontController extends Controller
         $blogs = Blog::all();
         return view('front.blog.index', compact('blogs'));
     }
+
+    public function blog_show($slug)
+    {
+        $blog = Blog::where('slug', $slug)->first();
+        return view('front.blog.show', compact('blog'));
+    }
+
 }
