@@ -361,8 +361,8 @@
         </div>
         <div class="tow-colmn flex ">
             <div class="all flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
-                <div class="one gap-[20px]  flex flex-wrap w-[70%] justify-center">
-                    <div class="w-[270px] gap-[45px]">
+                <div class="one gap-[20px] w-full  flex flex-wrap">
+                    <div class="md:w-[270px] gap-[45px]">
                         <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                             <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
@@ -378,7 +378,7 @@
                             لضمان السرير ضروري.
                         </p>
                     </div>
-                    <div class="w-[270px] gap-[45px]">
+                    <div class="md:w-[270px] gap-[45px]">
                         <div class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                             <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
@@ -394,7 +394,7 @@
                             لضمان السرير ضروري.
                         </p>
                     </div>
-                    <div class="w-[270px] gap-[45px]">
+                    <div class="md:w-[270px] gap-[45px]">
                         <div class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                             <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                         </div>
