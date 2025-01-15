@@ -498,7 +498,7 @@
             </div>
         </div>
         <div class="flex justify-center items-center pt-12">
-            <div class="link15 bg-[#25437e] p-[15px] rounded-[10px] text-white no-underline transition duration-500 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
+            <div class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-500 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
                 <a class=" " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
             </div>
         </div>
@@ -576,7 +576,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -590,7 +590,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -604,7 +604,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -618,7 +618,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -632,7 +632,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -646,7 +646,7 @@
                 <div
                     class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                     <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
+                    <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                         <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                             خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
                             في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
@@ -657,76 +657,7 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                    <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
-                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                            في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                        </div>
-                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                            <span class="h-[3px] w-[60px] bg-white block"></span>
-                            <span class="font-[700]">K Oiwake</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                    <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
-                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                            في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                        </div>
-                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                            <span class="h-[3px] w-[60px] bg-white block"></span>
-                            <span class="font-[700]">K Oiwake</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                    <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
-                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                            في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                        </div>
-                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                            <span class="h-[3px] w-[60px] bg-white block"></span>
-                            <span class="font-[700]">K Oiwake</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                    <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
-                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                            في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                        </div>
-                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                            <span class="h-[3px] w-[60px] bg-white block"></span>
-                            <span class="font-[700]">K Oiwake</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                    <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                    <div>
-                        <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                            خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                            في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                        </div>
-                        <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                            <span class="h-[3px] w-[60px] bg-white block"></span>
-                            <span class="font-[700]">K Oiwake</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
                     </filter>
                 </defs>
             </svg></div>
-        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
+        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center  px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
@@ -26,22 +26,19 @@
             <div class="title flex justify-center items-center flex-col">
                 <p class="text-[30px] md:text-[80px] text-white font-bold">أحدث منشورات مدونتنا
                 </p>
-                <div class="the-pahe bg-white relative ">
-                    <div id="blogs" class="blogs p-[20px] md:p-[100px]">
+                <div style="box-shadow: 0px 0px 20px 13px #00000033;" class="the-pahe bg-white relative rounded-[20px] w-[90%]">
+                    <div  id="blogs" class="blogs p-[20px] md:p-[100px]">
                         <div class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
                             <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold" data-aos="anim"
                                 data-aos-easing="linear" data-aos-duration="500">أحدث منشورات مدونتنا</div>
-                            <div class="link1 bg-[#171313] p-[15px] rounded-[10px] text-white" data-aos="anim"
-                                data-aos-easing="linear" data-aos-duration="500" data-aos-easing="ease-in-sine">
-                                <a class="font-[600] " href="#">شاهد جميع منشورات المدونة</a>
-                            </div>
+
                         </div>
                         <div class="tow-colmn flex ">
                             <div class="all flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                                 <div class="one gap-[40px]  flex flex-col flex-wrap w-[70%] justify-center">
                                     <div class="flex flex-wrap  justify-center gap-[20px]">
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -57,7 +54,7 @@
                                             </p>
                                         </div>
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -73,7 +70,7 @@
                                             </p>
                                         </div>
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -89,7 +86,7 @@
                                             </p>
                                         </div>
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -105,7 +102,7 @@
                                             </p>
                                         </div>
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -121,7 +118,7 @@
                                             </p>
                                         </div>
                                         <div class="w-[270px] gap-[45px]">
-                                            <div class="imageCard pb-[15px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
                                             <div class="date text-[#64607D]">
@@ -136,8 +133,6 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-
-
                                     </div>
                                     <div class="pagination">
                                         <nav aria-label="Page navigation example">
@@ -168,63 +163,63 @@
                                     </div>
                                 </div>
                                 <div class="two min-w-[400px] flex flex-col">
-                                        <div class=" flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
-                                            <div class="image min-w-[110px]">
-                                                <img src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                                    <div class=" flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                                        <div class="imageCard min-w-[110px]">
+                                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="date text-[14px] text-[#64607D]">
+                                                <span>08-11-2021</span>
+                                                <span>Category</span>
                                             </div>
-                                            <div>
-                                                <div class="date text-[14px] text-[#64607D]">
-                                                    <span>08-11-2021</span>
-                                                    <span>Category</span>
-                                                </div>
-                                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                                </div>
+                                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
                                             </div>
                                         </div>
-                                        <div class="  flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                                            <div class="image min-w-[110px]">
-                                                <img src="{{ asset('frontend/images/blog4.png') }}" alt="">
+                                    </div>
+                                    <div class="  flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                                        <div class="imageCard min-w-[110px]">
+                                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog4.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="date text-[14px] text-[#64607D]">
+                                                <span>08-11-2021</span>
+                                                <span>Category</span>
                                             </div>
-                                            <div>
-                                                <div class="date text-[14px] text-[#64607D]">
-                                                    <span>08-11-2021</span>
-                                                    <span>Category</span>
-                                                </div>
-                                                <div class="tit max-w-[375px] font-[800]  leading-[25px] py-[5px]">
-                                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                                </div>
+                                            <div class="tit max-w-[375px] font-[800]  leading-[25px] py-[5px]">
+                                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
                                             </div>
                                         </div>
-                                        <div class=" flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                                            <div class="image min-w-[110px]">
-                                                <img src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                                    </div>
+                                    <div class=" flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                                        <div class="imageCard min-w-[110px]">
+                                            <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="date text-[14px] text-[#64607D]">
+                                                <span>08-11-2021</span>
+                                                <span>Category</span>
                                             </div>
-                                            <div>
-                                                <div class="date text-[14px] text-[#64607D]">
-                                                    <span>08-11-2021</span>
-                                                    <span>Category</span>
-                                                </div>
-                                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                                </div>
+                                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
-                                            <div class="image min-w-[110px]">
-                                                <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                                    </div>
+                                    <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
+                                        <div class="imageCard min-w-[110px]">
+                                            <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="date text-[#64607D] text-[14px]">
+                                                <span>08-11-2021</span>
+                                                <span>Category</span>
                                             </div>
-                                            <div>
-                                                <div class="date text-[#64607D] text-[14px]">
-                                                    <span>08-11-2021</span>
-                                                    <span>Category</span>
-                                                </div>
-                                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                                </div>
+                                            <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
+                                                <a class= "origin-center transform hover:scale-110 transition duration-300" href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
                                             </div>
                                         </div>
-                                </div>
+                                    </div>
+                            </div>
                             </div>
                         </div>
 
