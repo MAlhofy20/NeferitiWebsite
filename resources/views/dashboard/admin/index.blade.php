@@ -31,10 +31,10 @@
 
                             @if ($admin->id != auth('admin')->user()->id)
                             <div>
-                                <form action="{{ route('dashboard.admin.destroy', $admin->id) }}" method="POST" id="deleteadminForm">
+                                <form action="{{ route('dashboard.admin.destroy', $admin->id) }}" method="POST" id="deleteadminForm{{ $admin->id }}">
                                     @csrf
                                     @method('DELETE')
-                                    <i role="button" onclick="confirmDelete('deleteadminForm', '{{ lang() }}')"  class="fa-solid fa-trash hover:text-red-500"></i>
+                                    <i role="button" onclick="confirmDelete('deleteadminForm{{ $admin->id }}', '{{ lang() }}')"  class="fa-solid fa-trash hover:text-red-500"></i>
                                 </form>
                                 </div>
                             @endif

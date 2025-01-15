@@ -20,6 +20,7 @@
                         <th class="py-2 px-4 text-start">{{ __('dashboard.name') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.slug') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.description') }}</th>
+                        <th class="py-2 px-4 text-start">{{ __('dashboard.order') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.product_details') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.actions') }}</th>
                     </tr>
@@ -40,6 +41,20 @@
                                 {{ $product->description }}
                             </td>
                             <td class="py-2 px-4 text-start items-center">
+                                <div class="flex gap-2 bg-blue-200 p-2 rounded-lg justify-center">
+                                    <form action="{{ route('dashboard.products.up', $product->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="fa-solid fa-arrow-up"></button>
+                                    </form>
+                                    {{ $product->order_number }}
+                                    <form action="{{ route('dashboard.products.down', $product->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="fa-solid fa-arrow-down"></button>
+                                    </form>    
+                                </div>
+                            </td>
+
+                            <td class="py-2 px-4 text-start items-center">
                                     <button onclick="window.location.href = '{{ route('dashboard.product_details.index', $product->id) }}';" 
                                     class="px-2 py-1 text-xs bg-gray-300 rounded text-black">{{ __('dashboard.product_details') }}</button>
                             </td>
@@ -49,10 +64,10 @@
                                     <a href="{{ route('dashboard.products.edit', $product->id) }}"
                                         class="fa-solid fa-pen-to-square hover:text-blue-500"></a>
                                     <form action="{{ route('dashboard.products.destroy', $product->id) }}" method="POST"
-                                        id="deleteProductForm" class="flex items-center">
+                                        id="deleteProductForm{{ $product->id }}" class="flex items-center">
                                         @csrf
                                         @method('DELETE')
-                                        <i role="button" onclick="confirmDelete('deleteProductForm', '{{ lang() }}')"
+                                        <i role="button" onclick="confirmDelete('deleteProductForm{{ $product->id }}', '{{ lang() }}')"
                                             class="fa-solid fa-trash hover:text-red-500"></i>
                                     </form>
                                 </div>
@@ -62,29 +77,11 @@
                         </tr>
                     @endforeach
                 </tbody>
-
-                {{-- {{ $products->links() }} --}}
             </table>
-            {{-- <div class="flex items-center mt-4 gap-2 text-xs">
-                <!-- زر Previous -->
-                @if ($currentPage > 1)
-                    <a href="{{ route('dashboard.products.index', ['page' => $currentPage - 1]) }}"
-                        class="px-3 py-1 text-white rounded bg-gray-800">{{ __('dashboard.previous') }}</a>
-                @endif
-
-                <!-- رقم الصفحة الحالية -->
-                <span class="font-semibold text-lg">{{ $currentPage }}</span>
-
-                <!-- زر Next -->
-                @if ($currentPage < $totalPages)
-                    <a href="{{ route('dashboard.products.index', ['page' => $currentPage + 1]) }}"
-                        class="px-3 py-1 text-white rounded bg-gray-800">{{ __('dashboard.next') }}</a>
-                @endif
-            </div> --}}
-
         </div>
     </div>
 @endsection
 
 @push('js')
+
 @endpush

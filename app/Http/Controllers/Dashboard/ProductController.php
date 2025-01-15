@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all(); 
+        $products = Product::orderBy('order_number', 'asc')->get(); 
         return view('dashboard.products.index', compact('products'));
     }
 
@@ -31,7 +31,10 @@ class ProductController extends Controller
             'meta_keywords' => 'required|string',
         ]);
 
+        $lastProduct = Product::orderBy('order_number', 'desc')->first();
         $product = new Product();
+        $product->order_number = $lastProduct ? $lastProduct->order_number + 1 : 1;
+
         $product->name = $request->name;
         $product->slug = cleanSlug($request->name);
         $product->description = $request->description;
@@ -84,6 +87,33 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('dashboard.products.index')->with('success', __('dashboard.deleted_successfully'));
     }
+
+    public function up($id)
+    {
+        $currentProduct = Product::find($id);
+        $product = Product::where('order_number', '<', $currentProduct->order_number)->latest()->first();
+        if($product){
+            $product->order_number = $product->order_number + 1;
+            $product->save();
+            $currentProduct->order_number = $currentProduct->order_number - 1;
+            $currentProduct->save();
+        }
+        return redirect()->route('dashboard.products.index')->with('success', __('dashboard.updated_successfully'));
+    }
+
+    public function down($id)
+    {
+        $currentProduct = Product::find($id);
+        $product = Product::where('order_number', '>', $currentProduct->order_number)->first();
+        if($product){
+            $product->order_number = $product->order_number - 1;
+            $product->save();
+            $currentProduct->order_number = $currentProduct->order_number + 1;
+            $currentProduct->save();
+        }
+        return redirect()->route('dashboard.products.index')->with('success', __('dashboard.updated_successfully'));
+    }
+
 
 
 }

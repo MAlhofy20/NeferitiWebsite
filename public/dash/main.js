@@ -115,6 +115,10 @@ function confirmDelete(form_id, lang) {
         confirmButtonText: lang == 'ar' ? 'نعم، احذف!' : 'Yes, delete it!',
         cancelButtonText: lang == 'ar' ? 'إلغاء' : 'Cancel'
     }).then((result) => {
+        console.log(form_id);
+        console.log(document.getElementById(form_id));
+        
+        console.log(result);
         if (result.isConfirmed) {
             // إرسال الطلب
             document.getElementById(form_id).submit();

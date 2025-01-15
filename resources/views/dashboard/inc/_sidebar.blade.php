@@ -36,6 +36,11 @@
                 <i class="fa-solid fa-blog mx-2"></i>
                 {{ __('dashboard.blogs') }}
             </a>
+            <a href="{{ route('dashboard.testimonials.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.testimonials.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-comment mx-2"></i>
+                {{ __('dashboard.testimonials') }}
+            </a>
             <a href="{{ route('dashboard.partners.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.partners.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-handshake mx-2"></i>

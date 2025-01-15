@@ -29,10 +29,10 @@
                             <td class="py-2 px-4 text-start items-center">
                                 <div class="flex gap-2 items-center">
                                     <form action="{{ route('dashboard.partners.destroy', $partner->id) }}" method="POST"
-                                        id="deletePartnerForm" class="flex items-center">
+                                        id="deletePartnerForm{{ $partner->id }}" class="flex items-center">
                                         @csrf
                                         @method('DELETE')
-                                        <i role="button" onclick="confirmDelete('deletePartnerForm', '{{ lang() }}')"
+                                        <i role="button" onclick="confirmDelete('deletePartnerForm{{ $partner->id }}', '{{ lang() }}')"
                                             class="fa-solid fa-trash hover:text-red-500"></i>
                                     </form>
                                 </div>

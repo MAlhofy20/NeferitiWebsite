@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Product;
 use App\Models\Project;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -13,7 +14,9 @@ class FrontController extends Controller
     {
         $products = Product::all();
         $projects = Project::take(6)->get();
-        return view('front.home', compact('products', 'projects'));
+        $testimonials = Testimonial::get();
+
+        return view('front.home', compact('products', 'projects', 'testimonials'));
     }
 
     public function product($slug)

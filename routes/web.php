@@ -13,6 +13,7 @@ use App\Http\Controllers\Dashboard\AuthDashController;
 use App\Http\Controllers\Dashboard\HomeDashController;
 use App\Http\Controllers\Dashboard\ProjectsController;
 use App\Http\Controllers\Dashboard\AdminDashController;
+use App\Http\Controllers\Dashboard\TestimonialController;
 use App\Http\Controllers\Dashboard\EmailSettingController;
 use App\Http\Controllers\Dashboard\ProductDetailController;
 
@@ -26,6 +27,9 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::resource('admin', AdminDashController::class)->names('admin');
     
     Route::resource('products', ProductController::class)->names('products');
+    Route::post('products/up/{product}', [ProductController::class, 'up'])->name('products.up');
+    Route::post('products/down/{product}', [ProductController::class, 'down'])->name('products.down');
+
     Route::controller(ProductDetailController::class)->group(function () {
         Route::get('product_details/{product}', 'index')->name('product_details.index');
         Route::get('product_details/create/{product}', 'create')->name('product_details.create');
@@ -33,11 +37,17 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
         Route::get('product_details/edit/{product_detail}', 'edit')->name('product_details.edit');
         Route::put('product_details/update/{product_detail}', 'update')->name('product_details.update');
         Route::delete('product_details/delete/{product_detail}', 'destroy')->name('product_details.destroy');
+        Route::post('product_details/up/{product_detail}', 'up')->name('product_details.up');
+        Route::post('product_details/down/{product_detail}', 'down')->name('product_details.down');
     });
 
     Route::resource('partners', PartnerController::class)->names('partners');
 
     Route::resource('projects', ProjectsController::class)->names('projects');   
+    Route::post('projects/up/{project}', [ProjectsController::class, 'up'])->name('projects.up');
+    Route::post('projects/down/{project}', [ProjectsController::class, 'down'])->name('projects.down');
+
+    Route::resource('testimonials', TestimonialController::class)->names('testimonials');
     
     Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
     Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
@@ -51,7 +61,8 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::get('blogs/edit/{blog_id}', [BlogController::class, 'edit'])->name('blogs.edit');
     Route::put('blogs/update/{blog_id}', [BlogController::class, 'update'])->name('blogs.update');
     Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
-    
+    Route::post('blogs/up/{blog_id}', [BlogController::class, 'up'])->name('blogs.up');
+    Route::post('blogs/down/{blog_id}', [BlogController::class, 'down'])->name('blogs.down');
     
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');

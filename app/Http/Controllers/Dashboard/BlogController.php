@@ -12,7 +12,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::orderBy('order_number', 'asc')->get();
         return view('dashboard.blogs.index', compact('blogs'));
     }
 
@@ -33,7 +33,9 @@ class BlogController extends Controller
             'meta_description' => 'nullable',
             'meta_keywords' => 'nullable',
         ]);
+        $lastBlog = Blog::orderBy('order_number', 'desc')->first();
         $blog = new Blog();
+        $blog->order_number = $lastBlog ? $lastBlog->order_number + 1 : 1;
         $blog->title = $request->title;
         $blog->slug = cleanSlug($request->title);
         $blog->preview = $request->preview;
@@ -84,13 +86,33 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         if ($blog->image) {
-            Upload::deleteImage($blog->image);
+            Upload::deleteFile($blog->image);
         }
         $blog->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => __('dashboard.deleted_successfully'),
-        ]);
+
+        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.deleted_successfully'));
+    }
+
+    public function up($id)
+    {
+        $currentBlog = Blog::find($id);
+        $blog = Blog::where('order_number', '<', $currentBlog->order_number)->latest()->first();
+        $blog->order_number = $blog->order_number + 1;
+        $blog->save();
+        $currentBlog->order_number = $currentBlog->order_number - 1;
+        $currentBlog->save();
+        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.updated_successfully'));
+    }
+
+    public function down($id)
+    {
+        $currentBlog = Blog::find($id);
+        $blog = Blog::where('order_number', '>', $currentBlog->order_number)->first();
+        $blog->order_number = $blog->order_number - 1;
+        $blog->save();
+        $currentBlog->order_number = $currentBlog->order_number + 1;
+        $currentBlog->save();
+        return redirect()->route('dashboard.blogs.index')->with('success', __('dashboard.updated_successfully'));
     }
 }

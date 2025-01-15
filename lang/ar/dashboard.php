@@ -17,6 +17,8 @@ return [
     'product' => 'المنتج',
     'inactive' => 'غير مفعل',
     'select_product' => 'اختر المنتج',
+    'order' => 'الترتيب',
+    'testimonials' => 'التعليقات',
     'active' => 'مفعل',
     'update' => 'تعديل',
     'close' => 'اغلاق',

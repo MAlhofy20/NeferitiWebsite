@@ -22,7 +22,12 @@ return new class extends Migration
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
+<<<<<<< Updated upstream
             $table->boolean('status')->default(true);
+=======
+            $table->boolean('status')->default(false);
+            $table->integer('order_number')->default(0);
+>>>>>>> Stashed changes
             $table->timestamps();
         });
     }

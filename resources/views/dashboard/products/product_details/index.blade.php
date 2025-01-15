@@ -21,6 +21,7 @@
                         <th class="py-2 px-4 text-start">{{ __('dashboard.image') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.title') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.description') }}</th>
+                        <th class="py-2 px-4 text-start">{{ __('dashboard.order') }}</th>
                         <th class="py-2 px-4 text-start">{{ __('dashboard.actions') }}</th>
                     </tr>
                 </thead>
@@ -37,14 +38,27 @@
                                 {{ $product_detail->description }}
                             </td>
                             <td class="py-2 px-4 text-start items-center">
+                                <div class="flex gap-2 bg-blue-200 p-2 rounded-lg justify-center">
+                                    <form action="{{ route('dashboard.product_details.up', $product_detail->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="fa-solid fa-arrow-up"></button>
+                                    </form>
+                                    {{ $product_detail->order_number }}
+                                    <form action="{{ route('dashboard.product_details.down', $product_detail->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="fa-solid fa-arrow-down"></button>
+                                    </form>    
+                                </div>
+                            </td>
+                            <td class="py-2 px-4 text-start items-center">
                                 <div class="flex gap-2 items-center">
                                     <a href="{{ route('dashboard.product_details.edit', $product_detail) }}"
                                         class="fa-solid fa-pen-to-square hover:text-blue-500"></a>
                                     <form action="{{ route('dashboard.product_details.destroy', $product_detail) }}" method="POST"
-                                        id="deleteProductDetailForm" class="flex items-center">
+                                        id="deleteProductDetailForm{{ $product_detail->id }}" class="flex items-center">
                                         @csrf
                                         @method('DELETE')
-                                        <i role="button" onclick="confirmDelete('deleteProductForm', '{{ lang() }}')"
+                                        <i role="button" onclick="confirmDelete('deleteProductDetailForm{{ $product_detail->id }}', '{{ lang() }}')"
                                             class="fa-solid fa-trash hover:text-red-500"></i>
                                     </form>
                                 </div>
