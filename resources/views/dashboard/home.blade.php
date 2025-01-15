@@ -4,151 +4,200 @@
     <x-dashboard.header>
         <div class="text-xl font-bold">{{ __('dashboard.home') }}</div>
     </x-dashboard.header>
-    @if(auth()->user()->type == 'user')
-    <div class="bg-white rounded-lg shadow p-6 h-full">
-        <div class="bg-white py-24 sm:py-32">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="mx-auto max-w-2xl sm:text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ __('dashboard.home_title') }}</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600">{{ __('dashboard.home_subtitle') }}</p>
-              </div>
-              <p class="text-center bg-green-500 rounded-2xl">{{ __('dashboard.expiry_date_dashboard') }}: <span class="font-bold">{{ auth()->user()->expiry_date }}</span></p>
-              <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-                <div class="p-8 sm:p-10 lg:flex-auto">
-                  <h3 class="text-2xl font-bold tracking-tight text-gray-900">{{ __('userarea.monthly') }}</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">{{ __('dashboard.monthly_description') }}</p>
-                  <div class="mt-10 flex items-center gap-x-4">
-                    <h4 class="flex-none text-sm font-semibold leading-6 text-[#452810]">{{ __('dashboard.whats_included') }}</h4>
-                    <div class="h-px flex-auto bg-gray-100"></div>
-                  </div>
-                  <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li1') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li2') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li3') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li4') }}
-                    </li>
-                  </ul>
-                </div>
-                <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                  <div class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                    <div class="mx-auto max-w-xs px-8">
-                      <p class="text-base font-semibold text-gray-600">{{ __('dashboard.monthly_subscription') }}</p>
-                      <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                        <span class="text-5xl font-bold tracking-tight text-gray-900">20</span>
-                        <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">{{ setting('currency') }}</span>
-                      </p>
-                      <a href="#" class="mt-10 block w-full rounded-md bg-[#452810] px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#946035]">{{ __('dashboard.Get started') }}</a>
-                      <p class="mt-6 text-xs leading-5 text-gray-600">{{ __('dashboard.monthly_description') }}</p>
+    <div class="container mx-auto px-4">
+        <!-- اختيار النطاق الزمني -->
+        <form method="GET" action="{{ route('dashboard.home') }}" class="mb-4">
+            <label for="time_range" class="block text-sm font-medium text-gray-700 mb-2">اختر النطاق الزمني:</label>
+            <select name="time_range" id="time_range" class="border-gray-300 rounded-md shadow-sm w-full md:w-auto" onchange="this.form.submit()">
+                <option value="day" {{ $timeRange == 'day' ? 'selected' : '' }}>آخر يوم</option>
+                <option value="week" {{ $timeRange == 'week' ? 'selected' : '' }}>آخر أسبوع</option>
+                <option value="month" {{ $timeRange == 'month' ? 'selected' : '' }}>آخر شهر</option>
+                <option value="year" {{ $timeRange == 'year' ? 'selected' : '' }}>آخر سنة</option>
+            </select>
+        </form>
+    
+        <!-- الكاردات والشارت -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+            <!-- الكاردات -->
+            <div class="flex flex-col gap-4">
+                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                    <div class="text-blue-500 text-center">
+                        <i class="fas fa-users fa-2x"></i>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-auto mt-5 max-w-2xl rounded-3xl ring-1 ring-gray-200 lg:mx-0 lg:flex lg:max-w-none">
-                <div class="p-8 sm:p-10 lg:flex-auto">
-                  <h3 class="text-2xl font-bold tracking-tight text-gray-900">{{ __('userarea.yearly') }}</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">{{ __('dashboard.yearly_description') }}</p>
-                  <div class="mt-10 flex items-center gap-x-4">
-                    <h4 class="flex-none text-sm font-semibold leading-6 text-[#452810]">{{ __('dashboard.whats_included') }}</h4>
-                    <div class="h-px flex-auto bg-gray-100"></div>
-                  </div>
-                  <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li1') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li2') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li3') }}
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg class="h-6 w-5 flex-none text-[#452810]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                      </svg>
-                      {{ __('userarea.sec5_li4') }}
-                    </li>
-                  </ul>
-                </div>
-                <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                  <div class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                    <div class="mx-auto max-w-xs px-8">
-                      <p class="text-base font-semibold text-gray-600">{{ __('dashboard.yearly_subscription') }}</p>
-                      <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                        <span class="text-5xl font-bold tracking-tight text-gray-900">20</span>
-                        <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">{{ setting('currency') }}</span>
-                      </p>
-                      <a href="#" class="mt-10 block w-full rounded-md bg-[#452810] px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#946035]">{{ __('dashboard.Get started') }}</a>
-                      <p class="mt-6 text-xs leading-5 text-gray-600">{{ __('dashboard.yearly_description') }}</p>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              <section class="bg-brown py-6">
-                <div class="container mx-auto">
-                    <p class="text-lg font-bold text-center text-black mb-5">{{ __('dashboard.social_media_contact') }}</ح>
-                    <div class="flex justify-center flex-wrap space-x-6">
-                        <a href="{{ setting('tictok') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-tiktok"></i>
-                        </a>
-                        <a href="{{ setting('snapchat') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-snapchat"></i>
-                        </a>
-                        <a href="{{ setting('twitter') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-twitter"></i>
-                        </a>
-                        <a href="{{ setting('linkedin') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="{{ setting('youtube') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-youtube"></i>
-                        </a>
-                        <a href="{{ setting('whatsapp') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fab fa-whatsapp"></i>
-                        </a>
-                        <a href="{{ setting('email') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fa-regular fa-envelope"></i>
-                        </a>
-                        <a href="tel:{{ setting('phone') }}" target="_blank" class="mb-3">
-                            <i class="text-[#452810] hover:text-[#946035] text-6xl mx-3 fa-solid fa-phone"></i>
-                        </a>
-
+                    <div class="col-span-2 text-right">
+                        <h5 class="text-sm font-semibold text-gray-700">عدد الجلسات</h5>
+                        <p class="text-2xl font-bold text-blue-500">{{ $sessionsCount }}</p>
+                        <p class="text-xs text-gray-500">جلسات تم تسجيلها في النطاق الزمني</p>
                     </div>
                 </div>
-            </section>
-
-              
+                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                    <div class="text-green-500 text-center">
+                        <i class="fas fa-eye fa-2x "></i>
+                    </div>
+                    <div class="col-span-2 text-right">
+                        <h5 class="text-sm font-semibold text-gray-700">عدد الزيارات</h5>
+                        <p class="text-2xl font-bold text-green-500">{{ $visitsCount }}</p>
+                        <p class="text-xs text-gray-500">إجمالي زيارات الصفحات المسجلة</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                    <div class="text-purple-500 text-center">
+                        <i class="fas fa-handshake fa-2x"></i>
+                    </div>
+                    <div class="col-span-2 text-right">
+                        <h5 class="text-sm font-semibold text-gray-700">عدد العملاء المحتملين</h5>
+                        <p class="text-2xl font-bold text-purple-500">{{ $potentialLeadsCount }}</p>
+                        <p class="text-xs text-gray-500">عملاء محتملين تفاعلوا مع الموقع</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                    <div class="text-red-500 text-center">
+                        <i class="fas fa-percentage fa-2x"></i>
+                    </div>
+                    <div class="col-span-2 text-right">
+                        <h5 class="text-sm font-semibold text-gray-700">نسبة التحويل</h5>
+                        <p class="text-2xl font-bold text-red-500">{{ $conversionRate }}%</p>
+                        <p class="text-xs text-gray-500">معدل التحويل مقارنةً بالجلسات</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          
+            
+            <!-- الشارت -->
+            <div class="col-span-2 bg-white shadow rounded-lg p-4">
+                <h3 class="text-sm font-semibold text-gray-800 mb-2">إحصائيات الجلسات والعملاء المحتملين</h3>
+                <canvas id="chart" style="height: 250px;"></canvas>
+            </div>
+        </div>
+                
+        <!-- الجداول -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- جدول الصفحات الأكثر زيارة -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+                <h3 class="text-sm font-semibold text-gray-800 p-2">الصفحات الأكثر زيارة</h3>
+                <table class="min-w-full table-auto text-sm">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-gray-600">URL</th>
+                            <th class="px-4 py-2 text-gray-600">عدد الزيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @forelse($topPages as $page)
+                        <tr>
+                            <td class="px-4 py-2 break-all">{{ $page->url }}</td>
+                            <td class="px-4 py-2">{{ $page->visits_count }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="2" class="px-4 py-2 text-center text-gray-500">لا توجد بيانات</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- جدول الدول والمحافظات الأكثر زيارة -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+                <h3 class="text-sm font-semibold text-gray-800 p-2">الدول والمحافظات الأكثر زيارة</h3>
+                <table class="min-w-full table-auto text-sm">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-gray-600">الدولة</th>
+                            <th class="px-4 py-2 text-gray-600">المحافظة/المدينة</th>
+                            <th class="px-4 py-2 text-gray-600">عدد الزيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @forelse($topLocations as $location)
+                        <tr>
+                            <td class="px-4 py-2">{{ $location->country ?? 'غير متوفرة' }}</td>
+                            <td class="px-4 py-2">{{ $location->city ?? 'غير متوفرة' }}</td>
+                            <td class="px-4 py-2">{{ $location->visits_count }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="3" class="px-4 py-2 text-center text-gray-500">لا توجد بيانات</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- جدول مصادر الزيارات الأكثر شيوعًا -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+                <h3 class="text-sm font-semibold text-gray-800 p-2">مصادر الزيارات الأكثر شيوعًا</h3>
+                <table class="min-w-full table-auto text-sm">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-gray-600">المصدر</th>
+                            <th class="px-4 py-2 text-gray-600">عدد الزيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @forelse($topReferrers as $referrer)
+                        <tr>
+                            <td class="px-4 py-2 break-all">{{ $referrer->referrer ?? 'غير معروف' }}</td>
+                            <td class="px-4 py-2">{{ $referrer->visits_count }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="2" class="px-4 py-2 text-center text-gray-500">لا توجد بيانات</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    @endif
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @json($dates),
+                datasets: [
+                    {
+                        label: 'الجلسات',
+                        data: @json($sessionsData),
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'العملاء المحتملين',
+                        data: @json($leadsData),
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'التاريخ'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'العدد'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 @endsection

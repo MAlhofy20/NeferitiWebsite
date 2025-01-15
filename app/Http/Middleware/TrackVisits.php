@@ -6,6 +6,7 @@ use Closure;
 use App\Models\Visit;
 use Illuminate\Http\Request;
 use Torann\GeoIP\Facades\GeoIP;
+use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpFoundation\Response;
 
 class TrackVisits
@@ -17,20 +18,21 @@ class TrackVisits
      */
     public function handle(Request $request, Closure $next): Response
     {
-
-        $geoData = GeoIP::getLocation($request->ip());
+        // if (App::environment('local')) {
+        //     return $next($request);
+        // }
+        // $geoData = GeoIP::getLocation($request->ip()) ?? [];
 
         $data = [
             'session_id' => $request->session()->getId(),
             'ip_address' => $request->ip(),
             'user_agent' => $request->header('User-Agent'),
-            'url'        => $request->path(),   // أو $request->fullUrl()
+            'url'        => $request->path(),
             'referrer'   => $request->header('referer'),
-            'country' => $geoData['country'],
-            'city' => $geoData['city'],
+            // 'country'    => $geoData['country'] ?? 'Unknown',
+            // 'city'       => $geoData['city'] ?? 'Unknown',
         ];
 
-        // احفظ البيانات في الجدول
         Visit::create($data);
 
         return $next($request);
