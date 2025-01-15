@@ -24,13 +24,12 @@ class TrackVisits
             'session_id' => $request->session()->getId(),
             'ip_address' => $request->ip(),
             'user_agent' => $request->header('User-Agent'),
-            'url'        => $request->path(),   // أو $request->fullUrl()
+            'url'        => $request->path(),
             'referrer'   => $request->header('referer'),
             'country' => $geoData['country'],
             'city' => $geoData['city'],
         ];
 
-        // احفظ البيانات في الجدول
         Visit::create($data);
 
         return $next($request);

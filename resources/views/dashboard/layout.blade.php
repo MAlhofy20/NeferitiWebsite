@@ -29,7 +29,7 @@
     @stack('css')
 </head>
 
-<body dir="{{ lang('ar') ? 'rtl' : 'ltr' }}" class="bg-gray-100">
+<body dir="{{ lang('ar') ? 'rtl' : 'ltr' }}" class="bg-gradient-to-bl from-[#DFFFFD] via-transparent">
     @include('dashboard.inc._sidebar')
     <div class="h-screen {{ lang('ar') ? 'md:mr-[250px]' : 'md:ml-[250px]' }}">
         <div class="p-5">
