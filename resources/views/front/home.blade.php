@@ -302,32 +302,6 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
-            <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
-                data-aos-easing="linear" data-aos-duration="1000" data-aos-easing="ease-in-sine"
-                data-aos-duration="500">
-                <div class="font-[600] text-[22px]">اعمال سابقه</div>
-                <i class="fa-solid fa-turn-down"></i>
-            </div>
-            <div class="previous flex gap-[32px] flex-wrap justify-center">
-                @foreach ($projects as $project)
-                    <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
-                        data-aos-easing="linear" data-aos-duration="500">
-                        <img class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px] w-full" src="{{ asset($project->image) }}"
-                            alt="">
-                        <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
-                    </div>
-                @endforeach
-            </div>
-            <div class="allVeow flex justify-center items-center pt-[50px]" data-aos="anim" data-aos-easing="linear"
-                data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-duration="100">
-                <div
-                    class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
-                    <a href="{{ route('front.projects') }}">جميع الالعمال السابقه</a>
-                    <i class="fa-solid fa-arrow-trend-down"></i>
                 </div>
             @endforeach
         </div>

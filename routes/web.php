@@ -95,7 +95,7 @@ Route::name('front.')->group(function () {
     Route::get('blog/{slug}', [FrontController::class, 'blog_show'])->name('blog.show');
 });
 
-
+Route::post('action', [FrontController::class, 'action'])->name('action');
 
 Route::get('language/{locale}', function($locale){
     if (isset($locale) && in_array($locale, ['ar','en'])) {
