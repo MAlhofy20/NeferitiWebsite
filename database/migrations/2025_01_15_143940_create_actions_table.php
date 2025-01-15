@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('visits', function (Blueprint $table) {
+        Schema::create('actions', function (Blueprint $table) {
             $table->id();
             $table->string('session_id')->nullable();
-            $table->string('ip_address');
-            $table->string('user_agent');
-            $table->string('url');
-            $table->string('referrer')->nullable();
-            $table->string('country')->nullable();
-            $table->string('city')->nullable();
+            $table->string('ip_address', 45)->nullable();
+            $table->string('action_name')->nullable(); // اسم الحدث (مثلاً clicked_whatsapp)
+            $table->string('url')->nullable();         // الصفحة التي وقع فيها الحدث
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('visits');
+        Schema::dropIfExists('actions');
     }
 };
