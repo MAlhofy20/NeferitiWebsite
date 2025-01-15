@@ -33,21 +33,8 @@
 
     @yield('content')
 
-
-    @php
-        $setting = collect([
-            'country' => 'Alexandria - EG',
-            'phone' => '+2001070019220',
-            'whatsapp' => '+201070019220',
-            'email' => 'contact@nefertitisolutions.com',
-            'facebook_link' => 'https://www.facebook.com/',
-            'twitter_link' => 'https://x.com/?lang=en',
-            'instagram_link' => 'https://www.instagram.com/?hl=en',
-        ]);
-    @endphp
-
     <div class="the-pahe bg-white relative overflow-hidden">
-        <div class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
+        <div class="section-info p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
                 class="all flex flex-wrap justify-center flex-row-reverse rounded-[20px] w-[1000px] overflow-hidden shadow-[0px_0px_9px_0px_#377287]">
                 <!-- Contact Form -->
@@ -58,20 +45,25 @@
                         <div class="form-group mb-[20px]">
                             <input type="text"
                                 class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
-                                name="name" id="name" placeholder="الاسم">
+                                name="name" id="name" placeholder="Name">
                         </div>
                         <div class="form-group mb-[20px]">
-                            <input type="phone"
+                            <input type="email"
                                 class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
-                                name="phone" id="phone" placeholder="رقم الهاتف للتواصل">
+                                name="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group mb-[20px]">
+                            <input type="text"
+                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
+                                name="subject" id="subject" placeholder="Subject">
                         </div>
                         <div class="form-group mb-[20px]">
                             <textarea name="message"
                                 class="form-control w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e]  border border-[#444] rounded-sm bg-[#333] text-white text-sm placeholder-[#bbb]"
-                                id="message" rows="5" placeholder="رسالتك هنا"></textarea>
+                                id="message" rows="5" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
-                            <input type="submit" value="ارسال"
+                            <input type="submit" value="Send Message"
                                 class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                         </div>
                     </div>
@@ -88,34 +80,32 @@
                             class=" w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-phone-volume"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف : </span>
-                            <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline link8"
-                                href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
-                        </p>
+                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف : </span><a
+                                class="text-[#666666] font-bold text-[20px]  no-underline link8"
+                                href="tel:+1235235598">+ 1235 2355 98</a></p>
                     </div>
                     <div class="info-item  flex gap-[20px] justify-start items-center mb-[15px]">
                         <div
                             class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-envelope"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل : </span><a
+                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الاميل : </span><a
                                 class="font-bold text-[20px]  text-[#666666] no-underline link8"
-                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل</a></p>
+                                href="mailto:info@yoursite.com">info@yoursite.com</a></p>
                     </div>
                     <div class="info-item flex gap-[20px] justify-start items-center mb-[15px]">
                         <div
                             class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الواتساب : </span><a
-                                target="_blank" class=" font-bold text-[20px]  text-[#666666] no-underline link8"
-                                href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
+                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الموقع الإلكتروني : </span><a
+                                class=" font-bold text-[20px]  text-[#666666] no-underline link8"
+                                href="#">yoursite.com</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div
-            class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
+        <div class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
             <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
                     viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_1833_4737)">
@@ -162,34 +152,31 @@
                 <div class="contact-Us leading-[24px]">
                     <div class="font-[700] text-[24px]">للتواصل</div>
                     <div class="forYou pt-[24px]">
-                        <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span>
-                            <a dir="ltr" class=" no-underline link9"
-                                href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
-                        </p>
+                        <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span><a class=" no-underline link9"
+                                href="tel:+1235235598">+ 1235 2355 98</a></p>
                         <p class="py-[10px]"><span class="text-[#fff] pl-[10px]"> الاميل : </span><a
-                                class=" no-underline link9"
-                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}</a></p>
-                        <p><span class="text-[#fff] pl-[10px]"> الواتساب : </span><a class=" no-underline link9"
-                                href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
+                                class=" no-underline link9" href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><span class="text-[#fff] pl-[10px]"> الموقع الإلكتروني : </span><a
+                                class=" no-underline link9" href="#">yoursite.com</a></p>
                     </div>
                     <div class="iconeweb py-[18px]  text-[40px] flex gap-[16px] lg:justify-start justify-center ">
                         <div class="start2">
-                            <a href="{{ $setting['facebook_link'] }}" target="_blank" class=" facebook">
+                            <a class=" facebook" href="https://www.facebook.com/">
                                 <i class=" fa-brands fa-facebook"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="{{ $setting['twitter_link'] }}" target="_blank" class=" x ">
+                            <a class=" x " href="https://x.com/?lang=en">
                                 <i class=" fa-brands fa-twitter"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="{{ $setting['instagram_link'] }}" target="_blank" class=" instagram">
+                            <a class=" instagram" href="https://www.instagram.com/?hl=en">
                                 <i class="  fa-brands fa-instagram"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class=" whatsapp">
+                            <a class=" whatsapp" href="https://web.whatsapp.com/">
                                 <i class="  fa-brands fa-whatsapp"></i>
                             </a>
                         </div>
@@ -201,11 +188,11 @@
                 class="location border-t border-white py-[20px] gap-[10px] flex-wrap flex justify-between items-center">
                 <div class="locati flex gap-[8px] items-baseline">
                     <i class="fa-solid fa-location-dot"></i>
-                    <div class="country">{{ $setting['country'] }}</div>
+                    <div class="country">Riyadh - KSA</div>
                 </div>
                 <div class="locati-sp flex flex-wrap gap-[10px]">
-                    <a href="#" class="no-underline link9">الشروط والاحكام</a>
-                    <a href="#" class="no-underline link9">سياسة الخصوصية</a>
+                    <span>Terms and conditions</span>
+                    <span>Privacy police </span>
                 </div>
             </div>
         </div>
