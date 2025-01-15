@@ -24,9 +24,9 @@ Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name
 
 Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->group(function () {
     Route::get('/', [HomeDashController::class, 'index'])->name('home');
-   
+
     Route::resource('admin', AdminDashController::class)->names('admin');
-    
+
     Route::resource('products', ProductController::class)->names('products');
     Route::post('products/up/{product}', [ProductController::class, 'up'])->name('products.up');
     Route::post('products/down/{product}', [ProductController::class, 'down'])->name('products.down');
@@ -44,15 +44,15 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
 
     Route::resource('partners', PartnerController::class)->names('partners');
 
-    Route::resource('projects', ProjectsController::class)->names('projects');   
+    Route::resource('projects', ProjectsController::class)->names('projects');
     Route::post('projects/up/{project}', [ProjectsController::class, 'up'])->name('projects.up');
     Route::post('projects/down/{project}', [ProjectsController::class, 'down'])->name('projects.down');
 
     Route::resource('testimonials', TestimonialController::class)->names('testimonials');
-    
+
     Route::get('email_settings', [EmailSettingController::class, 'index'])->name('email_settings');
     Route::post('email_settings', [EmailSettingController::class, 'update'])->name('email_settings.update');
-    
+
     Route::get('profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
 
@@ -64,10 +64,10 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::delete('blogs/delete/{blog_id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     Route::post('blogs/up/{blog_id}', [BlogController::class, 'up'])->name('blogs.up');
     Route::post('blogs/down/{blog_id}', [BlogController::class, 'down'])->name('blogs.down');
-    
+
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
-    
+
     Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
     Route::post('messages', [MessageController::class, 'delete'])->name('messages.delete');
 
@@ -79,7 +79,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     // Route::delete('external_pages/delete/{external_page_id}', [ExternalPageController::class, 'delete'])->name('external_pages.delete');
     // Route::get('external_pages/{external_page_id}', [ExternalPageController::class, 'show'])->name('external_pages.show');
 
-    
+
     Route::post('logout', function () {
         auth()->logout();
         return redirect()->route('login')->with('success', 'تم تسجيل الخروج بنجاح');
@@ -87,7 +87,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
 });
 
 
-Route::name('front.')->middleware([TrackVisits::class])->group(function () {
+Route::name('front.')->group(function () {
     Route::get('/', [FrontController::class, 'home'])->name('home');
     Route::get('product/{slug}', [FrontController::class, 'product'])->name('product');
     Route::get('projects', [FrontController::class, 'projects'])->name('projects');

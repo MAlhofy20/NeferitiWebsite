@@ -1,15 +1,26 @@
-let smallIcon = document.querySelector(".icon-small i")
-let dis  = document.querySelector(".icon-small .dis")
+let smallIcon = document.querySelector(".icon-small i");
+let ul = document.querySelector(".icon-small .dis ul");
+
+// متغير لتتبع حالة القائمة
+let isMenuOpen = false;
 
 document.addEventListener("click", function (e) {
-    if (e.target === smallIcon) { // إذا تم النقر على smallIcon
-        dis.style.opacity = "1";
-        dis.style.visibility = "visible";
-    } else { // إذا تم النقر في أي مكان آخر
-        dis.style.opacity = "0";
-        dis.style.visibility = "hidden ";
+    if (e.target === smallIcon) {
+
+        isMenuOpen = !isMenuOpen; // عكس الحالة الحالية
+        if (isMenuOpen) {
+            ul.style.opacity = "1";
+            ul.style.visibility = "visible";
+        } else {
+            ul.style.opacity = "0";
+            ul.style.visibility = "hidden";
+        }
+    } else {
+        isMenuOpen = false;
+        ul.style.opacity = "0";
+        ul.style.visibility = "hidden";
     }
-})
+});
 
 
 // الحصول على جميع الأكوردينات والعناصر المرتبطة بها
@@ -133,9 +144,9 @@ titless.forEach((title, index) => {
 /* inimation 2*/
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".Opinions .all");
-    const scrollSpeed = 2; // السرعة (بيكسل لكل إطار)
+    const scrollSpeed = 2;
 
-    // استنساخ المحتوى لملء العرض للحركة المستمرة
+
     const clone = container.innerHTML;
     container.innerHTML += clone;
 

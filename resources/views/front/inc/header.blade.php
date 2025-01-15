@@ -26,8 +26,8 @@
 </div>
 <div class="icon-small   fixed flex z-[999999] left-[10%] top-[30px] text-white text-center  lg:hidden cursor-pointer">
     <i class="text-[#FDB931] text-[20px] relative fa-solid fa-bars"></i>
-    <div class="dis  lg:hidden absolute left-[5px] last:left-[120px] transform -translate-x-[50%] opacity-0 invisible transition-opacity duration-300  p-4 rounded-lg ">
-        <ul class="active absolute  left-1/2 transform -translate-x-1/2 translate-y-3 text-center flex gap-y-[10px] flex-wrap p-[15px] gap-0 w-[250px] justify-center  items-center font-semibold rounded-[24px] ">
+    <div class="dis  lg:hidden absolute left-[5px] last:left-[120px] transform -translate-x-[50%]   p-4 rounded-lg ">
+        <ul style="backdrop-filter: brightness(0.7) blur(10px);" class=" absolute opacity-0 invisible transition-opacity duration-300  left-1/2 transform -translate-x-1/2 translate-y-3 text-center flex gap-y-[10px] flex-wrap p-[15px] gap-0 w-[250px] justify-center  items-center font-semibold rounded-[24px] ">
             <li class=" sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]" href="{{ route('front.home') }}">الرئيسية</a></li>
             <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]" href="#">تعريف بنا</a></li>
             <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]" href="#">المنتجات</a></li>
