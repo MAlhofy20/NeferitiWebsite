@@ -45,6 +45,23 @@
             'instagram_link' => 'https://www.instagram.com/?hl=en',
         ]);
     @endphp
+    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
+        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
+            <div class="icons flex gap-1 flex-col">
+                <a href="tel:{{ $setting['phone'] }}" class="sa" onclick="trackAction('زر الهاتف - ايقون معلقة')">
+                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb"
+                    onclick="trackAction('زر الواتساب - ايقون معلقة')">
+                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="the-pahe bg-white relative overflow-hidden">
         <div class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
@@ -249,6 +266,26 @@
                     action_name: actionName,
                     url: window.location.pathname,
                 }),
+            })
+        }
+
+        function sendMessage() {
+            fetch("{{ route('front.message.store') }}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                    url: window.location.pathname,
+                }).then(response => response.json()).then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                    }
+                });
             })
         }
     </script>

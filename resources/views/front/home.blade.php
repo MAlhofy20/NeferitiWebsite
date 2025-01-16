@@ -41,22 +41,6 @@
         </div>
         <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
     </div>
-    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
-        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
-            <div class="icons flex gap-1 flex-col">
-                <a href="#" class="sa">
-                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
-                    </div>
-                </a>
-                <a href="#" class="sb">
-                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
         <div class="about-us relative">
             <div class="main flex-col justify-center items-center text-center px-[20px]">

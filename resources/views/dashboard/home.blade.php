@@ -20,7 +20,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
             <!-- الكاردات -->
             <div class="flex flex-col gap-4">
-                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                <div class="bg-white shadow rounded-lg border p-4 grid grid-cols-3 items-center">
                     <div class="text-blue-500 text-center">
                         <i class="fas fa-users fa-2x"></i>
                     </div>
@@ -30,7 +30,7 @@
                         <p class="text-xs text-gray-500">جلسات تم تسجيلها في النطاق الزمني</p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                <div class="bg-white shadow rounded-lg border p-4 grid grid-cols-3 items-center">
                     <div class="text-green-500 text-center">
                         <i class="fas fa-eye fa-2x "></i>
                     </div>
@@ -40,7 +40,7 @@
                         <p class="text-xs text-gray-500">إجمالي زيارات الصفحات المسجلة</p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                <div class="bg-white shadow rounded-lg border p-4 grid grid-cols-3 items-center">
                     <div class="text-purple-500 text-center">
                         <i class="fas fa-handshake fa-2x"></i>
                     </div>
@@ -50,7 +50,7 @@
                         <p class="text-xs text-gray-500">عملاء محتملين تفاعلوا مع الموقع</p>
                     </div>
                 </div>
-                <div class="bg-white shadow rounded-lg p-4 grid grid-cols-3 items-center">
+                <div class="bg-white shadow rounded-lg border p-4 grid grid-cols-3 items-center">
                     <div class="text-red-500 text-center">
                         <i class="fas fa-percentage fa-2x"></i>
                     </div>
@@ -63,7 +63,7 @@
             </div>
             
             <!-- الشارت -->
-            <div class="col-span-2 bg-white shadow rounded-lg p-4">
+            <div class="col-span-2 bg-white shadow rounded-lg border p-4">
                 <h3 class="text-sm font-semibold text-gray-800 mb-2">إحصائيات الجلسات والعملاء المحتملين</h3>
                 <canvas id="chart" style="height: 250px;"></canvas>
             </div>
@@ -72,7 +72,7 @@
         <!-- الجداول -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
             <!-- جدول الصفحات الأكثر زيارة -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="bg-white shadow rounded-lg border overflow-hidden">
                 <h3 class="text-sm font-semibold text-gray-800 p-2">الصفحات الأكثر زيارة</h3>
                 <table class="min-w-full table-auto text-sm">
                     <thead class="bg-gray-100">
@@ -97,7 +97,7 @@
             </div>
         
             <!-- جدول الدول والمحافظات الأكثر زيارة -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="bg-white shadow rounded-lg border overflow-hidden">
                 <h3 class="text-sm font-semibold text-gray-800 p-2">الدول والمحافظات الأكثر زيارة</h3>
                 <table class="min-w-full table-auto text-sm">
                     <thead class="bg-gray-100">
@@ -124,7 +124,7 @@
             </div>
         
             <!-- جدول مصادر الزيارات الأكثر شيوعًا -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="bg-white shadow rounded-lg border overflow-hidden">
                 <h3 class="text-sm font-semibold text-gray-800 p-2">مصادر الزيارات الأكثر شيوعًا</h3>
                 <table class="min-w-full table-auto text-sm">
                     <thead class="bg-gray-100">
@@ -152,7 +152,7 @@
         <!-- جدول جديد وكاردات جديدة -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <!-- جدول أهم 10 أزرار تم التفاعل معها -->
-            <div class="col-span-2 bg-white shadow rounded-lg overflow-hidden">
+            <div class="col-span-2 bg-white shadow rounded-lg border overflow-hidden">
                 <h3 class="text-sm font-semibold text-gray-800 p-2">أهم 10 أزرار تم التفاعل معها</h3>
                 <table class="min-w-full table-auto text-sm">
                     <thead class="bg-gray-100">
@@ -179,12 +179,12 @@
 
             <!-- الكاردات: زوار الويب وزوار الموبايل -->
             <div class="flex flex-col gap-4">
-                <div class="bg-white shadow rounded-lg p-4">
+                <div class="bg-white shadow rounded-lg border p-4">
                     <h5 class="text-sm font-semibold text-gray-700">زوار الويب</h5>
                     <p class="text-2xl font-bold text-blue-500">{{ $webVisitorsCount }}</p>
                     <p class="text-xs text-gray-500">عدد الزوار الذين استخدموا أجهزة الويب</p>
                 </div>
-                <div class="bg-white shadow rounded-lg p-4">
+                <div class="bg-white shadow rounded-lg border p-4">
                     <h5 class="text-sm font-semibold text-gray-700">زوار الموبايل</h5>
                     <p class="text-2xl font-bold text-green-500">{{ $mobileVisitorsCount }}</p>
                     <p class="text-xs text-gray-500">عدد الزوار الذين استخدموا أجهزة الموبايل</p>

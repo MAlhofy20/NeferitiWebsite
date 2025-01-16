@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Visit;
 use App\Models\Action;
+use App\Models\ContactMessage;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Testimonial;
@@ -54,6 +55,29 @@ class FrontController extends Controller
             'url' => $request->url,
         ];
         Action::create($data);
+    }
+
+    public function store_message(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'message' => 'required|string',
+            'url' => 'required|string|max:255',
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'message' => $request->message,
+            'url' => $request->url,
+        ];
+        ContactMessage::create($data);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'تم إرسال الرسالة بنجاح سيتم التواصل معكم في أقرب وقت, شكرا لكم',
+        ]);
     }
 
 }

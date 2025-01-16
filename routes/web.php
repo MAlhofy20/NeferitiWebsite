@@ -93,6 +93,8 @@ Route::name('front.')->group(function () {
     Route::get('projects', [FrontController::class, 'projects'])->name('projects');
     Route::get('blog', [FrontController::class, 'blog'])->name('blog');
     Route::get('blog/{slug}', [FrontController::class, 'blog_show'])->name('blog.show');
+
+    Route::post('message', [FrontController::class, 'store_message'])->name('message.store');
 });
 
 Route::post('action', [FrontController::class, 'action'])->name('front.action');
