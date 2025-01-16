@@ -45,6 +45,23 @@
             'instagram_link' => 'https://www.instagram.com/?hl=en',
         ]);
     @endphp
+    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
+        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
+            <div class="icons flex gap-1 flex-col">
+                <a href="tel:{{ $setting['phone'] }}" class="sa" onclick="trackAction('زر الهاتف - ايقون معلقة')">
+                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb"
+                    onclick="trackAction('زر الواتساب - ايقون معلقة')">
+                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="the-pahe bg-white relative overflow-hidden">
         <div class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
@@ -90,9 +107,9 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف:</span>
-                            <div class="link8 flex flex-col gap-[5px]">
+                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
                                 <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline "
-                                href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
+                                href="tel:{{ $setting['phone'] }}" >اضغط للتواصل</a>
                                 <a dir="ltr" class=" no-underline "
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                             </div>
@@ -104,11 +121,12 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل: </span>
-                            <div class="link8 flex flex-col gap-[5px]">
+                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
                                 <a class="font-bold text-[20px]  text-[#666666] no-underline "
+                                target="_blank"
                                     href="mailto:{{ $setting['email'] }}">اضغط للتواصل
                                 </a>
-                                <a class=" no-underline "
+                                <a class=" no-underline " target="_blank"
                                 href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
                                 </a>
                             </div>
@@ -120,6 +138,7 @@
                             <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
                         </div>
                         <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الواتساب : </span><a
+                            onclick="trackAction('زر الواتساب - تواصل معنا')"
                                 target="_blank" class=" font-bold text-[20px]  text-[#666666] no-underline link8"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
                     </div>
@@ -176,17 +195,20 @@
                     <div class="forYou pt-[24px]">
                         <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span>
                             <a dir="ltr" class=" no-underline link9"
+                            onclick="trackAction('زر الهاتف - الفوتر')"
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </p>
                         <p class="py-[10px]">
                             <span class="text-[#fff] pl-[10px]"> الاميل : </span>
                             <a class=" no-underline link9"
-                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
+                            onclick="trackAction('زر الايميل - الفوتر')"
+                                href="mailto:{{ $setting['email'] }}" target="_blank">{{ $setting['email'] }}
                             </a>
                         </p>
                         <p>
                             <span class="text-[#fff] pl-[10px]"> الواتساب : </span>
-                                <a class=" no-underline link9"
+                                <a class=" no-underline link9" target="_blank"
+                                onclick="trackAction('زر الواتساب - الفوتر')"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a>
                         </p>
                     </div>
@@ -207,7 +229,8 @@
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class=" whatsapp">
+                            <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class=" whatsapp"
+                                onclick="trackAction('زر الواتساب - الفوتر')">
                                 <i class="  fa-brands fa-whatsapp"></i>
                             </a>
                         </div>
@@ -221,8 +244,8 @@
                     <div class="country">{{ $setting['country'] }}</div>
                 </div>
                 <div class="locati-sp flex flex-wrap gap-[10px]">
-                    <a href="#" onclick="trackAction('terms')" class="no-underline link9">الشروط والاحكام</a>
-                    <a href="#" onclick="trackAction('privacy')" class="no-underline link9">سياسة الخصوصية</a>
+                    <a href="#" class="no-underline link9">الشروط والاحكام</a>
+                    <a href="#" class="no-underline link9">سياسة الخصوصية</a>
                 </div>
             </div>
         </div>
@@ -243,6 +266,26 @@
                     action_name: actionName,
                     url: window.location.pathname,
                 }),
+            })
+        }
+
+        function sendMessage() {
+            fetch("{{ route('front.message.store') }}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                    url: window.location.pathname,
+                }).then(response => response.json()).then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                    }
+                });
             })
         }
     </script>

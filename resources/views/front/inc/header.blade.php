@@ -20,7 +20,7 @@
             </div>
             <div
                 class="start bg-[#FFFFFF] rounded-[12px] w-[116px] max-h-[36px] h-[36px] flex justify-center items-center">
-                <a class="text-[13px] font-[500]" href="#">ابدأ من هنا</a>
+                <a class="text-[13px] font-[500]" href="#" onclick="trackAction('زر ابدأ من هنا - منيو')">ابدأ من هنا</a>
             </div>
     </div>
 </div>

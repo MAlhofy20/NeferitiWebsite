@@ -20,7 +20,7 @@
             </div>
             <div>
                 <a class="cursor-box not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
-                    href="#contact-section">تواصل معنا</a>
+                    href="#contact-section" onclick="trackAction('زر تواصل معنا - صفحة الرئيسية')" >تواصل معنا</a>
             </div>
         </div>
         <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px]">
@@ -35,110 +35,11 @@
                             <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]"
                                 src="{{ asset($partner->image) }}" alt="">
                         @endforeach
-                        {{-- <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt=""> --}}
                     </div>
                 </div>
-                {{-- <div class="iconimg left">
-                <div class="flex logos-track justify-center items-center gap-[65px]">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                </div>
-            </div> --}}
             </div>
         </div>
         <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
-    </div>
-    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
-        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
-            <div class="icons flex gap-1 flex-col">
-                <a href="#" class="sa">
-                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
-                    </div>
-                </a>
-                <a href="#" class="sb">
-                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
     </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
         <div class="about-us relative">
@@ -186,7 +87,7 @@
             </div>
             <div class="mb-12 mx-auto w-64">
                 <a class="cursor-box font-bold cards-gold-gradient not-allowed text-nowrap rounded-[15px] text-white px-[50px] py-[10px] "
-                    href="#contact-section">اطلب استشارتك المجانية</a>
+                    href="#contact-section" onclick="trackAction('زر اطلب استشارتك المجانية - صفحة الرئيسية')">اطلب استشارتك المجانية</a>
             </div>
 
         </div>
@@ -243,7 +144,7 @@
             </div>
             <div class="mb-12 mt-[35px] mx-auto w-64">
                 <a class="cursor-box not-allowed bg-gold-button text-nowrap rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
-                    href="#contact-section">ابدأ معنا الان</a>
+                    href="#contact-section" onclick="trackAction('زر ابدأ معنا الان - صفحة الرئيسية')">ابدأ معنا الان</a>
             </div>
 
             <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img
@@ -330,28 +231,6 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="previousTwo">
-        <div class="box">
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-        </div>
-        <div class="bton">
-            <div class="btn prev"></div>
-            <div class="btn next"></div>
-        </div>
-        </div> --}}
         <div id="blogs" class="blogs p-[20px] md:p-[100px]">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
