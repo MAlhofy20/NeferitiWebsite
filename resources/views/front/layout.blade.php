@@ -88,8 +88,10 @@
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
-                            <button type="button" value="ارسال" onclick="sendMessage()"
+                            <button type="button"  onclick="sendMessage()"
                                 class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
+                                ارسال
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -268,23 +270,31 @@
         }
 
         function sendMessage() {
-            fetch("{{ route('front.message.store') }}", {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: document.getElementById('name').value,
-                    phone: document.getElementById('phone').value,
-                    message: document.getElementById('message').value,
-                    url: window.location.pathname,
-                }).then(response => response.json()).then(data => {
-                    if (data.success) {
-                        alert(data.message);
-                    }
-                })
-            })
+    fetch("{{ route('front.message.store') }}", {
+        method: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            message: document.getElementById('message').value,
+            url: window.location.pathname,
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+        } else {
+            alert('حدث خطأ ما');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال الرسالة.');
+            });
         }
     </script>
 </body>
