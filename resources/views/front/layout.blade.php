@@ -88,7 +88,7 @@
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
-                            <input type="submit" value="ارسال"
+                            <button type="button" value="ارسال" onclick="sendMessage()"
                                 class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                         </div>
                     </div>
