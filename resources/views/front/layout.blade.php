@@ -59,11 +59,6 @@
                             <input type="text"
                                 class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
                                 name="name" id="name" placeholder="الاسم">
-
-
-
-
-
                         </div>
                         <div class="form-group mb-[20px]">
                             <input type="phone"
@@ -93,19 +88,31 @@
                             class=" w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-phone-volume"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف : </span>
-                            <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline link8"
+                        <p>
+                            <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف:</span>
+                            <div class="link8 flex flex-col gap-[5px]">
+                                <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline "
                                 href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
+                                <a dir="ltr" class=" no-underline "
+                                href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
+                            </div>
                         </p>
                     </div>
                     <div class="info-item  flex gap-[20px] justify-start items-center mb-[15px]">
-                        <div
-                            class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <div class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-envelope"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل : </span><a
-                                class="font-bold text-[20px]  text-[#666666] no-underline link8"
-                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل</a></p>
+                        <p>
+                            <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل: </span>
+                            <div class="link8 flex flex-col gap-[5px]">
+                                <a class="font-bold text-[20px]  text-[#666666] no-underline "
+                                    href="mailto:{{ $setting['email'] }}">اضغط للتواصل
+                                </a>
+                                <a class=" no-underline "
+                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
+                                </a>
+                            </div>
+                        </p>
                     </div>
                     <div class="info-item flex gap-[20px] justify-start items-center mb-[15px]">
                         <div
@@ -171,11 +178,17 @@
                             <a dir="ltr" class=" no-underline link9"
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </p>
-                        <p class="py-[10px]"><span class="text-[#fff] pl-[10px]"> الاميل : </span><a
-                                class=" no-underline link9"
-                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}</a></p>
-                        <p><span class="text-[#fff] pl-[10px]"> الواتساب : </span><a class=" no-underline link9"
-                                href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
+                        <p class="py-[10px]">
+                            <span class="text-[#fff] pl-[10px]"> الاميل : </span>
+                            <a class=" no-underline link9"
+                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
+                            </a>
+                        </p>
+                        <p>
+                            <span class="text-[#fff] pl-[10px]"> الواتساب : </span>
+                                <a class=" no-underline link9"
+                                href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a>
+                        </p>
                     </div>
                     <div class="iconeweb py-[18px]  text-[40px] flex gap-[16px] lg:justify-start justify-center ">
                         <div class="start2">
@@ -198,7 +211,6 @@
                                 <i class="  fa-brands fa-whatsapp"></i>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -219,7 +231,7 @@
     <script src="{{ asset('js/aos.js') }}"></script>
     <script>
         AOS.init();
-        // 
+        //
         function trackAction(actionName) {
             fetch("{{ route('front.action') }}", {
                 method: 'POST',
