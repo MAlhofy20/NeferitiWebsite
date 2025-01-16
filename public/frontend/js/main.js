@@ -157,3 +157,33 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollContent();
 });
 /* inimation 2*/
+// popup
+
+let submit = document.querySelector(".contact-form .form .submit")
+let sowPopup = document.querySelector(".sowpopup")
+let overlay = document.querySelector("#overlay")
+let icon = document.querySelector(".sowpopup .x i")
+
+
+
+console.log(submit);
+
+
+
+
+function OpenSuccessPopup() {
+
+    submit.addEventListener("click",function(){
+        sowPopup.classList.add("open")
+        overlay.classList.add("now")
+    })
+    icon.addEventListener("click",function(){
+        overlay.classList.remove("now")
+        sowPopup.classList.remove("open")
+    })
+}
+
+OpenSuccessPopup()
+
+
+
