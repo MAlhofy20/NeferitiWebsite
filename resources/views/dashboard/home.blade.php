@@ -157,15 +157,16 @@
                 <table class="min-w-full table-auto text-sm">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="px-4 py-2 text-gray-600">اسم الزر</th>
-                            <th class="px-4 py-2 text-gray-600">عدد التفاعلات</th>
+                            <th class="px-4 py-2 text-gray-600 text-right">اسم الزر</th>
+                            <th class="px-4 py-2 text-gray-600 text-right">عدد التفاعلات</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         @forelse($topActions as $action)
                         <tr>
                             <td class="px-4 py-2">{{ $action->action_name }}</td>
-                            <td class="px-4 py-2">{{ $action->actions_count }}</td>
+                            <td class="px-4 py-2">
+                                <span class="text-green-500 font-bold">{{ $action->actions_count }}</span></td>
                         </tr>
                         @empty
                         <tr>
