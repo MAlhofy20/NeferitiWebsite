@@ -107,29 +107,29 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف:</span>
-                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
-                                <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline "
-                                href="tel:{{ $setting['phone'] }}" >اضغط للتواصل</a>
-                                <a dir="ltr" class=" no-underline "
+                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
+                            <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline "
+                                href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
+                            <a dir="ltr" class=" no-underline "
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
-                            </div>
+                        </div>
                         </p>
                     </div>
                     <div class="info-item  flex gap-[20px] justify-start items-center mb-[15px]">
-                        <div class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                        <div
+                            class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-envelope"></i>
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل: </span>
-                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
-                                <a class="font-bold text-[20px]  text-[#666666] no-underline "
-                                target="_blank"
-                                    href="mailto:{{ $setting['email'] }}">اضغط للتواصل
-                                </a>
-                                <a class=" no-underline " target="_blank"
+                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
+                            <a class="font-bold text-[20px]  text-[#666666] no-underline " target="_blank"
+                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل
+                            </a>
+                            <a class=" no-underline " target="_blank"
                                 href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
-                                </a>
-                            </div>
+                            </a>
+                        </div>
                         </p>
                     </div>
                     <div class="info-item flex gap-[20px] justify-start items-center mb-[15px]">
@@ -138,8 +138,8 @@
                             <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
                         </div>
                         <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الواتساب : </span><a
-                            onclick="trackAction('زر الواتساب - تواصل معنا')"
-                                target="_blank" class=" font-bold text-[20px]  text-[#666666] no-underline link8"
+                                onclick="trackAction('زر الواتساب - تواصل معنا')" target="_blank"
+                                class=" font-bold text-[20px]  text-[#666666] no-underline link8"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
                     </div>
                 </div>
@@ -194,20 +194,18 @@
                     <div class="font-[700] text-[24px]">للتواصل</div>
                     <div class="forYou pt-[24px]">
                         <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span>
-                            <a dir="ltr" class=" no-underline link9"
-                            onclick="trackAction('زر الهاتف - الفوتر')"
+                            <a dir="ltr" class=" no-underline link9" onclick="trackAction('زر الهاتف - الفوتر')"
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </p>
                         <p class="py-[10px]">
                             <span class="text-[#fff] pl-[10px]"> الاميل : </span>
-                            <a class=" no-underline link9"
-                            onclick="trackAction('زر الايميل - الفوتر')"
+                            <a class=" no-underline link9" onclick="trackAction('زر الايميل - الفوتر')"
                                 href="mailto:{{ $setting['email'] }}" target="_blank">{{ $setting['email'] }}
                             </a>
                         </p>
                         <p>
                             <span class="text-[#fff] pl-[10px]"> الواتساب : </span>
-                                <a class=" no-underline link9" target="_blank"
+                            <a class=" no-underline link9" target="_blank"
                                 onclick="trackAction('زر الواتساب - الفوتر')"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a>
                         </p>
@@ -285,7 +283,7 @@
                     if (data.success) {
                         alert(data.message);
                     }
-                });
+                })
             })
         }
     </script>
