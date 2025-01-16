@@ -6,7 +6,6 @@ let isMenuOpen = false;
 
 document.addEventListener("click", function (e) {
     if (e.target === smallIcon) {
-
         isMenuOpen = !isMenuOpen; // عكس الحالة الحالية
         if (isMenuOpen) {
             ul.style.opacity = "1";
@@ -21,7 +20,6 @@ document.addEventListener("click", function (e) {
         ul.style.visibility = "hidden";
     }
 });
-
 
 // الحصول على جميع الأكوردينات والعناصر المرتبطة بها
 const accordions = document.querySelectorAll(".accordon .accor");
@@ -44,7 +42,9 @@ document.addEventListener("click", (e) => {
             const isTargetAccordion = titles[index] === targetTitle;
 
             if (isTargetAccordion) {
-                const isCollapsed = paragraph.style.maxHeight === "0px" || !paragraph.style.maxHeight;
+                const isCollapsed =
+                    paragraph.style.maxHeight === "0px" ||
+                    !paragraph.style.maxHeight;
 
                 if (isCollapsed) {
                     paragraph.style.maxHeight = `${paragraph.scrollHeight}px`;
@@ -62,7 +62,6 @@ document.addEventListener("click", (e) => {
                     anchor.style.opacity = "0";
                 }
             } else {
-
                 paragraph.style.maxHeight = "0";
                 paragraph.style.opacity = "0";
                 image.style.height = "40px";
@@ -74,50 +73,46 @@ document.addEventListener("click", (e) => {
     }
 });
 
-
-
-
 // here//
 
 let mains = document.querySelectorAll(".Here-is-how .here .min");
 let titless = document.querySelectorAll(".Here-is-how .here .tit");
 
 titless.forEach((title, index) => {
-  title.addEventListener("click", function () {
-    mains.forEach((main, i) => {
-      let paragraph = main.querySelector("p");
+    title.addEventListener("click", function () {
+        mains.forEach((main, i) => {
+            let paragraph = main.querySelector("p");
 
-      if (i === index) {
-        // إذا كان العنصر الحالي
-        if (!main.classList.contains("activeTwo")) {
-          // إظهار العنصر الحالي
-          main.classList.add("activeTwo");
-          paragraph.style.opacity = "1";
-          paragraph.style.height = "100px";
-        } else {
-          // إخفاء العنصر إذا تم النقر عليه مجددًا
-          paragraph.style.opacity = "0";
-          paragraph.style.height = "0";
+            if (i === index) {
+                // إذا كان العنصر الحالي
+                if (!main.classList.contains("activeTwo")) {
+                    // إظهار العنصر الحالي
+                    main.classList.add("activeTwo");
+                    paragraph.style.opacity = "1";
+                    paragraph.style.height = "100px";
+                } else {
+                    // إخفاء العنصر إذا تم النقر عليه مجددًا
+                    paragraph.style.opacity = "0";
+                    paragraph.style.height = "0";
 
-          setTimeout(() => {
-            main.classList.remove("activeTwo");
-          }, 500); // إزالة الفئة بعد انتهاء الانتقال
-        }
-      } else {
-        // إخفاء العناصر الأخرى
-        if (main.classList.contains("activeTwo")) {
-          paragraph.style.opacity = "0";
-          paragraph.style.height = "0";
+                    setTimeout(() => {
+                        main.classList.remove("activeTwo");
+                    }, 500); // إزالة الفئة بعد انتهاء الانتقال
+                }
+            } else {
+                // إخفاء العناصر الأخرى
+                if (main.classList.contains("activeTwo")) {
+                    paragraph.style.opacity = "0";
+                    paragraph.style.height = "0";
 
-          setTimeout(() => {
-            main.classList.remove("activeTwo");
-          }, 500); // إزالة الفئة بعد انتهاء الانتقال
-        }
-      }
+                    setTimeout(() => {
+                        main.classList.remove("activeTwo");
+                    }, 500); // إزالة الفئة بعد انتهاء الانتقال
+                }
+            }
+        });
     });
-  });
 });
-
 
 // bbbbbbbbooooooooox// xxxxxxxxxx
 
@@ -135,17 +130,12 @@ titless.forEach((title, index) => {
 //     span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
 // });
 
-
-
-
 // Services
-
 
 /* inimation 2*/
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".Opinions .all");
     const scrollSpeed = 2;
-
 
     const clone = container.innerHTML;
     container.innerHTML += clone;
@@ -153,20 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let scrollPosition = 0;
 
     function scrollContent() {
-      scrollPosition += scrollSpeed; // التحرك بالعكس
-      container.style.transform = `translateX(${scrollPosition}px)`;
+        scrollPosition += scrollSpeed; // التحرك بالعكس
+        container.style.transform = `translateX(${scrollPosition}px)`;
 
-      // إعادة ضبط الحركة عند النهاية
-      if (scrollPosition >= container.scrollWidth / 2) {
-        scrollPosition = 0;
-      }
+        // إعادة ضبط الحركة عند النهاية
+        if (scrollPosition >= container.scrollWidth / 2) {
+            scrollPosition = 0;
+        }
 
-      requestAnimationFrame(scrollContent);
+        requestAnimationFrame(scrollContent);
     }
 
     scrollContent();
-  });
+});
 /* inimation 2*/
-
-
-

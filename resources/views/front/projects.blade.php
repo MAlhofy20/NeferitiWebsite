@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
+    <div class="previous-work bg-[#0f1521] text-white p-[20px] md:p-[50px]">
 
         <div class="previous flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
             @foreach ($projects as $project)

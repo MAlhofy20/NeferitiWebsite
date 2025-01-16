@@ -1,6 +1,6 @@
 @extends('front.layout')
 @section('content')
-    <div class="main bg-[#25437e] pb-[50px] relative overflow-hidden">
+    <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
                 viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1833_4737)">
@@ -26,8 +26,8 @@
             <div class="title flex justify-center items-center flex-col">
                 <p class="text-[30px] md:text-[80px] text-white font-bold">أحدث منشورات مدونتنا
                 </p>
-                <div style="box-shadow: 0px 0px 20px 13px #00000033;" class="the-pahe bg-white relative rounded-[20px] w-[90%]">
-                    <div  id="blogs" class="blogs p-[20px] md:p-[100px]">
+                <div style="box-shadow: 0px 0px 20px 13px #00000033;" class="the-pahe bg-white relative rounded-[20px]">
+                    <div  id="blogs" class="blogs p-[20px] ">
                         <div class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
                             <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold" data-aos="anim"
                                 data-aos-easing="linear" data-aos-duration="500">أحدث منشورات مدونتنا</div>
@@ -35,9 +35,9 @@
                         </div>
                         <div class="tow-colmn flex ">
                             <div class="all flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
-                                <div class="one gap-[40px]  flex flex-col flex-wrap w-[70%] justify-center">
+                                <div class="one gap-[40px]  flex flex-col flex-wrap justify-center">
                                     <div class="flex flex-wrap  justify-center gap-[20px]">
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
@@ -53,7 +53,7 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
@@ -69,7 +69,7 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
@@ -85,7 +85,7 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
@@ -101,7 +101,7 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
@@ -117,7 +117,7 @@
                                                 لضمان السرير ضروري.
                                             </p>
                                         </div>
-                                        <div class="w-[270px] gap-[45px]">
+                                        <div class="md:w-[270px] gap-[45px]">
                                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                                 <img class= "origin-center transform hover:scale-110 transition duration-300" src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                             </div>
