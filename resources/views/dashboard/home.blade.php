@@ -70,7 +70,7 @@
         </div>
                 
         <!-- الجداول -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
             <!-- جدول الصفحات الأكثر زيارة -->
             <div class="bg-white shadow rounded-lg overflow-hidden">
                 <h3 class="text-sm font-semibold text-gray-800 p-2">الصفحات الأكثر زيارة</h3>
@@ -146,6 +146,48 @@
                         @endforelse
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- جدول جديد وكاردات جديدة -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- جدول أهم 10 أزرار تم التفاعل معها -->
+            <div class="col-span-2 bg-white shadow rounded-lg overflow-hidden">
+                <h3 class="text-sm font-semibold text-gray-800 p-2">أهم 10 أزرار تم التفاعل معها</h3>
+                <table class="min-w-full table-auto text-sm">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-gray-600">اسم الزر</th>
+                            <th class="px-4 py-2 text-gray-600">عدد التفاعلات</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @forelse($topActions as $action)
+                        <tr>
+                            <td class="px-4 py-2">{{ $action->action_name }}</td>
+                            <td class="px-4 py-2">{{ $action->actions_count }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="2" class="px-4 py-2 text-center text-gray-500">لا توجد بيانات</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- الكاردات: زوار الويب وزوار الموبايل -->
+            <div class="flex flex-col gap-4">
+                <div class="bg-white shadow rounded-lg p-4">
+                    <h5 class="text-sm font-semibold text-gray-700">زوار الويب</h5>
+                    <p class="text-2xl font-bold text-blue-500">{{ $webVisitorsCount }}</p>
+                    <p class="text-xs text-gray-500">عدد الزوار الذين استخدموا أجهزة الويب</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4">
+                    <h5 class="text-sm font-semibold text-gray-700">زوار الموبايل</h5>
+                    <p class="text-2xl font-bold text-green-500">{{ $mobileVisitorsCount }}</p>
+                    <p class="text-xs text-gray-500">عدد الزوار الذين استخدموا أجهزة الموبايل</p>
+                </div>
             </div>
         </div>
     </div>

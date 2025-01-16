@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\Visit;
 use App\Models\Action;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Agent;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
@@ -13,10 +14,10 @@ class HomeDashController extends Controller
 {
     public function index(Request $request)
     {
-        // النطاق الزمني (افتراضي شهر)
+        // تحديد النطاق الزمني (افتراضي شهر)
         $timeRange = $request->get('time_range', 'month');
 
-        // تحديد النطاق الزمني
+        // تعيين تاريخ البداية والنهاية
         switch ($timeRange) {
             case 'day':
                 $startDate = Carbon::now()->subDay();
@@ -50,6 +51,24 @@ class HomeDashController extends Controller
 
         $conversionRate = ($sessionsCount > 0) ? round(($potentialLeadsCount / $sessionsCount) * 100, 1) : 0;
 
+        // تحليل زوار الويب والموبايل باستخدام user_agent
+        $allVisits = Visit::select('user_agent')
+            ->whereBetween('created_at', [$startDate, $endDate])
+            ->get();
+
+        $webVisitorsCount = 0;
+        $mobileVisitorsCount = 0;
+
+        $agent = new Agent();
+        foreach ($allVisits as $visit) {
+            $agent->setUserAgent($visit->user_agent);
+            if ($agent->isMobile()) {
+                $mobileVisitorsCount++;
+            } else {
+                $webVisitorsCount++;
+            }
+        }
+
         // الصفحات الأكثر زيارة
         $topPages = Visit::select('url', DB::raw('COUNT(*) as visits_count'))
             ->whereBetween('created_at', [$startDate, $endDate])
@@ -66,7 +85,7 @@ class HomeDashController extends Controller
             ->take(10)
             ->get();
 
-        // مصادر الزيارات الأكثر شيوعًا (فقط الروابط الخارجية)
+        // مصادر الزيارات الأكثر شيوعًا (روابط خارجية فقط)
         $baseUrl = config('app.url');
 
         $topReferrers = Visit::select('referrer', DB::raw('COUNT(*) as visits_count'))
@@ -75,6 +94,14 @@ class HomeDashController extends Controller
             ->whereBetween('created_at', [$startDate, $endDate])
             ->groupBy('referrer')
             ->orderByDesc('visits_count')
+            ->take(10)
+            ->get();
+
+        // أهم 10 أزرار تم التفاعل معها
+        $topActions = Action::select('action_name', DB::raw('COUNT(*) as actions_count'))
+            ->whereBetween('created_at', [$startDate, $endDate])
+            ->groupBy('action_name')
+            ->orderByDesc('actions_count')
             ->take(10)
             ->get();
 
@@ -104,6 +131,9 @@ class HomeDashController extends Controller
             'topPages' => $topPages,
             'topLocations' => $topLocations,
             'topReferrers' => $topReferrers,
+            'topActions' => $topActions,
+            'webVisitorsCount' => $webVisitorsCount,
+            'mobileVisitorsCount' => $mobileVisitorsCount,
             'dates' => $dates,
             'sessionsData' => $sessionsData,
             'leadsData' => $leadsData,
