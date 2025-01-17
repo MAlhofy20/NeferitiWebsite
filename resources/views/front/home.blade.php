@@ -20,7 +20,7 @@
             </div>
             <div>
                 <a class="cursor-box not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
-                    href="#contact-section" onclick="trackAction('زر تواصل معنا - صفحة الرئيسية')" >تواصل معنا</a>
+                    href="#contact-section">تواصل معنا</a>
             </div>
         </div>
         <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px]">
@@ -35,11 +35,110 @@
                             <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]"
                                 src="{{ asset($partner->image) }}" alt="">
                         @endforeach
+                        {{-- <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logob.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logod.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logob.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logod.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logob.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logod.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
+                        src="{{ asset('frontend/images/logoa.png') }}" alt=""> --}}
                     </div>
                 </div>
+                {{-- <div class="iconimg left">
+                <div class="flex logos-track justify-center items-center gap-[65px]">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
+                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
+                </div>
+            </div> --}}
             </div>
         </div>
         <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
+    </div>
+    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
+        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
+            <div class="icons flex gap-1 flex-col">
+                <a href="#" class="sa">
+                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                    </div>
+                </a>
+                <a href="#" class="sb">
+                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
+                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
         <div class="about-us relative">
@@ -87,7 +186,7 @@
             </div>
             <div class="mb-12 mx-auto w-64">
                 <a class="cursor-box font-bold cards-gold-gradient not-allowed text-nowrap rounded-[15px] text-white px-[50px] py-[10px] "
-                    href="#contact-section" onclick="trackAction('زر اطلب استشارتك المجانية - صفحة الرئيسية')">اطلب استشارتك المجانية</a>
+                    href="#contact-section">اطلب استشارتك المجانية</a>
             </div>
 
         </div>
@@ -144,7 +243,7 @@
             </div>
             <div class="mb-12 mt-[35px] mx-auto w-64">
                 <a class="cursor-box not-allowed bg-gold-button text-nowrap rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
-                    href="#contact-section" onclick="trackAction('زر ابدأ معنا الان - صفحة الرئيسية')">ابدأ معنا الان</a>
+                    href="#contact-section">ابدأ معنا الان</a>
             </div>
 
             <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img
@@ -231,6 +330,28 @@
                 </div>
             </div>
         </div>
+        {{-- <div class="previousTwo">
+        <div class="box">
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
+        </div>
+        <div class="bton">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+        </div> --}}
         <div id="blogs" class="blogs p-[20px] md:p-[100px]">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
@@ -240,9 +361,8 @@
             <div class="tow-colmn flex ">
                 <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                     <div class="one gap-[20px] w-full justify-center flex flex-wrap">
-                        <div class="md:w-[270px] gap-[45px]">
-                            <div
-                                class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
+                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset('frontend/images/blog1.png') }}" alt="">
                             </div>
@@ -258,25 +378,7 @@
                                 لضمان السرير ضروري.
                             </p>
                         </div>
-                        <div class="md:w-[270px] gap-[45px]">
-                            <div
-                                class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                            </div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                                رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
-                                لضمان السرير ضروري.
-                            </p>
-                        </div>
-                        <div class="md:w-[270px] gap-[45px]">
+                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
                             <div
                                 class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
@@ -294,25 +396,7 @@
                                 لضمان السرير ضروري.
                             </p>
                         </div>
-                        <div class="md:w-[270px] gap-[45px]">
-                            <div
-                                class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                            </div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                                رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
-                                لضمان السرير ضروري.
-                            </p>
-                        </div>
-                        <div class="md:w-[270px] gap-[45px]">
+                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
                             <div
                                 class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
@@ -332,8 +416,8 @@
                         </div>
                     </div>
                     <div class="two min-w-[400px] flex flex-col">
-                        <div class=" flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
-                            <div class="imageCard min-w-[110px]">
+                        <div class="boxes cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                            <div class="imageCard min-w-[110px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset('frontend/images/blog2.png') }}" alt="">
                             </div>
@@ -347,7 +431,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="  flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
                             <div class="imageCard min-w-[110px]">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset('frontend/images/blog4.png') }}" alt="">
@@ -362,7 +446,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
                             <div class="imageCard min-w-[110px]">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset('frontend/images/blog5.png') }}" alt="">
@@ -377,7 +461,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
+                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
                             <div class="imageCard min-w-[110px]">
                                 <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
                             </div>
@@ -559,13 +643,7 @@
                 </div>
             </div>
         </div>
-        <div id="overlay"></div>
-        <div class="sowpopup">
-            <div class="x"><i class="fa-solid fa-xmark"></i></div>
-            <div class="show">
-                <img src="./image/done-aXEopkocXP.png" alt="">
-                <p>Your Message has been sent successfully</p>
-        </div>
+
     </div>
     </div>
 @endsection

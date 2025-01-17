@@ -70,7 +70,7 @@
                 <!-- Contact Form -->
                 <div id="contact-section" class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8" data-aos="zoom-in-left"
                     data-aos-easing="linear" data-aos-duration="400">
-                    <h3 class="mb-5 text-[30px] font-bold text-[cyan]">تواصل معنا</h3>
+                    <h3 class="mb-5 text-[30px] font-bold text-[#09aba9]">تواصل معنا</h3>
                     <div class="form">
                         <div class="form-group mb-[20px]">
                             <input type="text"
@@ -88,7 +88,7 @@
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
-                            <button type="button"  onclick="sendMessage()"
+                            <button type="button" onclick="sendMessage()"
                                 class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                                 ارسال
                             </button>
@@ -98,7 +98,7 @@
                 <!-- Contact Information -->
                 <div class="contact-info flex-[1_1_300px] bg-[#1c1e25] p-8 text-[#dcdcdc]" data-aos="zoom-in-right"
                     data-aos-easing="linear" data-aos-duration="500">
-                    <h3 class="mb-[20px] text-[30px] font-bold text-[cyan]">معلومات للتواصل معنا</h3>
+                    <h3 class="mb-[20px] text-[30px] font-bold text-[#09aba9]">معلومات للتواصل معنا</h3>
                     <p class="mb-[20px] leading-9 text-[20px] text-[#666666]">نحن منفتحون على أي اقتراح <br> أو مجرد
                         الدردشة</p>
 
@@ -250,6 +250,21 @@
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
+    <div class="sowpopup">
+        <div class="x relative"><i
+                class="fa-solid fa-circle-xmark shadow-[0_0_5px_0_rgb(0,0,0)] rounded-full absolute right-0 text-[20px] cursor-pointer transition-transform duration-300 ease "></i>
+        </div>
+        <div class="show gap-[20px] flex justify-center items-center max-w-full max-h-full flex-wrap">
+            <i
+                class="fa-solid fa-circle-check right text-[100px] text-green-500 shadow-[0_0_10px_0_rgb(0,0,0)] rounded-full"></i>
+            <i
+                class="fa-solid fa-circle-xmark mistake text-[100px] text-red-500 shadow-[0_0_10px_0_rgb(0,0,0)] rounded-full"></i>
+            <P class="text-[24px] font-normal w-full text-center"></P>
+        </div>
+    </div>
+
+
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
     <script>
@@ -270,31 +285,77 @@
         }
 
         function sendMessage() {
-    fetch("{{ route('front.message.store') }}", {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: document.getElementById('name').value,
-            phone: document.getElementById('phone').value,
-            message: document.getElementById('message').value,
-            url: window.location.pathname,
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-        } else {
-            alert('حدث خطأ ما');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-                alert('حدث خطأ أثناء إرسال الرسالة.');
-            });
+            let name = document.getElementById('name').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            let message = document.getElementById('message').value.trim();
+
+            const sowPopup = document.querySelector(".sowpopup");
+            const overlay = document.querySelector("#overlay");
+            const messageParagraph = document.querySelector(".sowpopup .show p");
+            const right = document.querySelector(".sowpopup .show .right");
+            const mistake = document.querySelector(".sowpopup .show .mistake");
+
+            const icon = document.querySelector(".sowpopup .x i");
+
+
+            if (name === "" || phone === "" || message === "") {
+                OpenPopup(false, "من فضلك، املأ جميع الحقول.");
+                return;
+            }
+            if (name.length > 250) {
+                OpenPopup(false, "تحقق من الاسم .");
+                return;
+            }
+            if (phone.length > 20 || !/^[\d\s+()\-.]+$/.test(phone)) {
+                OpenPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا ).");
+                return;
+            }
+            if (message.length > 1000) {
+                OpenPopup(false, "يمكنك ان تقلل في حجم الرسالة .");
+                return;
+            }
+
+            fetch("{{ route('front.message.store') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        phone: phone,
+                        message: message,
+                        url: window.location.pathname,
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    OpenPopup(data.success, data.message);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    OpenPopup(false, "حدث خطأ أثناء إرسال الرسالة.");
+                });
+
+            function OpenPopup(success, message) {
+                messageParagraph.textContent = message;
+
+                if (success === true) {
+                    right.classList.remove("hidden");
+                    mistake.classList.add("hidden");
+                } else {
+                    mistake.classList.remove("hidden");
+                    right.classList.add("hidden");
+                }
+
+                sowPopup.classList.add("open");
+                overlay.classList.add("now");
+
+                icon.addEventListener("click", function() {
+                    overlay.classList.remove("now");
+                    sowPopup.classList.remove("open");
+                });
+            }
         }
     </script>
 </body>
