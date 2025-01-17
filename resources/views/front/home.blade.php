@@ -347,7 +347,7 @@
                             </div>
                             <div class="date text-[#64607D]">
                                 <span>{{ $blog->created_at->format('d-m-Y') }}</span>
-                                <span>{{ $blog->product->name }}</span>
+                                <span>{{ $blog->product?->name }}</span>
                             </div>
                             <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
                                 <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
@@ -368,7 +368,7 @@
                             <div>
                                 <div class="date text-[14px] text-[#64607D]">
                                     <span>{{ $blog->created_at->format('d-m-Y') }}</span>
-                                    <span>{{ $blog->product->name }}</span>
+                                    <span>{{ $blog->product?->name }}</span>
                                 </div>
                                 <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
                                     <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
