@@ -340,8 +340,8 @@
                 <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                     <div class="one gap-[20px] w-full justify-center flex flex-wrap">
                         @foreach ($blogs->take(3) as $blog)
-                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
-                            <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                        <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
+                            <div class="imageCard h-[192px] md:w-[270px] w-[100%] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
@@ -358,10 +358,10 @@
                         </div>
                         @endforeach
                     </div>
-                    <div class="two min-w-[400px] flex flex-col">
+                    <div class="two  gap-[20px] md:w-[600px] w-full justify-center flex flex-wrap">
                         @foreach ($blogs->skip(3) as $blog)
-                        <div class="boxes cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
-                            <div class="imageCard min-w-[110px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                        <div class="boxes  w-full cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                            <div class="imageCard w-[110px] h-[80px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>

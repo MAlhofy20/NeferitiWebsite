@@ -43,9 +43,9 @@
                 <div class="tow-colmn flex ">
                     <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                         <div class="one gap-[20px] w-full justify-center flex flex-wrap">
-                            <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
+                            <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                                 <div
-                                    class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                                    class="imageCard  h-[192px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
                                         src="{{ asset('frontend/images/blog1.png') }}" alt="">
                                 </div>
@@ -62,7 +62,7 @@
                                     لضمان السرير ضروري.
                                 </p>
                             </div>
-                            <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
+                            <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                                 <div
                                     class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
@@ -81,7 +81,7 @@
                                     لضمان السرير ضروري.
                                 </p>
                             </div>
-                            <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
+                            <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                                 <div
                                     class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
@@ -101,10 +101,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="two min-w-[400px] flex flex-col">
-                            <div
-                                class="boxes cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
-                                <div class="imageCard min-w-[110px]">
+                        <div class="two flex flex-col">
+                            <div class="boxes md:min-w-[400px]  cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
+                                <div class="imageCard w-[110px] h-[80px]">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
                                         src="{{ asset('frontend/images/blog2.png') }}" alt="">
                                 </div>
@@ -119,8 +118,8 @@
                                 </div>
                             </div>
                             <div
-                                class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                                <div class="imageCard min-w-[110px]">
+                                class="boxes md:min-w-[400px]  cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                                <div class="imageCard w-[110px] h-[80px]">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
                                         src="{{ asset('frontend/images/blog4.png') }}" alt="">
                                 </div>
@@ -135,8 +134,8 @@
                                 </div>
                             </div>
                             <div
-                                class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                                <div class="imageCard min-w-[110px]">
+                                class="boxes md:min-w-[400px] cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
+                                <div class="imageCard w-[110px] h-[80px]">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"
                                         src="{{ asset('frontend/images/blog5.png') }}" alt="">
                                 </div>
@@ -151,8 +150,8 @@
                                 </div>
                             </div>
                             <div
-                                class="boxes cursor-pointer flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
-                                <div class="imageCard min-w-[110px]">
+                                class="boxes md:min-w-[400px] cursor-pointer flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
+                                <div class="imageCard w-[110px] h-[80px]">
                                     <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
                                 </div>
                                 <div>
