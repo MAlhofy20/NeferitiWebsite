@@ -330,28 +330,6 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="previousTwo">
-        <div class="box">
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-            <span><img src="{{ asset('frontend/images/box1.jpg') }}" alt=""></span>
-        </div>
-        <div class="bton">
-            <div class="btn prev"></div>
-            <div class="btn next"></div>
-        </div>
-        </div> --}}
         <div id="blogs" class="blogs p-[20px] md:p-[100px]">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
@@ -361,121 +339,43 @@
             <div class="tow-colmn flex ">
                 <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                     <div class="one gap-[20px] w-full justify-center flex flex-wrap">
+                        @foreach ($blogs->take(3) as $blog)
                         <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
                             <div class="imageCard  transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                                    src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
+                                <span>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                <span>{{ $blog->product->name }}</span>
                             </div>
                             <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                                رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
-                                لضمان السرير ضروري.
+                            <p class="text-[#64607D] max-w-[375px] text-[400]  leading-[30px] ">
+                                {!! breackableText($blog->description, 3) !!}
                             </p>
                         </div>
-                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
-                            <div
-                                class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                            </div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                                رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
-                                لضمان السرير ضروري.
-                            </p>
-                        </div>
-                        <div class="boxes cursor-pointer md:w-[270px] gap-[45px]">
-                            <div
-                                class="imageCard transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                            </div>
-                            <div class="date text-[#64607D]">
-                                <span>08-11-2021</span>
-                                <span>Category</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                            </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400] leading-[30px]">
-                                رحبت السيدة بالبركة التي التقت بها، ورحبت بالسيد الذي قام بتربيتها. ستة أيام من الفضول
-                                لضمان السرير ضروري.
-                            </p>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="two min-w-[400px] flex flex-col">
+                        @foreach ($blogs->skip(3) as $blog)
                         <div class="boxes cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
                             <div class="imageCard min-w-[110px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog2.png') }}" alt="">
+                                    src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div>
                                 <div class="date text-[14px] text-[#64607D]">
-                                    <span>08-11-2021</span>
-                                    <span>Category</span>
+                                    <span>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    <span>{{ $blog->product->name }}</span>
                                 </div>
                                 <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
+                                    <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                            <div class="imageCard min-w-[110px]">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog4.png') }}" alt="">
-                            </div>
-                            <div>
-                                <div class="date text-[14px] text-[#64607D]">
-                                    <span>08-11-2021</span>
-                                    <span>Category</span>
-                                </div>
-                                <div class="tit max-w-[375px] font-[800]  leading-[25px] py-[5px]">
-                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px]  border-b border-[#DEE1E6]">
-                            <div class="imageCard min-w-[110px]">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset('frontend/images/blog5.png') }}" alt="">
-                            </div>
-                            <div>
-                                <div class="date text-[14px] text-[#64607D]">
-                                    <span>08-11-2021</span>
-                                    <span>Category</span>
-                                </div>
-                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                    <a href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="boxes cursor-pointer flex items-center gap-[19px] py-[15px] border-b border-[#DEE1E6]">
-                            <div class="imageCard min-w-[110px]">
-                                <img src="{{ asset('frontend/images/blog6.png') }}" alt="">
-                            </div>
-                            <div>
-                                <div class="date text-[#64607D] text-[14px]">
-                                    <span>08-11-2021</span>
-                                    <span>Category</span>
-                                </div>
-                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                    <a class= "origin-center transform hover:scale-110 transition duration-300"
-                                        href="#">الاعتقاد بأن الإهمال هو البدل لوجود الرحيل.</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

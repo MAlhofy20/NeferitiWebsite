@@ -18,8 +18,9 @@ class FrontController extends Controller
         $products = Product::all();
         $projects = Project::take(6)->get();
         $testimonials = Testimonial::get();
+        $blogs = Blog::take(7)->latest()->get();
 
-        return view('front.home', compact('products', 'projects', 'testimonials'));
+        return view('front.home', compact('products', 'projects', 'testimonials', 'blogs'));
     }
 
     public function product($slug)
