@@ -354,10 +354,11 @@
                 icon.addEventListener("click", function() {
                     overlay.classList.remove("now");
                     sowPopup.classList.remove("open");
-                });
+                }); 
             }
         }
     </script>
 </body>
 
 </html>
+
