@@ -18,7 +18,7 @@ class FrontController extends Controller
         $products = Product::all();
         $projects = Project::take(6)->get();
         $testimonials = Testimonial::get();
-        $blogs = Blog::take(7)->latest()->get();
+        $blogs = Blog::take(6)->latest()->get();
 
         return view('front.home', compact('products', 'projects', 'testimonials', 'blogs'));
     }
@@ -37,7 +37,7 @@ class FrontController extends Controller
 
     public function blog()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(13);
         return view('front.blog.index', compact('blogs'));
     }
 

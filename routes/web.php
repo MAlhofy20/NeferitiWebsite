@@ -1,6 +1,8 @@
 <?php
 
+use App\Mail\NotificationMail;
 use App\Http\Middleware\TrackVisits;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\Front\HomeController;
@@ -87,7 +89,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
 });
 
 
-Route::name('front.')->group(function () {
+Route::name('front.')->middleware(TrackVisits::class)->group(function () {
     Route::get('/', [FrontController::class, 'home'])->name('home');
     Route::get('product/{slug}', [FrontController::class, 'product'])->name('product');
     Route::get('projects', [FrontController::class, 'projects'])->name('projects');
@@ -108,3 +110,14 @@ Route::get('language/{locale}', function($locale){
     return redirect()->back();
 })->name('lang');
 
+Route::get('/test-emaill', function () {
+    try {
+        $testMessage = "This is a test notification email from Laravel!";
+        
+        Mail::to('melhofy20@gmail.com')->send(new NotificationMail($testMessage));
+        
+        return 'Email sent successfully!';
+    } catch (\Exception $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+});

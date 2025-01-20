@@ -339,7 +339,7 @@
             <div class="tow-colmn flex ">
                 <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                     <div class="one gap-[20px] w-full justify-center flex flex-wrap">
-                        @foreach ($blogs->take(3) as $blog)
+                        @foreach ($blogs->take(4) as $blog)
                         <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                             <div class="imageCard h-[192px] md:w-[270px] w-[100%] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
@@ -352,27 +352,10 @@
                             <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
                                 <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
-                            <p class="text-[#64607D] max-w-[375px] text-[400]  leading-[30px] ">
-                                {!! breackableText($blog->description, 3) !!}
-                            </p>
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="two  gap-[20px] md:w-[600px] w-full justify-center flex flex-wrap">
-                        @foreach ($blogs->skip(3) as $blog)
-                        <div class="boxes  w-full cursor-pointer flex items-center gap-[19px] pb-[15px] border-b border-[#DEE1E6]">
-                            <div class="imageCard w-[110px] h-[80px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset($blog->image) }}" alt="">
-                            </div>
-                            <div>
-                                <div class="date text-[14px] text-[#64607D]">
-                                    <span>{{ $blog->created_at->format('d-m-Y') }}</span>
-                                    <span>{{ $blog->product?->name }}</span>
-                                </div>
-                                <div class="tit max-w-[375px] font-[800] leading-[25px] py-[5px]">
-                                    <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
-                                </div>
+                            <div class="line-clamp-3">
+                                <p class="text-[#64607D] max-w-[375px] text-[400]  leading-[30px] mt-[10px]">
+                                    {!! breackableText($blog->content) !!}
+                                </p>
                             </div>
                         </div>
                         @endforeach
@@ -455,90 +438,22 @@
             </div>
             <div class="Opinions overflow-hidden transition-translate duration-500 pr-[20px] ">
                 <div class="all md:py-[65px] py-[40px] bg-[#101828] flex gap-[24px] transition-translate duration-500 ">
+                    
+                    @foreach ($testimonials as $testimonial)
                     <div
                         class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
                         <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
                         <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                             <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                                في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
+                                {!! breackableText($testimonial->description) !!}
                             </div>
                             <div class="prerson flex items-center gap-[20px] pt-[30px]">
                                 <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
+                                <span class="font-[700]">{{ $testimonial->name }}</span>
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                        <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خخدمة العملاء في بنك Sable
-                                في الإجابة على جم تجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                        <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                                في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                        <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                                في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                        <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                                في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                        <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
-                        <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
-                            <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
-                                خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable
-                                في الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك.
-                            </div>
-                            <div class="prerson flex items-center gap-[20px] pt-[30px]">
-                                <span class="h-[3px] w-[60px] bg-white block"></span>
-                                <span class="font-[700]">K Oiwake</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
