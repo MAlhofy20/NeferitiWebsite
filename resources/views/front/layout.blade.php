@@ -50,13 +50,13 @@
             <div class="icons flex gap-1 flex-col">
                 <a href="tel:{{ $setting['phone'] }}" class="sa" onclick="trackAction('زر الهاتف - ايقون معلقة')">
                     <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+                        <i class="fa-solid fa-phone-volume text-white text-[20px] text-2xl"></i>
                     </div>
                 </a>
                 <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb"
                     onclick="trackAction('زر الواتساب - ايقون معلقة')">
                     <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+                        <i class="fa-brands fa-whatsapp text-white text-[20px] text-2xl"></i>
                     </div>
                 </a>
             </div>
@@ -66,67 +66,66 @@
     <div class="the-pahe bg-white relative overflow-hidden">
         <div class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
-                class="all flex flex-wrap justify-center flex-row-reverse rounded-[20px] w-[1000px] overflow-hidden shadow-[0px_0px_9px_0px_#377287]">
+                class="all flex flex-wrap shadow-[-2px_-2px_7px_-2px_#8f8612] justify-center flex-row md:rounded-[20px] w-full md:max-w-[964px]  overflow-hidden ">
                 <!-- Contact Form -->
-                <div id="contact-section" class="contact-form bg-[#2a2a2a] flex-[1_1_300px] p-8" data-aos="zoom-in-left"
-                    data-aos-easing="linear" data-aos-duration="400">
-                    <h3 class="mb-5 text-[30px] font-bold text-[#09aba9]">تواصل معنا</h3>
+                <div id="contact-section" class="contact-form  p-8  bg-[#2a2a2a] lg:w-[482px] w-full">
+                    <h3 class="mb-5 text-[30px] font-bold text-gold-gradient">تواصل معنا</h3>
                     <div class="form">
                         <div class="form-group mb-[20px]">
                             <input type="text"
-                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
+                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] rounded-md bg-[#333] text-white text-sm"
                                 name="name" id="name" placeholder="الاسم">
                         </div>
                         <div class="form-group mb-[20px]">
                             <input type="phone"
-                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] border border-[#444] rounded-md bg-[#333] text-white text-sm"
+                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] rounded-md bg-[#333] text-white text-sm"
                                 name="phone" id="phone" placeholder="رقم الهاتف للتواصل">
                         </div>
                         <div class="form-group mb-[20px]">
                             <textarea name="message"
-                                class="form-control w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e]  border border-[#444] rounded-sm bg-[#333] text-white text-sm placeholder-[#bbb]"
+                                class="form-control w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e]  rounded-sm bg-[#333] text-white text-sm placeholder-[#bbb]"
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
                             <button type="button" onclick="sendMessage()"
-                                class="btn link5 w-full rounded-2xl p-3 border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]  bg-[#186766] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
+                                class="btn link5 w-full rounded-2xl p-3  shadow-[0_4px_6px_rgb(0,0,0)]
+                                bg-gold-button text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                                 ارسال
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Contact Information -->
-                <div class="contact-info flex-[1_1_300px] bg-[#1c1e25] p-8 text-[#dcdcdc]" data-aos="zoom-in-right"
-                    data-aos-easing="linear" data-aos-duration="500">
-                    <h3 class="mb-[20px] text-[30px] font-bold text-[#09aba9]">معلومات للتواصل معنا</h3>
-                    <p class="mb-[20px] leading-9 text-[20px] text-[#666666]">نحن منفتحون على أي اقتراح <br> أو مجرد
+                <div class="contact-info p-4 md:p-8 lg:w-[482px] w-full  bg-[#1c1e25] text-[#dcdcdc]">
+                    <h3 class="mb-[20px] text-[30px] font-bold text-gold-gradient">معلومات للتواصل معنا</h3>
+                    <p class="mb-[20px] md:leading-9 leading-[25px] text-[20px] text-[#666666]">نحن منفتحون على أي
+                        اقتراح <br> أو مجرد
                         الدردشة</p>
-
-                    <div class="info-item flex gap-[20px] justify-start items-center mb-[25px] ">
+                    <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[25px] ">
                         <div
-                            class=" w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                            class=" md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-phone-volume"></i>
                         </div>
                         <p>
-                            <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الهاتف:</span>
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الهاتف:</span>
                         <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
-                            <a dir="ltr" class="text-[#666666] font-bold text-[20px]  no-underline "
+                            <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
                             <a dir="ltr" class=" no-underline "
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </div>
                         </p>
                     </div>
-                    <div class="info-item  flex gap-[20px] justify-start items-center mb-[15px]">
+                    <div class="info-item  flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
                         <div
-                            class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                            class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-envelope"></i>
                         </div>
                         <p>
-                            <span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الايميل: </span>
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الايميل: </span>
                         <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
-                            <a class="font-bold text-[20px]  text-[#666666] no-underline " target="_blank"
-                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل
+                            <a class="font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline "
+                                target="_blank" href="mailto:{{ $setting['email'] }}">اضغط للتواصل
                             </a>
                             <a class=" no-underline " target="_blank"
                                 href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
@@ -134,14 +133,14 @@
                         </div>
                         </p>
                     </div>
-                    <div class="info-item flex gap-[20px] justify-start items-center mb-[15px]">
+                    <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
                         <div
-                            class="w-[60px] h-[60px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                            class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold text-[20px] "> الواتساب : </span><a
-                                onclick="trackAction('زر الواتساب - تواصل معنا')" target="_blank"
-                                class=" font-bold text-[20px]  text-[#666666] no-underline link8"
+                        <p><span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الواتساب:
+                            </span><a onclick="trackAction('زر الواتساب - تواصل معنا')" target="_blank"
+                                class=" font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline link8"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
                     </div>
                 </div>
@@ -354,11 +353,10 @@
                 icon.addEventListener("click", function() {
                     overlay.classList.remove("now");
                     sowPopup.classList.remove("open");
-                }); 
+                });
             }
         }
     </script>
 </body>
 
 </html>
-

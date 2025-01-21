@@ -34,9 +34,9 @@
             </div>
         </div>
     </div>
-    <div class="previous-work bg-[#0f1521] text-white p-[20px] md:p-[50px]">
+    <div  class="previous-work bg-[#0f1521] text-white p-[20px] md:p-[50px]">
 
-        <div class="previous flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
+        <div id="myElement" class="previous  flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
             @foreach ($projects as $project)
                 <div class="cee  rounded-[24px] w-[400px] text-black  border-2 " data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="400">

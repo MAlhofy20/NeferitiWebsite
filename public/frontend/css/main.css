@@ -269,12 +269,12 @@ html {
         rgb(0 255 255 / 16%)
     );
     transform: rotate(-45deg);
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     opacity: 0;
 }
 
 .previous-work .previous .cee:hover {
-    transform: scale(1.05);
+    transform: scale(0.9) translate(15px, 0px);
     box-shadow: 0 0 7px 4px rgb(0 255 255 / 9%);
 }
 .previous-work .previous .cee img:hover {
@@ -921,11 +921,9 @@ html {
     height: 120%;
     opacity: 1;
 }
-.boxes:hover .imageCard img {
-    transform: scale(1.1);
-}
+
 .boxes:hover .imageCard {
-    transform: translate(0px, -10px);
+    transform: scale(0.9) translate(15px, 0px);
 }
 .boxes:hover .tit::before {
     width: 100%;
@@ -998,55 +996,76 @@ html {
     z-index: 1;
 }
 .st .icons .sa {
-    border: 3px solid #3faeff;
-    background-color: white;
+    border: 3px solid white;
 }
 .st .icons .sb {
-    border: 3px solid #2ad04a;
+    border: 3px solid white;
 }
 .st .icons a i {
     position: relative;
     color: #262626;
     transition: 0.5s;
-    z-index: 3;
-}
-.st .icons .sb i {
-    color: #2ad04a;
-}
-.st .icons .sb:hover {
-    border: 3px solid white;
-}
-.st .icons a:hover i {
-    color: #fff;
-    transform: rotateY(360deg);
-}
-.st .icons .sa:hover i {
-    color: #3faeff;
-    transform: rotateY(360deg);
-}
-.st .icons a:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
+    color: white;
     width: 100%;
     height: 100%;
-    background: #f00;
-    transition: 0.5s;
-    z-index: 2;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(
+            ellipse farthest-corner at right bottom,
+            #fedb37 0%,
+            #fdb931 8%,
+            #9f7928 30%,
+            #8a6e2f 40%,
+            transparent 80%
+        ),
+        radial-gradient(
+            ellipse farthest-corner at left top,
+            #ffffff 0%,
+            #ffffac 8%,
+            #d1b464 25%,
+            #5d4a1f 62.5%,
+            #5d4a1f 100%
+        );
+}
+.st .icons .sb i {
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(
+            ellipse farthest-corner at right bottom,
+            #fedb37 0%,
+            #fdb931 8%,
+            #9f7928 30%,
+            #8a6e2f 40%,
+            transparent 80%
+        ),
+        radial-gradient(
+            ellipse farthest-corner at left top,
+            #ffffff 0%,
+            #ffffac 8%,
+            #d1b464 25%,
+            #5d4a1f 62.5%,
+            #5d4a1f 100%
+        );
+}
+.st .icons .sb:hover {
+    border: 3px solid #2ad04a;
+}
+.st .icons a:hover i {
+    color: #2ad04a;
+
+}
+.st .icons .sa:hover i {
+    color: black;
+
 }
 
-.st .icons a:hover:before {
-    top: 0;
-}
-
-.st .icons a:nth-child(1)::before {
-    background: black;
-}
-
-.st .icons a:nth-child(2)::before {
-    background: #2ad04a;
-}
 
 /* whatsapp and phone */
 /* small menu */

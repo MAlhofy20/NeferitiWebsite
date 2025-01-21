@@ -1,5 +1,8 @@
+// لالغاء ال click
+document.getElementById('myElement').addEventListener('contextmenu',  (e) =>  e.preventDefault());
+
 let smallIcon = document.querySelector(".icon-small i");
-let ul = document.querySelector(".icon-small .dis ul");
+let ul = document.querySelector(".icon-small ul");
 
 // متغير لتتبع حالة القائمة
 let isMenuOpen = false;

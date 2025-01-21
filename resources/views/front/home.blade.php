@@ -137,6 +137,7 @@
                         <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
                     </div>
                 </a>
+                
             </div>
         </div>
     </div>
@@ -305,7 +306,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
+        <div id="myElement" class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
             <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
                 data-aos-easing="linear" data-aos-duration="400" data-aos-duration="500">
                 <div class="font-[600] text-[22px]">اعمال سابقه</div>
@@ -341,7 +342,7 @@
                     <div class="one gap-[20px] w-full justify-center flex flex-wrap">
                         @foreach ($blogs->take(4) as $blog)
                         <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
-                            <div class="imageCard h-[192px] md:w-[270px] w-[100%] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
+                            <div class="imageCard h-[192px] md:w-[270px] w-[100%] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                                 <img class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
@@ -364,7 +365,7 @@
             </div>
             <div class="flex justify-center items-center pt-12">
                 <div
-                    class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-500 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
+                    class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-300 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
                     <a class=" " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
                 </div>
             </div>
@@ -438,7 +439,7 @@
             </div>
             <div class="Opinions overflow-hidden transition-translate duration-500 pr-[20px] ">
                 <div class="all md:py-[65px] py-[40px] bg-[#101828] flex gap-[24px] transition-translate duration-500 ">
-                    
+
                     @foreach ($testimonials as $testimonial)
                     <div
                         class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
