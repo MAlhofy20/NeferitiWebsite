@@ -88,8 +88,8 @@
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
                             <button type="button" onclick="sendMessage()"
-                                class="btn link5 w-full rounded-2xl p-3  shadow-[0_4px_6px_rgb(0,0,0)]
-                                bg-gold-button text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
+                                class="btn link5 w-full rounded-2xl p-3
+                                    bg-gold-button text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                                 ارسال
                             </button>
                         </div>

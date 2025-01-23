@@ -68,7 +68,22 @@ html {
 .content-menu ul li::before,
 .content-menu ul li::after {
     content: "";
-    background: #54b3d6;
+    background: radial-gradient(
+            ellipse farthest-corner at right bottom,
+            #fedb37 0%,
+            #fdb931 8%,
+            #9f7928 30%,
+            #8a6e2f 40%,
+            transparent 80%
+        ),
+        radial-gradient(
+            ellipse farthest-corner at left top,
+            #ffffff 0%,
+            #ffffac 8%,
+            #d1b464 25%,
+            #5d4a1f 62.5%,
+            #5d4a1f 100%
+        );
     display: block;
     position: absolute;
     bottom: -15px;
@@ -512,7 +527,22 @@ html {
     top: 0;
 }
 .start:before {
-    background: #0077b5;
+    background: radial-gradient(
+            ellipse farthest-corner at right bottom,
+            #fedb37 0%,
+            #fdb931 8%,
+            #9f7928 30%,
+            #8a6e2f 40%,
+            transparent 80%
+        ),
+        radial-gradient(
+            ellipse farthest-corner at left top,
+            #ffffff 0%,
+            #ffffac 8%,
+            #d1b464 25%,
+            #5d4a1f 62.5%,
+            #5d4a1f 100%
+        );
 }
 /*  / */
 /*
@@ -694,7 +724,14 @@ html {
     z-index: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(90deg, #8f8612, /* أصفر لامع */ #fedb37, /* ذهبي مشرق */ #fdb931, /* ذهبي متوسط */ #d1b464, /* ذهبي غامق */ #666666 53% /* بني ذهبي */);
+    background-image: linear-gradient(
+        90deg,
+        #8f8612,
+        /* أصفر لامع */ #fedb37,
+        /* ذهبي مشرق */ #fdb931,
+        /* ذهبي متوسط */ #d1b464,
+        /* ذهبي غامق */ #666666 53% /* بني ذهبي */
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -739,10 +776,12 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
-        to right,
-        rgb(7 151 139 / var(--tw-text-opacity, 1)),
-        rgb(7 151 139 / var(--tw-text-opacity, 1)) 50%,
-        rgb(153 153 153 / var(--tw-text-opacity, 1)) 50%
+        90deg,
+        #8f8612,
+        /* أصفر لامع */ #fedb37,
+        /* ذهبي مشرق */ #fdb931,
+        /* ذهبي متوسط */ #d1b464,
+        /* ذهبي غامق */ #666666 53% /* بني ذهبي */
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -757,7 +796,14 @@ html {
         bottom: -3px;
         z-index: 0;
         position: absolute;
-        background: rgb(7 151 139 / var(--tw-text-opacity, 1));
+        background: linear-gradient(
+            90deg,
+            #8f8612,
+            /* أصفر لامع */ #fedb37,
+            /* ذهبي مشرق */ #fdb931,
+            /* ذهبي متوسط */ #d1b464,
+            /* ذهبي غامق */ #8a6e2f /* بني ذهبي */
+        );
         transition: all 0.3s ease-in-out;
     }
     &:hover {
@@ -1065,13 +1111,10 @@ html {
 }
 .st .icons a:hover i {
     color: #2ad04a;
-
 }
 .st .icons .sa:hover i {
     color: black;
-
 }
-
 
 /* whatsapp and phone */
 /* small menu */
@@ -1164,20 +1207,71 @@ html {
     width: 100%;
     text-align: center;
 }
-
-/* .blogs .all{
+/* ///////////////////////////////////////////////////////////////////// */
+.chevrons {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
-.blogs .all .one{
-    display: grid;
-    gap: 10px;
-    width: 100%;
-    grid-template-columns: repeat(auto-fill , minmax(270px , 1fr));
-    grid-template-rows: repeat(auto-fill , minmax(300px , 1fr));
+
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 13px;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: move-chevron 3s ease-out infinite;
 }
-.blogs .all .one .boxes{
+
+.chevron:first-child {
+    animation: move-chevron 3s ease-out 1s infinite;
 }
-.blogs .all .two{
-    width: 480px;
-} */
+
+.chevron:nth-child(2) {
+    animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(
+        90deg,
+        #8f8612,
+        /* أصفر لامع */ #fedb37,
+        /* ذهبي مشرق */ #fdb931,
+        /* ذهبي متوسط */ #d1b464,
+        /* ذهبي غامق */ #8a6e2f /* بني ذهبي */
+    );
+}
+
+.chevron:before {
+    left: 0;
+    transform: skewY(30deg);
+}
+
+.chevron:after {
+    right: 0;
+    transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+    25% {
+        opacity: 1;
+    }
+    33.3% {
+        opacity: 1;
+        transform: translateY(calc(0.6rem * 3.8));
+    }
+    66.6% {
+        opacity: 1;
+        transform: translateY(calc(0.6rem * 5.2));
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(calc(0.6rem * 8)) scale(0.5);
+    }
+}
