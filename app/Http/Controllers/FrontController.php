@@ -25,7 +25,7 @@ class FrontController extends Controller
 
     public function product($slug)
     {
-        $product = Product::where('slug', $slug)->first();
+        $product = Product::with('productDetails')->where('slug', $slug)->first();
         return view('front.product', compact('product'));
     }
 
