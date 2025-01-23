@@ -42,9 +42,9 @@
                 <div class="font-[600] text-[19px] lg:text-[28px] py-[21px] leading-[25px] lg:leading-[44.8px] max-w-[500px] ">{{ $detail->title }}</div>
                 <div class=" leading-[21px] lg:leading-[25.6px] max-w-[500px] ">{!! breackableText($detail->description) !!}</div>
             </div>
-            <div class="max-w-[580px]">
+            <div class="max-w-[580px] p-[24px]">
                 <img data-aos="zoom-in" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300"
-                src="{{ asset($detail->image) }}" class="h-[450px] rounded-[20px]" alt="">
+                src="{{ asset($detail->image) }}" class="w-full h-full rounded-[20px]" alt="">
             </div>
         </div>
     </div>
