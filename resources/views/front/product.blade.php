@@ -17,7 +17,7 @@
         </defs>
     </svg></div>
     <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
-        data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
+        data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="300">
         <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
             <span>الاعمال</span></p>
         <div class="title flex justify-center items-center flex-col">
@@ -36,16 +36,40 @@
 
     <div class="the-pahe bg-white relative overflow-hidden">
         @foreach ($product->productDetails as $detail)
-        <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-black py-[20px] rounded-[20px] flex  flex-wrap-reverse items-center justify-evenly" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+        <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-black py-[20px] rounded-[20px] flex  flex-wrap-reverse items-center justify-evenly" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
             <div class="for-you  text-white px-[40px] lg:py-[70px] rounded-[20px]"
-                data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="300">
                 <div class="font-[600] text-[19px] lg:text-[28px] py-[21px] leading-[25px] lg:leading-[44.8px] max-w-[500px] ">{{ $detail->title }}</div>
                 <div class=" leading-[21px] lg:leading-[25.6px] max-w-[500px] ">{!! breackableText($detail->description) !!}</div>
             </div>
-            <div class="max-w-[580px]"><img data-aos="zoom-in" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
-                src="{{ asset($detail->image) }}" class="h-[450px] rounded-[20px]" alt=""></div>
+            <div class="max-w-[580px]">
+                <img data-aos="zoom-in" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300"
+                src="{{ asset($detail->image) }}" class="h-[450px] rounded-[20px]" alt="">
+            </div>
         </div>
-
-        @endforeach
-</div>
+    </div>
+    @endforeach
+    <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-black py-[20px] rounded-[20px] flex flex-col  items-center justify-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
+        <div class="main flex-col justify-center items-center text-center px-[20px]">
+            <div class="title font-bold text-[30px] md:text-[50px] text-[papayawhip] pb-[10px]">
+                عن اختيار فريق Nefirtiti
+            </div>
+            <p class="font-400 text-white text-[20px] rounded-[30.24px] px-[35px]">
+                في
+                <span class="font-bold text-gold-gradient">
+                    Nefertiti Solutions
+                </span>
+                نمتلك فريقًا متخصصًا يسخّر أحدث التقنيات لإدارة مشاريعك بكفاءة عالية
+                <br>
+                مع خطط مدروسة للتخطيط والتنفيذ، وضمان عمليات تسليم واختبار دقيقة تعكس احترافية عملنا
+            </p>
+        </div>
+        <div class="chevrons  rounded-[50%] bg-white">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    </div>
 @endsection
+
+{{-- bg-[#1f1f1f] --}}

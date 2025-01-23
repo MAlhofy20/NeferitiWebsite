@@ -328,7 +328,8 @@
                     class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
                     <a href="{{ route('front.projects') }}">جميع الالعمال السابقه </a>
                     <i class="fa-solid fa-arrow-trend-down"></i>
-                    <span>&#127482;&#127480;</span>
+
+
                 </div>
             </div>
         </div>
@@ -552,7 +553,7 @@
                     @foreach ($testimonials as $testimonial)
                         <div
                             class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                            <i class="text-[#10ACA2] text-[33px] fa-solid fa-quote-right"></i>
+                            <i class="text-[#FDB931] text-[33px] fa-solid fa-quote-right"></i>
                             <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                                 <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                     {!! breackableText($testimonial->description) !!}
