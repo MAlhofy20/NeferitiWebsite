@@ -1,7 +1,7 @@
 <div class = "flex justify-center">
     <div id="menu" class="active hidden lg:flex fixed z-[999999] ">
         <div class="logo ml-[10px]">
-            <img class="rounded-[8px] w-[40px] h-[50px]" src="{{ asset('frontend/images/logo trans.png') }}"
+            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/logo trans.png') }}"
                 alt="">
         </div>
         <div class="content-menu lg:px-[30px]">
@@ -10,7 +10,6 @@
                         href="{{ route('front.home') }}"><span>الرئيسية</span></a></li>
                 <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a href="#about"><span>تعريف
                             بنا</span></a></li>
-
                 <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
                         href="#products"><span>المنتجات</span></a></li>
                 <li class="font-bold text-[13px] leading-[18.2px] text-[#FFFFFF]"><a
@@ -29,7 +28,7 @@
     class="icon-small fixed z-[999999]  top-[30px] text-white text-center lg:hidden bg-transparent w-[90%] justify-between
     flex items-center mx-auto translate-x-[5%] left-0 backdrop-brightness-75 backdrop-blur-lg px-[20px] py-[10px] rounded-lg">
     <div class="logo ml-[10px]">
-        <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[1px_1px_6px_#8A6E2F]" src="http://127.0.0.1:8000/frontend/images/logo trans.png"
+        <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="http://127.0.0.1:8000/frontend/images/logo trans.png"
             alt="">
     </div>
     <i class="text-[#c0942c] text-[20px] relative fa-solid fa-bars cursor-pointer"></i>
