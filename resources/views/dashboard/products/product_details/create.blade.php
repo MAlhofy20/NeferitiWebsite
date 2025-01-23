@@ -36,7 +36,7 @@
                     <div class="mb-4 w-full">
                         <label for="description"
                             class="block text-sm font-medium text-gray-700">{{ __('dashboard.description') }}</label>
-                        <textarea rows="9" name="description" id="description" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1"></textarea>
+                        <textarea rows="9" name="description" id="description" class="mt-1 w-full rounded-md bg-gray-100 px-2 py-1">{{ old('description') }}</textarea>
                         @error('description')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
