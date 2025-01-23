@@ -694,12 +694,11 @@ html {
     z-index: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-        to right,
-        rgb(0 255 255 / var(--tw-text-opacity, 1)),
-        rgb(0 255 255 / var(--tw-text-opacity, 1)) 50%,
-        rgb(102 102 102 / var(--tw-text-opacity, 1)) 50%
-    );
+    background-image: linear-gradient(90deg, #8f8612, /* أصفر لامع */ #fedb37, /* ذهبي مشرق */ #fdb931, /* ذهبي متوسط */ #d1b464, /* ذهبي غامق */ #666666 53% /* بني ذهبي */);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     background-size: 200% 100%;
     background-position: -100%;
     transition: all 0.3s ease-in-out;
@@ -713,7 +712,14 @@ html {
         bottom: -3px;
         z-index: 0;
         position: absolute;
-        background: rgb(0 255 255 / var(--tw-text-opacity, 1));
+        background: linear-gradient(
+            90deg,
+            #8f8612,
+            /* أصفر لامع */ #fedb37,
+            /* ذهبي مشرق */ #fdb931,
+            /* ذهبي متوسط */ #d1b464,
+            /* ذهبي غامق */ #8a6e2f /* بني ذهبي */
+        );
         transition: all 0.3s ease-in-out;
     }
     &:hover {
@@ -765,7 +771,7 @@ html {
     transition: color 0.3s ease-in-out;
 }
 .info-item:hover .te1 {
-    color: rgb(0 255 255 / var(--tw-text-opacity, 1));
+    color: #fedb37;
     transition: color 0.5s;
 }
 
@@ -1158,3 +1164,20 @@ html {
     width: 100%;
     text-align: center;
 }
+
+/* .blogs .all{
+    display: flex;
+    gap: 10px;
+}
+.blogs .all .one{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill , minmax(270px , 1fr));
+    grid-template-rows: repeat(auto-fill , minmax(300px , 1fr));
+}
+.blogs .all .one .boxes{
+}
+.blogs .all .two{
+    width: 480px;
+} */
