@@ -1,10 +1,11 @@
 @extends('front.layout')
 @include('meta::manager', [
     'title' => 'Nefertiti Solutions - حلول برمجية متكاملة لتطوير أعمالك',
-    'description' => 'في Nefertiti Solutions نقدم حلول برمجية مبتكرة وتصميمات مخصصة لتلبية احتياجات عملك، من تطوير المواقع إلى التطبيقات الذكية.',
+    'description' =>
+        'في Nefertiti Solutions نقدم حلول برمجية مبتكرة وتصميمات مخصصة لتلبية احتياجات عملك، من تطوير المواقع إلى التطبيقات الذكية.',
     'keywords' => 'برمجة, تطوير مواقع, تصميم تطبيقات, حلول برمجية, شركات البرمجة, تطوير برمجي',
     'image' => asset('dash/images/logo_with_bg.jpg'),
-    'canonical' => url()->current()
+    'canonical' => url()->current(),
 ])
 
 @section('content')
@@ -36,27 +37,13 @@
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
                 موثوق به من قبل أكثر من 50 شركة
             </div>
-            <div class="main-icon overflow-hidden w-full">
-                <div class="iconimg flex gap-[45px]  ">
-                            @foreach (\App\Models\Partner::all() as $partner)
-                                <img class="rounded-[8px] w-auto h-[50px]"
-                                    src="{{ asset($partner->image) }}" alt="">
-                            @endforeach
+            <div class="main-icon active overflow-hidden w-full">
+                <div class="iconimg flex gap-[45px]">
+                    @foreach (\App\Models\Partner::all() as $partner)
+                        <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
+                            alt="">
+                    @endforeach
                 </div>
-                {{-- <div class="main-icon overflow-hidden w-full">
-                    <div class="iconimg flex gap-[45px]">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logod.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logob.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logod.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    </div>
-                </div> --}}
             </div>
         </div>
         <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
@@ -74,7 +61,6 @@
                         <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
                     </div>
                 </a>
-
             </div>
         </div>
     </div>
@@ -94,6 +80,7 @@
                     مع خطط مدروسة للتخطيط والتنفيذ، وضمان عمليات تسليم واختبار دقيقة تعكس احترافية عملنا
                 </p>
             </div>
+
             {{-- <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[20px] md:px-[50px] py-[80px] flex-wrap"
                 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
                 <div class="bb flex flex-col justify-center items-center gap-[30px]">
@@ -317,44 +304,47 @@
             <div class="all flex justify-center flex-wrap gap-[30px]">
                 <div class="one flex  gap-[30px] flex-wrap justify-center">
                     @foreach ($blogs->take(2) as $blog)
-                    <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'" class="boxes cursor-pointer">
-                        <div class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset($blog->image) }}" alt="">
-                        </div>
-                        <div class="date text-[#64607D] pt-1.5">
-                            <span>{{ $blog->created_at->format('d-m-Y') }}</span>
-                            <span>{{ $blog->product?->name }}</span>
-                        </div>
-                        <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
-                            <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
-                        </div>
-                        <div class="line-clamp-3 w-[380px]">
-                            <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
-                                {{ $blog->preview }}
-                            </p>
-                        </div>
-                    </div>
-
-                    @endforeach
-                </div>
-                <div class="two w-[390px] flex flex-col gap-5 ">
-                    @foreach ($blogs->skip(2) as $blog)
-                    <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'" class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
-                        <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset($blog->image) }}" alt="">
-                        </div>
-                        <div>
+                        <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'"
+                            class="boxes cursor-pointer">
+                            <div
+                                class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                                <img class= "origin-center transform hover:scale-110 transition duration-300"
+                                    src="{{ asset($blog->image) }}" alt="">
+                            </div>
                             <div class="date text-[#64607D] pt-1.5">
                                 <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
-                            <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
+                            <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
                                 <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
+                            <div class="line-clamp-3 w-[380px]">
+                                <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
+                                    {{ $blog->preview }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
+                </div>
+                <div class="two w-[390px] flex flex-col gap-5 ">
+                    @foreach ($blogs->skip(2) as $blog)
+                        <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'"
+                            class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
+                            <div
+                                class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                                <img class= "origin-center transform hover:scale-110 transition duration-300"
+                                    src="{{ asset($blog->image) }}" alt="">
+                            </div>
+                            <div>
+                                <div class="date text-[#64607D] pt-1.5">
+                                    <span>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    <span>{{ $blog->product?->name }}</span>
+                                </div>
+                                <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
+                                    <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
+                                </div>
+                            </div>
+                        </div>
                     @endforeach
 
                 </div>
@@ -377,11 +367,13 @@
                     <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
                 </div>
                 <div class="here">
-                    <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300">
+                    <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear"
+                        data-aos-duration="300">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                             فهم وتحليل</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            إجابتك تبدأ هنا. نجتمع لفهم فكرتك بدقة ونتعمق في احتياجات مشروعك، لنساعدك في تطوير رؤية مبتكرة تخدم أهدافك وتحقق طموحاتك.
+                            إجابتك تبدأ هنا. نجتمع لفهم فكرتك بدقة ونتعمق في احتياجات مشروعك، لنساعدك في تطوير رؤية مبتكرة
+                            تخدم أهدافك وتحقق طموحاتك.
 
                         </p>
                     </div>
@@ -389,22 +381,24 @@
                         <div class="tit text-[30px] md:text-[36px] text-[#2E2F3566] font-[700] pr-[50px] cursor-pointer">
                             التخطيط والتنفيذ</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            نقسم المشروع إلى مراحل واضحة. نتفق على ما سيتم إنجازه في كل خطوة، مع ضمان الالتزام بالجودة والمواعيد المحددة.
+                            نقسم المشروع إلى مراحل واضحة. نتفق على ما سيتم إنجازه في كل خطوة، مع ضمان الالتزام بالجودة
+                            والمواعيد المحددة.
                         </p>
                     </div>
-                    <div class="min  py-[15px]" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="500">
+                    <div class="min  py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                             تسليم واختبار</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            في نهاية كل مرحلة، نقوم بالتسليم التدريجي مع اختبار شامل لكل جزء. نعمل معك لضمان أن كل شيء يعمل كما ينبغي قبل الانتقال للخطوة التالية.
+                            في نهاية كل مرحلة، نقوم بالتسليم التدريجي مع اختبار شامل لكل جزء. نعمل معك لضمان أن كل شيء يعمل
+                            كما ينبغي قبل الانتقال للخطوة التالية.
                         </p>
                     </div>
                     <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
                             دعم مستمر</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px] ">
-                            رحلتك معنا لا تنتهي بالتسليم. نحن هنا دائمًا للتواصل السريع، لحل أي مشكلات أو تنفيذ أي تطويرات تضيف قيمة إلى مشروعك.
+                            رحلتك معنا لا تنتهي بالتسليم. نحن هنا دائمًا للتواصل السريع، لحل أي مشكلات أو تنفيذ أي تطويرات
+                            تضيف قيمة إلى مشروعك.
                         </p>
                     </div>
                 </div>

@@ -12,35 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const clonedImage = images[i].cloneNode(true); // إنشاء نسخة من الصورة
         container.appendChild(clonedImage); // إضافة النسخة إلى الحاوية
     }
-
-    // let scrollPosition = 0; // بدء الحركة من اليسار
-    // const totalWidth = container.scrollWidth; // عرض الحاوية
-
-    // function scrollContent() {
-    //     scrollPosition += scrollSpeed; // تحرك الصور لليسار
-    //     container.style.transform = `translateX(${scrollPosition}px)`; // تحريك الصور
-
-    //     // إذا وصلت الصور إلى نصف عرض الحاوية، قم بإعادة تعيين الموقع بعد الانتقال
-    //     if (scrollPosition >= totalWidth / 2) {
-    //         container.style.transition = "none"; // تعطيل الـ transition أثناء الانتقال إلى البداية
-    //         scrollPosition = 0; // إعادة تعيين المكان إلى البداية
-    //         setInterval(() => {
-    //             container.style.transition = "transform 1s linear"; // إعادة تفعيل الـ transition بعد إعادة تعيين الموقع
-    //         }); // تأخير صغير لتفعيل التمرير بشكل سلس
-    //     }
-
-    //     requestAnimationFrame(scrollContent); // استمرار الحركة
-    // }
-
-    // scrollContent(); // بدء الحركة
 });
-
-
-
-
-
-
-
 
 // لالغاء ال click
 document.getElementById('myElement').addEventListener('contextmenu',  (e) =>  e.preventDefault());
@@ -161,27 +133,8 @@ titless.forEach((title, index) => {
     });
 });
 
-// bbbbbbbbooooooooox// xxxxxxxxxx
-
-// let box = document.querySelector('.box');
-
-// // حركة الماوس لتدوير الصندوق
-// window.onmousemove = function (e) {
-//     let x = (e.clientX - window.innerWidth / 2) / 10; // تحريك بزاوية بناءً على موضع الماوس
-//     box.style.transform = `perspective(1000px) rotateY(${x}deg)`;
-// };
-
-// // تعيين زوايا دوران لكل عنصر داخل الصندوق
-// const spans = document.querySelectorAll('.box span');
-// spans.forEach((span, index) => {
-//     span.style.setProperty('--rotation', index); // تعيين قيمة الدوران
-// });
-
-// Services
-
-/* inimation 2*/
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".Opinions .all .left");
+    const container = document.querySelector(".Opinions .all");
     if (!container) {
         return
     }
