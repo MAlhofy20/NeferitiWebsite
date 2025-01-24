@@ -1,7 +1,7 @@
 <div class = "flex justify-center">
     <div id="menu" class="active hidden lg:flex fixed z-[999999] ">
         <div class="logo ml-[10px]">
-            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/logo trans.png') }}"
+            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/menu_logo.webp') }}"
                 alt="">
         </div>
         <div class="content-menu lg:px-[30px]">
