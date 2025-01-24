@@ -1,8 +1,8 @@
 <div class = "flex justify-center">
     <div id="menu" class="active hidden lg:flex fixed z-[999999] ">
         <div class="logo ml-[10px]">
-            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]"
-                src="{{ asset('frontend/images/logo trans.png') }}" alt="">
+            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/menu_logo.webp') }}"
+                alt="">
         </div>
         <div class="content-menu lg:px-[30px]">
             <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">

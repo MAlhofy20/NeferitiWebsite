@@ -14,7 +14,7 @@
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
         <div class="flex justify-center items-center">
             <img class="rounded-[8px] w-full  absolute  right-0 top-0 opacity-10"
-                src="{{ asset('frontend/images/dadad.jpg') }}" alt="">
+                src="{{ asset('frontend/images/heroImage.webp') }}" alt="">
         </div>
         <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center pb-[50px] px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
@@ -42,7 +42,7 @@
             <div class="main-icon active overflow-hidden w-full">
                 <div class="iconimg flex gap-[45px]">
                     @foreach (\App\Models\Partner::all() as $partner)
-                        <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
+                        <img loading="lazy" class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
                             alt="">
                     @endforeach
                 </div>
@@ -202,7 +202,7 @@
                         <div class="min flex justify-center gap-[15px] cursor-pointer">
                             <div class="image" data-aos="zoom-in" data-aos-easing="linear"
                                 data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                <img class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
+                                <img loading="lazy" class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
                                     src="{{ asset($product->image) }}" alt="">
                             </div>
                             <div class="flex flex-col gap-[5px]">
@@ -242,7 +242,7 @@
                 @foreach ($projects as $project)
                     <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
                         data-aos-easing="linear" data-aos-duration="500">
-                        <img class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px] w-full"
+                        <img loading="lazy" class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px] w-full"
                             src="{{ asset($project->image) }}" alt="">
                         <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                     </div>
@@ -310,7 +310,7 @@
                             class="boxes cursor-pointer">
                             <div
                                 class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
+                                <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div class="date text-[#64607D] pt-1.5">
@@ -334,7 +334,7 @@
                             class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
                             <div
                                 class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
+                                <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div>
