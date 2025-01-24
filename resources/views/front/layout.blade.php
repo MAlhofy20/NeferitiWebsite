@@ -36,11 +36,11 @@
 
     @php
         $setting = collect([
-            'country' => 'Alexandria - EG',
-            'phone' => '+2001070019220',
-            'whatsapp' => '+201070019220',
+            'country' => 'الاسكندرية - مصر',
+            'phone' => '+201148394372',
+            'whatsapp' => '+201148394372',
             'email' => 'contact@nefertitisolutions.com',
-            'facebook_link' => 'https://www.facebook.com/',
+            'facebook_link' => 'https://www.facebook.com/Nefertitisolutions',
             'twitter_link' => 'https://x.com/?lang=en',
             'instagram_link' => 'https://www.instagram.com/?hl=en',
         ]);
