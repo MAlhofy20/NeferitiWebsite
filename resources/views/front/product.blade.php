@@ -1,4 +1,12 @@
 @extends('front.layout')
+@include('meta::manager', [
+    'title' => $product->meta_title,
+    'description' => Str::limit($product->meta_description, 160),
+    'keywords' => $product->meta_keywords,
+    'image' => asset($product->image),
+    'canonical' => route('front.product', $product->slug),
+])
+
 @section('content')
 <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
     <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">

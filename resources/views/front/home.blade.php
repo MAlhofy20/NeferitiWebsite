@@ -1,4 +1,12 @@
 @extends('front.layout')
+@include('meta::manager', [
+    'title' => 'Nefertiti Solutions - حلول برمجية متكاملة لتطوير أعمالك',
+    'description' => 'في Nefertiti Solutions نقدم حلول برمجية مبتكرة وتصميمات مخصصة لتلبية احتياجات عملك، من تطوير المواقع إلى التطبيقات الذكية.',
+    'keywords' => 'برمجة, تطوير مواقع, تصميم تطبيقات, حلول برمجية, شركات البرمجة, تطوير برمجي',
+    'image' => asset('dash/images/logo_with_bg.jpg'),
+    'canonical' => url()->current()
+])
+
 @section('content')
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
         <div class="flex justify-center items-center">
@@ -379,7 +387,7 @@
             <div class="all flex justify-center flex-wrap gap-[30px]">
                 <div class="one flex  gap-[30px] flex-wrap justify-center">
                     @foreach ($blogs->take(2) as $blog)
-                    <div onclick="window.location.href='{{ route('front.blog', $blog->slug) }}'" class="boxes cursor-pointer">
+                    <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'" class="boxes cursor-pointer">
                         <div class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                             <img class= "origin-center transform hover:scale-110 transition duration-300"
                                 src="{{ asset($blog->image) }}" alt="">
@@ -389,7 +397,7 @@
                             <span>{{ $blog->product?->name }}</span>
                         </div>
                         <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
-                            <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
+                            <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                         </div>
                         <div class="line-clamp-3 w-[380px]">
                             <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
@@ -402,7 +410,7 @@
                 </div>
                 <div class="two w-[390px] flex flex-col gap-5 ">
                     @foreach ($blogs->skip(2) as $blog)
-                    <div onclick="window.location.href='{{ route('front.blog', $blog->slug) }}'" class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
+                    <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'" class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
                         <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                             <img class= "origin-center transform hover:scale-110 transition duration-300"
                                 src="{{ asset($blog->image) }}" alt="">
@@ -413,7 +421,7 @@
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
                             <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
-                                <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
+                                <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
                         </div>
                     </div>

@@ -43,7 +43,7 @@ class FrontController extends Controller
 
     public function blog_show($slug)
     {
-        $blog = Blog::where('slug', $slug)->first();
+        $blog = Blog::with('product')->where('slug', $slug)->first();
         return view('front.blog.show', compact('blog'));
     }
 
