@@ -138,10 +138,16 @@
                             class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
                         </div>
-                        <p><span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الواتساب:
-                            </span><a onclick="trackAction('زر الواتساب - تواصل معنا')" target="_blank"
-                                class=" font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline link8"
-                                href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a></p>
+                        <p>
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الواتساب:</span>
+                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الواتساب - تواصل معنا')">
+                                <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
+                                    href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط للتواصل</a>
+                                <a dir="ltr" class=" no-underline "
+                                    href="https://wa.me/{{ $setting['whatsapp'] }}">{{ $setting['phone'] }}</a>
+                            </div>
+                        </p>
+        
                     </div>
                 </div>
             </div>
@@ -172,9 +178,11 @@
                         <img class="rounded-[8px] w-[65px] h-[88px]"
                             src="{{ asset('frontend/images/logo trans.png') }}" alt="">
                     </div>
-                    <p class="max-w-[414px] text-[#FFFFFF] leading-[26px] pt-[24px] t">
-                        خدمة عملاء رائعة. انتقلت من بنك تقليدي إلى بنك Sable و ساعدتني خدمة العملاء في بنك Sable في
-                        الإجابة على جميع الأسئلة التي احتجت إلى تغيير البنك. </p>
+                    <p class="max-w-[414px] text-[#FFFFFF] leading-[26px] pt-[24px] t">من خلال نظرة تجمع بين خبرة
+                        المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
+                        نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
+
+                    </p>
                 </div>
                 <div class="overview max-w-[275px] leading-[26px]">
                     <div class="font-[700] text-[24px]">اختصارات</div>
@@ -199,7 +207,7 @@
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </p>
                         <p class="py-[10px]">
-                            <span class="text-[#fff] pl-[10px]"> الاميل : </span>
+                            <span class="text-[#fff] pl-[10px]"> الايميل : </span>
                             <a class=" no-underline link9" onclick="trackAction('زر الايميل - الفوتر')"
                                 href="mailto:{{ $setting['email'] }}" target="_blank">{{ $setting['email'] }}
                             </a>
@@ -243,8 +251,8 @@
                     <div class="country">{{ $setting['country'] }}</div>
                 </div>
                 <div class="locati-sp flex flex-wrap gap-[10px]">
-                    <a href="#" class="no-underline link9">الشروط والاحكام</a>
-                    <a href="#" class="no-underline link9">سياسة الخصوصية</a>
+                    <a href="{{ route('front.terms') }}" target="_blank" class="no-underline link9">الشروط والاحكام</a>
+                    <a href="{{ route('front.privacy') }}" target="_blank" class="no-underline link9">سياسة الخصوصية</a>
                 </div>
             </div>
         </div>
@@ -284,69 +292,69 @@
         }
 
         function sendMessage() {
-    const name = document.getElementById('name');
-    const phone = document.getElementById('phone');
-    const message = document.getElementById('message');
-    const sowPopup = document.querySelector(".sowpopup");
-    const overlay = document.querySelector("#overlay");
-    const messageParagraph = document.querySelector(".sowpopup .show p");
-    const right = document.querySelector(".sowpopup .show .right");
-    const mistake = document.querySelector(".sowpopup .show .mistake");
-    const icon = document.querySelector(".sowpopup .x i");
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const message = document.getElementById('message');
+            const sowPopup = document.querySelector(".sowpopup");
+            const overlay = document.querySelector("#overlay");
+            const messageParagraph = document.querySelector(".sowpopup .show p");
+            const right = document.querySelector(".sowpopup .show .right");
+            const mistake = document.querySelector(".sowpopup .show .mistake");
+            const icon = document.querySelector(".sowpopup .x i");
 
-    // التحقق من المدخلات
-    if (!name.value.trim() || !phone.value.trim() || !message.value.trim()) {
-        return showPopup(false, "من فضلك، املأ جميع الحقول.");
-    }
-    if (name.value.length > 250) {
-        return showPopup(false, "تحقق من الاسم.");
-    }
-    if (phone.value.length > 20 || !/^[\d\s+()\-.]+$/.test(phone.value.trim())) {
-        return showPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا).");
-    }
-    if (message.value.length > 1000) {
-        return showPopup(false, "يمكنك أن تقلل في حجم الرسالة.");
-    }
-
-    // إرسال البيانات
-    fetch("{{ route('front.message.store') }}", {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: name.value.trim(),
-            phone: phone.value.trim(),
-            message: message.value.trim(),
-            url: window.location.pathname,
-        })
-    })
-        .then(response => response.json())
-        .then(data => {
-            showPopup(data.success, data.message);
-            if (data.success) {
-                name.value = "";
-                phone.value = "";
-                message.value = "";
+            // التحقق من المدخلات
+            if (!name.value.trim() || !phone.value.trim() || !message.value.trim()) {
+                return showPopup(false, "من فضلك، املأ جميع الحقول.");
             }
-        })
-        .catch(() => showPopup(false, "حدث خطأ أثناء إرسال الرسالة."));
+            if (name.value.length > 250) {
+                return showPopup(false, "تحقق من الاسم.");
+            }
+            if (phone.value.length > 20 || !/^[\d\s+()\-.]+$/.test(phone.value.trim())) {
+                return showPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا).");
+            }
+            if (message.value.length > 1000) {
+                return showPopup(false, "يمكنك أن تقلل في حجم الرسالة.");
+            }
 
-    // عرض الإشعار
-    function showPopup(success, message) {
-        messageParagraph.textContent = message;
-        right.classList.toggle("hidden", !success);
-        mistake.classList.toggle("hidden", success);
-        sowPopup.classList.add("open");
-        overlay.classList.add("now");
+            // إرسال البيانات
+            fetch("{{ route('front.message.store') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name.value.trim(),
+                        phone: phone.value.trim(),
+                        message: message.value.trim(),
+                        url: window.location.pathname,
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    showPopup(data.success, data.message);
+                    if (data.success) {
+                        name.value = "";
+                        phone.value = "";
+                        message.value = "";
+                    }
+                })
+                .catch(() => showPopup(false, "حدث خطأ أثناء إرسال الرسالة."));
 
-        icon.addEventListener("click", () => {
-            sowPopup.classList.remove("open");
-            overlay.classList.remove("now");
-        });
-    }
-}
+            // عرض الإشعار
+            function showPopup(success, message) {
+                messageParagraph.textContent = message;
+                right.classList.toggle("hidden", !success);
+                mistake.classList.toggle("hidden", success);
+                sowPopup.classList.add("open");
+                overlay.classList.add("now");
+
+                icon.addEventListener("click", () => {
+                    sowPopup.classList.remove("open");
+                    overlay.classList.remove("now");
+                });
+            }
+        }
     </script>
 </body>
 
