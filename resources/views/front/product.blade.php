@@ -1,4 +1,6 @@
 @extends('front.layout')
+@section('head')
+
 @include('meta::manager', [
     'title' => $product->meta_title,
     'description' => Str::limit($product->meta_description, 160),
@@ -6,6 +8,7 @@
     'image' => asset($product->image),
     'canonical' => route('front.product', $product->slug),
 ])
+    @endsection
 
 @section('content')
 <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">

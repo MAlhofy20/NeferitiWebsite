@@ -1,4 +1,6 @@
 @extends('front.layout')
+@section('head')
+
 @include('meta::manager', [
     'title' => 'مدونة نيفرتيتي - رؤى برمجية وأحدث التقنيات',
     'description' => 'تابع أحدث المقالات والنصائح حول البرمجة، تطوير التطبيقات، وتحسين أداء المشاريع التقنية.',
@@ -6,6 +8,7 @@
     'image' => asset('dash/images/logo_with_bg.jpg'),
     'canonical' => url()->current()
 ])
+    @endsection
 
 @section('content')
     <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">

@@ -1,4 +1,6 @@
 @extends('front.layout')
+@section('head')
+
 @include('meta::manager', [
     'title' => $blog->meta_title,
     'description' => Str::limit($blog->meta_description, 160),
@@ -6,6 +8,7 @@
     'image' => asset($blog->image),
     'canonical' => route('front.blog.show', $blog->slug),
 ])
+    @endsection
 
 @section('content')
     <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">

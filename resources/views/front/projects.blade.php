@@ -1,4 +1,6 @@
 @extends('front.layout')
+@section('head')
+
 @include('meta::manager', [
     'title' => 'أعمالنا البرمجية - مشاريع ناجحة وحلول تقنية مبتكرة',
     'description' => 'استعرض أمثلة من مشاريعنا البرمجية التي تضم تصميم المواقع، تطوير التطبيقات، وأنظمة متقدمة صنعت فرقًا حقيقيًا لعملائنا.',
@@ -6,7 +8,7 @@
     'image' => asset('dash/images/logo_with_bg.jpg'),
     'canonical' => url()->current()
 ])
-
+    @endsection
 @section('content')
     <div class="main bg-[#0f1521] pb-[50px] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,4 +1,6 @@
 @extends('front.layout')
+
+@section('head')
 @include('meta::manager', [
     'title' => 'Nefertiti Solutions - حلول برمجية متكاملة لتطوير أعمالك',
     'description' =>
@@ -7,7 +9,7 @@
     'image' => asset('dash/images/logo_with_bg.jpg'),
     'canonical' => url()->current(),
 ])
-
+@endsection
 @section('content')
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
         <div class="flex justify-center items-center">
