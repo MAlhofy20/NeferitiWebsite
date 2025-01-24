@@ -109,7 +109,7 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الهاتف:</span>
-                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
+                        <div class="link8 flex flex-col items-start gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
                             <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 href="tel:{{ $setting['phone'] }}">اضغط للتواصل</a>
                             <a dir="ltr" class=" no-underline "
@@ -124,7 +124,7 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الايميل: </span>
-                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
+                        <div class="link8 flex flex-col items-start gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
                             <a class="font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline "
                                 target="_blank" href="mailto:{{ $setting['email'] }}">اضغط للتواصل
                             </a>
@@ -137,18 +137,18 @@
                     <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
                         <div
                             class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
-                            <i class="te1 text-[#fff] fa-solid fa-earth-americas"></i>
+                            <i class="te1 text-[#fff] fa-brands fa-whatsapp text-[20px]"></i>
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الواتساب:</span>
-                            <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الواتساب - تواصل معنا')">
+                            <div class="link8 flex flex-col items-start gap-[5px]" onclick="trackAction('زر الواتساب - تواصل معنا')">
                                 <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                     href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط للتواصل</a>
                                 <a dir="ltr" class=" no-underline "
                                     href="https://wa.me/{{ $setting['whatsapp'] }}">{{ $setting['phone'] }}</a>
                             </div>
                         </p>
-        
+
                     </div>
                 </div>
             </div>
@@ -275,6 +275,7 @@
 
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
+
     <script>
         AOS.init();
         //

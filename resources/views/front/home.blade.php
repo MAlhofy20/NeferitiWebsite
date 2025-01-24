@@ -34,7 +34,7 @@
                     href="#contact-section">تواصل معنا</a>
             </div>
         </div>
-        <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px]">
+        <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px] ">
             <div class="title flex justify-center items-center text-white pb-[30px]" data-aos="fade-up"
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
                 موثوق به من قبل أكثر من 50 شركة
