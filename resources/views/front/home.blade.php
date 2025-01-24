@@ -37,97 +37,31 @@
                 موثوق به من قبل أكثر من 50 شركة
             </div>
             <div class="main-icon flex flex-col gap-[10px] ">
-                <div class="iconimg right ">
-                    <div class="flex justify-center items-center gap-[65px]">
-                        @foreach (\App\Models\Partner::all() as $partner)
-                            <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]"
-                                src="{{ asset($partner->image) }}" alt="">
-                        @endforeach
-                        {{-- <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logob.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoc.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logod.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoe.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt="">
-                    <img class="animate-scrollLeft rounded-[8px] w-[100px] h-[50px]"
-                        src="{{ asset('frontend/images/logoa.png') }}" alt=""> --}}
+                {{-- <div class="iconimg  ">
+                        <div class="flex justify-center items-center gap-[65px]">
+                            @foreach (\App\Models\Partner::all() as $partner)
+                                <img class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]"
+                                    src="{{ asset($partner->image) }}" alt="">
+                            @endforeach
+                            <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                            <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logob.png') }}" alt="">
+                            <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                        </div>
+                </div> --}}
+                <div class="main-icon overflow-hidden w-full">
+                    <div class="iconimg flex gap-[45px]">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logod.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logob.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoa.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoc.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logod.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logoe.png') }}" alt="">
+                        <img class="rounded-[8px] w-auto h-[50px]" src="{{ asset('frontend/images/logob.png') }}" alt="">
                     </div>
                 </div>
-                {{-- <div class="iconimg left">
-                <div class="flex logos-track justify-center items-center gap-[65px]">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoc.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logod.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoa.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logob.png')}}" alt="">
-                    <img class="animate-scrollRight rounded-[8px] w-[100px] h-[50px]" src="{{asset('frontend/images/logoe.png')}}" alt="">
-                </div>
-            </div> --}}
             </div>
         </div>
         <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
@@ -381,7 +315,8 @@
             </div>
         </div> --}}
         <div id="blogs" class="blogs p-[20px] ">
-            <div class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
+            <div
+                class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
                 <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث منشورات مدونتنا</div>
             </div>
             <div class="all flex justify-center flex-wrap gap-[30px]">
