@@ -143,7 +143,7 @@
     </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
         <div class="about-us relative">
-            <div class="main flex-col justify-center items-center text-center px-[20px]">
+            <div class="main flex-col justify-center items-center text-center px-[20px] mb-10">
                 <div class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
                     عن اختيار فريق Nefirtiti
                 </div>
@@ -157,7 +157,7 @@
                     مع خطط مدروسة للتخطيط والتنفيذ، وضمان عمليات تسليم واختبار دقيقة تعكس احترافية عملنا
                 </p>
             </div>
-            <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[20px] md:px-[50px] py-[80px] flex-wrap"
+            {{-- <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[20px] md:px-[50px] py-[80px] flex-wrap"
                 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
                 <div class="bb flex flex-col justify-center items-center gap-[30px]">
                     <div class="flex justify-center items-center bg-white  rounded-[32px] ">
@@ -184,7 +184,7 @@
                     </div>
                     <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تسليم واختبار </p>
                 </div>
-            </div>
+            </div> --}}
             <div class="mb-12 mx-auto w-64">
                 <a class="cursor-box font-bold cards-gold-gradient not-allowed text-nowrap rounded-[15px] text-white px-[50px] py-[10px] "
                     href="#contact-section">اطلب استشارتك المجانية</a>
@@ -378,104 +378,46 @@
             </div>
             <div class="all flex justify-center flex-wrap gap-[30px]">
                 <div class="one flex  gap-[30px] flex-wrap justify-center">
-                    <div class="boxes cursor-pointer">
+                    @foreach ($blogs->take(2) as $blog)
+                    <div onclick="window.location.href='{{ route('front.blog', $blog->slug) }}'" class="boxes cursor-pointer">
                         <div class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                             <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog1.png') }}" alt="">
+                                src="{{ asset($blog->image) }}" alt="">
                         </div>
                         <div class="date text-[#64607D] pt-1.5">
-                            <span>17-01-2025</span>
-                            <span>catihory</span>
+                            <span>{{ $blog->created_at->format('d-m-Y') }}</span>
+                            <span>{{ $blog->product?->name }}</span>
                         </div>
                         <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
-                            <a href="{{ asset('frontend/images/blog1.png') }}">Believing neglected so so allowance existence departure.</a>
+                            <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
                         </div>
                         <div class="line-clamp-3 w-[380px]">
                             <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
-                                Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.
+                                {{ $blog->preview }}
                             </p>
                         </div>
                     </div>
-                    <div class="boxes cursor-pointer">
-                        <div class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                        </div>
-                        <div class="date text-[#64607D] pt-1.5">
-                            <span>17-01-2025</span>
-                            <span>catihory</span>
-                        </div>
-                        <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
-                            <a href="{{ asset('frontend/images/blog1.png') }}">Believing neglected so so allowance existence departure.</a>
-                        </div>
-                        <div class="line-clamp-3 w-[380px]">
-                            <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
-                                Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.
-                            </p>
-                        </div>
-                    </div>
+
+                    @endforeach
                 </div>
                 <div class="two w-[390px] flex flex-col gap-5 ">
-                    <div class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
+                    @foreach ($blogs->skip(2) as $blog)
+                    <div onclick="window.location.href='{{ route('front.blog', $blog->slug) }}'" class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
                         <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                             <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog5.png') }}" alt="">
+                                src="{{ asset($blog->image) }}" alt="">
                         </div>
                         <div>
                             <div class="date text-[#64607D] pt-1.5">
-                                <span>17-01-2025</span>
-                                <span>catihory</span>
+                                <span>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                <span>{{ $blog->product?->name }}</span>
                             </div>
                             <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
-                                <a href="#"> Partiality on or continuing in particular principles</a>
+                                <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
-                        <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog2.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D] pt-1.5">
-                                <span>17-01-2025</span>
-                                <span>catihory</span>
-                            </div>
-                            <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
-                                <a href="#"> Partiality on or continuing in particular principles</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
-                        <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog4.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D] pt-1.5">
-                                <span>17-01-2025</span>
-                                <span>catihory</span>
-                            </div>
-                            <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
-                                <a href="#"> Partiality on or continuing in particular principles</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
-                        <div class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                            <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                src="{{ asset('frontend/images/blog6.png') }}" alt="">
-                        </div>
-                        <div>
-                            <div class="date text-[#64607D] pt-1.5">
-                                <span>17-01-2025</span>
-                                <span>catihory</span>
-                            </div>
-                            <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
-                                <a href="#"> Partiality on or continuing in particular principles</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
 
@@ -492,42 +434,39 @@
                 <div class="title text-[33px] md:text-[60px] flex justify-center items-center text-center flex-col"
                     data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
                     <div class="md:font-[700] font-bold  text-[#2E2F35]">
-                        إطلاق سريع. نتائج سريعة.
+                        إطلاق سريع. نتائج مثالية.
                     </div>
                     <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
                 </div>
                 <div class="here">
-                    <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300">
+                    <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="300">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
-                            شريحة</div>
+                            فهم وتحليل</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون
-                            أسبوع.
+                            إجابتك تبدأ هنا. نجتمع لفهم فكرتك بدقة ونتعمق في احتياجات مشروعك، لنساعدك في تطوير رؤية مبتكرة تخدم أهدافك وتحقق طموحاتك.
+
                         </p>
                     </div>
                     <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="400">
                         <div class="tit text-[30px] md:text-[36px] text-[#2E2F3566] font-[700] pr-[50px] cursor-pointer">
-                            تصميم</div>
+                            التخطيط والتنفيذ</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون
-                            أسبوع.
+                            نقسم المشروع إلى مراحل واضحة. نتفق على ما سيتم إنجازه في كل خطوة، مع ضمان الالتزام بالجودة والمواعيد المحددة.
                         </p>
                     </div>
-                    <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear"
+                    <div class="min  py-[15px]" data-aos="fade-right" data-aos-easing="linear"
                         data-aos-duration="500">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
-                            ارسال</div>
+                            تسليم واختبار</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px]">
-                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون
-                            أسبوع.
+                            في نهاية كل مرحلة، نقوم بالتسليم التدريجي مع اختبار شامل لكل جزء. نعمل معك لضمان أن كل شيء يعمل كما ينبغي قبل الانتقال للخطوة التالية.
                         </p>
                     </div>
                     <div class="min py-[15px]" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
-                            يتحول</div>
+                            دعم مستمر</div>
                         <p class="text-[20px] leading-[34px] font-[500] pr-[50px] max-w-[400px] ">
-                            إعلانات لمرة واحدة أو تدفقات يتم تشغيلها تلقائيًا. يتلقى العملاء بطاقاتهم الشخصية في غضون
-                            أسبوع.
+                            رحلتك معنا لا تنتهي بالتسليم. نحن هنا دائمًا للتواصل السريع، لحل أي مشكلات أو تنفيذ أي تطويرات تضيف قيمة إلى مشروعك.
                         </p>
                     </div>
                 </div>
@@ -537,13 +476,11 @@
             <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
                 <div class="tit font-bold max-w-[600px] text-[22px] md:text-[33px] px-[20px] text-center" data-aos="anim"
                     data-aos-easing="linear" data-aos-duration="400">
-                    يحب الكثير من الأشخاص الآخرين
-                    بناء وشحن
-                    المواقع باستخدام Framer.
+                    انضم إلى مجتمعنا واستفد من حلول مبتكرة تدعم نجاح أعمالك
                 </div>
                 <div class="link-2 flex gap-[10px] items-center" data-aos="anim" data-aos-easing="linear"
                     data-aos-duration="400">
-                    <a class="text-[22px] font-bold font-sans" href="#">انضم إلى المجتمع</a>
+                    <a class="text-[22px] font-bold font-sans" href="#">قصص نجاح مع عملائنا</a>
                     <i class="fa-solid fa-turn-down"></i>
                 </div>
             </div>
