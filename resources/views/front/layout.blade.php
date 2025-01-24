@@ -284,78 +284,69 @@
         }
 
         function sendMessage() {
-            let name = document.getElementById('name').value.trim();
-            let phone = document.getElementById('phone').value.trim();
-            let message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+    const sowPopup = document.querySelector(".sowpopup");
+    const overlay = document.querySelector("#overlay");
+    const messageParagraph = document.querySelector(".sowpopup .show p");
+    const right = document.querySelector(".sowpopup .show .right");
+    const mistake = document.querySelector(".sowpopup .show .mistake");
+    const icon = document.querySelector(".sowpopup .x i");
 
-            const sowPopup = document.querySelector(".sowpopup");
-            const overlay = document.querySelector("#overlay");
-            const messageParagraph = document.querySelector(".sowpopup .show p");
-            const right = document.querySelector(".sowpopup .show .right");
-            const mistake = document.querySelector(".sowpopup .show .mistake");
+    // التحقق من المدخلات
+    if (!name.value.trim() || !phone.value.trim() || !message.value.trim()) {
+        return showPopup(false, "من فضلك، املأ جميع الحقول.");
+    }
+    if (name.value.length > 250) {
+        return showPopup(false, "تحقق من الاسم.");
+    }
+    if (phone.value.length > 20 || !/^[\d\s+()\-.]+$/.test(phone.value.trim())) {
+        return showPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا).");
+    }
+    if (message.value.length > 1000) {
+        return showPopup(false, "يمكنك أن تقلل في حجم الرسالة.");
+    }
 
-            const icon = document.querySelector(".sowpopup .x i");
-
-
-            if (name === "" || phone === "" || message === "") {
-                OpenPopup(false, "من فضلك، املأ جميع الحقول.");
-                return;
+    // إرسال البيانات
+    fetch("{{ route('front.message.store') }}", {
+        method: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name.value.trim(),
+            phone: phone.value.trim(),
+            message: message.value.trim(),
+            url: window.location.pathname,
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            showPopup(data.success, data.message);
+            if (data.success) {
+                name.value = "";
+                phone.value = "";
+                message.value = "";
             }
-            if (name.length > 250) {
-                OpenPopup(false, "تحقق من الاسم .");
-                return;
-            }
-            if (phone.length > 20 || !/^[\d\s+()\-.]+$/.test(phone)) {
-                OpenPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا ).");
-                return;
-            }
-            if (message.length > 1000) {
-                OpenPopup(false, "يمكنك ان تقلل في حجم الرسالة .");
-                return;
-            }
+        })
+        .catch(() => showPopup(false, "حدث خطأ أثناء إرسال الرسالة."));
 
-            fetch("{{ route('front.message.store') }}", {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: name,
-                        phone: phone,
-                        message: message,
-                        url: window.location.pathname,
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    OpenPopup(data.success, data.message);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    OpenPopup(false, "حدث خطأ أثناء إرسال الرسالة.");
-                });
+    // عرض الإشعار
+    function showPopup(success, message) {
+        messageParagraph.textContent = message;
+        right.classList.toggle("hidden", !success);
+        mistake.classList.toggle("hidden", success);
+        sowPopup.classList.add("open");
+        overlay.classList.add("now");
 
-            function OpenPopup(success, message) {
-                messageParagraph.textContent = message;
-
-                if (success === true) {
-                    right.classList.remove("hidden");
-                    mistake.classList.add("hidden");
-                } else {
-                    mistake.classList.remove("hidden");
-                    right.classList.add("hidden");
-                }
-
-                sowPopup.classList.add("open");
-                overlay.classList.add("now");
-
-                icon.addEventListener("click", function() {
-                    overlay.classList.remove("now");
-                    sowPopup.classList.remove("open");
-                });
-            }
-        }
+        icon.addEventListener("click", () => {
+            sowPopup.classList.remove("open");
+            overlay.classList.remove("now");
+        });
+    }
+}
     </script>
 </body>
 
