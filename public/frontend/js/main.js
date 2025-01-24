@@ -15,7 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // لالغاء ال click
-document.getElementById('myElement').addEventListener('contextmenu',  (e) =>  e.preventDefault());
+ let disableImageClick = document.getElementById('myElement')
+ if (disableImageClick) {
+
+    disableImageClick.addEventListener('contextmenu',  (e) =>  e.preventDefault());
+ }
+
 
 let smallIcon = document.querySelector(".icon-small i");
 let ul = document.querySelector(".icon-small ul");
