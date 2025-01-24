@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Blog;
+use App\Models\Product;
 use App\Mail\NotificationMail;
 use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Mail;
@@ -120,4 +122,49 @@ Route::get('/test-emaill', function () {
     } catch (\Exception $e) {
         return 'Error: ' . $e->getMessage();
     }
+});
+
+Route::get('/sitemap.xml', function () {
+    $content = '<?xml version="1.0" encoding="UTF-8"?>';
+    $content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+    // الصفحات الثابتة
+    $staticPages = [
+        ['url' => url('/'), 'priority' => '1.0', 'changefreq' => 'monthly'],
+        ['url' => url('/blog'), 'priority' => '0.9', 'changefreq' => 'weekly'],
+        ['url' => url('/projects'), 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ];
+
+    foreach ($staticPages as $page) {
+        $content .= '<url>';
+        $content .= '<loc>' . $page['url'] . '</loc>';
+        $content .= '<changefreq>' . $page['changefreq'] . '</changefreq>';
+        $content .= '<priority>' . $page['priority'] . '</priority>';
+        $content .= '</url>';
+    }
+
+    // المدونة (Blogs)
+    $blogs = Blog::where('status', true)->latest()->get();
+    foreach ($blogs as $blog) {
+        $content .= '<url>';
+        $content .= '<loc>' . url("/blog/{$blog->slug}") . '</loc>';
+        $content .= '<changefreq>daily</changefreq>';
+        $content .= '<priority>0.8</priority>';
+        $content .= '</url>';
+    }
+
+    // المنتجات (Products)
+    $products = Product::latest()->get();
+    foreach ($products as $product) {
+        $content .= '<url>';
+        $content .= '<loc>' . url("/product/{$product->slug}") . '</loc>';
+        $content .= '<changefreq>weekly</changefreq>';
+        $content .= '<priority>0.9</priority>';
+        $content .= '</url>';
+    }
+
+    $content .= '</urlset>';
+
+    return response($content, 200)
+        ->header('Content-Type', 'application/xml');
 });

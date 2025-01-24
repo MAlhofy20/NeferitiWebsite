@@ -1,4 +1,12 @@
 @extends('front.layout')
+@include('meta::manager', [
+    'title' => $product->meta_title,
+    'description' => Str::limit($product->meta_description, 160),
+    'keywords' => $product->meta_keywords,
+    'image' => asset($product->image),
+    'canonical' => route('front.product', $product->slug),
+])
+
 @section('content')
 <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
     <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,17 +60,17 @@
     <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-black py-[20px] rounded-[20px] flex flex-col  items-center justify-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
         <div class="main flex-col justify-center items-center text-center px-[20px]">
             <div class="title font-bold text-[30px] md:text-[50px] text-[papayawhip] pb-[10px]">
-                عن اختيار فريق Nefirtiti
+                لماذا Nefertiti Solutions؟
             </div>
-            <p class="font-400 text-white text-[20px] rounded-[30.24px] px-[35px]">
+            <p class="font-400 text-white text-[20px] rounded-[30.24px] px-[35px] text-start">
                 في
                 <span class="font-bold text-gold-gradient">
                     Nefertiti Solutions
                 </span>
-                نمتلك فريقًا متخصصًا يسخّر أحدث التقنيات لإدارة مشاريعك بكفاءة عالية
                 <br>
-                مع خطط مدروسة للتخطيط والتنفيذ، وضمان عمليات تسليم واختبار دقيقة تعكس احترافية عملنا
-            </p>
+                <br>
+                ⚡ نقدم حلولاً مرنة وتصاميم استثنائية تلبي احتياجاتك وتحول الزوار إلى عملاء فعليين.
+                ابدأ مع Nefertiti Solutions وحقق نجاح مشروعك من خلال تخطيط مدروس وتسليم دقيق! 🚀</p>
         </div>
         <div class="chevrons  rounded-[50%] bg-white">
             <div class="chevron"></div>

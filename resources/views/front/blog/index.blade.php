@@ -1,4 +1,12 @@
 @extends('front.layout')
+@include('meta::manager', [
+    'title' => 'مدونة نيفرتيتي - رؤى برمجية وأحدث التقنيات',
+    'description' => 'تابع أحدث المقالات والنصائح حول البرمجة، تطوير التطبيقات، وتحسين أداء المشاريع التقنية.',
+    'keywords' => 'مدونة برمجية, تطوير برمجيات, تصميم مواقع, تحسين الأداء, تقنيات حديثة',
+    'image' => asset('dash/images/logo_with_bg.jpg'),
+    'canonical' => url()->current()
+])
+
 @section('content')
     <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
@@ -37,8 +45,8 @@
                 <div class="tow-colmn flex mt-[50px]">
                     <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
                         <div class="one gap-[20px] w-full justify-center flex flex-wrap">
-                            @foreach ($blogs->take(9) as $blog)
-                            <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
+                            @foreach ($blogs as $blog)
+                            <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'" class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                                 <div
                                     class="imageCard  h-[192px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
                                     <img class= "origin-center transform hover:scale-110 transition duration-300"

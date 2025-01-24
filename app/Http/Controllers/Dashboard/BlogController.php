@@ -30,8 +30,8 @@ class BlogController extends Controller
             'image' => 'required|image',
             'content' => 'required',
             'meta_title' => 'nullable|max:255',
-            'meta_description' => 'nullable',
-            'meta_keywords' => 'nullable',
+            'meta_description' => 'nullable|max:255',
+            'meta_keywords' => 'nullable|max:255',
         ]);
         $lastBlog = Blog::orderBy('order_number', 'desc')->first();
         $blog = new Blog();
@@ -64,13 +64,20 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'preview' => 'required',
-            'image' => 'nullable|image',
+            'image' => 'required|image',
             'content' => 'required',
+            'meta_title' => 'nullable|max:255',
+            'meta_description' => 'nullable|max:255',
+            'meta_keywords' => 'nullable|max:255',
         ]);
         $blog = Blog::find($id);
         $blog->title = $request->title;
         $blog->preview = $request->preview;
         $blog->content = $request->content;
+        if ($request->product_id) {
+            $blog->product_id = $request->product_id;
+        }
+
         if ($request->hasFile('image')) {
             $blog->image = Upload::UploadFile($request->image, 'blogs');
         }
