@@ -39,10 +39,13 @@
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
                 موثوق به من قبل أكثر من 50 شركة
             </div>
-            <div class="main-icon active overflow-hidden w-full">
+            <div class="main-icon overflow-hidden w-full">
                 <div class="iconimg flex gap-[45px]">
-                    @foreach (\App\Models\Partner::all() as $partner)
-                        <img loading="lazy" class="animate-scrollLeft rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
+                    @php
+                        $partners = \App\Models\Partner::all();
+                    @endphp
+                    @foreach ($partners as $partner)
+                        <img loading="lazy" class=" rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
                             alt="">
                     @endforeach
                 </div>
