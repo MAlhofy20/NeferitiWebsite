@@ -4,7 +4,7 @@
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]">
             <!-- SVG أو أي عنصر تصميمي آخر -->
         </div>
-        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center px-[20px]"
+        <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center px-[20px]"
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave text-[25px] font-bold text-[#ffe9b7]">
                 <span>نفرتيتي</span> <span>لحلول</span> <span>الأعمال</span>

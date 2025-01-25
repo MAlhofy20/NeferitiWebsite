@@ -27,7 +27,7 @@
             </filter>
         </defs>
     </svg></div>
-    <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center pb-[50px] px-[20px] "
+    <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center pb-[50px] px-[20px] "
         data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="300">
         <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
             <span>الاعمال</span></p>
@@ -62,10 +62,10 @@
     @endforeach
     <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-black py-[20px] rounded-[20px] flex flex-col  items-center justify-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
         <div class="main flex-col justify-center items-center text-center px-[20px]">
-            <div class="title font-bold text-[30px] md:text-[50px] text-[papayawhip] pb-[10px]">
+            <div class="title font-bold text-[26px] md:text-[50px] text-[papayawhip] pb-[10px]">
                 لماذا Nefertiti Solutions؟
             </div>
-            <p class="font-400 text-white text-[20px] rounded-[30.24px] px-[35px] text-start">
+            <p class="font-400 text-white md:text-[20px] text-[17px] rounded-[30.24px] px-[35px] text-start">
                 في
                 <span class="font-bold text-gold-gradient">
                     Nefertiti Solutions

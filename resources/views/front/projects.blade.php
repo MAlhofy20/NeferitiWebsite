@@ -26,7 +26,7 @@
                 </filter>
             </defs>
         </svg></div>
-        <div class="hero flex justify-center items-center flex-col pt-[100px] md:pt-[150px] text-center px-[20px] "
+        <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center px-[20px] "
             data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="400">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
