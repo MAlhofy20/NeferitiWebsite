@@ -6,7 +6,7 @@
         </div>
         <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center px-[20px]"
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
-            <p class="wave text-[25px] font-bold text-[#ffe9b7]">
+            <p class="wave2 text-[25px] font-bold text-[#ffe9b7]">
                 <span>نفرتيتي</span> <span>لحلول</span> <span>الأعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">

@@ -12,10 +12,7 @@
 @endsection
 @section('content')
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
-        <div class="flex justify-center items-center">
-            <img class="rounded-[8px] w-full  absolute  right-0 top-0 opacity-10"
-                src="{{ asset('frontend/images/heroImage.webp') }}" alt="">
-        </div>
+        <div class="flex page justify-center items-center"></div>
         <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center pb-[50px] px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
@@ -48,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="color w-full absolute h-[14%] bg-white md:-bottom-[47px]"></div>
+        <div class="color w-full absolute h-[10%] bg-white md:-bottom-[35px]"></div>
     </div>
     <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
         <div class="st flex flex-col gap-[10px] " data-network="facebook ">
@@ -259,45 +256,6 @@
                 </div>
             </div>
         </div>
-        {{-- <div id="blogs" class="blogs p-[20px] md:p-[100px]">
-            <div
-                class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] items-center">
-                <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold" data-aos="anim"
-                    data-aos-easing="linear" data-aos-duration="500">أحدث منشورات مدونتنا</div>
-            </div>
-            <div class="tow-colmn flex ">
-                <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
-                    <div class="one gap-[20px] w-full justify-center flex flex-wrap">
-                        @foreach ($blogs->take(4) as $blog)
-                        <div class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
-                            <div class="imageCard h-[192px] md:w-[270px] w-[100%] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                                <img class= "origin-center transform hover:scale-110 transition duration-300"
-                                    src="{{ asset($blog->image) }}" alt="">
-                            </div>
-                            <div class="date text-[#64607D]">
-                                <span>{{ $blog->created_at->format('d-m-Y') }}</span>
-                                <span>{{ $blog->product?->name }}</span>
-                            </div>
-                            <div class="tit max-w-[375px] font-[800] text-[20px] leading-[36px] py-[5px]">
-                                <a href="{{ route('front.blog', $blog->slug) }}">{{ $blog->title }}</a>
-                            </div>
-                            <div class="line-clamp-3">
-                                <p class="text-[#64607D] max-w-[375px] text-[400]  leading-[30px] mt-[10px]">
-                                    {!! breackableText($blog->content) !!}
-                                </p>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center pt-12">
-                <div
-                    class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-300 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
-                    <a class=" " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
-                </div>
-            </div>
-        </div> --}}
         <div id="blogs" class="blogs p-[20px] ">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
@@ -308,8 +266,7 @@
                     @foreach ($blogs->take(2) as $blog)
                         <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'"
                             class="boxes cursor-pointer">
-                            <div
-                                class="imageCard  w-[380px] h-[270px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                            <div class="imageCard  md:w-[380px] md:h-[270px] w-[330px] h-[220px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
                                 <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
@@ -317,10 +274,10 @@
                                 <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
-                            <div class="tit font-[800] max-w-[380px] text-[20px] leading-[36px] py-[5px]">
+                            <div class="tit font-[800] w-fit max-w-[380px] text-[20px] leading-[36px] py-[5px]">
                                 <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
-                            <div class="line-clamp-3 w-[380px]">
+                            <div class="line-clamp-3 max-w-[380px]">
                                 <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
                                     {{ $blog->preview }}
                                 </p>
