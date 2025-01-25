@@ -174,7 +174,7 @@
             </div>
 
             <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img
-                    src="{{ asset('frontend/images/logo trans.png') }}" alt=""></div>
+                    src="{{ asset('frontend/images/menu_logo.webp') }}" alt=""></div>
         </div>
         <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
             <div class="main flex flex-col justify-center items-center text-center" data-aos="zoom-in-up"
