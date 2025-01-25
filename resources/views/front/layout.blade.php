@@ -178,7 +178,7 @@
                 <div class="main-fot leading-[26px]">
                     <div class="logo ml-[10px]">
                         <img class="rounded-[8px] w-[65px] h-[88px]" onclick="window.location.href='{{ route('front.home') }}'"
-                            src="{{ asset('frontend/images/logo trans.png') }}" alt="">
+                            src="{{ asset('frontend/images/menu_logo.webp') }}" alt="">
                     </div>
                     <p class="max-w-[414px] text-[#FFFFFF] leading-[26px] pt-[24px] t">من خلال نظرة تجمع بين خبرة
                         المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
