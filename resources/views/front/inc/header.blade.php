@@ -1,7 +1,7 @@
 <div class = "flex justify-center">
     <div id="menu" class="active hidden lg:flex fixed z-[999999] ">
         <div class="logo ml-[10px]">
-            <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/menu_logo.webp') }}"
+            <img onclick="window.location.href='{{ route('front.home') }}'" class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]" src="{{ asset('frontend/images/menu_logo.webp') }}"
                 alt="">
         </div>
         <div class="content-menu lg:px-[30px]">
@@ -28,8 +28,8 @@
     class="icon-small fixed z-[999999]  top-[30px] text-white text-center lg:hidden bg-transparent w-[90%] justify-between
     flex items-center mx-auto translate-x-[5%] left-0 backdrop-brightness-75 backdrop-blur-lg px-[20px] py-[10px] rounded-lg">
     <div class="logo ml-[10px]">
-        <img class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]"
-            src="http://127.0.0.1:8000/frontend/images/logo trans.png" alt="">
+        <img onclick="window.location.href='{{ route('front.home') }}'" class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]"
+            src="{{ asset('frontend/images/menu_logo.webp') }}" alt="">
     </div>
     <i class="text-[#c0942c] text-[20px] relative fa-solid fa-bars cursor-pointer"></i>
     <ul class=" absolute left-[125px] top-[62px] opacity-0 invisible transition-opacity duration-300  transform -translate-x-1/2 translate-y-3

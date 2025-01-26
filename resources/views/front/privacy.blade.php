@@ -13,6 +13,7 @@
                 <p class="text-[30px] md:text-[80px] text-white font-bold">سياسة الخصوصية</p>
             </div>
         </div>
+    
     </div>
 
     <div class="w-[90%] md:w-3/4 mx-auto py-10">
