@@ -50,26 +50,10 @@
         </div>
         <div class="color w-full absolute h-[10%] bg-white md:-bottom-[35px]"></div>
     </div>
-    <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
-        <div class="st flex flex-col gap-[10px] " data-network="facebook ">
-            <div class="icons flex gap-1 flex-col">
-                <a href="#" class="sa">
-                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
-                    </div>
-                </a>
-                <a href="#" class="sb">
-                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
-                        <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
         <div class="about-us relative">
             <div class="main flex-col justify-center items-center text-center px-[20px] mb-10">
-                <div class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
+                <div id="about" class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
                     عن اختيار فريق Nefirtiti
                 </div>
                 <p class="font-400 text-[#394B58] text-[20px] rounded-[30.24px] px-[35px]">
@@ -232,7 +216,7 @@
                 @endforeach
             </div>
         </div>
-        <div id="myElement" class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
+        <div id="projects" class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
             <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
                 data-aos-easing="linear" data-aos-duration="400" data-aos-duration="500">
                 <div class="font-[600] text-[22px]">اعمال سابقه</div>
