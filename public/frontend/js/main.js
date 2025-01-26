@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // لالغاء ال click
- let disableImageClick = document.getElementById('myElement')
+ let disableImageClick = document.getElementById('projects')
  if (disableImageClick) {
 
     disableImageClick.addEventListener('contextmenu',  (e) =>  e.preventDefault());
