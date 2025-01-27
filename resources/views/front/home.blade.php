@@ -1,14 +1,13 @@
 @extends('front.layout')
-
 @section('head')
-@include('meta::manager', [
-    'title' => 'Nefertiti Solutions - حلول برمجية متكاملة لتطوير أعمالك',
-    'description' =>
-        'في Nefertiti Solutions نقدم حلول برمجية مبتكرة وتصميمات مخصصة لتلبية احتياجات عملك، من تطوير المواقع إلى التطبيقات الذكية.',
-    'keywords' => 'برمجة, تطوير مواقع, تصميم تطبيقات, حلول برمجية, شركات البرمجة, تطوير برمجي',
-    'image' => asset('dash/images/logo_with_bg.jpg'),
-    'canonical' => url()->current(),
-])
+    @include('meta::manager', [
+        'title' => 'Nefertiti Solutions - حلول برمجية متكاملة لتطوير أعمالك',
+        'description' =>
+            'في Nefertiti Solutions نقدم حلول برمجية مبتكرة وتصميمات مخصصة لتلبية احتياجات عملك، من تطوير المواقع إلى التطبيقات الذكية.',
+        'keywords' => 'برمجة, تطوير مواقع, تصميم تطبيقات, حلول برمجية, شركات البرمجة, تطوير برمجي',
+        'image' => asset('dash/images/logo_with_bg.jpg'),
+        'canonical' => url()->current(),
+    ])
 @endsection
 @section('content')
     <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
@@ -27,7 +26,7 @@
                 </p>
             </div>
             <div>
-                <a class="cursor-box not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
+                <a class="cursor-box font-bold not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
                     href="#contact-section">تواصل معنا</a>
             </div>
         </div>
@@ -148,9 +147,10 @@
                 @foreach ($products as $product)
                     <div class="accor flex justify-center items-center">
                         <div class="min flex justify-center gap-[15px] cursor-pointer">
-                            <div class="image" data-aos="zoom-in" data-aos-easing="linear"
-                                data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                <img loading="lazy" class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
+                            <div class="image" data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine"
+                                data-aos-duration="500">
+                                <img loading="lazy"
+                                    class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
                                     src="{{ asset($product->image) }}" alt="">
                             </div>
                             <div class="flex flex-col gap-[5px]">
@@ -198,34 +198,35 @@
             </div>
             <div class="allVeow flex justify-center items-center pt-[50px]" data-aos="anim" data-aos-easing="linear"
                 data-aos-duration="400">
-                <div
+                <a href="{{ route('front.projects') }}"
                     class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
-                    <a href="{{ route('front.projects') }}">جميع الأعمال السابقه </a>
+                    جميع الأعمال السابقه
                     <i class="fa-solid fa-arrow-trend-down"></i>
-
-
-                </div>
+                </a>
             </div>
         </div>
         <div id="blogs" class="blogs p-[20px] ">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
-                <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث المقالات على مدونتنا                </div>
+                <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث المقالات على مدونتنا </div>
             </div>
             <div class="all flex justify-center flex-wrap gap-[30px]">
                 <div class="one flex  gap-[30px] flex-wrap justify-center">
                     @foreach ($blogs->take(2) as $blog)
                         <div onclick="window.location.href='{{ route('front.blog.show', $blog->slug) }}'"
                             class="boxes cursor-pointer">
-                            <div class="imageCard  md:w-[380px] md:h-[270px] w-[330px] h-[220px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                                <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
+                            <div
+                                class="imageCard  md:w-[380px] md:h-[270px] w-[330px] h-[220px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                                <img loading="lazy"
+                                    class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div class="date text-[#64607D] pt-1.5">
                                 <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
-                            <div class="tit font-[800] w-fit max-w-[380px] text-[20px] md:leading-[36px] leading-[28px] py-[5px]">
+                            <div
+                                class="tit font-[800] w-fit max-w-[380px] text-[20px] md:leading-[36px] leading-[28px] py-[5px]">
                                 <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
                             <div class="line-clamp-3 max-w-[380px]">
@@ -242,7 +243,8 @@
                             class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
                             <div
                                 class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
-                                <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
+                                <img loading="lazy"
+                                    class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
                             </div>
                             <div>
