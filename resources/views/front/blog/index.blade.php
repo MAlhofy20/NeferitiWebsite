@@ -38,7 +38,7 @@
                 <p class="text-[30px] md:text-[80px] text-white font-bold">
                     مدونتنا | اكتشف أحدث مقالاتنا
                 </p>
-                <p class="py-[20px] max-w-[1000px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="py-[20px] max-w-[1000px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
                     بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
                 </p>
@@ -74,7 +74,7 @@
             </nav>
 
         </div>
-        <div style="box-shadow: 0px 0px 20px 13px #00000033;" class="the-pahe bg-white relative rounded-[20px] mx-[33px]">
+        <div style="box-shadow: 0px 0px 20px 13px #00000033;" class="the-pahe bg-white relative rounded-[20px] mx-[20px]">
             <div id="blogs" class="blogs p-[20px] ">
                 <div class="tow-colmn flex mt-[50px]">
                     <div class="all w-full flex flex-wrap md:flex-nowrap justify-center gap-[20px]">
