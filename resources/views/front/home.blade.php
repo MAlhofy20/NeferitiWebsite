@@ -20,7 +20,7 @@
             </p>
             <div class="title">
                 <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
-                <p class="py-[20px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="py-[20px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
                     <br>
                     نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
@@ -31,7 +31,7 @@
                     href="#contact-section">تواصل معنا</a>
             </div>
         </div>
-        <div class="icons md:pt-[50px] overflow-hidden w-[80%] mx-auto pb-[54px] ">
+        <div class="icons md:pt-[50px] overflow-hidden md:w-[80%] mx-auto pb-[54px] ">
             <div class="title flex justify-center items-center text-white pb-[30px]" data-aos="fade-up"
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
                 موثوق به من قبل أكثر من 50 شركة
@@ -56,45 +56,16 @@
                 <div id="about" class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
                     عن اختيار فريق Nefirtiti
                 </div>
-                <p class="font-400 text-[#394B58] text-[20px] rounded-[30.24px] px-[35px]">
+                <p class="font-400 text-[#394B58] text-[20px] rounded-[30.24px] px-[20px]">
                     في
                     <span class="font-bold text-gold-gradient">
                         Nefertiti Solutions
                     </span>
-                    نمتلك فريقًا متخصصًا يسخّر أحدث التقنيات لإدارة مشاريعك بكفاءة عالية
+                    نمتلك فريقًا متخصصًا يسخّر أحدث التقنيات لإدارة مشاريعك بكفاءة عالية.
                     <br>
                     مع خطط مدروسة للتخطيط والتنفيذ، وضمان عمليات تسليم واختبار دقيقة تعكس احترافية عملنا
                 </p>
             </div>
-
-            {{-- <div class="cards relative z-[1] flex justify-center gap-[60px] items-center px-[20px] md:px-[50px] py-[80px] flex-wrap"
-                data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
-                <div class="bb flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white  rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/blog1.png') }}" alt="">
-                    </div>
-                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تخطيط مُحكم</p>
-                </div>
-                <div class="aa flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white  rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/1.png') }}" alt="">
-                    </div>
-                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تقنية متطورة</p>
-                </div>
-
-                <div class="dd flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/2.png') }}" alt="">
-                    </div>
-                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تصميم عصري</p>
-                </div>
-                <div class="cc flex flex-col justify-center items-center gap-[30px]">
-                    <div class="flex justify-center items-center bg-white rounded-[32px] ">
-                        <img class="w-full h-[110px]" src="{{ asset('frontend/images/section/4.png') }}" alt="">
-                    </div>
-                    <p class="font-[500] text-[30px] px-[20px] text-center text-[#0B2131]">تسليم واختبار </p>
-                </div>
-            </div> --}}
             <div class="mb-12 mx-auto w-64">
                 <a class="cursor-box font-bold cards-gold-gradient not-allowed text-nowrap rounded-[15px] text-white px-[50px] py-[10px] "
                     href="#contact-section">اطلب استشارتك المجانية</a>
@@ -104,21 +75,18 @@
         <div id="ideas" class="home relative overflow-hidden bg-[#101828] text-white p-[20px] md:p-[50px]">
             <div class="main text-center flex gap-[10px] flex-col justify-center items-center" data-aos="fade-down-right"
                 data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                <div class="title font-bold md:font-500 text-[35px] md:text-[56px]">
+                <div class="title font-bold md:font-500 leading-[40px] text-[30px] md:text-[56px]">
                     رؤيتنا تتجاوز تقديم حلول تقليدية
                 </div>
                 <p class="font-[400] text-[20px] leading-[30px] text-center ">
                     في Nefertiti Solutions نسعى لنكون شريكك الحقيقي في عالم الإنترنت.
-                    <br>
+                    <hr>
                     نلتزم ببناء علاقة مستدامة معك في رحلتك نحو النجاح الرقمي؛ من خلال تقديم
                     <span class="font-bold text-gold-gradient">
                         حلول برمجية مصممة خصيصًا
                     </span>
                     لتلبية احتياجات منظومتك
-                    <hr>
                     مع دعم مستمر لضمان التطوير والصيانة
-                    <br>
-
                 </p>
             </div>
             <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[20px] flex-wrap">
@@ -167,17 +135,13 @@
                 </div>
                 <p class="font-[400] text-[20px] leading-[30px] px[4px]">
                     في Nefertiti Solutions قمنا بصناعة وتقديم
-                    <br>
                     منتجات متطورة صنعت خصيصًا لترك بصمة فريدة في احتياجات السوق .
-                    سعيًا منا في دعم توجهات المسئولين
                     <hr>
+                    سعيًا منا في دعم توجهات المسئولين
                     نحو بيئات عمل رقمية متطورة
                     <span class="pt-[10px] font-bold text-gold-gradient">
                         توافق رؤية 2030
                     </span>
-
-
-                    <br>
                 </p>
             </div>
             <div class="accordon py-[50px] gap-[25px] flex flex-col">
@@ -190,7 +154,7 @@
                                     src="{{ asset($product->image) }}" alt="">
                             </div>
                             <div class="flex flex-col gap-[5px]">
-                                <div class="tot flex justify-between items-center">
+                                <div class="tot gap-3 flex justify-between items-center">
                                     <div class="tit font-bold md:font-[600] text-[20px] md:text-[28px]" data-aos="fade-up"
                                         data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
                                         {{ $product->name }}</div>
@@ -261,11 +225,11 @@
                                 <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
-                            <div class="tit font-[800] w-fit max-w-[380px] text-[20px] leading-[36px] py-[5px]">
+                            <div class="tit font-[800] w-fit max-w-[380px] text-[20px] md:leading-[36px] leading-[28px] py-[5px]">
                                 <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
                             <div class="line-clamp-3 max-w-[380px]">
-                                <p class="text-[#64607D]  font-[400]  leading-[30px] mt-[5px]">
+                                <p class="text-[#64607D]  font-[400]  md:leading-[30px] leading-[28px] mt-[5px]">
                                     {{ $blog->preview }}
                                 </p>
                             </div>
@@ -286,7 +250,7 @@
                                     <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                     <span>{{ $blog->product?->name }}</span>
                                 </div>
-                                <div class="tit w-fit font-[800] text-[18px] leading-[30px] ">
+                                <div class="tit w-fit font-[800] text-[18px] md:leading-[30px] leading-[25px] ">
                                     <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                                 </div>
                             </div>
@@ -305,14 +269,14 @@
         </div>
         <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">
             <div class="all">
-                <div class="title text-[33px] md:text-[60px] flex justify-center items-center text-center flex-col"
+                <div class="title text-[30px] md:text-[60px]   flex justify-center items-center text-center flex-col"
                     data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
-                    <div class="md:font-[700] font-bold  text-[#2E2F35]">
+                    <div class="md:font-[700] font-bold wave2 pb-3 text-[#2E2F35]">
                         إطلاق سريع. نتائج مثالية.
                     </div>
                     <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
                 </div>
-                <div class="here">
+                <div class="here ">
                     <div class="min activeTwo py-[15px]" data-aos="fade-right" data-aos-easing="linear"
                         data-aos-duration="300">
                         <div class="tit text-[30px] md:text-[36px] font-[700] text-[#2E2F3566] pr-[50px] cursor-pointer">
@@ -384,7 +348,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     </div>
 @endsection
