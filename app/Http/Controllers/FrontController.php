@@ -15,8 +15,8 @@ class FrontController extends Controller
 {
     public function home()
     {
-        $products = Product::all();
-        $projects = Project::take(6)->get();
+        $products = Product::orderBy('order_number', 'asc')->get();
+        $projects = Project::orderBy('order_number', 'asc')->take(6)->get();
         $testimonials = Testimonial::get();
         $blogs = Blog::take(6)->latest()->get();
 
@@ -31,7 +31,7 @@ class FrontController extends Controller
 
     public function projects()
     {
-        $projects = Project::all();
+        $projects = Project::orderBy('order_number', 'asc')->get();
         return view('front.projects', compact('projects'));
     }
 

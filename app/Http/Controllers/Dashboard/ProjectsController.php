@@ -11,6 +11,9 @@ class ProjectsController extends Controller
 {
     public function index()
     {
+        // مؤقتًا: إعادة ترتيب الأرقام عند فتح الصفحة (يمكن إزالته لاحقًا)
+        // $this->reorderProjects();
+        
         $projects = Project::orderBy('order_number', 'asc')->get();
         return view('dashboard.projects.index', compact('projects'));
     }
@@ -22,66 +25,110 @@ class ProjectsController extends Controller
 
     public function store(Request $request)
     {   
-        $lastProject = Project::orderBy('order_number', 'desc')->first();
+        // الحصول على آخر ترتيب وإضافة 1
+        $lastOrder = Project::max('order_number') ?? 0;
+        
         $project = new Project();
-        $project->order_number = $lastProject ? $lastProject->order_number + 1 : 1;
+        $project->order_number = $lastOrder + 1;
         $project->name = $request->name;
         $project->image = Upload::uploadFile($request->image, 'projects');
         $project->save();
-        return redirect()->back()->with('success', 'تم اضافة المشروع بنجاح');
+        
+        return redirect()->route('dashboard.projects.index')
+            ->with('success', 'تم إضافة المشروع بنجاح');
     }
 
     public function edit($id)
     {
-        $project = Project::find($id);
+        $project = Project::findOrFail($id);
         return view('dashboard.projects.edit', compact('project'));
     }
 
     public function update(Request $request, $id)
     {
-        $project = Project::find($id);
+        $project = Project::findOrFail($id);
         $project->name = $request->name;
-        if ($request->image) {
+        
+        if ($request->hasFile('image')) {
             Upload::deleteFile($project->image);
             $project->image = Upload::uploadFile($request->image, 'projects');
         }
+        
         $project->save();
-        return redirect()->back()->with('success', 'تم تعديل المشروع بنجاح');
+        return redirect()->route('dashboard.projects.index')
+            ->with('success', 'تم تعديل المشروع بنجاح');
     }
 
     public function destroy($id)
     {
-        $project = Project::find($id);
+        $project = Project::findOrFail($id);
         Upload::deleteFile($project->image);
         $project->delete();
-        return redirect()->back()->with('success', 'تم حذف المشروع بنجاح');
+        
+        // إعادة ترتيب الأرقام بعد الحذف
+        $this->reorderProjects();
+        
+        return redirect()->back()
+            ->with('success', 'تم حذف المشروع بنجاح');
     }
 
     public function up($id)
     {
-        $currentProject = Project::find($id);
-        $project = Project::where('order_number', '<', $currentProject->order_number)->latest()->first();
-        if($project){
-            $project->order_number = $project->order_number + 1;
-            $project->save();
-            $currentProject->order_number = $currentProject->order_number - 1;
-            $currentProject->save();
+        $current = Project::findOrFail($id);
+        
+        // البحث عن العنصر السابق مباشرة
+        $previous = Project::where('order_number', '<', $current->order_number)
+            ->orderBy('order_number', 'desc')
+            ->first();
+        
+        if ($previous) {
+            // التبديل بين الترتيبين
+            $currentOrder = $current->order_number;
+            $current->order_number = $previous->order_number;
+            $previous->order_number = $currentOrder;
+            
+            $current->save();
+            $previous->save();
         }
-        return redirect()->route('dashboard.projects.index')->with('success', __('dashboard.updated_successfully'));
+        
+        return redirect()->route('dashboard.projects.index')
+            ->with('success', 'تم تحديث الترتيب بنجاح');
     }
 
     public function down($id)
     {
-        $currentProject = Project::find($id);
-        $project = Project::where('order_number', '>', $currentProject->order_number)->first();
-        if($project){
-            $project->order_number = $project->order_number - 1;
-            $project->save();
-            $currentProject->order_number = $currentProject->order_number + 1;
-            $currentProject->save();
+        $current = Project::findOrFail($id);
+        
+        // البحث عن العنصر التالي مباشرة
+        $next = Project::where('order_number', '>', $current->order_number)
+            ->orderBy('order_number', 'asc')
+            ->first();
+        
+        if ($next) {
+            // التبديل بين الترتيبين
+            $currentOrder = $current->order_number;
+            $current->order_number = $next->order_number;
+            $next->order_number = $currentOrder;
+            
+            $current->save();
+            $next->save();
         }
-        return redirect()->route('dashboard.projects.index')->with('success', __('dashboard.updated_successfully'));
+        
+        return redirect()->route('dashboard.projects.index')
+            ->with('success', 'تم تحديث الترتيب بنجاح');
     }
 
-
+    /**
+     * إعادة ترتيب الأرقام بشكل تسلسلي
+     */
+    private function reorderProjects()
+    {
+        $projects = Project::orderBy('order_number')->get();
+        
+        $order = 1;
+        foreach ($projects as $project) {
+            $project->order_number = $order++;
+            $project->save();
+        }
+    }
 }

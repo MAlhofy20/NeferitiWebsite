@@ -34,7 +34,8 @@
                 <span>الاعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">أحدث منشورات مدونتنا
+                <p class="text-[30px] md:text-[80px] text-white font-bold">
+                    مدونتنا | {{ $blog->title }}
                 </p>
             </div>
         </div>
@@ -67,7 +68,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 9 4-4-4-4" />
                         </svg>
-                        <a class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">اسم المنتج</a>
+                        <a class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">{{ $blog->title }}</a>
                     </div>
                 </li>
 
@@ -76,8 +77,6 @@
     </div>
 
     <div class="w-[90%] md:w-1/2 mx-auto py-10">
-        <h1 class="text-4xl">{{ $blog->title }}</h1>
-        <p>{{ $blog->preview }}</p>
         <img class="w-400 py-10" src="{{ asset($blog->image) }}" />
 
         {!! $blog->content !!}

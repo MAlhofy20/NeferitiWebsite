@@ -32,7 +32,7 @@
                 <span>الاعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">أعمالنا السابقة - تنوع يُلهم الإبداع</p>
+                <p class="text-[30px] md:text-[80px] text-white font-bold">أعمالنا السابقة | تنوع يُلهم الإبداع</p>
                 <p class="py-[20px] max-w-[1000px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
                     بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
@@ -63,7 +63,7 @@
                                     d="m1 9 4-4-4-4" />
                             </svg>
                             <a
-                                class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">أعمالنا السابقة</a>
+                                class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">أعمالنا</a>
                         </div>
                     </li>
 

@@ -110,7 +110,7 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الهاتف:</span>
-                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الاتصال - تواصل معنا')">
+                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الاتصال - تواصل معنا')">
                             <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا" href="tel:{{ $setting['phone'] }}">اضغط
                                 للتواصل</a>
@@ -126,7 +126,7 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الايميل: </span>
-                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الايميل - تواصل معنا')">
+                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الايميل - تواصل معنا')">
                             <a class="font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا" target="_blank"
                                 href="mailto:{{ $setting['email'] }}">اضغط للتواصل
@@ -143,8 +143,8 @@
                             <i class="te1 text-[#fff] fa-brands fa-whatsapp text-[20px]"></i>
                         </div>
                         <p>
-                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الواتساب:</span>
-                        <div class="link8 flex flex-col gap-[5px]" onclick="trackAction('زر الواتساب - تواصل معنا')">
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> واتساب:</span>
+                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الواتساب - تواصل معنا')">
                             <a dir="ltr"
                                 class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا"

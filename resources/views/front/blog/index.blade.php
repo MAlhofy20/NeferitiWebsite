@@ -34,8 +34,14 @@
                 <span>الاعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">أحدث منشورات مدونتنا
+                <p class="text-[30px] md:text-[80px] text-white font-bold">
+                    مدونتنا | اكتشف أحدث مقالاتنا
                 </p>
+                <p class="py-[20px] max-w-[1000px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                    نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
+                    بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
+                </p>
+
             </div>
 
             <nav class="flex self-start pr-[20px]" aria-label="Breadcrumb">

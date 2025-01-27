@@ -219,7 +219,7 @@
         <div id="projects" class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
             <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
                 data-aos-easing="linear" data-aos-duration="400" data-aos-duration="500">
-                <div class="font-[600] text-[22px]">اعمال سابقه</div>
+                <div class="font-[600] text-[22px]">أعمالنا السابقة</div>
                 <i class="fa-solid fa-turn-down"></i>
             </div>
             <div class="previous flex gap-[32px] flex-wrap justify-center">
@@ -236,7 +236,7 @@
                 data-aos-duration="400">
                 <div
                     class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
-                    <a href="{{ route('front.projects') }}">جميع الالعمال السابقه </a>
+                    <a href="{{ route('front.projects') }}">جميع الأعمال السابقه </a>
                     <i class="fa-solid fa-arrow-trend-down"></i>
 
 
@@ -246,7 +246,7 @@
         <div id="blogs" class="blogs p-[20px] ">
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
-                <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث منشورات مدونتنا</div>
+                <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث المقالات على مدونتنا                </div>
             </div>
             <div class="all flex justify-center flex-wrap gap-[30px]">
                 <div class="one flex  gap-[30px] flex-wrap justify-center">
@@ -299,7 +299,7 @@
             <div class="flex justify-center items-center pt-12">
                 <div
                     class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-300 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
-                    <a class=" " href="{{ route('front.blog') }}">شاهد جميع منشورات المدونة</a>
+                    <a class=" " href="{{ route('front.blog') }}">شاهد جميع المقالات</a>
                 </div>
             </div>
         </div>
