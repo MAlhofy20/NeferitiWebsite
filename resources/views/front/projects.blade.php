@@ -26,19 +26,19 @@
                 </filter>
             </defs>
         </svg></div>
-        <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center px-[20px] "
+        <div class="hero flex justify-center items-center flex-col pt-[140px]  md:pt-[150px] text-center px-[20px] "
             data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="400">
             <p class="wave2  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">أعمالنا السابقة - تنوع يُلهم الإبداع</p>
-                <p class="py-[20px] max-w-[1000px] px-[50px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="text-[28px] md:text-[80px] text-white font-bold">أعمالنا السابقة - تنوع يُلهم الإبداع</p>
+                <p class="py-[20px] max-w-[1000px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
                     بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
                 </p>
             </div>
-            <div>
+            <div class="pt-[15px] pb-[40px]">
                 <a class="cursor-box not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
                     href="#contact-section">تواصل معنا الان</a>
             </div>
@@ -71,7 +71,7 @@
             </nav>
             </div>
     </div>
-    <div  class="previous-work bg-[#0f1521] text-white px-[20px] md:px-[50px]">
+    <div  class="previous-work bg-[#0f1521] text-white px-[20px] pb-[40px]  md:px-[50px]">
 
         <div id="myElement" class="previous  flex gap-[32px] flex-wrap bg-white rounded-[40px] py-[50px] justify-center">
             @foreach ($projects as $project)

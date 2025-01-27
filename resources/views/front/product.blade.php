@@ -33,10 +33,10 @@
             <p class="wave2  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
             </p>
-            <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">{{ $product->name }}</p>
+            <div class="title flex pt-3 justify-center items-center flex-col">
+                <p class="text-[22px] md:text-[80px] text-white font-bold">{{ $product->name }}</p>
                 <p
-                    class="py-[20px] px-[50px] leading-[30px] max-w-[1000px]  md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                    class="py-[20px] px-[20px] leading-[30px] max-w-[1000px]  md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
                     {!! breackableText($product->description) !!}
                 </p>
             </div>
@@ -65,7 +65,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 9 4-4-4-4" />
                         </svg>
-                        <a 
+                        <a
                             class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">منتجاتنا</a>
                     </div>
                 </li>
@@ -75,7 +75,7 @@
     </div>
     <div class="the-pahe bg-white relative overflow-hidden">
         @foreach ($product->productDetails as $detail)
-            <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-black py-[20px] rounded-[20px] flex  flex-wrap-reverse items-center justify-evenly"
+            <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-black pb-[20px] rounded-[20px] flex  flex-wrap-reverse items-center justify-evenly"
                 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
                 <div class="for-you  text-white px-[40px] lg:py-[70px] rounded-[20px]" data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="300">

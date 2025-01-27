@@ -11,8 +11,8 @@
 
 @section('content')
     <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">
-        <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
-                viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]">
+            <svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1833_4737)">
                     <ellipse cx="618.5" cy="-213" rx="268.5" ry="268" fill="#48DCFF">
                     </ellipse>
@@ -27,7 +27,8 @@
                         </feGaussianBlur>
                     </filter>
                 </defs>
-            </svg></div>
+            </svg>
+        </div>
         <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center  px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
             <p class="wave2  text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
