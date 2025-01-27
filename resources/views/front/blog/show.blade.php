@@ -34,8 +34,7 @@
                 <span>الاعمال</span>
             </p>
             <div class="title flex justify-center items-center flex-col">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">
-                    مدونتنا | {{ $blog->title }}
+                <p class="text-[30px] md:text-[80px] py-6 text-white font-bold"> مدونتنا | {{ $blog->title }}
                 </p>
             </div>
         </div>
@@ -68,7 +67,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 9 4-4-4-4" />
                         </svg>
-                        <a class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">{{ $blog->title }}</a>
+                        <a class=" text-[20px] ms-1 font-medium text-white md:ms-2 dark:text-white">مقال</a>
                     </div>
                 </li>
 
