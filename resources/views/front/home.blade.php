@@ -273,7 +273,7 @@
             <div class="all">
                 <div class="title text-[30px] md:text-[60px]   flex justify-center items-center text-center flex-col"
                     data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
-                    <div class="md:font-[700] font-bold wave2 pb-3 text-[#2E2F35]">
+                    <div class="md:font-[700] font-bold wave3 pb-3 text-[#2E2F35]">
                         إطلاق سريع. نتائج مثالية.
                     </div>
                     <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
