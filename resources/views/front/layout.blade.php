@@ -8,17 +8,10 @@
 
     @yield('head')
     <link rel="icon" type="image/jpg" href="{{ asset('dash/images/logo_with_bg.jpg') }}">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=El+Messiri:wght@400..700&family=Rakkas&display=swap"
-        rel="stylesheet">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <!-- Local Stylesheets -->
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
     <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
@@ -50,21 +43,16 @@
     <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
         <div class="st flex flex-col gap-[10px] " data-network="facebook ">
             <div class="icons flex gap-1 flex-col">
-                <a href="tel:{{ $setting['phone'] }}" class="sa" onclick="trackAction('زر الهاتف - ايقون معلقة')">
-                    <div class="phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center ">
+                <a href="tel:{{ $setting['phone'] }}" class="sa phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center" target="_blank" onclick="trackAction('زر الهاتف - ايقون معلقة')">
                         <i class="fa-solid fa-phone-volume text-white text-[20px] text-2xl"></i>
-                    </div>
                 </a>
-                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb"
+                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center "
                     onclick="trackAction('زر الواتساب - ايقون معلقة')">
-                    <div class=" whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center ">
                         <i class="fa-brands fa-whatsapp text-white text-[20px] text-2xl"></i>
-                    </div>
                 </a>
             </div>
         </div>
     </div>
-
     <div class="the-pahe bg-white relative overflow-hidden">
         <div id="contact" class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
@@ -110,7 +98,8 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الهاتف:</span>
-                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الاتصال - تواصل معنا')">
+                        <div class="link8 flex flex-col gap-[5px] text-right"
+                            onclick="trackAction('زر الاتصال - تواصل معنا')">
                             <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا" href="tel:{{ $setting['phone'] }}">اضغط
                                 للتواصل</a>
@@ -126,7 +115,8 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الايميل: </span>
-                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الايميل - تواصل معنا')">
+                        <div class="link8 flex flex-col gap-[5px] text-right"
+                            onclick="trackAction('زر الايميل - تواصل معنا')">
                             <a class="font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا" target="_blank"
                                 href="mailto:{{ $setting['email'] }}">اضغط للتواصل
@@ -144,7 +134,8 @@
                         </div>
                         <p>
                             <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> واتساب:</span>
-                        <div class="link8 flex flex-col gap-[5px] text-right" onclick="trackAction('زر الواتساب - تواصل معنا')">
+                        <div class="link8 flex flex-col gap-[5px] text-right"
+                            onclick="trackAction('زر الواتساب - تواصل معنا')">
                             <a dir="ltr"
                                 class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
                                 aria-label="اتصل بنا" title="اتصل بنا"
@@ -287,8 +278,6 @@
             <P class="text-[24px] font-normal w-full text-center"></P>
         </div>
     </div>
-
-
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
 
@@ -377,8 +366,8 @@
         function goToSection(section) {
             // التحقق من الصفحة الحالية
             const isHomePage = window.location.pathname === "{{ route('front.home') }}";
-                console.log(isHomePage);
-                
+            console.log(isHomePage);
+
             if (isHomePage) {
                 // إذا كانت الصفحة الرئيسية، انتقل مباشرة إلى القسم
                 window.location.hash = section;

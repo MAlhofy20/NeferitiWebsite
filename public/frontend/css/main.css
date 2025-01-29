@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
 }
-
 [data-aos="anim3"] {
     transform: skewX(45deg);
     opacity: 0;
@@ -24,12 +23,46 @@
         opacity: 1;
     }
 }
-body {
-    font-family: "El Messiri", "Baloo Bhaijaan 2", "Rakkas", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
+/* @font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../icons/all.min.css') format('woff2');
+} */
+img {
+    object-fit: cover; /* أو استخدم contain حسب الحاجة */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.55;
+}
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src: url("../fonts/Rakkas-Regular.ttf") format("truetype");
+    font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "El Messiri";
+    src: url("../fonts/Figtree-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/ElMessiri-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rakkas";
+    src: url("../fonts/BalooBhaijaan2-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -192,7 +225,12 @@ html {
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
-    background: linear-gradient(to left, #9f9f9f 0, #fff 10%, #686868 20%); /* تغيير to right إلى to left */
+    background: linear-gradient(
+        to left,
+        #9f9f9f 0,
+        #fff 10%,
+        #686868 20%
+    ); /* تغيير to right إلى to left */
     background-position: 300px; /* ابدأ من 300px */
     -webkit-background-clip: text;
     background-clip: text;

@@ -124,7 +124,7 @@
                     href="#contact-section">ابدأ معنا الان</a>
             </div>
 
-            <div class="colr absolute top-0 z-[1] opacity-[0.1] w-[300px] right-0"> <img
+            <div class="colr absolute top-0 z-[1] opacity-[0.1]  right-0"> <img
                     src="{{ asset('frontend/images/menu_logo.webp') }}" alt=""></div>
         </div>
         <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
@@ -273,7 +273,7 @@
             <div class="all">
                 <div class="title text-[30px] md:text-[60px]   flex justify-center items-center text-center flex-col"
                     data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
-                    <div class="md:font-[700] font-bold wave3 pb-3 text-[#2E2F35]">
+                    <div class="md:font-[700] font-bold wave2 pb-3 text-[#2E2F35]">
                         إطلاق سريع. نتائج مثالية.
                     </div>
                     <span class="font-[400] text-[#2E2F35]">إليك الطريقة.</span>
