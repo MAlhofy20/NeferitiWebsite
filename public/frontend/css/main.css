@@ -35,6 +35,7 @@ img {
     height: auto;
     aspect-ratio: 1.55;
 }
+
 @font-face {
     font-family: "Baloo Bhaijaan 2";
     src: url("../fonts/Rakkas-Regular.ttf") format("truetype");
@@ -256,15 +257,7 @@ html {
     animation: wave 2s ease-in-out infinite;
 }
 
-.wave span:nth-child(1) {
-    animation-delay: 0s;
-}
-.wave span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.wave span:nth-child(3) {
-    animation-delay: 0.4s;
-}
+
 
 @keyframes wave {
     0%,

@@ -37,6 +37,8 @@
             </div>
             <div class="main-icon overflow-hidden w-full">
                 <div class="iconimg flex gap-[45px]">
+                    <source srcset="image.webp" type="image/webp">
+
                     @php
                         $partners = \App\Models\Partner::all();
                     @endphp
@@ -124,7 +126,7 @@
                     href="#contact-section">ابدأ معنا الان</a>
             </div>
 
-            <div class="colr absolute top-0 z-[1] opacity-[0.1]  right-0"> <img
+            <div class="colr absolute top-0 z-[1] opacity-[0.1]  right-0"> <img loading="lazy"
                     src="{{ asset('frontend/images/menu_logo.webp') }}" alt=""></div>
         </div>
         <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
@@ -149,6 +151,8 @@
                         <div class="min flex justify-center gap-[15px] cursor-pointer">
                             <div class="image" data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine"
                                 data-aos-duration="500">
+                                <source srcset="image.webp" type="image/webp">
+
                                 <img loading="lazy"
                                     class="rounded-[18px] w-[140px] h-[40px] transition-all duration-300 ease-in-out"
                                     src="{{ asset($product->image) }}" alt="">
@@ -190,6 +194,8 @@
                 @foreach ($projects as $project)
                     <div class="cee w-[400px]  rounded-[24px] border-2 border-[#282828]" data-aos="zoom-in"
                         data-aos-easing="linear" data-aos-duration="500">
+                        <source srcset="image.webp" type="image/webp">
+
                         <img loading="lazy" class=" h-[300px]  rounded-tl-[24px] rounded-tr-[24px] w-full"
                             src="{{ asset($project->image) }}" alt="">
                         <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
@@ -217,6 +223,7 @@
                             class="boxes cursor-pointer">
                             <div
                                 class="imageCard  md:w-[380px] md:h-[270px] w-[330px] h-[220px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                                <source srcset="image.webp" type="image/webp">
                                 <img loading="lazy"
                                     class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">
@@ -243,6 +250,8 @@
                             class="boxes cursor-pointer flex gap-5 border-b-2 border-[#DEE1E6] pb-2.5">
                             <div
                                 class="imageCard h-[80px] w-[167px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-300">
+                                <source srcset="image.webp" type="image/webp">
+
                                 <img loading="lazy"
                                     class= "origin-center transform hover:scale-110 transition duration-300"
                                     src="{{ asset($blog->image) }}" alt="">

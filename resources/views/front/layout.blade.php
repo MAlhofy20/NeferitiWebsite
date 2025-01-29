@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Fonts -->
-
+    {{-- !-- Adding a proper referrer policy --> --}}
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     @yield('head')
     <link rel="icon" type="image/jpg" href="{{ asset('dash/images/logo_with_bg.jpg') }}">
 
@@ -43,16 +43,25 @@
     <div class="stiky fixed bottom-0 z-[9999] w-auto pr-[10px] py-[50px]">
         <div class="st flex flex-col gap-[10px] " data-network="facebook ">
             <div class="icons flex gap-1 flex-col">
-                <a href="tel:{{ $setting['phone'] }}" class="sa phone w-[35px] h-[35px] cursor-pointer  flex items-center justify-center" target="_blank" onclick="trackAction('زر الهاتف - ايقون معلقة')">
-                        <i class="fa-solid fa-phone-volume text-white text-[20px] text-2xl"></i>
+                <!-- زر الهاتف -->
+                <a href="tel:{{ $setting['phone'] }}"
+                    class="sa phone w-[35px] h-[35px] cursor-pointer flex items-center justify-center" target="_blank"
+                    onclick="trackAction('زر الهاتف - ايقون معلقة')" aria-label="اتصل بنا" title="اتصل بنا">
+                    <i class="fa-solid fa-phone-volume text-white text-[20px] text-2xl"></i>
                 </a>
-                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank" class="sb whatsapp w-[35px] h-[35px]  cursor-pointer  flex items-center justify-center "
-                    onclick="trackAction('زر الواتساب - ايقون معلقة')">
-                        <i class="fa-brands fa-whatsapp text-white text-[20px] text-2xl"></i>
+
+                <!-- زر الواتساب -->
+                <a href="https://wa.me/{{ $setting['whatsapp'] }}" target="_blank"
+                    class="sb whatsapp w-[35px] h-[35px] cursor-pointer flex items-center justify-center"
+                    onclick="trackAction('زر الواتساب - ايقون معلقة')" aria-label="مراسلتنا عبر الواتساب"
+                    title="مراسلتنا عبر الواتساب">
+                    <i class="fa-brands fa-whatsapp text-white text-[20px] text-2xl"></i>
                 </a>
             </div>
+
         </div>
     </div>
+
     <div class="the-pahe bg-white relative overflow-hidden">
         <div id="contact" class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
             <div
@@ -91,42 +100,43 @@
                     <p class="mb-[20px] md:leading-9 leading-[25px] text-[20px] text-[#666666]">
                         سواء كان لديك استفسار، فكرة، أو تحتاج إلى دعم – نحن هنا لأجلك.
                     </p>
-                    <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[25px] ">
+                    <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[25px]">
                         <div
-                            class=" md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
+                            class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-phone-volume"></i>
                         </div>
                         <p>
-                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الهاتف:</span>
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الهاتف:</span>
                         <div class="link8 flex flex-col gap-[5px] text-right"
                             onclick="trackAction('زر الاتصال - تواصل معنا')">
-                            <a dir="ltr" class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
+                            <a dir="ltr"
+                                class="text-[#666666] font-bold md:text-[20px] text-[18px] no-underline py-2 px-4"
                                 aria-label="اتصل بنا" title="اتصل بنا" href="tel:{{ $setting['phone'] }}">اضغط
                                 للتواصل</a>
-                            <a dir="ltr" class=" no-underline " aria-label="اتصل بنا" title="اتصل بنا"
+                            <a dir="ltr" class="no-underline py-2 px-4" aria-label="اتصل بنا" title="اتصل بنا"
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </div>
                         </p>
                     </div>
-                    <div class="info-item  flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
+
+                    <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
                         <div
                             class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
                             <i class="te1 text-[#fff] fa-solid fa-envelope"></i>
                         </div>
                         <p>
-                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px] "> الايميل: </span>
+                            <span class="text-[#fff] pl-[10px] font-bold md:text-[20px] text-[18px]"> الايميل:</span>
                         <div class="link8 flex flex-col gap-[5px] text-right"
                             onclick="trackAction('زر الايميل - تواصل معنا')">
-                            <a class="font-bold md:text-[20px] text-[18px]  text-[#666666] no-underline "
+                            <a class="font-bold md:text-[20px] text-[18px] text-[#666666] no-underline py-2 px-4"
                                 aria-label="اتصل بنا" title="اتصل بنا" target="_blank"
-                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل
-                            </a>
-                            <a class=" no-underline " target="_blank" aria-label="اتصل بنا" title="اتصل بنا"
-                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}
-                            </a>
+                                href="mailto:{{ $setting['email'] }}">اضغط للتواصل</a>
+                            <a class="no-underline py-2 px-4" target="_blank" aria-label="اتصل بنا" title="اتصل بنا"
+                                href="mailto:{{ $setting['email'] }}">{{ $setting['email'] }}</a>
                         </div>
                         </p>
                     </div>
+
                     <div class="info-item flex md:gap-[20px] gap-[5px] justify-start items-center mb-[15px]">
                         <div
                             class="md:w-[60px] w-[45px] md:h-[60px] h-[45px] rounded-full bg-[rgba(255,255,255,0.02)] flex justify-center items-center">
@@ -137,15 +147,15 @@
                         <div class="link8 flex flex-col gap-[5px] text-right"
                             onclick="trackAction('زر الواتساب - تواصل معنا')">
                             <a dir="ltr"
-                                class="text-[#666666] font-bold md:text-[20px] text-[18px]  no-underline "
+                                class="text-[#666666] font-bold md:text-[20px] text-[18px] no-underline py-2 px-4"
                                 aria-label="اتصل بنا" title="اتصل بنا"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط للتواصل</a>
-                            <a dir="ltr" class=" no-underline " aria-label="اتصل بنا" title="اتصل بنا"
+                            <a dir="ltr" class="no-underline py-2 px-4" aria-label="اتصل بنا" title="اتصل بنا"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">{{ $setting['phone'] }}</a>
                         </div>
                         </p>
-
                     </div>
+
                 </div>
             </div>
         </div>
@@ -172,7 +182,8 @@
                 class="information pb-[10px] lg:pb-[50px] flex justify-center lg:justify-between flex-wrap  gap-[40px]">
                 <div class="main-fot leading-[26px]">
                     <div class="logo ml-[10px]">
-                        <img class="rounded-[8px] w-[65px] h-[88px] mx-auto md:mx-0"
+                        <source srcset="image.webp" type="image/webp">
+                        <img loading="lazy" class="rounded-[8px] w-[65px] h-[88px] mx-auto md:mx-0"
                             onclick="window.location.href='{{ route('front.home') }}'"
                             src="{{ asset('frontend/images/menu_logo.webp') }}" alt="">
                     </div>
@@ -203,52 +214,52 @@
                     <div class="font-[700] text-[24px]">للتواصل</div>
                     <div class="forYou pt-[24px]">
                         <p><span class="text-[#fff] pl-[10px]"> الهاتف : </span>
-                            <a dir="ltr" class=" no-underline link9" onclick="trackAction('زر الهاتف - الفوتر')"
-                                aria-label="اتصل بنا" title="اتصل بنا"
+                            <a dir="ltr" class="no-underline link9 py-2 px-4"
+                                onclick="trackAction('زر الهاتف - الفوتر')" aria-label="اتصل بنا" title="اتصل بنا"
                                 href="tel:{{ $setting['phone'] }}">{{ $setting['phone'] }}</a>
                         </p>
                         <p class="py-[10px]">
                             <span class="text-[#fff] pl-[10px]"> الايميل : </span>
-                            <a class=" no-underline link9" onclick="trackAction('زر الايميل - الفوتر')"
+                            <a class="no-underline link9 py-2 px-4" onclick="trackAction('زر الايميل - الفوتر')"
                                 aria-label="اتصل بنا" title="اتصل بنا" href="mailto:{{ $setting['email'] }}"
-                                target="_blank">{{ $setting['email'] }}
-                            </a>
+                                target="_blank">{{ $setting['email'] }}</a>
                         </p>
                         <p>
                             <span class="text-[#fff] pl-[10px]"> الواتساب : </span>
-                            <a class=" no-underline link9" target="_blank" aria-label="اتصل بنا" title="اتصل بنا"
-                                onclick="trackAction('زر الواتساب - الفوتر')"
+                            <a class="no-underline link9 py-2 px-4" target="_blank" aria-label="اتصل بنا"
+                                title="اتصل بنا" onclick="trackAction('زر الواتساب - الفوتر')"
                                 href="https://wa.me/{{ $setting['whatsapp'] }}">اضغط لبدأ التواصل</a>
                         </p>
                     </div>
-                    <div class="iconeweb py-[18px]  text-[40px] flex gap-[16px] lg:justify-start justify-center ">
+                    <div class="iconeweb py-[18px] text-[40px] flex gap-[16px] lg:justify-start justify-center">
                         <div class="start2">
-                            <a href="{{ $setting['facebook_link'] }}" aria-label="اتصل بنا" title="اتصل بنا"
-                                target="_blank" class=" facebook">
-                                <i class=" fa-brands fa-facebook"></i>
+                            <a href="{{ $setting['facebook_link'] }}" aria-label="Facebook" title="انتقل إلى فيسبوك"
+                                target="_blank" class="facebook">
+                                <i class="fa-brands fa-facebook"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="{{ $setting['twitter_link'] }}" aria-label="اتصل بنا" title="اتصل بنا"
-                                target="_blank" class=" x ">
-                                <i class=" fa-brands fa-twitter"></i>
+                            <a href="{{ $setting['twitter_link'] }}" aria-label="Twitter" title="انتقل إلى تويتر"
+                                target="_blank" class="x">
+                                <i class="fa-brands fa-twitter"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="{{ $setting['instagram_link'] }}" aria-label="اتصل بنا" title="اتصل بنا"
-                                target="_blank" class=" instagram">
-                                <i class="  fa-brands fa-instagram"></i>
+                            <a href="{{ $setting['instagram_link'] }}" aria-label="Instagram"
+                                title="انتقل إلى إنستغرام" target="_blank" class="instagram">
+                                <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
                         <div class="start2">
-                            <a href="https://wa.me/{{ $setting['whatsapp'] }}" aria-label="اتصل بنا"
-                                title="اتصل بنا" target="_blank" class=" whatsapp"
+                            <a href="https://wa.me/{{ $setting['whatsapp'] }}" aria-label="WhatsApp"
+                                title="انتقل إلى واتساب" target="_blank" class="whatsapp"
                                 onclick="trackAction('زر الواتساب - الفوتر')">
-                                <i class="  fa-brands fa-whatsapp"></i>
+                                <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div
                 class="location border-t border-white py-[20px] gap-[10px] flex-wrap flex justify-between items-center">
@@ -278,6 +289,8 @@
             <P class="text-[24px] font-normal w-full text-center"></P>
         </div>
     </div>
+
+
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
 

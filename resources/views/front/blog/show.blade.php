@@ -76,7 +76,9 @@
     </div>
 
     <div class="w-[90%] md:w-1/2 mx-auto py-10">
-        <img class="w-400 py-10" src="{{ asset($blog->image) }}" />
+        <source srcset="image.webp" type="image/webp">
+
+        <img loading="lazy" class="w-400 py-10" src="{{ asset($blog->image) }}" />
 
         {!! $blog->content !!}
     </div>

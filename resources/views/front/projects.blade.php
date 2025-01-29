@@ -77,7 +77,9 @@
             @foreach ($projects as $project)
                 <div class="cee  rounded-[24px] w-[400px] text-black  border-2 " data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="400">
-                <img class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full "
+                    <source srcset="image.webp" type="image/webp">
+
+                <img loading="lazy"  class=" h-[300px] rounded-tl-[24px] rounded-tr-[24px] w-full "
                         src="{{ asset($project->image) }}" alt="">
                     <div class="title font-[600] text-[28px] px-[15px] py-[10px]">{{ $project->name }}</div>
                 </div>

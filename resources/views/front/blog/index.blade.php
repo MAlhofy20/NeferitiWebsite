@@ -84,7 +84,8 @@
                                     class="boxes cursor-pointer md:w-[270px] w-full gap-[45px]">
                                     <div
                                         class="imageCard  h-[192px] transform perspective-[1000px] hover:rotate-x-[10deg] hover:rotate-y-[10deg] transition duration-500">
-                                        <img class= "origin-center transform hover:scale-110 transition duration-300"
+                                        <source srcset="image.webp" type="image/webp">
+                                        <img loading="lazy" class= "origin-center transform hover:scale-110 transition duration-300"
                                             src="{{ asset($blog->image) }}" alt="">
                                     </div>
                                     <div class="date text-[#64607D]">

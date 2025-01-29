@@ -169,3 +169,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const image = document.querySelectorAll('img');
+image.forEach(image => {
+    image.onload = () => {
+        const width = image.naturalWidth;
+        const height = image.naturalHeight;
+        // اضبط الصورة إذا كانت أكبر من الأبعاد المناسبة
+        if (width > 300) {
+            image.width = 300;
+        }
+        if (height > 200) {
+            image.height = 200;
+        }
+    };
+});
