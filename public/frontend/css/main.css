@@ -1311,6 +1311,8 @@ html {
     background-image: url(https://nefertitisolutions.com/frontend/images/heroImage.webp);
     background-size: 350px auto;
     width: 100%;
+
+    background-size: cover;
     height: 1000px;
     border-radius: 8px; /* rounded-[8px] */
     width: 100%; /* w-full */
