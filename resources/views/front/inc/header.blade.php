@@ -32,6 +32,7 @@
 </div>
 <div
     class="icon-small fixed z-[999999]  top-[30px] text-white text-center lg:hidden bg-transparent w-[90%] justify-between
+
     flex items-center mx-auto translate-x-[5%] left-0 backdrop-brightness-75 backdrop-blur-lg px-[20px] py-[10px] rounded-lg">
     <div class="logo ml-[10px]">
         <source srcset="image.webp" type="image/webp">
