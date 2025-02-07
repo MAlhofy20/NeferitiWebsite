@@ -9,6 +9,7 @@ body {
     writing-mode: horizontal-tb;
     direction: ltr;
     text-orientation: mixed;
+    direction: rtl;
 }
 [data-aos="anim3"] {
     transform: skewX(45deg);
