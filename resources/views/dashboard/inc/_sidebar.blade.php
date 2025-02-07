@@ -16,11 +16,11 @@
                 <i class="fa-solid fa-user-tie mx-2"></i>
                 {{ __('dashboard.admins') }}
             </a>
-            {{-- <a href="{{ route('dashboard.countries.index') }}"
-                class="flex items-center  {{ Route::is('dashboard.countries.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
-                <i class="fa-solid fa-globe mx-2"></i>
-                {{ __('dashboard.geographical_scope') }}
-            </a> --}}
+            <a href="{{ route('dashboard.contact_messages.index') }}"
+                class="flex items-center  {{ Route::is('dashboard.contact_messages.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-envelope mx-2"></i>
+                {{ __('dashboard.messages') }}
+            </a>
             <a href="{{ route('dashboard.products.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.products.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-tags mx-2"></i>

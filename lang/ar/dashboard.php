@@ -5,7 +5,9 @@ return [
     'facilities_of_room' => 'خدمات الغرف',
     'facilities_of_property' => 'خدمات عامة',
     'home' => 'الرئيسية',
-
+    'phone_email' => 'الهاتف / البريد',
+    'subject' => 'الموضوع',
+    'from' => 'من',
     'name' => 'الاسم',
     'category' => 'القسم',
     'actions' => 'اعدادات',

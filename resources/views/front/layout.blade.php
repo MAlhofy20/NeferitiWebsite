@@ -76,9 +76,9 @@
                                 name="name" id="name" placeholder="الاسم">
                         </div>
                         <div class="form-group mb-[20px]">
-                            <input type="phone"
+                            <input type="text"
                                 class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] rounded-md bg-[#333] text-white text-sm"
-                                name="phone" id="phone" placeholder="رقم الهاتف للتواصل">
+                                name="phone_email" id="phone_email" placeholder="رقم الهاتف للتواصل او البريد الالكتروني">
                         </div>
                         <div class="form-group mb-[20px]">
                             <textarea name="message"
@@ -313,7 +313,7 @@
 
         function sendMessage() {
             const name = document.getElementById('name');
-            const phone = document.getElementById('phone');
+            const phone_email = document.getElementById('phone_email');
             const message = document.getElementById('message');
             const sowPopup = document.querySelector(".sowpopup");
             const overlay = document.querySelector("#overlay");
@@ -329,9 +329,6 @@
             if (name.value.length > 250) {
                 return showPopup(false, "تحقق من الاسم.");
             }
-            if (phone.value.length > 20 || !/^[\d\s+()\-.]+$/.test(phone.value.trim())) {
-                return showPopup(false, "تحقق من رقم الهاتف (يجب أن يكون رقمًا صحيحًا).");
-            }
             if (message.value.length > 1000) {
                 return showPopup(false, "يمكنك أن تقلل في حجم الرسالة.");
             }
@@ -345,7 +342,7 @@
                     },
                     body: JSON.stringify({
                         name: name.value.trim(),
-                        phone: phone.value.trim(),
+                        phone_email: phone_email.value.trim(),
                         message: message.value.trim(),
                         url: window.location.pathname,
                     })

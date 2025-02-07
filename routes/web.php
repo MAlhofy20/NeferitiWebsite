@@ -21,6 +21,7 @@ use App\Http\Controllers\Dashboard\AdminDashController;
 use App\Http\Controllers\Dashboard\TestimonialController;
 use App\Http\Controllers\Dashboard\EmailSettingController;
 use App\Http\Controllers\Dashboard\ProductDetailController;
+use App\Http\Controllers\Dashboard\ContactMessagesController;
 
 Route::get('dashboard/login', [AuthDashController::class, 'login_page'])->name('login');
 Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name('login.check');
@@ -72,8 +73,9 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
 
-    Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
-    Route::post('messages', [MessageController::class, 'delete'])->name('messages.delete');
+    Route::get('messages', [ContactMessagesController::class, 'index'])->name('contact_messages.index');
+    Route::get('messages/{message}', [ContactMessagesController::class, 'show'])->name('contact_messages.show');
+    Route::post('messages/{message}', [ContactMessagesController::class, 'destroy'])->name('contact_messages.destroy');
 
     // Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
     // Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');
