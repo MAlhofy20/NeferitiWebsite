@@ -75,7 +75,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->grou
 
     Route::get('messages', [ContactMessagesController::class, 'index'])->name('contact_messages.index');
     Route::get('messages/{message}', [ContactMessagesController::class, 'show'])->name('contact_messages.show');
-    Route::post('messages/{message}', [ContactMessagesController::class, 'destroy'])->name('contact_messages.destroy');
+    Route::delete('messages/{message}', [ContactMessagesController::class, 'destroy'])->name('contact_messages.destroy');
 
     // Route::get('external_pages', [ExternalPageController::class, 'index'])->name('external_pages.index');
     // Route::get('external_pages/create', [ExternalPageController::class, 'create'])->name('external_pages.create');

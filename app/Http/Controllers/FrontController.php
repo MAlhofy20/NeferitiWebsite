@@ -62,14 +62,14 @@ class FrontController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'phone' => 'required|string|max:255',
+            'phone_email' => 'required|string|max:255',
             'message' => 'required|string',
             'url' => 'required|string|max:255',
         ]);
 
         $data = [
             'name' => $request->name,
-            'phone' => $request->phone,
+            'phone_email' => $request->phone_email,
             'message' => $request->message,
             'url' => $request->url,
         ];

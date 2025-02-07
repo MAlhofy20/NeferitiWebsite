@@ -13,7 +13,7 @@
                     <th class="py-2 px-4 text-start">#ID</th>
                     <th class="py-2 px-4 text-start">{{ __('dashboard.name') }}</th>
                     <th class="py-2 px-4 text-start">{{ __('dashboard.phone_email') }}</th>
-\                    <th class="py-2 px-4 text-start">{{ __('dashboard.from') }}</th>
+                    <th class="py-2 px-4 text-start">{{ __('dashboard.from') }}</th>
                     <th class="py-2 px-4 text-start">{{ __('dashboard.created_at') }}</th>
                     <th class="py-2 px-4 text-start">{{ __('dashboard.actions') }}</th>
                 </tr>
@@ -35,14 +35,12 @@
                             {{ $message->created_at->format('Y-m-d | H:i a') }}
                         </td>
                         <td class="py-2 px-4 flex gap-2 items-center">
-                                <a class="px-2 py-1 text-xs bg-white border border-gray-300 text-black rounded-lg" href="{{ route('dashboard.contact_messages.show', $message->id) }}">{{ __('dashboard.show') }}</a>
-                                <form action="{{ route('dashboard.contact_messages.destroy', $message->id) }}" method="POST" id="deleteadminForm">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="button" onclick="confirmDelete('deleteadminForm', '{{ lang() }}')" class="px-2 py-1 text-xs bg-red-500 rounded text-white">{{ __('dashboard.delete') }}</button>
-                                </form>
-
-
+                            <a class="px-2 py-1 text-xs bg-white border border-gray-300 text-black rounded-lg" href="{{ route('dashboard.contact_messages.show', $message->id) }}">{{ __('dashboard.show') }}</a>
+                            <form action="{{ route('dashboard.contact_messages.destroy', $message->id) }}" method="POST" id="deleteadminForm">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" onclick="confirmDelete('deleteadminForm', '{{ lang() }}')" class="px-2 py-1 text-xs bg-red-500 rounded text-white">{{ __('dashboard.delete') }}</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

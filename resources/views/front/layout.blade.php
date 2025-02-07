@@ -35,8 +35,8 @@
             'phone' => '+201148394372',
             'whatsapp' => '+201148394372',
             'email' => 'contact@nefertitisolutions.com',
-            'facebook_link' => 'https://www.facebook.com/Nefertitisolutions',
-            'twitter_link' => 'https://x.com/?lang=en',
+            'facebook_link' => 'https://www.facebook.com/Nefertitisolutions0',
+            'twitter_link' => 'https://x.com/NefertitiSo',
             'instagram_link' => 'https://www.instagram.com/?hl=en',
         ]);
     @endphp
@@ -86,7 +86,7 @@
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
-                            <button type="button" onclick="sendMessage()"
+                            <button type="button" onclick="sendMessage(this)"
                                 class="btn link5 w-full rounded-2xl p-3
                                     bg-gold-button text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                                 ارسال
@@ -311,7 +311,10 @@
             })
         }
 
-        function sendMessage() {
+        function sendMessage(element) {
+            element.disabled = true;
+            element.classList.add('opacity-50', 'pointer-events-none');
+            //disabled btn
             const name = document.getElementById('name');
             const phone_email = document.getElementById('phone_email');
             const message = document.getElementById('message');
@@ -323,14 +326,26 @@
             const icon = document.querySelector(".sowpopup .x i");
 
             // التحقق من المدخلات
-            if (!name.value.trim() || !phone.value.trim() || !message.value.trim()) {
+            if (!name.value.trim() || !phone_email.value.trim() || !message.value.trim()) {
+                element.disabled = false;
+                    element.classList.remove('opacity-50', 'pointer-events-none');
+
                 return showPopup(false, "من فضلك، املأ جميع الحقول.");
+
             }
             if (name.value.length > 250) {
+                element.disabled = false;
+                    element.classList.remove('opacity-50', 'pointer-events-none');
+
                 return showPopup(false, "تحقق من الاسم.");
+
             }
             if (message.value.length > 1000) {
+                element.disabled = false;
+                    element.classList.remove('opacity-50', 'pointer-events-none');
+
                 return showPopup(false, "يمكنك أن تقلل في حجم الرسالة.");
+
             }
 
             // إرسال البيانات
@@ -349,10 +364,13 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    //enable btn
+                    element.disabled = false;
+                    element.classList.remove('opacity-50', 'pointer-events-none');
                     showPopup(data.success, data.message);
                     if (data.success) {
                         name.value = "";
-                        phone.value = "";
+                        phone_email.value = "";
                         message.value = "";
                     }
                 })
@@ -360,6 +378,7 @@
 
             // عرض الإشعار
             function showPopup(success, message) {
+                
                 messageParagraph.textContent = message;
                 right.classList.toggle("hidden", !success);
                 mistake.classList.toggle("hidden", success);
