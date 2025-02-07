@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- !-- Adding a proper referrer policy --> --}}
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     @yield('head')
     <link rel="icon" type="image/jpg" href="{{ asset('dash/images/logo_with_bg.jpg') }}">
 
