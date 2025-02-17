@@ -31,6 +31,10 @@ Route::post('dashboard/login', [AuthDashController::class, 'login_store'])->name
 Route::name('dashboard.')->prefix('dashboard')->middleware(['auth:admin'])->group(function () {
     Route::get('/', [HomeDashController::class, 'index'])->name('home');
 
+    Route::get('/pomo', function () {
+        return view('dashboard.pomo');
+    })->name('pomo');
+
     Route::resource('admin', AdminDashController::class)->names('admin');
 
     Route::resource('products', ProductController::class)->names('products');

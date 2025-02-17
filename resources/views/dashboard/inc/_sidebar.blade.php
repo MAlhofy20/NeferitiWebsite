@@ -11,6 +11,12 @@
                 <i class="fa-solid fa-house mx-2"></i>
                 {{ __('dashboard.home') }}
             </a>
+            <a href="{{ route('dashboard.pomo') }}"
+                class="flex items-center  {{ Route::currentRouteName() == 'dashboard.pomo' ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
+                <i class="fa-solid fa-stopwatch-20  mx-2"></i>
+                ادارة المهام
+            </a>
+
             <a href="{{ route('dashboard.admin.index') }}"
                 class="flex items-center  {{ Route::is('dashboard.admin.*') ? 'bg-white' : 'text-white' }} hover:bg-secondary  rounded-lg px-3 py-3">
                 <i class="fa-solid fa-user-tie mx-2"></i>
