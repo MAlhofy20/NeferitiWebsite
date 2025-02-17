@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Visit;
 use App\Models\Action;
-use App\Models\ContactMessage;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use App\Mail\NotificationMail;
+use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
     public function home()
     {
         $products = Product::orderBy('order_number', 'asc')->get();
-        $projects = Project::orderBy('order_number', 'asc')->take(6)->get();
+        $projects = Project::orderBy('order_number', 'desc')->take(6)->get();
         $testimonials = Testimonial::get();
         $blogs = Blog::take(6)->latest()->get();
 
@@ -74,6 +76,7 @@ class FrontController extends Controller
             'url' => $request->url,
         ];
         ContactMessage::create($data);
+        Mail::to('melhofy20@gmail.com')->send(new NotificationMail($request->message));
 
         return response()->json([
             'success' => true,

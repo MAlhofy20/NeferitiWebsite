@@ -3,6 +3,7 @@
 use App\Models\Blog;
 use App\Models\Product;
 use App\Mail\NotificationMail;
+use Illuminate\Support\Facades\Log;
 use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -116,14 +117,22 @@ Route::get('language/{locale}', function($locale){
     return redirect()->back();
 })->name('lang');
 
-Route::get('/test-emaill', function () {
+Route::get('/test-email', function () {
     try {
         $testMessage = "This is a test notification email from Laravel!";
 
+        // جرب إضافة "Mail::failures()" بعد الإرسال للتحقق من أي فشل
         Mail::to('melhofy20@gmail.com')->send(new NotificationMail($testMessage));
+
+        // تحقق من الفشل
+        if (count(Mail::failures()) > 0) {
+            return 'Failed to send email. Please check your settings.';
+        }
 
         return 'Email sent successfully!';
     } catch (\Exception $e) {
+        // تسجيل الخطأ في ملف اللوج وأيضًا عرضه مباشرة
+        Log::error('Email Sending Error: ' . $e->getMessage());
         return 'Error: ' . $e->getMessage();
     }
 });
