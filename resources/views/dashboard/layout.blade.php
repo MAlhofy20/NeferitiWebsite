@@ -41,7 +41,7 @@
 
     <script src="{{ asset('dash/jquery.min.js') }}"></script>
     <script src="{{ asset('dash/main.js') }}"></script>
-    
+
     @stack('js')
 
     <script>
