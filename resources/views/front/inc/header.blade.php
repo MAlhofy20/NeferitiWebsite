@@ -44,18 +44,18 @@
     <ul
         class=" absolute left-[125px] top-[62px] opacity-0 invisible transition-opacity duration-300  transform -translate-x-1/2 translate-y-3
             text-center flex gap-y-[10px] flex-wrap p-[15px] gap-0 bg-black w-[250px] justify-center  items-center font-semibold rounded-[24px] ">
-        <li class="sparkle u-hover--sparkle w-1/2">
+        <li  class="sparkle u-hover--sparkle w-1/2">
             <a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
                 href="{{ route('front.home') }}">الرئيسية</a>
         </li>
-        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-        href="{{ url('home#about') }}">تعريف بنا</a></li>
-        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="{{ url('home#projects') }}">المنتجات</a></li>
-        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="{{ url('home#projects') }}">المشاريع</a></li>
-        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="{{ url('home#blogs') }}">المدونة</a></li>
+        <li onclick="goToSection('about')" class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+        >تعريف بنا</a></li>
+        <li onclick="goToSection('products')" class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                >المنتجات</a></li>
+        <li onclick="goToSection('projects')" class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                >المشاريع</a></li>
+        <li onclick="goToSection('blogs')" class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                >المدونة</a></li>
     </ul>
 
 </div>
