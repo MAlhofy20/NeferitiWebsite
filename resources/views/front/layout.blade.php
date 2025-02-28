@@ -378,7 +378,7 @@
 
             // عرض الإشعار
             function showPopup(success, message) {
-                
+
                 messageParagraph.textContent = message;
                 right.classList.toggle("hidden", !success);
                 mistake.classList.toggle("hidden", success);

@@ -4,8 +4,8 @@
             <source srcset="image.webp" type="image/webp">
 
             <img onclick="window.location.href='{{ route('front.home') }}'"
-                class="rounded-[8px] w-[40px] h-[50px] drop-shadow-[2px_4px_6px_#000]"
-                src="{{ asset('frontend/images/menu_logo.webp') }}" alt="">
+                class="rounded-[8px] w-[40px] h-16 drop-shadow-[2px_4px_6px_#000]"
+                src="{{ asset('frontend/images/logo trans2.png') }}" alt="">
         </div>
         <div class="content-menu lg:px-[30px]">
             <ul class="px-[10px] lg:gap-[50px] gap-[24px] flex justify-center items-center cursor-pointer">
@@ -48,14 +48,14 @@
             <a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
                 href="{{ route('front.home') }}">الرئيسية</a>
         </li>
-        <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="#">تعريف بنا</a></li>
-        <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="#">المنتجات</a></li>
-        <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="#">المشاريع</a></li>
-        <li class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
-                href="#">المدونة</a></li>
+        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+        href="{{ url('home#about') }}">تعريف بنا</a></li>
+        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                href="{{ url('home#projects') }}">المنتجات</a></li>
+        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                href="{{ url('home#projects') }}">المشاريع</a></li>
+        <li  class="sparkle u-hover--sparkle w-1/2"><a class="rounded-[8px]  transition-colors  py-[6px] px-[12px]"
+                href="{{ url('home#blogs') }}">المدونة</a></li>
     </ul>
 
 </div>

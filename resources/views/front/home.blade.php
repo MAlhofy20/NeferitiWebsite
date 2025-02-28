@@ -43,18 +43,19 @@
                         $partners = \App\Models\Partner::all();
                     @endphp
                     @foreach ($partners as $partner)
-                        <img loading="lazy" class=" rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
+                        <img loading="lazy" class=" rounded-[8px] w-[150px] h-[75px]" src="{{ asset($partner->image) }}"
                             alt="">
                     @endforeach
+
                 </div>
             </div>
         </div>
         <div class="color w-full absolute h-[10%] bg-white md:-bottom-[35px]"></div>
     </div>
     <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
-        <div class="about-us relative">
+        <div id="about" class="about-us relative">
             <div class="main flex-col justify-center items-center text-center px-[20px] mb-10">
-                <div id="about" class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
+                <div  class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
                     عن اختيار فريق Nefirtiti
                 </div>
                 <p class="font-400 text-[#394B58] text-[20px] rounded-[30.24px] px-[20px]">
