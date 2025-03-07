@@ -43,7 +43,7 @@
                         $partners = \App\Models\Partner::all();
                     @endphp
                     @foreach ($partners as $partner)
-                        <img loading="lazy" class=" rounded-[8px] w-[150px] h-[75px]" src="{{ asset($partner->image) }}"
+                        <img loading="lazy" class=" rounded-[8px] w-[150px] h-[50px]" src="{{ asset($partner->image) }}"
                             alt="">
                     @endforeach
 
