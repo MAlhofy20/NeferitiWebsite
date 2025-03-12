@@ -115,40 +115,21 @@ html {
     transition: all 0.3s ease-in-out;
 }
 
-.content-menu ul li::before,
-.content-menu ul li::after {
+.content-menu ul li::before {
     content: "";
-    background: radial-gradient(ellipse farthest-corner at right bottom,
-            #fedb37 0%,
-            #fdb931 8%,
-            #9f7928 30%,
-            #8a6e2f 40%,
-            transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top,
-            #ffffff 0%,
-            #ffffac 8%,
-            #d1b464 25%,
-            #5d4a1f 62.5%,
-            #5d4a1f 100%);
+    background: #fde755;
     display: block;
     position: absolute;
     bottom: -15px;
-    width: 0;
+    width: 100%;
+    transform: scale(0);
     height: 3px;
     transition: all 0.3s ease-in-out;
 }
 
-.content-menu ul li::after {
-    left: 0;
-}
 
-.content-menu ul li::before {
-    right: 0;
-}
-
-.content-menu ul li:hover::before,
-.content-menu ul li:hover::after {
-    width: 51%;
+.content-menu ul li:hover::before {
+    transform: scale(1);
 }
 
 .content-menu ul li:hover {
@@ -160,11 +141,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
     margin-top: 10px;
     padding: 10px;
     border-radius: 15px;
-    backdrop-filter: brightness(0.7) blur(10px);
 }
 
 .active2 {
@@ -179,9 +158,7 @@ html {
     backdrop-filter: brightness(0.7) blur(10px);
 }
 
-.color {
-    clip-path: ellipse(56% 100% at 50% 100%);
-}
+
 
 .color2 {
     clip-path: ellipse(56% 100% at 50% 0%);
@@ -504,7 +481,7 @@ html {
 }
 
 .not-allowed {
-    background: linear-gradient(145deg, #2a2a2a, #383838);
+    
     border: 2px solid 2px solid #00000061;
 }
 
@@ -553,14 +530,14 @@ html {
 
 .start a {
     position: relative;
-    color: #262626;
     transition: 0.5s;
     z-index: 3;
 }
 
 .start:hover a {
-    color: #fff;
+    color: black;
     transform: rotateY(360deg);
+    font-weight: bold;
 }
 
 .start:before {
@@ -570,7 +547,8 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f00;
+    background: #fde755
+    ;
     transition: 0.5s;
     z-index: 2;
 }
@@ -581,10 +559,7 @@ html {
 
 .start:before {
     background: radial-gradient(ellipse farthest-corner at right bottom,
-            #fedb37 0%,
-            #fdb931 8%,
-            #9f7928 30%,
-            #8a6e2f 40%,
+    #fde755
             transparent 80%),
         radial-gradient(ellipse farthest-corner at left top,
             #ffffff 0%,
@@ -785,7 +760,7 @@ html {
     font-weight: bold;
     position: relative;
     z-index: 1;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(90deg,
             #8f8612,
@@ -793,9 +768,9 @@ html {
             #fdb931,
             #d1b464,
             #666666 53%
-        );
-    background-clip: text;
-    color: transparent;
+        ); */
+    /* background-clip: text; */
+    color: #3256a9;
     background-size: 200% 100%;
     background-position: -100%;
     transition: all 0.3s ease-in-out;
@@ -811,13 +786,7 @@ html {
     left: 0;
     z-index: 0;
     position: absolute;
-    background: linear-gradient(90deg,
-            #8f8612,
-            #fedb37,
-            #fdb931,
-            #d1b464,
-            #8a6e2f
-        );
+    background:rgb(253 231 85 / var(--tw-text-opacity, 1));
     transition: all 0.3s ease-in-out;
 }
 
@@ -837,20 +806,6 @@ html {
     font-weight: bold;
     position: relative;
     z-index: 1;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(90deg,
-            #8f8612,
-            /* أصفر لامع */
-            #fedb37,
-            /* ذهبي مشرق */
-            #fdb931,
-            /* ذهبي متوسط */
-            #d1b464,
-            /* ذهبي غامق */
-            #666666 53%
-            /* بني ذهبي */
-        );
     background-size: 200% 100%;
     background-position: -100%;
     transition: all 0.3s ease-in-out;
@@ -858,33 +813,22 @@ html {
     &:before {
         display: block;
         content: "";
-        width: 0;
+        width: 100%;
         height: 3px;
-        bottom: 5px;
+        bottom: 0;
         left: 0;
-        bottom: -3px;
         z-index: 0;
         position: absolute;
-        background: linear-gradient(90deg,
-                #8f8612,
-                /* أصفر لامع */
-                #fedb37,
-                /* ذهبي مشرق */
-                #fdb931,
-                /* ذهبي متوسط */
-                #d1b464,
-                /* ذهبي غامق */
-                #8a6e2f
-                /* بني ذهبي */
-            );
+        background: #fde755;
         transition: all 0.3s ease-in-out;
+        transform: scale(0);
     }
 
     &:hover {
         background-position: 0%;
 
         &:before {
-            width: 100%;
+            transform: scale(1);
         }
     }
 }
@@ -918,15 +862,13 @@ html {
     font-family: "FontAwesome";
     position: absolute;
     display: flex;
-    height: 0;
+    height: 100%;
     overflow: hidden;
     transition: height 0.5s ease-in-out;
     align-items: center;
 }
 
-.iconeweb .instagram:hover::before {
-    height: 100%;
-}
+
 
 .iconeweb .whatsapp::before {
     content: "\f232";
@@ -934,15 +876,13 @@ html {
     font-family: "FontAwesome";
     position: absolute;
     display: flex;
-    height: 0;
+    height: 100%;
     overflow: hidden;
     transition: height 0.5s ease-in-out;
     align-items: center;
 }
 
-.iconeweb .whatsapp:hover::before {
-    height: 100%;
-}
+
 
 .iconeweb .facebook::before {
     content: "\f39e";
@@ -950,7 +890,7 @@ html {
     font-family: "FontAwesome";
     position: absolute;
     display: flex;
-    height: 0;
+    height: 100%;
     justify-content: center;
     overflow: hidden;
     transition: height 0.5s ease-in-out;
@@ -960,9 +900,6 @@ html {
     top: 4px;
 }
 
-.iconeweb .facebook:hover::before {
-    height: 100%;
-}
 
 .iconeweb .x::before {
     content: "\f099";
@@ -970,14 +907,10 @@ html {
     font-family: "FontAwesome";
     position: absolute;
     display: flex;
-    height: 0;
+    height: 100%;
     overflow: hidden;
     transition: height 0.5s ease-in-out;
     align-items: center;
-}
-
-.iconeweb .x:hover::before {
-    height: 100%;
 }
 
 /* .blogs */
@@ -989,7 +922,7 @@ html {
 
 .boxes .tit::before {
     content: "";
-    background: #54b3d6;
+    background: #fde755;
     display: block;
     position: absolute;
     bottom: -3px;
@@ -999,24 +932,7 @@ html {
     transition: all 0.3s ease-in-out;
 }
 
-.text-gold-gradient {
-    background-image: linear-gradient(90deg,
-            #8f8612,
-            /* أصفر لامع */
-            #fedb37,
-            /* ذهبي مشرق */
-            #fdb931,
-            /* ذهبي متوسط */
-            #d1b464,
-            /* ذهبي غامق */
-            #8a6e2f
-            /* بني ذهبي */
-        );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
+
 
 /* stiky */
 
@@ -1130,7 +1046,8 @@ html {
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-
+    height: 40px ;
+    width: 40px;
     z-index: 1;
 }
 
@@ -1153,18 +1070,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(ellipse farthest-corner at right bottom,
-            #fedb37 0%,
-            #fdb931 8%,
-            #9f7928 30%,
-            #8a6e2f 40%,
-            transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top,
-            #ffffff 0%,
-            #ffffac 8%,
-            #d1b464 25%,
-            #5d4a1f 62.5%,
-            #5d4a1f 100%);
+    background: darkcyan;
 }
 
 .st .icons .sb i {
@@ -1175,31 +1081,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(ellipse farthest-corner at right bottom,
-            #fedb37 0%,
-            #fdb931 8%,
-            #9f7928 30%,
-            #8a6e2f 40%,
-            transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top,
-            #ffffff 0%,
-            #ffffac 8%,
-            #d1b464 25%,
-            #5d4a1f 62.5%,
-            #5d4a1f 100%);
+    background: #2ad04a;
 }
 
-.st .icons .sb:hover {
-    border: 3px solid #2ad04a;
-}
 
-.st .icons a:hover i {
-    color: #2ad04a;
-}
-
-.st .icons .sa:hover i {
-    color: black;
-}
 
 /* whatsapp and phone */
 /* small menu */
@@ -1227,14 +1112,14 @@ html {
 }
 
 .u-hover--sparkle::before {
-    border-top: 0.2em solid #54b3d6;
-    border-bottom: 0.2em solid #54b3d6;
+    border-top: 0.2em solid #3256a9;
+    border-bottom: 0.2em solid #3256a9;
     transform: scale3d(0, 1, 1);
 }
 
 .u-hover--sparkle::after {
-    border-left: 0.2em solid #54b3d6;
-    border-right: 0.2em solid #54b3d6;
+    border-left: 0.2em solid #3256a9;
+    border-right: 0.2em solid #3256a9;
     transform: scale3d(1, 0, 1);
 }
 
@@ -1406,23 +1291,50 @@ html {
 }
 
 .page {
-    background-image: url(https://nefertitisolutions.com/frontend/images/heroImage.webp);
-    background-size: 350px auto;
-    width: 100%;
-
-    background-size: cover;
-    height: 1000px;
+    height: 700px;
     border-radius: 8px;
-    /* rounded-[8px] */
     width: 100%;
-    /* w-full */
     position: absolute;
-    /* absolute */
     right: 0;
-    /* right-0 */
-    top: 0;
-    /* top-0 */
+    top: 50px;
     opacity: 0.1;
-    /* opacity-10 */
 }
+.page2{
+    height: 299px;
+    border-radius: 8px;
+    width: 47%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+.page3{
+    height: 432px;
+    border-radius: 8px;
+    width: 47%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.page4{
+    height: 365px;
+    border-radius: 8px;
+    width: 35%;
+    position: absolute;
+    right: 26%;
+    top: -81px;
+}
+.page5{
+    height: 700px;
+    border-radius: 8px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    opacity: 0.1;
+}
+#contact .br{
+    border-bottom:1px solid rgba(255, 255, 255, 0.2);
+}
+#contact .br:focus{
+    border-bottom:1px solid rgba(255, 255, 255, 0.5) !important;
 
+}

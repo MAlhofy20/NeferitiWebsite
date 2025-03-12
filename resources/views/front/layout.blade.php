@@ -63,32 +63,34 @@
     </div>
 
     <div class="the-pahe bg-white relative overflow-hidden">
-        <div id="contact" class="section-info md:p-[50px] bg-[#000000] flex flex-wrap justify-center">
+        <div style="background: linear-gradient(180deg, #f5f5f500, #f5f5f5), linear-gradient(84deg, #3bb3ff33, #ffffff 70.83%, #b1bb2f33 100%, #ffffff);" id="contact" class="section-info md:p-[50px]  flex flex-wrap justify-center">
             <div
-                class="all flex flex-wrap shadow-[-2px_-2px_7px_-2px_#8f8612] justify-center flex-row md:rounded-[20px] w-full md:max-w-[964px]  overflow-hidden ">
+                class="all flex flex-wrap  justify-center flex-row md:rounded-[10px] w-full md:max-w-[964px]  overflow-hidden ">
                 <!-- Contact Form -->
-                <div id="contact-section" class="contact-form  p-8  bg-[#2a2a2a] lg:w-[482px] w-full">
-                    <h3 class="mb-5 text-[30px] font-bold text-gold-gradient">راسلنا</h3>
+                <div id="contact-section" class="contact-form  p-8  bg-[#272a34] lg:w-[482px] w-full">
+                    <h3 class="mb-5 text-[30px] font-bold text-white">راسلنا</h3>
                     <div class="form">
                         <div class="form-group mb-[20px]">
                             <input type="text"
-                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] rounded-md bg-[#333] text-white text-sm"
+                                class="form-control  w-full p-3  bg-[#272a34] text-white text-sm
+                            br"
                                 name="name" id="name" placeholder="الاسم">
                         </div>
                         <div class="form-group mb-[20px]">
                             <input type="text"
-                                class="form-control placeholder-[#bbb] w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e] rounded-md bg-[#333] text-white text-sm"
+                                class="form-control  w-full p-3  bg-[#272a34] text-white text-sm
+                            br"
                                 name="phone_email" id="phone_email" placeholder="رقم الهاتف للتواصل او البريد الالكتروني">
                         </div>
                         <div class="form-group mb-[20px]">
                             <textarea name="message"
-                                class="form-control w-full p-3 shadow-[3px_4px_1px_0px_#1e1e1e]  rounded-sm bg-[#333] text-white text-sm placeholder-[#bbb]"
+                                class="form-control w-full p-3 br bg-transparent text-white text-sm "
                                 id="message" rows="5" placeholder="رسالتك هنا"></textarea>
                         </div>
                         <div class="form-group mb-[20px]  cursor-pointer  ">
                             <button type="button" onclick="sendMessage(this)"
-                                class="btn link5 w-full rounded-2xl p-3
-                                    bg-gold-button text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
+                                class="btn  link5 w-fit rounded-[10px] px-[50px] py-[15px]
+                                    bg-[#3256a9] text-white text-lg font-bold cursor-pointer  transition-colors-transform duration-300 ">
                                 ارسال
                             </button>
                         </div>
@@ -160,7 +162,7 @@
             </div>
         </div>
         <div
-            class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[rgb(16_24_40/var(--tw-bg-opacity))] text-white">
+            class="footer relative px-[20px] lg:text-start text-center lg:px-[100px] pt-[50px] lg:pt-[80px]  bg-[#1a43a1] text-white">
             <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
                     viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_f_1833_4737)">
@@ -183,9 +185,9 @@
                 <div class="main-fot leading-[26px]">
                     <div class="logo ml-[10px]">
                         <source srcset="image.webp" type="image/webp">
-                        <img loading="lazy" class="rounded-[8px] w-[65px] h-[88px] mx-auto md:mx-0"
+                        <img loading="lazy" class="rounded-[8px] w-[200px] h-[100px] mx-auto md:mx-0"
                             onclick="window.location.href='{{ route('front.home') }}'"
-                            src="{{ asset('frontend/images/menu_logo.webp') }}" alt="">
+                            src="{{ asset('frontend/images/LOGO (2).png') }}" alt="">
                     </div>
                     <p class="max-w-[414px] text-[#FFFFFF] leading-[26px] pt-[24px] t">من خلال نظرة تجمع بين خبرة
                         المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
@@ -196,7 +198,7 @@
                 <div class="overview max-w-[275px] leading-[26px]">
                     <div class="font-[700] text-[24px]">اختصارات</div>
                     <div class="list">
-                        <ul class="flex flex-wrap gap-y-4 pt-[24px] leading-[16px]">
+                        <ul class="flex flex-wrap text-white gap-y-4 pt-[24px] leading-[16px]">
                             <li class="w-1/2 hover:font-bold"><a class="link9"
                                     href="{{ route('front.home') }}">الرئيسية</a></li>
                             <li class="w-1/2 hover:font-bold"><a class="link9" role="button"
@@ -268,9 +270,9 @@
                     <div class="country">{{ $setting['country'] }}</div>
                 </div>
                 <div class="locati-sp flex flex-wrap gap-[10px]">
-                    <a href="{{ route('front.terms') }}" target="_blank" class="no-underline link9">الشروط
+                    <a href="{{ route('front.terms') }}" target="_blank" class="text-white no-underline link9">الشروط
                         والاحكام</a>
-                    <a href="{{ route('front.privacy') }}" target="_blank" class="no-underline link9">سياسة
+                    <a href="{{ route('front.privacy') }}" target="_blank" class="text-white no-underline link9">سياسة
                         الخصوصية</a>
                 </div>
             </div>

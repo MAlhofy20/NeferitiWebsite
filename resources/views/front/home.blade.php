@@ -10,28 +10,32 @@
     ])
 @endsection
 @section('content')
-    <div class="main bg-[#101828] pb-[50px] relative overflow-hidden">
-        <div class="flex page justify-center items-center"></div>
+    <div class="main bg-[#99b0c10f] pb-[50px] relative overflow-hidden">
+        <div class="flex  justify-center items-center"></div>
+        <img class="page absolute  object-cover" src="{{ asset('frontend/images/Component.png') }}" alt="">
+        <img class="page2 absolute  object-cover" src="{{ asset('frontend/images/Ellipse 435.png') }}" alt="">  
+        <img class="page3 absolute  object-cover" src="{{ asset('frontend/images/Ellipse 434.png') }}" alt="">  
+
         <div class="hero flex justify-center items-center flex-col pt-[140px] md:pt-[150px] text-center pb-[50px] px-[20px] "
             data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
-            <p class="wave text-[25px] font-bold  text-[#ffe9b7]"><span>نفرتيتي</span> <span>لحلول</span>
+            <p class="wave text-[25px] font-bold  text-[#0061f4]"><span>نفرتيتي</span> <span>لحلول</span>
                 <span>الاعمال</span>
             </p>
             <div class="title">
-                <p class="text-[30px] md:text-[80px] text-white font-bold">نصمم مواقع تُحدث فرقًا</p>
-                <p class="py-[20px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="text-[30px] md:text-[80px]  font-bold">نصمم مواقع تُحدث فرقًا</p>
+                <p class="py-[20px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-[#647990]">
                     من خلال نظرة تجمع بين خبرة المبرمجين ودقة المصممين وبُعد نظر خبراء التسويق،
                     <br>
                     نصنع لك نافذة تنقل أعمالك إلى بُعد آخر
                 </p>
             </div>
             <div>
-                <a class="cursor-box font-bold not-allowed bg-gold-button rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
+                <a class="cursor-box font-bold not-allowed text-white bg-[#014efe] rounded-[15px]  px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
                     href="#contact-section">تواصل معنا</a>
             </div>
         </div>
         <div class="icons md:pt-[50px] overflow-hidden md:w-[80%] mx-auto pb-[54px] ">
-            <div class="title flex justify-center items-center text-white pb-[30px]" data-aos="fade-up"
+            <div class="title flex justify-center items-center  pb-[30px]" data-aos="fade-up"
                 data-aos-easing="ease-in-sine" data-aos-duration="1000">
                 موثوق به من قبل أكثر من 50 شركة
             </div>
@@ -50,17 +54,20 @@
                 </div>
             </div>
         </div>
-        <div class="color w-full absolute h-[10%] bg-white md:-bottom-[35px]"></div>
     </div>
-    <div class="the-pahe bg-white relative md:pt-[50px] overflow-hidden">
-        <div id="about" class="about-us relative">
+    <div class="the-pahe bg-[#ffffff] relative md:pt-[50px] overflow-hidden">
+        <div  data-aos="fade-down-right"
+                data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500" 
+                id="about" class="  about-us relative">
             <div class="main flex-col justify-center items-center text-center px-[20px] mb-10">
+            <img class="page4 absolute  object-cover" src="{{ asset('frontend/images/middle1.png') }}" alt="">  
+
                 <div  class="title font-bold text-[30px] md:text-[50px] text-[#0B2131] pb-[10px]">
                     عن اختيار فريق Nefirtiti
                 </div>
-                <p class="font-400 text-[#394B58] text-[20px] rounded-[30.24px] px-[20px]">
+                <p class="font-[600] text-[#647990] text-[20px] rounded-[30.24px] px-[20px]">
                     في
-                    <span class="font-bold text-gold-gradient">
+                    <span class="font-bold text-[#014efe]">
                         Nefertiti Solutions
                     </span>
                     نمتلك فريقًا متخصصًا يسخّر أحدث التقنيات لإدارة مشاريعك بكفاءة عالية.
@@ -74,27 +81,32 @@
             </div>
 
         </div>
-        <div id="ideas" class="home relative overflow-hidden bg-[#101828] text-white p-[20px] md:p-[50px]">
-            <div class="main text-center flex gap-[10px] flex-col justify-center items-center" data-aos="fade-down-right"
+        <div style="background: linear-gradient(180deg, #ffffff2e, #88adefa6), linear-gradient(84deg, #e4ff0033, #f4f5fb33 70.83%, #e1ff0033 100%, #ffffff);" id="ideas" class="home relative overflow-hidden bg-[#99b0c10f] p-[20px] md:p-[50px]"
+            data-aos="fade-down-right"
                 data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                <div class="title font-bold md:font-500 leading-[40px] text-[30px] md:text-[56px]">
+            <div class="main text-center flex gap-[10px] flex-col justify-center items-center">
+                <div class="title pb-[50px] font-bold md:font-500 leading-[40px] text-[30px] md:text-[56px]">
                     رؤيتنا تتجاوز تقديم حلول تقليدية
                 </div>
-                <p class="font-[400] text-[20px] leading-[30px] text-center ">
+                <p class="font-[600] text-[#647990] text-[20px] leading-[30px] text-center ">
                     في Nefertiti Solutions نسعى لنكون شريكك الحقيقي في عالم الإنترنت.
                     <hr>
-                    نلتزم ببناء علاقة مستدامة معك في رحلتك نحو النجاح الرقمي؛ من خلال تقديم
-                    <span class="font-bold text-gold-gradient">
+                    <span class=" font-[600] text-[#647990]">        
+                        نلتزم ببناء علاقة مستدامة معك في رحلتك نحو النجاح الرقمي؛ من خلال تقديم
+                    </span>
+                    <span class="font-bold text-[#014efe]">
                         حلول برمجية مصممة خصيصًا
                     </span>
-                    لتلبية احتياجات منظومتك
-                    مع دعم مستمر لضمان التطوير والصيانة
+                    <span class=" font-[600] text-[#647990]">
+                        لتلبية احتياجات منظومتك
+                        مع دعم مستمر لضمان التطوير والصيانة
+                    </span>
                 </p>
             </div>
             <div class="flex gap-[20px] justify-center z-[2] relative items-center p-[20px] flex-wrap">
                 <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] md:h-[180px] h-[140px]"
                     data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                    <i class="mb-2 fa-solid text-6xl fa-laptop-code"></i>
+                    <i class="mb-2 text-[#014efe] fa-solid text-6xl fa-laptop-code"></i>
 
                     <div class="font-[400] text-center md:text-2xl">
                         تصميم وبرمجة مواقع احترافية
@@ -102,46 +114,45 @@
                 </div>
                 <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] md:h-[180px] h-[140px]"
                     data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                    <i class="mb-2 fa-solid text-6xl fa-mobile-screen-button"></i>
+                    <i class="mb-2 text-[#014efe] fa-solid text-6xl fa-mobile-screen-button"></i>
                     <div class="font-[400] text-center md:text-2xl">
                         تطوير تطبيقات عصرية ومميزة
                     </div>
                 </div>
                 <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] md:h-[180px] h-[140px]"
                     data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                    <i class="mb-2 fa-brands text-6xl  fa-google"></i>
+                    <i class="mb-2 text-[#014efe] fa-brands text-6xl  fa-google"></i>
                     <div class="font-[400] text-center md:text-2xl">
                         تحسين ظهورك عبر محركات البحث
                     </div>
                 </div>
                 <div class="boxColor flex flex-col text-center justify-center p-[15px]  rounded-[20px] items-center w-[264px] md:h-[180px] h-[140px]"
                     data-aos="zoom-in" data-aos-easing="linear" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                    <i class="mb-2 fa-solid text-6xl fa-database"></i>
+                    <i class="mb-2 text-[#014efe] fa-solid text-6xl fa-database"></i>
                     <div class="font-[400] text-center md:text-2xl">
                         إدارة استضافاتك باحترافية وأمان
                     </div>
                 </div>
             </div>
             <div class="mb-12 mt-[35px] mx-auto w-64">
-                <a class="cursor-box not-allowed bg-gold-button text-nowrap rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
+                <a class="cursor-box not-allowed font-[600] bg-[#014efe] text-nowrap rounded-[15px] text-white px-[50px] py-[10px] shadow-[0_0_3px_0_#0d0b0b]"
                     href="#contact-section">ابدأ معنا الان</a>
             </div>
 
-            <div class="colr absolute top-0 z-[1] opacity-[0.1]  right-0"> <img loading="lazy"
-                    src="{{ asset('frontend/images/menu_logo.webp') }}" alt=""></div>
+
         </div>
-        <div id="products" class="products p-[20px] md:p-[50px] bg-black text-white">
+        <div id="products" class="products p-[20px] md:p-[50px] ">
             <div class="main flex flex-col justify-center items-center text-center" data-aos="zoom-in-up"
                 data-aos-easing="ease-in-sine" data-aos-duration="400">
                 <div class="title font-bold md:font-500 text-[35px] md:text-[56px] pb-[20px]"> منتجات فريق Nefertiti
                 </div>
-                <p class="font-[400] text-[20px] leading-[30px] px[4px]">
+                <p class="font-[600] max-w-[500px] text-[20px] text-[#647990] leading-[30px] px[4px]">
                     في Nefertiti Solutions قمنا بصناعة وتقديم
                     منتجات متطورة صنعت خصيصًا لترك بصمة فريدة في احتياجات السوق .
-                    <hr>
                     سعيًا منا في دعم توجهات المسئولين
                     نحو بيئات عمل رقمية متطورة
-                    <span class="pt-[10px] font-bold text-gold-gradient">
+                    <br>
+                    <span class="pt-[10px] font-bold text-[#014efe]">
                         توافق رؤية 2030
                     </span>
                 </p>
@@ -174,9 +185,9 @@
                                 </p>
                                 <div
                                     class="flex   all overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0 gap-[10px] pr-[10px]">
-                                    <a class=" w-[125px] cards-gold-gradient cursor-box md:w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed  rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    <a class=" w-[125px] bg-[#fde755] cursor-box md:w-[160px] h-[30px] transition-all duration-300 ease-in-out not-allowed  rounded-[15px] text-black font-[600] "
                                         href="{{ route('front.product', $product->slug) }}">اعرف اكتر</a>
-                                    <a class="cursor-box w-[125px] h-[30px] md:w-[160px] transition-all duration-300 ease-in-out not-allowed bg-gold-button rounded-[15px] text-white  shadow-[0_0_3px_0_#0d0b0b]"
+                                    <a class="cursor-box w-[125px] h-[30px] md:w-[160px] transition-all duration-300 ease-in-out not-allowed bg-[#014efe] rounded-[15px] text-white font-[600] "
                                         href="#">تواصل معنا</a>
                                 </div>
                             </div>
@@ -185,11 +196,11 @@
                 @endforeach
             </div>
         </div>
-        <div id="projects" class="previous-work bg-[#101828] text-white p-[20px] md:p-[50px]">
+        <div id="projects" class="previous-work bg-[#99b0c10f]  p-[20px] md:p-[50px]">
             <div class="title flex items-center pb-[20px] pr-[20px] md:pr-[32px] gap-[10px]" data-aos="zoom-in"
                 data-aos-easing="linear" data-aos-duration="400" data-aos-duration="500">
-                <div class="font-[600] text-[22px]">أعمالنا السابقة</div>
-                <i class="fa-solid fa-turn-down"></i>
+                <div class="font-[600] text-[#014efe] text-[22px]">أعمالنا السابقة</div>
+                <i class="text-[#014efe] fa-solid fa-turn-down"></i>
             </div>
             <div class="previous flex gap-[32px] flex-wrap justify-center">
                 @foreach ($projects as $project)
@@ -206,13 +217,14 @@
             <div class="allVeow flex justify-center items-center pt-[50px]" data-aos="anim" data-aos-easing="linear"
                 data-aos-duration="400">
                 <a href="{{ route('front.projects') }}"
-                    class="link-3 gap-5 flex justify-center items-center  p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
+                    class="link-3 gap-5 flex justify-center items-center  bg-[#014efe] p-[10px_8px] w-[663px] rounded-2xl cursor-pointer bg-[#0000001c] border text-white border-[rgba(255,255,255,0.3)] shadow-[0_4px_6px_rgb(0,0,0)]">
                     جميع الأعمال السابقه
-                    <i class="fa-solid fa-arrow-trend-down"></i>
+                    <i class="text-white fa-solid fa-arrow-trend-down"></i>
                 </a>
             </div>
         </div>
-        <div id="blogs" class="blogs p-[20px] ">
+        <div id="blogs" class="blogs relative p-[20px] ">
+
             <div
                 class="title gap-[10px] flex justify-center flex-wrap md:flex-nowrap md:justify-between pb-[50px] pr-[50px] items-center">
                 <div class="ti text-[35px] md:text-[42px] md:font-[800] font-bold">أحدث المقالات على مدونتنا </div>
@@ -234,7 +246,7 @@
                                 <span>{{ $blog->product?->name }}</span>
                             </div>
                             <div
-                                class="tit font-[800] w-fit max-w-[380px] text-[20px] md:leading-[36px] leading-[28px] py-[5px]">
+                                class="tit font-[800]  w-fit max-w-[380px] text-[20px] md:leading-[36px] leading-[28px] py-[5px]">
                                 <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                             </div>
                             <div class="line-clamp-3 max-w-[380px]">
@@ -262,7 +274,7 @@
                                     <span>{{ $blog->created_at->format('d-m-Y') }}</span>
                                     <span>{{ $blog->product?->name }}</span>
                                 </div>
-                                <div class="tit w-fit font-[800] text-[18px] md:leading-[30px] leading-[25px] ">
+                                <div class="tit w-fit font-[800]  text-[18px] md:leading-[30px] leading-[25px] ">
                                     <a href="{{ route('front.blog.show', $blog->slug) }}">{{ $blog->title }}</a>
                                 </div>
                             </div>
@@ -274,12 +286,13 @@
             </div>
             <div class="flex justify-center items-center pt-12">
                 <div
-                    class="link15 bg-[#097aa5] p-[15px] rounded-[10px] text-white no-underline transition duration-300 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
+                    class="link15 bg-[#014efe] p-[15px] rounded-[10px] text-white no-underline transition duration-300 shadow-[rgba(0,0,0,0.5)_-5px_5px_5px] hover:shadow-none">
                     <a class=" " href="{{ route('front.blog') }}">شاهد جميع المقالات</a>
                 </div>
             </div>
         </div>
-        <div id="Here" class="Here-is-how bg-[#E3F8F8] p-[20px] md:px-[100px] md:py-[50px]">
+        <div id="Here" class="Here-is-how bg-[#018dff30] relative overflow-hidden p-[20px] md:px-[100px] md:py-[50px]">
+            <img class="page5 absolute  object-cover " src="{{ asset('frontend/images/Component.png') }}" alt="">  
             <div class="all">
                 <div class="title text-[30px] md:text-[60px]   flex justify-center items-center text-center flex-col"
                     data-aos="anim" data-aos-easing="linear" data-aos-duration="300">
@@ -326,32 +339,32 @@
                 </div>
             </div>
         </div>
-        <div id="clients" class="clients bg-[#101828] text-white">
+        <div id="clients" class="clients bg-[#99b0c10f]">
             <div class="title flex flex-col justify-center gap-[20px] items-center pt-[50px]">
                 <div class="tit font-bold max-w-[600px] text-[22px] md:text-[33px] px-[20px] text-center" data-aos="anim"
                     data-aos-easing="linear" data-aos-duration="400">
                     انضم إلى مجتمعنا واستفد من حلول مبتكرة تدعم نجاح أعمالك
                 </div>
-                <div class="link-2 flex gap-[10px] items-center" data-aos="anim" data-aos-easing="linear"
+                <div class="flex gap-[10px] items-center" data-aos="anim" data-aos-easing="linear"
                     data-aos-duration="400">
-                    <a class="text-[22px] font-bold font-sans" href="#">قصص نجاح مع عملائنا</a>
-                    <i class="fa-solid fa-turn-down"></i>
+                    <a class="text-[22px] text-[#647990] font-bold font-sans" href="#">قصص نجاح مع عملائنا</a>
+                    <i class="fa-solid text-[#647990] fa-turn-down"></i>
                 </div>
             </div>
-            <div class="Opinions overflow-hidden transition-translate duration-500 pr-[20px] ">
-                <div class="all md:py-[65px] py-[40px] bg-[#101828] flex gap-[24px] transition-translate duration-500 ">
+            <div class="Opinions overflow-hidden  transition-translate duration-500 pr-[20px] ">
+                <div class="all md:py-[65px] py-[40px] flex gap-[24px] transition-translate duration-500 ">
 
                     @foreach ($testimonials as $testimonial)
                         <div
-                            class="boxOpinions flex-shrink-0 bg-[#1C1C1E] p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
-                            <i class="text-[#FDB931] text-[33px] fa-solid fa-quote-right"></i>
+                            class="boxOpinions flex-shrink-0 bg-white p-[22px] max-h-[350px] max-w-[1500px] flex  w-[390px] rounded-[20px] justify-center gap-[30px]">
+                            <i class="text-[#fde755] text-[33px] fa-solid fa-quote-right"></i>
                             <div class="w-[290px] h-[280px] flex flex-col justify-between items-stretch">
                                 <div class="prag max-w-[370px] text-[28px] leading-[32.44px] font-[400]">
                                     {!! breackableText($testimonial->description) !!}
                                 </div>
                                 <div class="prerson flex items-center gap-[20px] pt-[30px]">
                                     <span class="h-[3px] w-[60px] bg-white block"></span>
-                                    <span class="font-[700]">{{ $testimonial->name }}</span>
+                                    <span class="text-[#647990] font-[700]">{{ $testimonial->name }}</span>
                                 </div>
                             </div>
                         </div>
