@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="main bg-[#07182F] pb-[50px] relative overflow-hidden">
+    <div class="main bg-[#1a43a1] pb-[50px] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]">
             <svg width="1237" height="405" viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1833_4737)">
@@ -38,7 +38,7 @@
                 <p class="text-[30px] md:text-[80px] text-white font-bold">
                     مدونتنا | اكتشف أحدث مقالاتنا
                 </p>
-                <p class="py-[20px] max-w-[1000px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-gray-500 ">
+                <p class="py-[20px] max-w-[1000px] px-[20px] leading-[30px] md:leading-[37px] font-bold md:text-[20px] text-[#f1ffe2] ">
                     نفخر بتقديم تشكيلة متنوعة من الأعمال السابقة التي ساهمت في تطوير خبراتنا، مما يمكننا من تحقيق رؤيتك
                     بأفضل صورة. بفضل مشاريعنا الناجحة، نقدم حلولًا مبتكرة مصممة خصيصًا لتلبية احتياجاتك وتجاوز توقعاتك.
                 </p>

@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="main bg-[#101828] relative overflow-hidden">
+    <div class="main bg-[#1a43a1] relative overflow-hidden">
         <div class="absolute left-[7%] top-0 z-1 opacity-50 3xl:left-[19%]"><svg width="1237" height="405"
                 viewBox="0 0 1237 405" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1833_4737)">
@@ -92,13 +92,13 @@
             </div>
     </div>
     @endforeach
-    <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-black py-[20px] rounded-[20px] flex flex-col  items-center justify-center"
+    <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-[#7794d5] py-[20px] rounded-[20px] flex flex-col  items-center justify-center"
         data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
         <div class="main flex-col justify-center items-center text-center px-[20px]">
-            <div class="title font-bold text-[26px] md:text-[50px] text-[papayawhip] pb-[10px]">
+            <div class="title font-bold text-[26px] md:text-[50px] text-[black] pb-[10px]">
                 لماذا Nefertiti Solutions؟
             </div>
-            <p class="font-400 text-white md:text-[20px] text-[17px] rounded-[30.24px] px-[35px] text-start">
+            <p class="font-400 text-black md:text-[20px] text-[17px] rounded-[30.24px] px-[35px] text-start">
                 في
                 <span class="font-bold text-gold-gradient">
                     Nefertiti Solutions

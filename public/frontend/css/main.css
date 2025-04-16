@@ -223,21 +223,16 @@ html {
 
 /* نفرتيتي */
 .wave2 {
-    color: #fff;
+    /* color: #ff7171; */
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
-    background: linear-gradient(to left,
-            #9f9f9f 0,
-            #fff 10%,
-            #686868 20%);
-    /* تغيير to right إلى to left */
+    background: linear-gradient(to left, white  40%, #fff 10%, #040a1a 7%);
     background-position: 300px;
-    /* ابدأ من 300px */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 2s infinite linear;
+    animation: shine 6s infinite linear;
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
 }
