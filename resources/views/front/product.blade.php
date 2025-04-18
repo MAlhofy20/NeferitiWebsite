@@ -75,9 +75,9 @@
     </div>
     <div class="the-pahe bg-white relative overflow-hidden">
         @foreach ($product->productDetails as $detail)
-            <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-black pb-[20px] rounded-[20px] flex  flex-wrap-reverse items-center justify-evenly"
+            <div class="MissionTwo rounded-tl-[20px] w-[90%] my-[40px] mx-auto bg-[#d4d4d4] pb-[20px] rounded-[20px] flex gap-[64px]  flex-wrap-reverse items-center justify-evenly"
                 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
-                <div class="for-you  text-white px-[40px] lg:py-[70px] rounded-[20px]" data-aos="zoom-in"
+                <div class="for-you  text-black px-[40px] lg:py-[70px] rounded-[20px]" data-aos="zoom-in"
                     data-aos-easing="linear" data-aos-duration="300">
                     <div
                         class="font-[600] text-[19px] lg:text-[28px] py-[21px] leading-[25px] lg:leading-[44.8px] max-w-[500px] ">
@@ -92,7 +92,7 @@
             </div>
     </div>
     @endforeach
-    <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-[#7794d5] py-[20px] rounded-[20px] flex flex-col  items-center justify-center"
+    <div class="LASTMissionTwo h-[500px] rounded-tl-[20px] w-[90%] my-[40px] gap-[50px] mx-auto bg-[#d4d4d4] py-[20px] rounded-[20px] flex flex-col  items-center justify-center"
         data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
         <div class="main flex-col justify-center items-center text-center px-[20px]">
             <div class="title font-bold text-[26px] md:text-[50px] text-[black] pb-[10px]">
